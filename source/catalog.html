@@ -136,7 +136,202 @@
     <section class="filter-companion">
       <div class="container">
         <h2 class="filter-companion">Подберите идеального попутчика</h2>
-        <form action="" class="filter-companion__form"></form>
+        <form class="filter-companion__list preferences" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="preferences__item">
+            <legend class="preferences__title">Хобби</legend>
+            <ul class="preferences__list preferences-list">
+              <li class="preferences-list__item">
+                <label class="preferences-list__point">
+                  <input class="preferences-list__checkbox" type="checkbox" name="gym" required>
+                  <span class="preferences-list__text">Спортзал</span>
+                </label>
+              </li>
+              <li class="preferences-list__item">
+                <label class="preferences-list__point">
+                  <input class="preferences-list__checkbox" type="checkbox" name="hookah">
+                  <span class="preferences-list__text">Кальян</span>
+                </label>
+              </li>
+              <li class="preferences-list__item">
+                <label class="preferences-list__point">
+                  <input class="preferences-list__checkbox" type="checkbox" name="sofa">
+                  <span class="preferences-list__text">Диван</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="preferences__item">
+            <legend class="preferences__title">Музыка</legend>
+            <ul class="preferences__list preferences-list">
+              <li class="preferences-list__item">
+                <label class="preferences-list__point">
+                  <input class="preferences-list__checkbox" type="checkbox" name="hard-rock" required>
+                  <span class="preferences-list__text">Тяжелый рок</span>
+                </label>
+              </li>
+              <li class="preferences-list__item">
+                <label class="preferences-list__point">
+                  <input class="preferences-list__checkbox" type="checkbox" name="russian-rap">
+                  <span class="preferences-list__text">Русский рэп</span>
+                </label>
+              </li>
+              <li class="preferences-list__item">
+                <label class="preferences-list__point">
+                  <input class="preferences-list__checkbox" type="checkbox" name="eurodance">
+                  <span class="preferences-list__text">Евроденс</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="preferences__item">
+            <legend class="preferences__title">Еда</legend>
+            <ul class="preferences__list preferences-list">
+              <li class="preferences-list__item">
+                <label class="preferences-list__point">
+                  <input class="preferences-list__checkbox" type="checkbox" name="meat-eater" required>
+                  <span class="preferences-list__text">Мясоед</span>
+                </label>
+              </li>
+              <li class="preferences-list__item">
+                <label class="preferences-list__point">
+                  <input class="preferences-list__checkbox" type="checkbox" name="pp-products">
+                  <span class="preferences-list__text">Сидит на ПП</span>
+                </label>
+              </li>
+              <li class="preferences-list__item">
+                <label class="preferences-list__point">
+                  <input class="preferences-list__checkbox" type="checkbox" name="vegan-raw-foodist">
+                  <span class="preferences-list__text">Веган-сыроед</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="preferences__item">
+            <legend class="preferences__title">Транспорт</legend>
+            <ul class="preferences__list preferences-list list-transports">
+              <li class="preferences-list__item tooltip list-transports__item">
+                <label class="preferences-list__point">
+                  <input class="preferences-list__checkbox" type="checkbox" name="gym" required>
+                  <span class="list-transports__text tooltip__text">Авиаперелет</span>
+                </label>
+              </li>
+              <li class="preferences-list__item tooltip list-transports__item">
+                <label class="preferences-list__point">
+                  <input class="preferences-list__checkbox" type="checkbox" name="hookah" required>
+                  <span class="list-transports__text tooltip__text">Автотранспорт</span>
+                </label>
+              </li>
+              <li class="preferences-list__item tooltip list-transports__item">
+                <label class="preferences-list__point">
+                  <input class="preferences-list__checkbox" type="checkbox" name="sofa">
+                  <span class="list-transports__text tooltip__text">Велосипед</span>
+                </label>
+              </li>
+              <li class="preferences-list__item tooltip list-transports__item">
+                <label class="preferences-list__point">
+                  <input class="preferences-list__checkbox" type="checkbox" name="sofa" required>
+                  <span class="list-transports__text tooltip__text">Пешком</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <!-- ЛЕВЕЛ-->
+          <button class="preferences__button btn" type="submit">Показать</button>
+        </form>
+      </div>
+    </section>
+    <section class="companion">
+      <div class="container">
+        <h2 class="visually-hidden">Список попутчиков</h2>
+        <ul class="companion__list">
+          <li class="companion__item card-companion">
+            <h3 class="card-companion__title title-small">Таня Фирсова</h3>
+            <button></button>
+            <ul class="card-companion__list-tags list-tags">
+              <li class="list-tags__item">#ЗОЖ</li>
+              <li class="list-tags__item">#ПП</li>
+              <li class="list-tags__item">#Фитнес</li>
+              <li class="list-tags__item">#пляж</li>
+              <li class="list-tags__item">#авокадо</li>
+              <li class="list-tags__item">#смузи</li>
+            </ul>
+            <img class="card-companion__img" src="img/avatars/avatar-1.jpg" width="270" height="270" alt="аватарка пользователя.">
+            <ul class="card-companion__list-countries list-countries">
+              <li class="list-countries__item tooltip">
+                <img class="list-countries__flag" src="img/countries/sri-lanka.png" width="35" height="24" alt="флаг Шри-Ланка.">
+                <span class="list-countries__text tooltip__text">Шри-Ланка</span>
+              </li>
+              <li class="list-countries__item tooltip">
+                <img class="list-countries__flag" src="img/countries/thailand.png" width="35" height="24" alt="флаг Таиланда.">
+                <span class="list-countries__text tooltip__text">Таиланд</span>
+              </li>
+              <li class="list-countries__item tooltip">
+                <img class="list-countries__flag" src="img/countries/seychelles.png" width="35" height="24" alt="флаг Сейшелы.">
+                <span class="list-countries__text tooltip__text">Сейшелы</span>
+              </li>
+            </ul>
+            <ul class="card-companion__list-transports list-transports">
+              <li class="list-transports__item tooltip transport-icon transport-icon--first">
+                <span class="list-transports__text tooltip__text">Авиаперелет</span>
+              </li>
+              <li class="list-transports__item tooltip transport-icon transport-icon--second">
+                <span class="list-transports__text tooltip__text">Автотранспорт</span>
+              </li>
+              <li class="list-transports__item tooltip transport-icon transport-icon--third">
+                <span class="list-transports__text tooltip__text">Велосипед</span>
+              </li>
+              <li class="list-transports__item tooltip transport-icon transport-icon--fouth">
+                <span class="list-transports__text tooltip__text">Пешком</span>
+              </li>
+            </ul>
+            <div class="card-companion__info">
+              <b class="card-companion__level">99</b>
+              <span class="card-companion__text">level</span>
+            </div>
+          </li>
+          <li class="companion__item card-companion">
+            <a class="card-companion__link" href="#">
+              <div class="card-companion__info">
+                <b class="card-companion__level">80</b>
+                <span class="card-companion__text">level</span>
+              </div>
+              <img class="card-companion__img" src="img/avatars/avatar-2.jpg" width="270" height="270" alt="аватарка пользователя.">
+              <ul class="card-companion__list-countries list-countries">
+                <li class="list-countries__item tooltip">
+                  <img class="list-countries__flag" src="img/countries/belgium.png" width="35" height="24" alt="флаг Бельгии.">
+                  <span class="list-countries__text tooltip__text">Бельгия</span>
+                </li>
+                <li class="list-countries__item tooltip">
+                  <img class="list-countries__flag" src="img/countries/czechia.png" width="35" height="24" alt="флаг Чехии.">
+                  <span class="list-countries__text tooltip__text">Чехия</span>
+                </li>
+              </ul>
+              <h3 class="card-companion__title title-small">Петя Демин</h3>
+              <ul class="card-companion__list-tags list-tags">
+                <li class="list-tags__item">#бургер</li>
+                <li class="list-tags__item">#бар</li>
+                <li class="list-tags__item">#футбол</li>
+                <li class="list-tags__item">#концерт</li>
+                <li class="list-tags__item">#крафт</li>
+              </ul>
+              <ul class="card-companion__list-transports list-transports">
+                <li class="list-transports__item tooltip transport-icon transport-icon--first">
+                  <span class="list-transports__text tooltip__text">Авиаперелет</span>
+                </li>
+                <li class="list-transports__item tooltip transport-icon transport-icon--second">
+                  <span class="list-transports__text tooltip__text">Автотранспорт</span>
+                </li>
+                <li class="list-transports__item tooltip transport-icon transport-icon--third">
+                  <span class="list-transports__text tooltip__text">Велосипед</span>
+                </li>
+                <li class="list-transports__item tooltip transport-icon transport-icon--fouth">
+                  <span class="list-transports__text tooltip__text">Пешком</span>
+                </li>
+              </ul>
+            </a>
+          </li>
+        </ul>
+        <button class="companion__btn btn btn--primary" type="button">Показать еще</button>
       </div>
     </section>
   </main>
