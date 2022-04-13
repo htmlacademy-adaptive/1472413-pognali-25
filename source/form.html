@@ -191,12 +191,31 @@
             </a>
           </li>
         </ol>
-        <ol class="steps__actions actions-list">
-          <li class="actions-list__item">
-            <h3 class="actions-list__title">Шаг 1. <span class="actions-list__subtitle">Даты пребывания</span></h3>
+        <form class="steps__actions actions-list" action="https://echo.htmlacademy.ru/" method="post">
+          <fieldset class="actions-list__item">
+            <legend class="actions-list__title">Шаг 1. <span class="actions-list__subtitle">Даты пребывания</span></legend>
             <p class="actions-list__info">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
-          </li>
-        </ol>
+            <label class="actions-list__label" for="companion-count">
+              <span class="actions-list__label-text">Ищу попутчиков:</span>
+              <span class="actions-list__label-unit">чел.</span>
+            </label>
+            <div class="actions-list__wrapper">
+              <button class="actions-list__button actions-list__button--minus btn">-</button>
+              <input  type="number" name="companion-count" id="companion-count" placeholder="2">
+              <button class="actions-list__button actions-list__button--plus btn">+</button>
+            </div>
+            <label class="actions-list__label" for="companion-duration">
+              <span class="actions-list__label-text">Длительность:</span>
+              <span class="actions-list__label-unit">дн.</span>
+            </label>
+            <div class="actions-list__wrapper">
+              <button class="actions-list__button actions-list__button--minus btn" type="button">-</button>
+              <input  type="number" name="companion-duration" id="companion-duration" placeholder="3">
+              <button class="actions-list__button actions-list__button--plus btn" type="button">+</button>
+            </div>
+            <button class="actions-list__next btn">Следующий шаг</button>
+          </fieldset>
+        </form>
       </div>
     </section>
   </main>
