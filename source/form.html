@@ -201,7 +201,7 @@
             </label>
             <div class="actions-list__wrapper">
               <button class="actions-list__button actions-list__button--minus btn">-</button>
-              <input  type="number" name="companion-count" id="companion-count" placeholder="2">
+              <input class="actions-list__count" type="number" name="companion-count" id="companion-count" placeholder="2">
               <button class="actions-list__button actions-list__button--plus btn">+</button>
             </div>
             <label class="actions-list__label" for="companion-duration">
@@ -210,9 +210,13 @@
             </label>
             <div class="actions-list__wrapper">
               <button class="actions-list__button actions-list__button--minus btn" type="button">-</button>
-              <input  type="number" name="companion-duration" id="companion-duration" placeholder="3">
+              <input class="actions-list__count" type="number" name="companion-duration" id="companion-duration" placeholder="3">
               <button class="actions-list__button actions-list__button--plus btn" type="button">+</button>
             </div>
+            <label class="actions-list__check">
+              <input type="checkbox" name="with-children" checked>
+              Можно с детьми
+            </label>
             <button class="actions-list__next btn">Следующий шаг</button>
           </fieldset>
         </form>
