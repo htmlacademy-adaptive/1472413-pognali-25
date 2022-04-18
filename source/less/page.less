@@ -1,0 +1,13 @@
+@import "mixins";
+
+.page {
+  .base;
+  height: 100%;
+
+  &__body {
+    .base;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+}

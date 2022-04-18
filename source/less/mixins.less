@@ -1,0 +1,25 @@
+.base() {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* функции */
+/* шрифт */
+.font(@ff: "BloggerSans", San-serif, @fz, @fw, @lh, @fs: normal) {
+  font-family: @ff;
+  font-size: @fz;
+  font-weight: @fw;
+  line-height: @lh;
+  font-style: @fs;
+}
+
+/* позиционирование */
+.abs(@d:block, @t, @r, @b, @l) {
+  position: absolute;
+  top: @t;
+  right: @r;
+  bottom: @b;
+  left: @l;
+}
