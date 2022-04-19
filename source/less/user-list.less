@@ -1,0 +1,17 @@
+@import "_vars";
+@import "_mixins";
+@import "_visually-hidden";
+
+.user-list {
+  display: flex;
+  .base;
+  .reset;
+
+  &__link--first {
+    background-color: @orange;
+  }
+
+  &__link--second {
+    background-color: @yellow-dark;
+  }
+}

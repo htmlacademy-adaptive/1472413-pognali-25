@@ -1,0 +1,43 @@
+@import "_vars";
+@import "_mixins";
+
+.steps-list {
+  .base;
+
+  &__item {
+    .size(100%, 90px);
+    text-align: left;
+    .font(18px, 700, 18px, normal);
+    color: @basic-blue;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    &:first-child {
+      background-color: @orange;
+    }
+
+    &:nth-child(2) {
+      margin-top: -10px;
+      background-color: #FFA530;
+    }
+
+    &:nth-child(3) {
+      margin-top: -10px;
+      background-color: @yellow-dark;
+    }
+
+    &:nth-child(4) {
+      height: 80px;
+      margin-top: -10px;
+      background-color: @basic-yellow;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+  }
+
+  &__description {
+    .base;
+    padding-top: 22px;
+    padding-left: 24px;
+  }
+}

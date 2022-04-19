@@ -1,0 +1,18 @@
+@import "_vars";
+@import "_mixins";
+
+.burger {
+  position: relative;
+  .size(100%, 100%);
+  background-color: @white;
+  border-radius: 1.5px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-color: @white;
+    border-radius: 1.5px;
+    .size(100%, 3px);
+    .abs(d, -8px, 0, 0, 0);
+  }
+}

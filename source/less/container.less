@@ -1,8 +1,19 @@
-@import "mixins";
+@import "_mixins";
 
 .container {
   .base;
   margin: 0 auto;
   padding: 0 15px;
   max-width: 290px;
+
+  &--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  &--promo {
+    background-image: url(../img/promo-traveller-mobile.png);
+    .bg(center 130px, auto);
+  }
 }

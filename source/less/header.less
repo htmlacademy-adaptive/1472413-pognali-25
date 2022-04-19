@@ -1,7 +1,20 @@
-@import "vars";
-@import "mixins";
+@import "_vars";
+@import "_mixins";
 
 .header {
   .base;
-  background-color: @basic-blue;
+  position: fixed;
+  width: 100%;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  background-color: transparent;
+  z-index: 2;
+
+  &__logo {
+    max-height: 15px;
+  }
+
+  &__nav {
+    max-height: 15px;
+  }
 }

@@ -1,0 +1,25 @@
+@import "_vars";
+@import "_mixins";
+
+.btn {
+  .resetLink;
+  .resetButton;
+
+  &--icon {
+    .size(40px, 40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+
+  &--authorization {
+    display: block;
+    padding: 12px 40px;
+    .font(17px, 700, 20px, normal);
+    color: @basic-blue;
+    text-transform: uppercase;
+    background-color: @basic-yellow;
+    border-radius: 25px;
+  }
+}
