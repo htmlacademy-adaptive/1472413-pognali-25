@@ -1,0 +1,30 @@
+@import "_vars";
+@import "_mixins";
+
+.companion {
+  position: relative;
+  margin-top: -30px;
+  padding-top: 100px;
+  padding-bottom: 31px;
+  z-index: 1;
+  background-color: #192144;
+  .borderRadius;
+  color: @white;
+
+  &__text {
+    .base;
+    max-width: 217px;
+    margin-bottom: 25px;
+
+    &--bold {
+      display: inline-block;
+      margin-bottom: 54px;
+      font-weight: 700;
+    }
+  }
+
+  &__list {
+    .reset;
+    .base;
+  }
+}
