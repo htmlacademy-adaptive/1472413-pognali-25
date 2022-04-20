@@ -1,0 +1,48 @@
+@import "_vars";
+@import "_mixins";
+
+.modal {
+  .abs(d, 16px, 0, 0, 0);
+  .size(270px, 465px);
+  z-index: 3;
+  margin: 0 auto;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 34px;
+  background-color: @white;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(29, 46, 91, 0.14);
+  box-sizing: border-box;
+
+  &__list {
+    flex-grow: 1;
+    width: calc(100% - 50px);
+    color: @gray;
+  }
+
+  &__item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid @gray-light;
+
+    &:first-child {
+      border-top: 1px solid @gray-light;
+    }
+  }
+
+  &__price {
+    margin: 0;
+  }
+
+  &__button {
+    width: 100%;
+    padding: 18px;
+    background-color: @encycolorpedia;
+    .font(16px, 700, 24px, normal);
+    color: @basic-blue-light;
+    text-transform: uppercase;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+}

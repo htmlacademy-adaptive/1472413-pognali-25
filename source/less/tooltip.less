@@ -1,0 +1,25 @@
+@import "_vars";
+@import "_mixins";
+
+.tooltip {
+  &__text {
+    visibility: hidden;
+    padding: 18px 22px;
+    text-align: center;
+    .font(20px, 400, 20px, normal);
+    color: @white;
+    background-color: @blue-dark;
+    border-radius: 4px;
+    .abs(d, 100%, 0, 0, 50%);
+    margin-left: calc(100% / 2);
+
+    &::after {
+      content: "";
+      .abs(d, 0, 0, 100%, 50%);
+      margin-left: -6px;
+      border-width: 6px;
+      border-style: solid;
+      border-color: transparent transparent @blue-dark transparent;
+    }
+  }
+}

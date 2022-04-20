@@ -2,6 +2,13 @@
 @import "_mixins";
 
 .card-companion {
+  text-align: center;
+  background-color: @white;
+  .borderRadiusSmallTop;
+  .borderRadiusSmallBottom;
+  margin-bottom: 10px;
+  padding-bottom: 23px;
+
   &__link {
     position: relative;
     display: flex;
@@ -10,6 +17,28 @@
   }
 
   &__info {
+    .size(60px, 60px);
     .abs(d, 17px, 0, 0, 17px);
+    color: @white;
+  }
+
+  &__img {
+    .borderRadiusSmallTop;
+  }
+
+  &__list-countries {
+    .size(100%, 25px);
+    margin-top: -11px;
+  }
+
+  &__title {
+    margin-top: 13px;
+    margin-bottom: 15px;
+    color: @basic-blue-light;
+  }
+
+  &__list-tags {
+    margin: 0 auto;
+    margin-bottom: 17px;
   }
 }

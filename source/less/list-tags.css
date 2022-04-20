@@ -1,0 +1,20 @@
+/* colors */
+/* margins */
+/* функции */
+/* шрифт */
+/* позиционирование */
+/* размеры */
+/* фон */
+.list-tags {
+  max-width: 188px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.list-tags__item:not(:last-child) {
+  margin-right: 5px;
+}

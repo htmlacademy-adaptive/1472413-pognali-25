@@ -1,0 +1,19 @@
+/* colors */
+/* margins */
+/* функции */
+/* шрифт */
+/* позиционирование */
+/* размеры */
+/* фон */
+.list-transports {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.list-transports__item:not(:first-child) {
+  margin-left: 14px;
+}
