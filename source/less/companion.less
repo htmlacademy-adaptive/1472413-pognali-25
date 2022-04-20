@@ -6,11 +6,11 @@
   margin-top: -30px;
   padding-top: 100px;
   padding-bottom: 31px;
-  z-index: 1;
+  z-index: 5;
   .borderRadius;
   background-color: @midnight-blue;
   background-image: url(../img/companion-back.png), url(../img/smolov-back.png), url(../img/rogovaya-back.png);
-  background-position: -34px 64px, 160px 64px, -12px 342px;
+  background-position: -18px 64px, 144px 64px, -12px 342px;
   background-size: 132px, 143px, 71px;
   background-repeat: no-repeat;
 
@@ -18,6 +18,7 @@
     .base;
     max-width: 217px;
     margin-bottom: 25px;
+    margin-left: @margin-left;
     color: @white;
 
     &--bold {
@@ -46,5 +47,9 @@
       background-image: url("data:image/svg+xml,%3Csvg width='12' height='14' viewBox='0 0 12 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 7L0 13.0622L0 0.937822L12 7Z' fill='%231D2E5B'/%3E%3C/svg%3E%0A");
       .bg(right center, cover);
     }
+  }
+
+  &__title {
+    margin-left: @margin-left;
   }
 }

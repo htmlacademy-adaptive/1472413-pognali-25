@@ -6,7 +6,66 @@
   margin-top: -30px;
   padding-top: 100px;
   padding-bottom: 31px;
-  z-index: 1;
+  z-index: 3;
+  text-align: center;
   .borderRadius;
   background-color: @midnight-blue;
+
+  &__text {
+    .base;
+    margin-bottom: 29px;
+    color: @white;
+
+    & ~ .contact__text {
+      margin-bottom: 17px;
+    }
+  }
+
+  &__link {
+    color: @basic-yellow;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: 210px 60px;
+    margin-bottom: 29px;
+  }
+
+  &__input {
+    grid-column: 1 / -1;
+    grid-row: 1 / 1;
+    padding-left: 25px;
+    padding-right: 70px;
+    border: none;
+    .borderRadiusSmallBottom;
+    .borderRadiusSmallTop;
+
+    &::placeholder {
+      .font(18px, 700, 18px, normal);
+      color: @gray;
+      opacity: 0.3;
+    }
+  }
+
+  &__button {
+    position: relative;
+    grid-column: 2 / 3;
+    grid-row: 1 / 1;
+    .size(60px, 62px);
+    padding: 0;
+    .borderRadiusSmallBottom;
+    .borderRadiusSmallTop;
+
+    &::after {
+      .abs(d, 39%, 0, 0, calc(100% - 35px));
+      content: "";
+      .size(13px, 13.5px);
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='14' viewBox='0 0 12 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 7L0 13.0622L0 0.937822L12 7Z' fill='%231D2E5B'/%3E%3C/svg%3E%0A");
+      .bg(right center, cover);
+    }
+  }
+
+  &__list {
+    text-align: left;
+  }
 }

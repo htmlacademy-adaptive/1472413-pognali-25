@@ -6,8 +6,11 @@
   .base;
   margin-bottom: 30px;
   color: @gray;
+  .reset;
+  counter-reset: list2;
 
   &__item {
+    position: relative;
     margin-left: 25px;
     margin-right: 70px;
     padding-top: 13px;
@@ -16,6 +19,28 @@
 
     &:first-child {
       border-top: 1px solid @gray-light;
+
+      &::after {
+        background-color: @orange;
+      }
+    }
+
+    &:last-child::after {
+      background-color: @basic-yellow;
+    }
+
+    &::after {
+      counter-increment: list2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .size(34px, 34px);
+      border-radius: 50%;
+      background-color: @yellow-dark;
+      content: counter(list2);
+      .abs(d, 3px, -70px, initial, initial);
+      .font(16px, 400, 16px, normal);
+      color: @white;
     }
   }
 }
