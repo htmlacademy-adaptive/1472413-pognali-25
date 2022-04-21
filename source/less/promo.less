@@ -1,0 +1,21 @@
+@import "_vars";
+@import "_mixins";
+
+.promo {
+  padding-top: 94px;
+  padding-bottom: 39px;
+  text-align: center;
+  background-color: @basic-blue;
+  background-image: url(../img/promo-bg-mobile.jpg);
+  .bg(center top, 100% 477px);
+
+  &__title {
+    margin-bottom: 242px;
+    .font(36px, 700, 40px, normal);
+    color: @white;
+  }
+
+  &__list {
+    margin-bottom: @standart;
+  }
+}

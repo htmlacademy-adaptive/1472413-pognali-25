@@ -1,0 +1,15 @@
+@import "_vars";
+@import "_mixins";
+
+.page {
+  .base;
+  height: 100%;
+  .font(16px, 300, 22px, normal);
+
+  &__body {
+    .base;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+}

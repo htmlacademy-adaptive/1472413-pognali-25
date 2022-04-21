@@ -1,0 +1,35 @@
+@import "_vars";
+@import "_mixins";
+
+.btn {
+  display: block;
+  .resetLink;
+  .resetButton;
+  box-sizing: border-box;
+
+  &--icon {
+    .size(40px, 40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+
+  &--authorization {
+    display: block;
+    padding: 12px 40px;
+    .font(17px, 700, 20px, normal);
+    color: @basic-blue;
+    text-transform: uppercase;
+    background-color: @basic-yellow;
+    border-radius: 25px;
+  }
+
+  &--primary {
+    padding: 25px 50px 25px 33px;
+    .font(24px, 700, 24px, normal);
+    color: @basic-blue-light;
+    background-color: @basic-yellow;
+    border-radius: 20px;
+  }
+}

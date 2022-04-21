@@ -1,0 +1,27 @@
+@import "_vars";
+@import "_mixins";
+
+.contacts-list {
+  position: relative;
+  .reset;
+  .base;
+  font-weight: 700;
+  color: @basic-yellow;
+  z-index: 3;
+
+  &__link {
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+    .size(45px, 45px);
+    background-color: #121936;
+    border-radius: 50%;
+  }
+}
+

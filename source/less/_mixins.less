@@ -1,0 +1,66 @@
+.base() {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.reset() {
+  list-style-type: none;
+}
+
+.resetLink() {
+  color: inherit;
+  text-decoration: none;
+}
+
+.resetButton() {
+  border: none;
+  cursor: pointer;
+}
+
+.borderRadius() {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.borderRadiusSmallBottom() {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.borderRadiusSmallTop() {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* функции */
+/* шрифт */
+.font(@fz, @fw, @lh, @fs) {
+  font-family: "BloggerSans", sans-serif;
+  font-size: @fz;
+  font-weight: @fw;
+  line-height: @lh;
+  font-style: @fs;
+}
+
+/* позиционирование */
+.abs(@d:block, @t, @r, @b, @l) {
+  position: absolute;
+  top: @t;
+  right: @r;
+  bottom: @b;
+  left: @l;
+}
+
+/* размеры */
+.size(@w, @h) {
+  width: @w;
+  height: @h;
+}
+
+/* фон */
+.bg(@bgp, @bgz) {
+  background-position: @bgp;
+  background-size: @bgz;
+  background-repeat: no-repeat;
+}

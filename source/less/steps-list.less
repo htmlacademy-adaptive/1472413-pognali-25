@@ -1,0 +1,56 @@
+@import "_vars";
+@import "_mixins";
+
+.steps-list {
+  position: relative;
+  z-index: 8;
+  .base;
+  .reset;
+  counter-reset: list1;
+
+  &__item {
+    position: relative;
+    .size(100%, 90px);
+    text-align: left;
+    .font(18px, 700, 18px, normal);
+    color: @basic-blue;
+    .borderRadiusSmallTop;
+
+    &:first-child {
+      background-color: @orange;
+    }
+
+    &:nth-child(2) {
+      margin-top: -10px;
+      background-color: #FFA530;
+    }
+
+    &:nth-child(3) {
+      margin-top: -10px;
+      background-color: @yellow-dark;
+    }
+
+    &:nth-child(4) {
+      height: 80px;
+      margin-top: -10px;
+      background-color: @basic-yellow;
+      .borderRadiusSmallBottom;
+    }
+
+    &::after {
+      counter-increment: list1;
+      display: block;
+      .size(15px, 20px);
+      content: counter(list1);
+      .abs(d, 22px, 21px, initial, initial);
+      .font(18px, 700, 18px, normal);
+      color: @white;
+    }
+  }
+
+  &__description {
+    .base;
+    padding-top: 22px;
+    padding-left: 24px;
+  }
+}

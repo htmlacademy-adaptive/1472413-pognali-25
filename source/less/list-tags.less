@@ -1,0 +1,17 @@
+@import "_vars";
+@import "_mixins";
+
+.list-tags {
+  max-width: 188px;
+  .reset;
+  .base;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+}
