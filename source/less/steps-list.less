@@ -10,29 +10,28 @@
 
   &__item {
     position: relative;
+    margin-top: -10px;
     .size(100%, 90px);
     text-align: left;
     .font(18px, 700, 18px, normal);
     color: @basic-blue;
     .borderRadiusSmallTop;
+    background-color: @basic-yellow;
 
     &:first-child {
       background-color: @orange;
     }
 
     &:nth-child(2) {
-      margin-top: -10px;
       background-color: #FFA530;
     }
 
     &:nth-child(3) {
-      margin-top: -10px;
       background-color: @yellow-dark;
     }
 
-    &:nth-child(4) {
+    &:last-child {
       height: 80px;
-      margin-top: -10px;
       background-color: @basic-yellow;
       .borderRadiusSmallBottom;
     }

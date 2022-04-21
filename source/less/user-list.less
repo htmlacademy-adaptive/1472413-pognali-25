@@ -7,11 +7,22 @@
   .base;
   .reset;
 
+  &__item {
+    &--header {
+      width: 100%;
+    }
+  }
+
   &__link--first {
     background-color: @orange;
   }
 
   &__link--second {
     background-color: @yellow-dark;
+  }
+
+  &--header &__link--first,
+  &--header &__link--second {
+    display: none;
   }
 }

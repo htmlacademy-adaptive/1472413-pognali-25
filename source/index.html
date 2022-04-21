@@ -9,28 +9,39 @@
 </head>
 <body class="page__body">
   <!-- header -->
-  <header class="header header--theme-dark">
+  <!-- добавляется класс header--theme-light через js при скролле страницв-->
+  <header class="header">
     <div class="container container--header">
       <a class="header__logo logo">
-        <img class="logo__img" src="img/icons/logo-mobile.svg" width="96" height="15" alt="логотип сайта Погнали">
+<!-- через js добавляется display:none, при классе header--theme-light у header и при открытии меню -->
+        <picture class="logo__img">
+          <source media="(min-width: 1200px)" srcset="img/icons/logo-full.svg" sizes="200px 50px">
+          <source media="(min-width: 768px)" srcset="img/icons/logo-full.svg">
+          <img src="img/icons/logo-mobile.svg" alt="логотип сайта Погнали">
+        </picture>
+<!-- через js добавляется display:block, при классе header--theme-light у header и при открытии меню -->
+        <img class="logo__img-dark" src="img/icons/logo-mobile-dark.svg" width="96" height="15" alt="логотип сайта Погнали">
       </a>
+<!-- через js добавляется класс burger--dark, если у header есть класс header--theme-light -->
+<!-- при нажатии на кнопку открытия меню, добавляется класс burger--open-->
+      <button class="header__button btn burger" type="button">
+        <span class="visually-hidden">Меню.</span>
+      </button>
+<!-- при нажатии на кнопку открытия меню, добавляется класс nav--open -->
       <div class="header__nav nav">
-        <button class="nav__button btn burger" type="button">
-          <span class="visually-hidden">Меню.</span>
-        </button>
-        <div class="nav__wrapper">
+        <div class="container container--nav">
           <ul class="nav__list site-list">
             <li class="site-list__item">
               <a class="site-list__link" href="#service">О&nbsp;сервисе</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="#direction">Направления</a>
+              <a class="site-list__link" href="form.html">Направления</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="#companion">Попутчики</a>
+              <a class="site-list__link" href="catalog.html">Попутчики</a>
             </li>
           </ul>
-          <ul class="nav__list user-list">
+          <ul class="nav__list user-list user-list--header">
             <li class="user-list__item">
               <a class="user-list__link user-list__link--first btn btn--icon" href="tel:+88005558628">
                 <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -48,24 +59,28 @@
                 <span class="visually-hidden">Написать на&nbsp;электронную почту.</span>
               </a>
             </li>
-            <li class="user-list__item">
+            <li class="user-list__item user-list__item--header">
               <a class="user-list__link btn btn--authorization" href="#">Авторизация</a>
             </li>
           </ul>
           <ul class="nav__list contacts-list">
             <li class="contacts-list__item">
               <a class="contacts-list__link btn" href="tel:+88005558628">
-                <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.50001 1.08615C6.70356 1.08615 3.90039 1.55882 2.88328 2.50092C2.0394 3.28252 1.7581 4.66329 1.66328 5.53753C1.66328 5.53753 1.65021 5.62393 1.65021 5.66109C1.65021 6.00391 1.94451 6.27887 2.30433 6.27887C2.34684 6.27887 3.92008 6.15837 4.86857 6.08425C4.8914 6.08112 4.9144 6.07806 4.93722 6.07191C5.29049 6.0627 5.57511 5.7908 5.57511 5.45413L5.57828 4.237C5.57828 3.86014 5.9022 3.55737 6.30126 3.55737H12.6987C13.0979 3.55737 13.4218 3.86011 13.4218 4.237L13.425 5.45413C13.425 5.7908 13.7096 6.0627 14.0628 6.07191C14.0855 6.0781 14.1085 6.08112 14.1316 6.08425C15.0802 6.15834 16.6534 6.27887 16.6957 6.27887C17.0554 6.27887 17.3499 6.00391 17.3499 5.66109C17.3499 5.62393 17.3369 5.53753 17.3369 5.53753C17.242 4.66329 16.961 3.28255 16.1171 2.50092C15.0996 1.55882 12.2965 1.08615 9.50001 1.08615ZM9.50001 9.11773C8.77717 9.11773 8.1917 9.67064 8.1917 10.3533C8.1917 11.036 8.77717 11.5889 9.50001 11.5889C10.2229 11.5889 10.8083 11.036 10.8083 10.3533C10.8083 9.67064 10.2229 9.11773 9.50001 9.11773ZM8.51879 6.33752V5.56528C8.51879 5.13902 8.15242 4.79303 7.70113 4.79303C7.24983 4.79303 6.88346 5.13905 6.88346 5.56528V6.33752L2.47101 10.7889C2.16695 11.07 1.9772 11.4622 1.9772 11.8948V13.1335C1.9772 13.8162 2.5627 14.3691 3.28551 14.3691H3.6126V15.1414C3.6126 15.5677 3.97901 15.9136 4.43031 15.9136C4.8816 15.9136 5.24798 15.5677 5.24798 15.1414V14.3691H13.752V15.1414C13.752 15.5677 14.1183 15.9136 14.5698 15.9136C15.0211 15.9136 15.3874 15.5677 15.3874 15.1414V14.3691H15.7145C16.4373 14.3691 17.0228 13.8162 17.0228 13.1335V11.8948C17.0228 11.4622 16.833 11.07 16.5289 10.7889L12.1167 6.33752V5.56528C12.1167 5.13902 11.7502 4.79303 11.2989 4.79303C10.8476 4.79303 10.4813 5.13905 10.4813 5.56528V6.33752H8.51879ZM9.50001 7.8821C10.9457 7.8821 12.1167 8.98799 12.1167 10.3533C12.1167 11.7187 10.9457 12.8246 9.50001 12.8246C8.05432 12.8246 6.88342 11.7187 6.88342 10.3533C6.88342 8.98795 8.05432 7.8821 9.50001 7.8821Z" fill="#FFD74B"/>
-                </svg>
+                <div class="contacts-list__img">
+                  <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.50001 1.08615C6.70356 1.08615 3.90039 1.55882 2.88328 2.50092C2.0394 3.28252 1.7581 4.66329 1.66328 5.53753C1.66328 5.53753 1.65021 5.62393 1.65021 5.66109C1.65021 6.00391 1.94451 6.27887 2.30433 6.27887C2.34684 6.27887 3.92008 6.15837 4.86857 6.08425C4.8914 6.08112 4.9144 6.07806 4.93722 6.07191C5.29049 6.0627 5.57511 5.7908 5.57511 5.45413L5.57828 4.237C5.57828 3.86014 5.9022 3.55737 6.30126 3.55737H12.6987C13.0979 3.55737 13.4218 3.86011 13.4218 4.237L13.425 5.45413C13.425 5.7908 13.7096 6.0627 14.0628 6.07191C14.0855 6.0781 14.1085 6.08112 14.1316 6.08425C15.0802 6.15834 16.6534 6.27887 16.6957 6.27887C17.0554 6.27887 17.3499 6.00391 17.3499 5.66109C17.3499 5.62393 17.3369 5.53753 17.3369 5.53753C17.242 4.66329 16.961 3.28255 16.1171 2.50092C15.0996 1.55882 12.2965 1.08615 9.50001 1.08615ZM9.50001 9.11773C8.77717 9.11773 8.1917 9.67064 8.1917 10.3533C8.1917 11.036 8.77717 11.5889 9.50001 11.5889C10.2229 11.5889 10.8083 11.036 10.8083 10.3533C10.8083 9.67064 10.2229 9.11773 9.50001 9.11773ZM8.51879 6.33752V5.56528C8.51879 5.13902 8.15242 4.79303 7.70113 4.79303C7.24983 4.79303 6.88346 5.13905 6.88346 5.56528V6.33752L2.47101 10.7889C2.16695 11.07 1.9772 11.4622 1.9772 11.8948V13.1335C1.9772 13.8162 2.5627 14.3691 3.28551 14.3691H3.6126V15.1414C3.6126 15.5677 3.97901 15.9136 4.43031 15.9136C4.8816 15.9136 5.24798 15.5677 5.24798 15.1414V14.3691H13.752V15.1414C13.752 15.5677 14.1183 15.9136 14.5698 15.9136C15.0211 15.9136 15.3874 15.5677 15.3874 15.1414V14.3691H15.7145C16.4373 14.3691 17.0228 13.8162 17.0228 13.1335V11.8948C17.0228 11.4622 16.833 11.07 16.5289 10.7889L12.1167 6.33752V5.56528C12.1167 5.13902 11.7502 4.79303 11.2989 4.79303C10.8476 4.79303 10.4813 5.13905 10.4813 5.56528V6.33752H8.51879ZM9.50001 7.8821C10.9457 7.8821 12.1167 8.98799 12.1167 10.3533C12.1167 11.7187 10.9457 12.8246 9.50001 12.8246C8.05432 12.8246 6.88342 11.7187 6.88342 10.3533C6.88342 8.98795 8.05432 7.8821 9.50001 7.8821Z" fill="#FFD74B"/>
+                  </svg>
+                </div>
                 88005558628
               </a>
             </li>
             <li class="contacts-list__item">
               <a class="contacts-list__link btn" href="mailto:mail@htmlacademy.ru">
-                <svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1393 10.4663L11.8089 6.5L16.1393 2.53365L15.5488 1.90264L9.25 7.67188L2.9512 1.90264L2.36069 2.53365L6.69112 6.5L2.36069 10.4663L2.9512 11.0974L7.33084 7.08594L9.25 8.84375L11.1692 7.08594L15.5488 11.0974L16.1393 10.4663ZM1.57597 0.25C0.76695 0.25 0.111115 0.948839 0.111115 1.80786V11.1921C0.111115 12.0525 0.76163 12.75 1.57597 12.75H16.924C17.7331 12.75 18.3889 12.0512 18.3889 11.1921V1.80786C18.3889 0.947478 17.7384 0.25 16.924 0.25H1.57597Z" fill="#FFD74B"/>
+                <div class="contacts-list__img">
+                  <svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1393 10.4663L11.8089 6.5L16.1393 2.53365L15.5488 1.90264L9.25 7.67188L2.9512 1.90264L2.36069 2.53365L6.69112 6.5L2.36069 10.4663L2.9512 11.0974L7.33084 7.08594L9.25 8.84375L11.1692 7.08594L15.5488 11.0974L16.1393 10.4663ZM1.57597 0.25C0.76695 0.25 0.111115 0.948839 0.111115 1.80786V11.1921C0.111115 12.0525 0.76163 12.75 1.57597 12.75H16.924C17.7331 12.75 18.3889 12.0512 18.3889 11.1921V1.80786C18.3889 0.947478 17.7384 0.25 16.924 0.25H1.57597Z" fill="#FFD74B"/>
                   </svg>
+                </div>
                 mail@htmlacademy.ru
               </a>
             </li>
@@ -167,34 +182,46 @@
         <p class="direction__text">Мы&nbsp;не&nbsp;продаем туры и&nbsp;ничего не&nbsp;рекламируем. Люди сами пишут о&nbsp;странах, куда хотели&nbsp;бы отправиться и&nbsp;чем можно там заняться.</p>
         <ul class="direction__list">
           <li class="direction__item card-direction">
-            <img class="card-direction__img" src="img/direction/thailand-mobile.jpg" width="270" height="110" alt="голубое море с двумя небольшими зелёными скалами.">
+            <picture class="card-direction__img">
+              <source media="(min-width: 1200px)" srcset="img/direction/thailand-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/direction/thailand-tablet.jpg">
+              <img src="img/direction/thailand-mobile.jpg" alt="голубое море с двумя небольшими зелёными скалами.">
+            </picture>
             <img class="card-direction__flag" src="img/countries/thailand.png" width="35" height="24" alt="флаг Таиланда.">
-            <a class="card-direction__link" href="#">
+            <div class="card-direction__wrapper" href="#">
               <h3 class="card-direction__title title-small">Таиланд</h3>
               <span class="card-direction__count">18321</span>
               <p class="card-direction__text">Джунгли зовут!</p>
-            </a>
+            </div>
           </li>
           <li class="direction__item card-direction">
-            <img class="card-direction__img" src="img/direction/france-mobile.jpg" width="270" height="110" alt="фактурный невысокий многоквартирный дом с аллеей напротив.">
+            <picture class="card-direction__img">
+              <source media="(min-width: 1200px)" srcset="img/direction/france-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/direction/france-tablet.jpg">
+              <img src="img/direction/france-mobile.jpg" alt="фактурный невысокий многоквартирный дом с аллеей напротив.">
+            </picture>
             <img class="card-direction__flag" src="img/countries/france.png" width="35" height="24" alt="флаг Франции.">
-            <a class="card-direction__link" href="#">
+            <div class="card-direction__wrapper" href="#">
               <h3 class="card-direction__title title-small">Франция</h3>
               <span class="card-direction__count">12518</span>
               <p class="card-direction__text">Трэ бьен, манифик!</p>
-            </a>
+            </div>
           </li>
           <li class="direction__item card-direction">
-            <img class="card-direction__img" src="img/direction/czech-mobile.jpg" width="270" height="110" alt="река с теплоходоим на фоне старого моста и старых разноцветных домов.">
+            <picture class="card-direction__img">
+              <source media="(min-width: 1200px)" srcset="img/direction/czech-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/direction/czech-tablet.jpg">
+              <img src="img/direction/czech-mobile.jpg" alt="река с теплоходоим на фоне старого моста и старых разноцветных домов.">
+            </picture>
             <img class="card-direction__flag" src="img/countries/czechia.png" width="35" height="24" alt="флаг Чехия.">
-            <a class="card-direction__link" href="#">
+            <div class="card-direction__wrapper" href="#">
               <h3 class="card-direction__title title-small">Чехия</h3>
               <span class="card-direction__count">5326</span>
               <p class="card-direction__text">Закоулки старой Европы</p>
-            </a>
+            </div>
           </li>
         </ul>
-        <a class="direction__btn btn btn--primary" href="#">Показать все</a>
+        <a class="direction__btn btn btn--primary" href="form.html">Показать все</a>
       </div>
     </section>
     <section class="companion">
@@ -206,6 +233,9 @@
           <li class="companion__item card-companion">
             <a class="card-companion__link" href="#">
               <div class="card-companion__info">
+                <svg class="card-companion__toolbar" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.5503 3.00922C15.7757 4.87906 9.95203 9.22814 6.23551 15.1929C2.51899 21.1577 1.18146 28.302 2.48848 35.2073C3.7955 42.1126 7.65149 48.2739 13.2908 52.4678C18.9302 56.6618 25.9405 58.5817 32.9298 57.8463C39.9191 57.1109 46.3763 53.7741 51.0193 48.4983C55.6623 43.2226 58.1516 36.3937 57.9929 29.3676C57.8341 22.3415 55.039 15.632 50.1625 10.5713C45.2859 5.51057 38.6846 2.46876 31.6692 2.0498" stroke="#FF8D30" stroke-width="4" stroke-linecap="round"/>
+                </svg>
                 <b class="card-companion__level">99</b>
                 <span class="card-companion__text">level</span>
               </div>
@@ -224,7 +254,7 @@
                   <span class="list-countries__text tooltip__text">Сейшелы</span>
                 </li>
               </ul>
-              <h3 class="card-companion__title title-small">Таня Фирсова</h3>
+              <h3 class="card-companion__title title-small" aria-label="Пользователь оффлайн" aria-expanded="false">Таня Фирсова</h3>
               <ul class="card-companion__list-tags list-tags">
                 <li class="list-tags__item">#ЗОЖ</li>
                 <li class="list-tags__item">#ПП</li>
@@ -252,6 +282,9 @@
           <li class="companion__item card-companion">
             <a class="card-companion__link" href="#">
               <div class="card-companion__info">
+                <svg class="card-companion__toolbar" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.74236 17.9148C2.16557 23.3002 1.37757 29.3683 2.4934 35.2332C3.60922 41.0982 6.57045 46.4529 10.9448 50.5159C15.3192 54.5788 20.8777 57.1372 26.8089 57.8176C32.7402 58.498 38.7336 57.2647 43.9144 54.2979C49.0952 51.3311 53.1921 46.786 55.607 41.3261C58.022 35.8662 58.6285 29.7773 57.3382 23.9483C56.0478 18.1193 52.9282 12.8553 48.4345 8.92466C43.9408 4.99408 38.3084 2.6027 32.3595 2.0996" stroke="#FF8D30" stroke-width="4" stroke-linecap="round"/>
+                  </svg>
                 <b class="card-companion__level">80</b>
                 <span class="card-companion__text">level</span>
               </div>
@@ -266,7 +299,7 @@
                   <span class="list-countries__text tooltip__text">Чехия</span>
                 </li>
               </ul>
-              <h3 class="card-companion__title title-small">Петя Демин</h3>
+              <h3 class="card-companion__title card-companion__title--online title-small">Петя Демин</h3>
               <ul class="card-companion__list-tags list-tags">
                 <li class="list-tags__item">#бургер</li>
                 <li class="list-tags__item">#бар</li>
@@ -291,7 +324,7 @@
             </a>
           </li>
         </ul>
-        <a class="companion__btn btn btn--primary" href="#">Показать всех</a>
+        <a class="companion__btn btn btn--primary" href="catalog.html">Показать всех</a>
       </div>
     </section>
     <section class="profile">
@@ -375,7 +408,7 @@
       <div class="container">
         <h2 class="visually-hidden">Местонахождение</h2>
         <p class="location__address">ул. Большая Конюшенная, 19/8</p>
-        <a class="location__button btn btn--secondary" href="#" target="_blank">Проложить маршрут</a>
+        <a class="location__button btn btn--secondary" href="https://goo.gl/maps/z61GzcFfaVSCYbSt8" target="_blank">Проложить маршрут</a>
       </div>
     </section>
     <section class="map">
@@ -416,7 +449,7 @@
       </li>
       </ul>
       <div class="footer__developed developed">
-        <a class="developed__link" href="https://htmlacademy.ru/" target="_blank">
+        <a class="developed__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
           <span class="developed__text">Разработано</span>
           <span class="visually-hidden">
             сайт Академии.

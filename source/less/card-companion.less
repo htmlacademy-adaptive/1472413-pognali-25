@@ -19,7 +19,16 @@
   &__info {
     .size(60px, 60px);
     .abs(d, 17px, 0, 0, 17px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: @white;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+  }
+
+  &__toolbar {
+    .abs(d, 0, 0, 0, 0);
   }
 
   &__img {
@@ -30,11 +39,24 @@
     .size(100%, 25px);
     margin-top: -11px;
   }
+  /* в обычном состоянии пользователь оффлайн, в aria-label прописано, что пользователь оффлайн, когда пользователь онлайн, добавляется класс-модификатор "--online", при добавлении класса онлайн необходимо поменять текст aria-label */
+  &__title::before {
+    content: "";
+    .abs(d, 7.5px, initial, initial, 53px);
+    .size(6px, 6px);
+    background-color: #F97676;
+    border-radius: 50%;
+  }
 
   &__title {
+    position: relative;
     margin-top: 13px;
     margin-bottom: 15px;
     color: @basic-blue-light;
+
+    &--online::before {
+      background-color: #81E31E;
+    }
   }
 
   &__list-tags {
