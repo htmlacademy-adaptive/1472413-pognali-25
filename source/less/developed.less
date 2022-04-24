@@ -7,14 +7,31 @@
   padding-bottom: 18px;
   border-top: 1px solid #F2F2F2;
 
+  @media (min-width: @tablet-width) {
+    width: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: none;
+  }
+
   &__link {
     width: 270px;
     display: flex;
     justify-content: space-between;
     .resetLink;
+
+    @media (min-width: @tablet-width) {
+      width: auto;
+      justify-content: flex-end;
+    }
   }
 
   &__text {
     color: @gray;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 2px;
+      margin-right: 23px;
+    }
   }
 }

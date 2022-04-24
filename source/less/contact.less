@@ -11,13 +11,28 @@
   .borderRadius;
   background-color: @midnight-blue;
 
+  @media (min-width: @tablet-width) {
+    margin-top: -50px;
+    padding-top: 125px;
+    padding-bottom: 60px;
+  }
+
   &__text {
     .base;
     margin-bottom: 29px;
     color: @white;
 
+    @media (min-width: @tablet-width) {
+      margin-bottom: 65px;
+      .font(28px, 300, 32px, normal);
+    }
+
     & ~ .contact__text {
       margin-bottom: 17px;
+
+      @media (min-width: @tablet-width) {
+        margin-bottom: 40px;
+      }
     }
   }
 
@@ -27,8 +42,13 @@
 
   &__form {
     display: grid;
-    grid-template-columns: 210px 60px;
+    grid-template-columns: 1fr 60px;
     margin-bottom: 29px;
+
+    @media (min-width: @tablet-width) {
+      grid-template-columns: 1fr 80px;
+      margin-bottom: 60px;
+    }
   }
 
   &__input {
@@ -36,14 +56,24 @@
     grid-row: 1 / 1;
     padding-left: 25px;
     padding-right: 70px;
+    .font(18px, 700, 18px, normal);
     border: none;
     .borderRadiusSmallBottom;
     .borderRadiusSmallTop;
+
+    @media (min-width: @tablet-width) {
+      padding-left: 36px;
+      padding-right: 90px;
+    }
 
     &::placeholder {
       .font(18px, 700, 18px, normal);
       color: @gray;
       opacity: 0.3;
+
+      @media (min-width: @tablet-width) {
+        .font(24px, 700, 24px, normal);
+      }
     }
   }
 
@@ -56,12 +86,23 @@
     .borderRadiusSmallBottom;
     .borderRadiusSmallTop;
 
+    @media (min-width: @tablet-width) {
+      .size(80px, 80px);
+      border-top-left-radius: initial;
+      border-bottom-left-radius: initial;
+    }
+
     &::after {
       .abs(d, 39%, 0, 0, calc(100% - 35px));
       content: "";
       .size(13px, 13.5px);
       background-image: url("data:image/svg+xml,%3Csvg width='12' height='14' viewBox='0 0 12 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 7L0 13.0622L0 0.937822L12 7Z' fill='%231D2E5B'/%3E%3C/svg%3E%0A");
       .bg(right center, cover);
+
+      @media (min-width: @tablet-width) {
+        .abs(d, 40%, 0, 0, calc(100% - 45px));
+        .size(14px, 16px);
+      }
     }
   }
 

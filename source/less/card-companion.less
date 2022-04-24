@@ -9,6 +9,11 @@
   margin-bottom: 10px;
   padding-bottom: 23px;
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    padding-bottom: 27px;
+  }
+
   &__link {
     position: relative;
     display: flex;
@@ -32,7 +37,13 @@
   }
 
   &__img {
+    width: 100%;
+    object-fit: cover;
     .borderRadiusSmallTop;
+
+    @media (min-width: @tablet-width) {
+      .size(100%, 285px);
+    }
   }
 
   &__list-countries {
@@ -54,6 +65,11 @@
     margin-bottom: 15px;
     color: @basic-blue-light;
 
+    @media (min-width: @tablet-width) {
+      margin-top: 19px;
+      margin-bottom: 23px;
+    }
+
     &--online::before {
       background-color: #81E31E;
     }
@@ -62,5 +78,9 @@
   &__list-tags {
     margin: 0 auto;
     margin-bottom: 17px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 24px;
+    }
   }
 }

@@ -1,23 +1,70 @@
+@import "_vars";
 @import "_mixins";
 
 .container {
   .base;
   margin: 0 auto;
   padding: 0 10px;
-  max-width: 290px;
+  min-width: 290px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1340px;
+  }
 
   &--header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (min-width: @desktop-width) {
+      justify-content: start;
+    }
   }
 
   &--nav {
     width: 290px;
+
+    @media (min-width: @tablet-width) {
+      width: 708px;
+      padding-left: 57px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: auto;
+    }
   }
 
   &--promo {
     background-image: url(../img/promo-traveller-mobile.png);
     .bg(center 130px, auto);
+
+    @media (min-width: @tablet-width) {
+      background-image: url(../img/promo-traveller-tablet.png);
+      .bg(bottom 280px right 71px, auto);
+    }
+
+    @media (min-width: @desktop-width) {
+      background-image: url(../img/promo-traveller-desktop.png);
+    }
+  }
+
+  &--contact,
+  &--location {
+    @media (min-width: @tablet-width) {
+      max-width: 636px;
+    }
+  }
+
+  &--footer {
+    @media (min-width: @tablet-width) {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 }

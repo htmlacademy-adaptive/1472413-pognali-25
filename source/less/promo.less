@@ -9,14 +9,42 @@
   background-image: url(../img/promo-bg-mobile.jpg);
   .bg(center top, 100% 477px);
 
+  @media (min-width: @tablet-width) {
+    padding-top: 162px;
+    padding-bottom: 0;
+    background-color: #182044;
+    background-image: url(../img/promo-bg-tablet.jpg);
+    .bg(center bottom 140px, 100% 612px);
+  }
+
   &__title {
     margin-bottom: 242px;
     .font(36px, 700, 40px, normal);
     color: @white;
+
+    @media (min-width: @tablet-width) {
+      .font(60px, 700, 70px, normal);
+      margin-bottom: 86px;
+    }
   }
 
   &__list {
     margin-bottom: @standart;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  &__quote {
+    max-width: 160px;
+    margin-left: 25px;
+
+    @media (min-width: @tablet-width) {
+      max-width: 265px;
+      min-height: 397px;
+      margin-left: 32px;
+    }
   }
 
   &__steps {

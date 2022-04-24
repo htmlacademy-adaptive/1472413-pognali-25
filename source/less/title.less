@@ -6,9 +6,19 @@
   margin-bottom: 19px;
   .font(24px, 700, 24px, normal);
   color: @orange;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 55px;
+    .font(45px, 700, 45px, normal);
+  }
 }
 
 .title-small {
   .base;
   .font(21px, 700, 21px, normal);
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 5px;
+    .font(24px, 700, 24px, normal);
+  }
 }

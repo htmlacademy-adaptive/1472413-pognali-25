@@ -2,11 +2,10 @@
 @import "_mixins";
 
 .modal {
-  .abs(d, 16px, 0, 0, 0);
+  .abs(none, 16px, 0, 0, 0);
   .size(270px, 465px);
-  z-index: 3;
+  z-index: 6;
   margin: 0 auto;
-  display: none;
   flex-direction: column;
   align-items: center;
   padding-top: 34px;
@@ -14,6 +13,10 @@
   border-radius: 20px;
   box-shadow: 0 2px 8px rgba(29, 46, 91, 0.14);
   box-sizing: border-box;
+
+  &--open {
+    display: flex;
+  }
 
   &__list {
     flex-grow: 1;

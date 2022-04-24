@@ -21,8 +21,39 @@
     background-color: @yellow-dark;
   }
 
+  &--header {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: flex;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: auto;
+    }
+  }
+
   &--header &__link--first,
   &--header &__link--second {
     display: none;
+
+    @media (min-width: @desktop-width) {
+      display: flex;
+    }
+  }
+
+  &--open {
+    display: flex;
+    position: absolute;
+    width: 270px;
+    top: 274px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media (min-width: @tablet-width) {
+      position: initial;
+      width: auto;
+      transform: none;
+    }
   }
 }
