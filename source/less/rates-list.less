@@ -9,6 +9,28 @@
   .reset;
   counter-reset: list2;
 
+  &::before {
+    content: "";
+    .size(198px, 100%);
+    padding-top: 63px;
+    padding-bottom: 23px;
+    border-radius: 20px;
+    background-color: @lavender-light;
+    .abs(none, -41px, 0, initial, initial);
+    .font(16px, 400, 16px, normal);
+    color: @white;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+
+    @media (min-width: @desktop-width) {
+      .size(446px, 100%);
+      padding-top: 70px;
+      top: -51px;
+    }
+  }
+
   &__item {
     position: relative;
     margin-left: 25px;
@@ -17,12 +39,23 @@
     padding-bottom: 18px;
     border-bottom: 1px solid @gray-light;
 
+    @media (min-width: @tablet-width) {
+      display: flex;
+      justify-content: space-between;
+      margin-right: 35px;
+      padding-top: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 0;
+    }
+
     &:first-child {
       border-top: 1px solid @gray-light;
+    }
 
-      &::after {
-        background-color: @orange;
-      }
+    &:first-child::after {
+      background-color: @orange;
     }
 
     &:last-child::after {
@@ -41,6 +74,24 @@
       .abs(d, 3px, -70px, initial, initial);
       .font(16px, 400, 16px, normal);
       color: @white;
+
+      @media (min-width: @tablet-width) {
+        .abs(d, 0, 0, 0, -90px);
+        .size(68px, 68px);
+        .font(28px, 400, 28px, normal);
+      }
+    }
+  }
+
+  &__service {
+    @media (min-width: @tablet-width) {
+      .font(28px, 300, 28px, normal);
+    }
+  }
+
+  &__price {
+    @media (min-width: @tablet-width) {
+      .font(28px, 300, 28px, normal);
     }
   }
 }

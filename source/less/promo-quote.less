@@ -2,9 +2,7 @@
 @import "_mixins";
 
 .promo-quote {
-  max-width: 160px;
   .base;
-  margin-left: 25px;
   margin-bottom: @standart;
   text-align: left;
   color: @white;
@@ -12,9 +10,26 @@
   &__text {
     .base;
     margin-bottom: 20px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 45px;
+      .font(28px, 300, 33px, normal);
+    }
   }
 
   &__author {
     font-weight: 700;
+
+    & br {
+      display: none;
+
+      @media (min-width: @tablet-width) {
+        display: block;
+      }
+    }
+
+    @media (min-width: @tablet-width) {
+      .font(21px, 700, 25px, normal);
+    }
   }
 }

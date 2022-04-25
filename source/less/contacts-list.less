@@ -9,6 +9,17 @@
   color: @basic-yellow;
   z-index: 3;
 
+  @media (min-width: @tablet-width) {
+    .font(28px, 700, 28px, normal);
+    text-transform: uppercase;
+  }
+
+  &__item--desktop:not(:last-child) {
+    @media (min-width: @desktop-width) {
+      margin-right: 110px;
+    }
+  }
+
   &__link {
     display: flex;
     align-items: center;
@@ -22,6 +33,21 @@
     .size(45px, 45px);
     background-color: #121936;
     border-radius: 50%;
+
+    & svg {
+      @media (min-width: @tablet-width) {
+        .size(27px, 26px);
+      }
+    }
+
+    @media (min-width: @tablet-width) {
+      .size(68px, 68px);
+    }
+  }
+
+  &__img--desktop {
+    @media (min-width: @desktop-width) {
+      margin-right: 31px;
+    }
   }
 }
-

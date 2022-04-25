@@ -1,19 +1,124 @@
+@import "_vars";
 @import "_mixins";
 
 .container {
   .base;
   margin: 0 auto;
   padding: 0 10px;
-  max-width: 290px;
+  min-width: 290px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1340px;
+  }
 
   &--header {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
+
+    @media (min-width: @desktop-width) {
+      justify-content: start;
+    }
+  }
+
+  &--nav {
+    width: 290px;
+
+    @media (min-width: @tablet-width) {
+      width: 708px;
+      padding-left: 57px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: auto;
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   &--promo {
-    background-image: url(../img/promo-traveller-mobile.png);
+    background-image: url("../img/promo-traveller-mobile.png");
     .bg(center 130px, auto);
+
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/promo-traveller-tablet.png");
+      .bg(bottom 280px right 71px, auto);
+    }
+
+    @media (min-width: @desktop-width) {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 100px 250px;
+      padding-top: 209px;
+      padding-bottom: 123px;
+      background-image: url("../img/promo-traveller-desktop.png");
+      .bg(right 355px bottom, 431px 640px);
+    }
+  }
+
+  &--service {
+    @media (min-width: @desktop-width) {
+      padding-top: 190px;
+      padding-bottom: 163px;
+      background-image: url("../img/service-bg-desktop.png"), url("../img/companion-back.png");
+      background-position: bottom left calc(100% - 10px), left 10px top 128px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--direction {
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/direction-bg-flags.png");
+      .bg(top left calc(100% - 10px), auto);
+    }
+
+    @media (min-width: @desktop-width) {
+      display: grid;
+      grid-template-columns: minmax(50%, 632px) 1fr;
+      column-gap: 144px;
+      padding-top: 75px;
+      padding-bottom: 138px;
+      background-image: url("../img/direction-bg-flags.png");
+      .bg(top right 10px, auto);
+    }
+  }
+
+  &--companion {
+    @media (min-width: @desktop-width) {
+      display: grid;
+      grid-template-columns: 1fr minmax(570px, 630px);
+      column-gap: 60px;
+    }
+  }
+
+  &--contact,
+  &--location {
+    @media (min-width: @tablet-width) {
+      max-width: 636px;
+    }
+
+    @media (min-width: @desktop-width) {
+      max-width: 1340px;
+    }
+  }
+
+  &--location {
+    @media (min-width: @desktop-width) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &--footer {
+    @media (min-width: @tablet-width) {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 }

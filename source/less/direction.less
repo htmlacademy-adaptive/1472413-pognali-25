@@ -10,15 +10,70 @@
   .borderRadius;
   z-index: 6;
 
+  @media (min-width: @tablet-width) {
+    margin-top: -50px;
+    padding-top: 123px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 176px;
+    padding-bottom: 0;
+    background-image: none;
+  }
+
   &__text {
     max-width: 201px;
     margin-bottom: 60px;
     margin-left: @margin-left;
+
+    @media (min-width: @tablet-width) {
+      max-width: 50%;
+      margin-bottom: 104px;
+      margin-left: @margin-left-m;
+      .font(28px, 300, 33px, normal);
+    }
+
+    @media (min-width: @desktop-width) {
+      max-width: 353px;
+      margin-top: 0;
+      margin-bottom: 98px;
+      margin-left: 0;
+    }
   }
 
   &__list {
+    position: relative;
     .reset;
     .base;
+
+    @media (min-width: @tablet-width) {
+      max-width: 89.5%;
+      margin: 0 auto;
+      margin-bottom: 46px;
+    }
+
+    @media (min-width: @desktop-width) {
+      grid-area: 1 / 1 / 4 / 2;
+      max-width: initial;
+      margin: 0;
+      margin-left: 72px;
+    }
+
+    &::after {
+      @media (min-width: @tablet-width) {
+        content: "";
+        .size(141px, 141px);
+        .abs(d, -38px, 0, 0, -36px);
+        background-color: @lavender-light;
+        .borderRadiusSmallBottom;
+        .borderRadiusSmallTop;
+      }
+
+      @media (min-width: @desktop-width) {
+        top: -72px;
+        left: -72px;
+      }
+    }
   }
 
   &__btn {
@@ -33,10 +88,37 @@
       .size(13px, 13.5px);
       background-image: url("data:image/svg+xml,%3Csvg width='12' height='14' viewBox='0 0 12 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 7L0 13.0622L0 0.937822L12 7Z' fill='%231D2E5B'/%3E%3C/svg%3E%0A");
       .bg(right center, cover);
+
+      @media (min-width: @tablet-width) {
+        top: 45%;
+      }
+    }
+
+    @media (min-width: @tablet-width) {
+      max-width: 90%;
+      margin: 0 auto;
+      padding-top: 31px;
+      padding-bottom: 27px;
+      .font(24px, 700, 24px, normal);
+    }
+
+    @media (min-width: @desktop-width) {
+      align-self: flex-start;
+      grid-area: 3 / 2 / 3 / 3;
+      max-width: 275px;
+      margin: 0;
     }
   }
 
   &__title {
     margin-left: @margin-left;
+
+    @media (min-width: @tablet-width) {
+      margin-left: @margin-left-m;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 0;
+    }
   }
 }

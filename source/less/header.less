@@ -8,13 +8,26 @@
   padding-top: 19px;
   padding-bottom: 19px;
   background-color: transparent;
-  z-index: 9;
+  z-index: 10;
 
   &__logo {
     max-height: 15px;
+
+    @media (min-width: @tablet-width) {
+      margin-right: 145px;
+      max-height: none;
+    }
   }
 
-  &__nav {
-    max-height: 15px;
+  &__button {
+    .size(25px, 11px);
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
   }
+}
+
+.header--theme-light {
+  background-color: @white;
 }

@@ -1,0 +1,33 @@
+@import "_vars";
+@import "_mixins";
+
+.site-list {
+  position: relative;
+  .reset;
+  .base;
+  .font(30px, 500, 35px, normal);
+  color: @midnight-blue;
+  text-transform: uppercase;
+
+  &::before {
+    content: "";
+    .size(60px, 2px);
+    .abs(none, 50%, 0, 0, -105px);
+    background-color: @white;
+    transform: translateY(-50%);
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
+  }
+
+  &__link {
+    .resetLink;
+  }
+
+  &__item:not(:last-child) {
+    @media (min-width: @desktop-width) {
+      margin-right: 34px;
+    }
+  }
+}

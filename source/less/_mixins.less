@@ -1,3 +1,5 @@
+@import "_vars";
+
 .base() {
   margin: 0;
   padding: 0;
@@ -19,22 +21,37 @@
 }
 
 .borderRadius() {
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: @standart;
+  border-bottom-right-radius: @standart;
+
+  @media (min-width: @tablet-width) {
+    border-bottom-left-radius: @big;
+    border-bottom-right-radius: @big;
+  }
 }
 
 .borderRadiusSmallBottom() {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
 }
 
 .borderRadiusSmallTop() {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
 }
 
-/* функции */
-/* шрифт */
+/* functions */
+/* font */
 .font(@fz, @fw, @lh, @fs) {
   font-family: "BloggerSans", sans-serif;
   font-size: @fz;
@@ -43,22 +60,23 @@
   font-style: @fs;
 }
 
-/* позиционирование */
+/* positioning */
 .abs(@d:block, @t, @r, @b, @l) {
   position: absolute;
+  display: @d;
   top: @t;
   right: @r;
   bottom: @b;
   left: @l;
 }
 
-/* размеры */
+/* sizes */
 .size(@w, @h) {
   width: @w;
   height: @h;
 }
 
-/* фон */
+/* backgrpund */
 .bg(@bgp, @bgz) {
   background-position: @bgp;
   background-size: @bgz;
