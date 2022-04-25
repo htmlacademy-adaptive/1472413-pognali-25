@@ -17,6 +17,11 @@
     padding-bottom: 84px;
   }
 
+  @media (min-width: @desktop-width) {
+    padding-top: 116px;
+    padding-bottom: 56px;
+  }
+
   &__address {
     position: relative;
     .base;
@@ -33,6 +38,15 @@
       .font(28px, 700, 28px, normal);
     }
 
+    @media (min-width: @desktop-width) {
+      margin-right: 147px;
+      margin-bottom: 0;
+      margin-left: 225px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-left: 121px;
+    }
+
     &::before {
       display: block;
       content: "";
@@ -46,6 +60,11 @@
       @media (min-width: @tablet-width) {
         .size(68px, 68px);
         .bg(center, 32px 32px);
+      }
+
+      @media (min-width: @desktop-width) {
+        .size(90px, 90px);
+        .bg(center, 42px 42px);
       }
     }
 
@@ -68,6 +87,11 @@
     @media (min-width: @tablet-width) {
       padding: 25px;
       .font(24px, 700, 24px, normal);
+    }
+
+    @media (min-width: @desktop-width) {
+      width: auto;
+      min-width: 324px;
     }
 
     &::after {

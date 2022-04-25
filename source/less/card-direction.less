@@ -10,20 +10,37 @@
     grid-template-columns: 1fr 30%;
   }
 
+  @media (min-width: @desktop-width) {
+    max-width: 560px;
+    grid-template-columns: 1fr 33%;
+  }
+
+  &:last-child::after {
+    @media (min-width: @desktop-width) {
+      content: "";
+      z-index: 3;
+      .size(100%, 100%);
+      .abs(d, 0, 0, 0, 0);
+      background-image: url("../img/fade.png");
+      .bg(center bottom, auto);
+    }
+  }
+
   &__img {
     position: relative;
     display: block;
     z-index: 1;
-    .size(270px, 110px);
+    .size(100%, 110px);
+    overflow: hidden;
 
     @media (min-width: @tablet-width) {
       grid-column: 2 / 3;
-      .size(186px, 140px);
-      overflow: hidden;
+      .size(100%, 140px);
     }
 
     & img {
       display: block;
+      width: 100%;
       .borderRadiusSmallTop;
 
       @media (min-width: @tablet-width) {

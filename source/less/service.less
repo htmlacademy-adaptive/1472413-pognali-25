@@ -21,6 +21,12 @@
     background-position: bottom 89px left calc(100% - 10px), center top 235px;
   }
 
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin-top: -60px;
+    background-image: none;
+  }
+
   &__text {
     max-width: 211px;
     margin-bottom: 20px;
@@ -34,6 +40,12 @@
       .font(28px, 300, 33px, normal);
     }
 
+    @media (min-width: @desktop-width) {
+      max-width: 50%;
+      margin-bottom: 38px;
+      margin-left: @margin-left-xl;
+    }
+
     &--bold {
       display: block;
       margin-bottom: 0;
@@ -42,6 +54,11 @@
       @media (min-width: @tablet-width) {
         margin-bottom: 52px;
         .font(21px, 700, 25px, normal);
+      }
+
+      @media (min-width: @desktop-width) {
+        max-width: 425px;
+        margin-bottom: 85px;
       }
     }
   }
@@ -63,6 +80,10 @@
       max-width: 276px;
       margin-left: @margin-left-m;
     }
+
+    @media (min-width: @desktop-width) {
+      margin-left: @margin-left-xl;
+    }
   }
 
   &__title {
@@ -70,6 +91,10 @@
 
     @media (min-width: @tablet-width) {
       margin-left: @margin-left-m;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: @margin-left-xl;
     }
   }
 }

@@ -3,7 +3,6 @@
 
 .btn {
   display: block;
-  text-align: center;
   .resetLink;
   .resetButton;
   box-sizing: border-box;
@@ -41,5 +40,10 @@
     color: @basic-blue-light;
     background-color: @basic-yellow;
     border-radius: 20px;
+
+    @media (min-width: @desktop-width) {
+      padding-top: 29px;
+      padding-bottom: 27px;
+    }
   }
 }
