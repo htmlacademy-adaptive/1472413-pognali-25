@@ -2,8 +2,8 @@
 @import "_mixins";
 
 .service {
-  margin-top: -280px;
-  padding-top: 315px;
+  margin-top: -275px;
+  padding-top: 300px;
   padding-bottom: 82px;
   position: relative;
   z-index: 7;
@@ -19,6 +19,7 @@
     padding-bottom: 89px;
     background-image: url("../img/service-bg-tablet.png"), url("../img/service-back-tablet.png");
     background-position: bottom 89px left calc(100% - 10px), center top 235px;
+    background-size: auto, calc(100% - 20px);
   }
 
   @media (min-width: @desktop-width) {
@@ -28,13 +29,13 @@
   }
 
   &__text {
-    max-width: 211px;
+    margin-right: 55px;
     margin-bottom: 20px;
     margin-left: @margin-left;
     color: @white;
 
     @media (min-width: @tablet-width) {
-      max-width: 45%;
+      max-width: 41%;
       margin-bottom: 31px;
       margin-left: @margin-left-m;
       .font(28px, 300, 33px, normal);

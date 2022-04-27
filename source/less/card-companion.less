@@ -51,16 +51,15 @@
     margin-top: -11px;
   }
   /* в обычном состоянии пользователь оффлайн, в aria-label прописано, что пользователь оффлайн, когда пользователь онлайн, добавляется класс-модификатор "--online", при добавлении класса онлайн необходимо поменять текст aria-label */
-  &__title::before {
+  &__title span::before {
     content: "";
-    .abs(d, 7.5px, initial, initial, 53px);
+    .abs(d, 12px, initial, initial, -15px);
     .size(6px, 6px);
     background-color: #f97676;
     border-radius: 50%;
   }
 
   &__title {
-    position: relative;
     margin-top: 13px;
     margin-bottom: 15px;
     color: @basic-blue-light;
@@ -70,7 +69,11 @@
       margin-bottom: 23px;
     }
 
-    &--online::before {
+    & span {
+      position: relative;
+    }
+
+    &--online span::before {
       background-color: #81e31e;
     }
   }

@@ -22,10 +22,9 @@
     z-index: 9;
     padding-top: 0;
     background-color: @basic-blue;
-    background-image: url("../img/promo-bg-desktop.jpg");
-    .bg(center bottom, 100% 750px);
-    border-bottom-left-radius: 75px;
-    border-bottom-right-radius: 75px;
+    background-image: url("../img/promo-bg-desktop.png");
+    .bg(center bottom -5px, 100% 750px);
+    .borderRadius;
   }
 
   &__title {
@@ -46,6 +45,7 @@
   }
 
   &__list {
+    justify-content: center;
     margin-bottom: @standart;
 
     @media (min-width: @tablet-width) {
@@ -54,16 +54,17 @@
   }
 
   &__quote {
-    max-width: 160px;
+    margin-right: 88px;
     margin-left: 25px;
 
     @media (min-width: @tablet-width) {
-      max-width: 265px;
+      max-width: 35%;
       min-height: 397px;
       margin-left: 32px;
     }
 
     @media (min-width: @desktop-width) {
+      max-width: 290px;
       align-self: center;
       min-height: initial;
       margin-right: 23px;

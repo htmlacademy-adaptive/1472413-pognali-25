@@ -19,16 +19,16 @@
     <div class="container container--header">
       <a class="header__logo logo">
 <!-- через js добавляется display:none, при классе header--theme-light у header и при открытии меню -->
-        <picture class="logo__img">
+        <picture>
           <source media="(min-width: 1200px)" srcset="img/icons/logo-full.svg">
           <source media="(min-width: 768px)" srcset="img/icons/logo-full.svg">
-          <img src="img/icons/logo-mobile.svg" alt="логотип сайта Погнали">
+          <img class="logo__img" src="img/icons/logo-mobile.svg" alt="логотип сайта Погнали">
         </picture>
 <!-- через js добавляется display:block, при классе header--theme-light у header и при открытии меню -->
-        <picture class="logo__img-dark">
+        <picture>
           <source media="(min-width: 1200px)" srcset="img/icons/logo-full-dark.svg">
           <source media="(min-width: 768px)" srcset="img/icons/logo-full-dark.svg">
-          <img src="img/icons/logo-mobile-dark.svg" alt="логотип сайта Погнали">
+          <img class="logo__img-dark" src="img/icons/logo-mobile-dark.svg" alt="логотип сайта Погнали">
         </picture>
       </a>
 <!-- через js добавляется класс burger--dark, если у header есть класс header--theme-light -->
@@ -181,7 +181,7 @@
     <section class="service">
       <div class="container container--service">
         <h2 class="service__title title">О&nbsp;сервисе</h2>
-        <p class="service__text">Любое путешествие веселее с&nbsp;попутчиками, которые на&nbsp;одной волне с&nbsp;тобой! Делитесь своими идеями путешествий и черпайте вдохновение в&nbsp;чужих.</p>
+        <p class="service__text">Любое путешествие веселее с&nbsp;попутчиками, которые на одной волне с&nbsp;тобой!&nbsp;Делитесь своими идеями путешествий и черпайте вдохновение в&nbsp;чужих.</p>
         <b class="service__text service__text--bold">А&nbsp;если найдете кого-то близкого&nbsp;по&nbsp;духу&nbsp;&mdash; скорее зовите&nbsp;в&nbsp;совместный трип!</b>
         <a class="service__button btn btn--primary" href="#">Подробнее</a>
       </div>
@@ -192,10 +192,10 @@
         <p class="direction__text">Мы&nbsp;не&nbsp;продаем туры и&nbsp;ничего не&nbsp;рекламируем. Люди сами пишут о&nbsp;странах, куда хотели&nbsp;бы отправиться и&nbsp;чем можно там заняться.</p>
         <ul class="direction__list">
           <li class="direction__item card-direction">
-            <picture class="card-direction__img">
+            <picture>
               <source media="(min-width: 1200px)" srcset="img/direction/thailand-desktop.jpg">
               <source media="(min-width: 768px)" srcset="img/direction/thailand-tablet.jpg">
-              <img src="img/direction/thailand-mobile.jpg" alt="голубое море с двумя небольшими зелёными скалами.">
+              <img class="card-direction__img" src="img/direction/thailand-mobile.jpg" alt="голубое море с двумя небольшими зелёными скалами.">
             </picture>
             <img class="card-direction__flag" src="img/countries/thailand.png" width="35" height="24" alt="флаг Таиланда.">
             <div class="card-direction__wrapper" href="#">
@@ -205,10 +205,10 @@
             </div>
           </li>
           <li class="direction__item card-direction">
-            <picture class="card-direction__img">
+            <picture>
               <source media="(min-width: 1200px)" srcset="img/direction/france-desktop.jpg">
               <source media="(min-width: 768px)" srcset="img/direction/france-tablet.jpg">
-              <img src="img/direction/france-mobile.jpg" alt="фактурный невысокий многоквартирный дом с аллеей напротив.">
+              <img class="card-direction__img" src="img/direction/france-mobile.jpg" alt="фактурный невысокий многоквартирный дом с аллеей напротив.">
             </picture>
             <img class="card-direction__flag" src="img/countries/france.png" width="35" height="24" alt="флаг Франции.">
             <div class="card-direction__wrapper" href="#">
@@ -218,10 +218,10 @@
             </div>
           </li>
           <li class="direction__item card-direction">
-            <picture class="card-direction__img">
+            <picture>
               <source media="(min-width: 1200px)" srcset="img/direction/czech-desktop.jpg">
               <source media="(min-width: 768px)" srcset="img/direction/czech-tablet.jpg">
-              <img src="img/direction/czech-mobile.jpg" alt="река с теплоходоим на фоне старого моста и старых разноцветных домов.">
+              <img class="card-direction__img" src="img/direction/czech-mobile.jpg" alt="река с теплоходоим на фоне старого моста и старых разноцветных домов.">
             </picture>
             <img class="card-direction__flag" src="img/countries/czechia.png" width="35" height="24" alt="флаг Чехия.">
             <div class="card-direction__wrapper" href="#">
@@ -237,8 +237,8 @@
     <section class="companion">
       <div class="container container--companion">
         <h2 class="companion__title title">Попутчики</h2>
-        <p class="companion__text">Все мы&nbsp;индивидуальны и&nbsp;у каждого свой взгляд на идеальный отдых. Одному нужен пляж и&nbsp;коктейль, а&nbsp;другому маршрут для&nbsp;хайкинга.</p>
-        <b class="companion__text companion__text--bold">Теперь можно легко<br>найти единомышленников!</b>
+        <p class="companion__text">Все мы&nbsp;индивидуальны и&nbsp;у каждого свой взгляд на идеальный отдых. Одному нужен&nbsp;пляж и&nbsp;коктейль, а другому&nbsp;маршрут для&nbsp;хайкинга.</p>
+        <b class="companion__text companion__text--bold">Теперь можно легко<br> найти единомышленников!</b>
         <ul class="companion__list">
           <li class="companion__item card-companion">
             <a class="card-companion__link" href="#">
@@ -264,7 +264,9 @@
                   <span class="list-countries__text tooltip__text">Сейшелы</span>
                 </li>
               </ul>
-              <h3 class="card-companion__title title-small" aria-label="Пользователь оффлайн" aria-expanded="false">Таня Фирсова</h3>
+              <h3 class="card-companion__title title-small" aria-label="Пользователь оффлайн" aria-expanded="false">
+                <span>Таня Фирсова</span>
+              </h3>
               <ul class="card-companion__list-tags list-tags">
                 <li class="list-tags__item">#ЗОЖ</li>
                 <li class="list-tags__item">#ПП</li>
@@ -325,7 +327,9 @@
                   <span class="list-countries__text tooltip__text">Чехия</span>
                 </li>
               </ul>
-              <h3 class="card-companion__title card-companion__title--online title-small">Петя Демин</h3>
+              <h3 class="card-companion__title card-companion__title--online title-small">
+                <span>Петя Демин</span>
+              </h3>
               <ul class="card-companion__list-tags list-tags">
                 <li class="list-tags__item">#бургер</li>
                 <li class="list-tags__item">#бар</li>
@@ -421,14 +425,14 @@
     <section class="contact">
       <div class="container container--contact">
         <h2 class="contact__title title">Заинтересовались?</h2>
-        <p class="contact__text">Зарегистрируйтесь, это быстро и&nbsp;бесплатно! Уже&nbsp;зарегистрированы? Тогда скорее <a class="contact__link" href="#">авторизуйтесь</a>.</p>
+        <p class="contact__text">Зарегистрируйтесь,<br> это быстро и&nbsp;бесплатно! Уже&nbsp;зарегистрированы? Тогда скорее&nbsp;<a class="contact__link" href="#">авторизуйтесь</a>.</p>
         <form class="contact__form" action="https://echo.htmlacademy.ru" method="POST">
           <input class="contact__input" type="text" placeholder="E-mail" name="email">
           <button class="contact__button btn btn--primary" type="submit">
             <span class="contact__button-text">Регистрация</span>
           </button>
         </form>
-        <p class="contact__text">Остались вопросы? Мы&nbsp;с&nbsp;радостью на&nbsp;них ответим!</p>
+        <p class="contact__text">Остались вопросы?<br> Мы&nbsp;с&nbsp;радостью на&nbsp;них ответим!</p>
         <ul class="contact__list contacts-list">
           <li class="contacts-list__item contacts-list__item--desktop">
             <a class="contacts-list__link btn" href="tel:+88005558628">
@@ -469,10 +473,10 @@
   <footer class="footer">
     <div class="container container--footer">
       <a class="footer__logo logo">
-        <picture class="logo__img">
+        <picture>
           <source media="(min-width: 1200px)" srcset="img/icons/logo-full-dark.svg">
           <source media="(min-width: 768px)" srcset="img/icons/logo-full-dark.svg">
-          <img src="img/icons/logo-mobile-dark.svg" alt="логотип сайта Погнали">
+          <img class="logo__img" src="img/icons/logo-mobile-dark.svg" alt="логотип сайта Погнали">
         </picture>
       </a>
       <ul class="footer__social social">

@@ -43,6 +43,12 @@
         margin-bottom: 40px;
       }
     }
+
+    & br {
+      @media (min-width: @tablet-width) {
+        display: none;
+      }
+    }
   }
 
   &__link {
@@ -61,7 +67,8 @@
 
     @media (min-width: @desktop-width) {
       grid-template-columns: 1fr 330px;
-      margin-bottom: 70px;
+      max-width: 1174px;
+      margin: 0 auto 70px;
     }
   }
 

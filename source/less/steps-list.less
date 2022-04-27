@@ -134,7 +134,9 @@
     }
 
     &:last-child::after {
-      right: 33px;
+      @media (min-width: @desktop-width) {
+        right: 33px;
+      }
     }
   }
 

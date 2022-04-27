@@ -30,27 +30,18 @@
     position: relative;
     display: block;
     z-index: 1;
-    .size(100%, 110px);
+    .size(100%, 100%);
     overflow: hidden;
+    .borderRadiusSmallTop;
 
     @media (min-width: @tablet-width) {
       grid-column: 2 / 3;
       .size(100%, 140px);
-    }
-
-    & img {
-      display: block;
-      width: 100%;
-      .borderRadiusSmallTop;
-
-      @media (min-width: @tablet-width) {
-        .size(186px, 140px);
-        object-fit: cover;
-        object-position: right;
-        border-top-left-radius: initial;
-        border-bottom-right-radius: 20px;
-        border-bottom-left-radius: initial;
-      }
+      object-fit: cover;
+      object-position: right;
+      border-top-left-radius: initial;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: initial;
     }
   }
 
@@ -78,7 +69,7 @@
   }
 
   &__flag {
-    .abs(d, 88px, 0, 45%, 25px);
+    .abs(d, initial, 0, 78px, 25px);
     z-index: 3;
 
     @media (min-width: @tablet-width) {
