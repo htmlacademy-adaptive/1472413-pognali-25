@@ -4,13 +4,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="fonts/bloggersans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/bloggersans-light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/bloggersans-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <title>Погнили! | Главная страница</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon32.ico"> <!-- 32×32 -->
   <link rel="icon" href="favicon16.ico"> <!-- 16×16 -->
   <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon/apple.png"> <!-- 180×180 -->
-  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="manifest" href="manifest.json">
+  <script async src="lazysizes.min.js"></script>
+  <script defer src="script.js"></script>
 </head>
 <body class="page__body">
   <!-- header -->
@@ -20,15 +25,15 @@
       <a class="header__logo logo">
 <!-- через js добавляется display:none, при классе header--theme-light у header и при открытии меню -->
         <picture>
-          <source media="(min-width: 1200px)" srcset="img/icons/logo-full.svg">
-          <source media="(min-width: 768px)" srcset="img/icons/logo-full.svg">
-          <img class="logo__img" src="img/icons/logo-mobile.svg" alt="логотип сайта Погнали">
+          <source media="(min-width: 1200px)" srcset="img/logo/logo-full.svg">
+          <source media="(min-width: 768px)" srcset="img/logo/logo-full.svg">
+          <img class="logo__img" src="img/logo/logo-mobile.svg" alt="логотип сайта Погнали">
         </picture>
 <!-- через js добавляется display:block, при классе header--theme-light у header и при открытии меню -->
         <picture>
-          <source media="(min-width: 1200px)" srcset="img/icons/logo-full-dark.svg">
-          <source media="(min-width: 768px)" srcset="img/icons/logo-full-dark.svg">
-          <img class="logo__img-dark" src="img/icons/logo-mobile-dark.svg" alt="логотип сайта Погнали">
+          <source media="(min-width: 1200px)" srcset="img/logo/logo-full-dark.svg">
+          <source media="(min-width: 768px)" srcset="img/logo/logo-full-dark.svg">
+          <img class="logo__img-dark" src="img/logo/logo-mobile-dark.svg" alt="логотип сайта Погнали">
         </picture>
       </a>
 <!-- через js добавляется класс burger--dark, если у header есть класс header--theme-light -->
@@ -196,7 +201,7 @@
               <source type="image/webp" media="(min-width: 768px)" srcset="img/direction/thailand.webp 1x, img/direction/thailand@2x.webp 2x">
               <source type="image/webp" srcset="img/direction/thailand-mobile.webp 1x, img/direction/thailand-mobile@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/direction/thailand.png 1x, img/direction/thailand@2x.png 2x">
-              <img class="card-direction__img" src="img/direction/thailand-mobile.png 1x, img/direction/thailand-mobile@2x.png 2x" alt="голубое море с двумя небольшими зелёными скалами.">
+              <img class="card-direction__img lazyload" src="img/direction/thailand-mobile.png 1x, img/direction/thailand-mobile@2x.png 2x" alt="голубое море с двумя небольшими зелёными скалами.">
             </picture>
             <img class="card-direction__flag" src="img/countries/thailand.png" width="35" height="24" alt="флаг Таиланда.">
             <div class="card-direction__wrapper" href="#">
@@ -256,7 +261,7 @@
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/avatars/avatar-1-285x285.webp 1x, img/avatars/avatar-1-285x285@2x.webp 2x">
                 <source type="image/webp" srcset="img/avatars/avatar-1.webp 1x, img/avatars/avatar-1@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/avatars/avatar-1-285x285.png 1x, img/avatars/avatar-1-285x285@2x.png 2x">
-                <img class="card-companion__img" src="img/avatars/avatar-1.png 1x, img/avatars/avatar-1@2x.png 2x" alt="аватарка пользователя.">
+                <img class="card-companion__img" src="img/avatars/avatar-1.png" srcset="img/avatars/avatar-1@2x.png 2x" alt="аватарка пользователя.">
               </picture>
               <ul class="card-companion__list-countries list-countries">
                 <li class="list-countries__item tooltip">
@@ -410,30 +415,30 @@
           </svg>
           Показать тарифы для&nbsp;бизнеса
         </button>
-<!-- при нажатии на кнопку добавляется класс modal--open -->
-        <div class="profile__modal modal">
-          <h2 class="modal__title title">Бизнес-тарифы</h2>
-          <dl class="modal__list">
-            <div class="modal__item">
-              <dt class="modal__service">Реклама у&nbsp;блоггера</dt>
-              <dd class="modal__price">300&nbsp;000&nbsp;руб./пост</dd>
-            </div>
-            <div class="modal__item">
-              <dt class="modal__service">Накрутка подписчиков</dt>
-              <dd class="modal__price">от&nbsp;1&nbsp;руб./лайк</dd>
-            </div>
-            <div class="modal__item">
-              <dt class="modal__service">Лайки от&nbsp;ботов</dt>
-              <dd class="modal__price">от&nbsp;20&nbsp;коп./лайк</dd>
-            </div>
-            <div class="modal__item">
-              <dt class="modal__service">Ваш продакт-плейсмент</dt>
-              <dd class="modal__price">Индивидуально</dd>
-            </div>
-          </dl>
-          <button class="modal__button btn" type="button">Закрыть окно</button>
-        </div>
       </div>
+    </section>
+    <!-- при нажатии на кнопку добавляется класс modal--open -->
+    <section class="modal">
+      <h2 class="modal__title title">Бизнес-тарифы</h2>
+      <dl class="modal__list">
+        <div class="modal__item">
+          <dt class="modal__service">Реклама у&nbsp;блоггера</dt>
+          <dd class="modal__price">300&nbsp;000&nbsp;руб./пост</dd>
+        </div>
+        <div class="modal__item">
+          <dt class="modal__service">Накрутка подписчиков</dt>
+          <dd class="modal__price">от&nbsp;1&nbsp;руб./лайк</dd>
+        </div>
+        <div class="modal__item">
+          <dt class="modal__service">Лайки от&nbsp;ботов</dt>
+          <dd class="modal__price">от&nbsp;20&nbsp;коп./лайк</dd>
+        </div>
+        <div class="modal__item">
+          <dt class="modal__service">Ваш продакт-плейсмент</dt>
+          <dd class="modal__price">Индивидуально</dd>
+        </div>
+      </dl>
+      <button class="modal__button btn" type="button">Закрыть окно</button>
     </section>
     <section class="contact">
       <div class="container container--contact">
@@ -487,9 +492,9 @@
     <div class="container container--footer">
       <a class="footer__logo logo">
         <picture>
-          <source media="(min-width: 1200px)" srcset="img/icons/logo-full-dark.svg">
-          <source media="(min-width: 768px)" srcset="img/icons/logo-full-dark.svg">
-          <img class="logo__img" src="img/icons/logo-mobile-dark.svg" alt="логотип сайта Погнали">
+          <source media="(min-width: 1200px)" srcset="img/logo/logo-full-dark.svg">
+          <source media="(min-width: 768px)" srcset="img/logo/logo-full-dark.svg">
+          <img class="logo__img" src="img/logo/logo-mobile-dark.svg" alt="логотип сайта Погнали">
         </picture>
       </a>
       <ul class="footer__social social">
