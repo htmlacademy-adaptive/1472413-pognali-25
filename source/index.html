@@ -14,13 +14,13 @@
   <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon/apple.png"> <!-- 180×180 -->
   <link rel="manifest" href="manifest.json">
-  <script async src="lazysizes.min.js"></script>
-  <script defer src="script.js"></script>
+  <script async src="js/lazysizes.min.js"></script>
+  <script defer src="js/script.js"></script>
 </head>
 <body class="page__body">
   <!-- header -->
-  <!-- добавляется класс header--theme-light через js при скролле страницв-->
-  <header class="header">
+  <!-- добавляется класс header--theme-light через js при скролле страницы -->
+  <header class="header header--no-js">
     <div class="container container--header">
       <a class="header__logo logo">
 <!-- через js добавляется display:none, при классе header--theme-light у header и при открытии меню -->
@@ -42,11 +42,11 @@
         <span class="visually-hidden">Меню.</span>
       </button>
       <!-- при нажатии на кнопку открытия меню, добавляется класс nav--open -->
-      <div class="header__nav nav">
+      <div class="header__nav nav nav--open">
         <div class="container container--nav">
           <ul class="nav__list site-list">
             <li class="site-list__item">
-              <a class="site-list__link" href="#service">О&nbsp;сервисе</a>
+              <a class="site-list__link">О&nbsp;сервисе</a>
             </li>
             <li class="site-list__item">
               <a class="site-list__link" href="form.html">Направления</a>
@@ -57,10 +57,10 @@
           </ul>
           <ul class="nav__list-contact contacts-list">
             <li class="contacts-list__item">
-              <a class="contacts-list__link btn" href="tel:+88005558628">
+              <a class="contacts-list__link btn" href="tel:+78005558628">
                 <div class="contacts-list__img">
-                  <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.50001 1.08615C6.70356 1.08615 3.90039 1.55882 2.88328 2.50092C2.0394 3.28252 1.7581 4.66329 1.66328 5.53753C1.66328 5.53753 1.65021 5.62393 1.65021 5.66109C1.65021 6.00391 1.94451 6.27887 2.30433 6.27887C2.34684 6.27887 3.92008 6.15837 4.86857 6.08425C4.8914 6.08112 4.9144 6.07806 4.93722 6.07191C5.29049 6.0627 5.57511 5.7908 5.57511 5.45413L5.57828 4.237C5.57828 3.86014 5.9022 3.55737 6.30126 3.55737H12.6987C13.0979 3.55737 13.4218 3.86011 13.4218 4.237L13.425 5.45413C13.425 5.7908 13.7096 6.0627 14.0628 6.07191C14.0855 6.0781 14.1085 6.08112 14.1316 6.08425C15.0802 6.15834 16.6534 6.27887 16.6957 6.27887C17.0554 6.27887 17.3499 6.00391 17.3499 5.66109C17.3499 5.62393 17.3369 5.53753 17.3369 5.53753C17.242 4.66329 16.961 3.28255 16.1171 2.50092C15.0996 1.55882 12.2965 1.08615 9.50001 1.08615ZM9.50001 9.11773C8.77717 9.11773 8.1917 9.67064 8.1917 10.3533C8.1917 11.036 8.77717 11.5889 9.50001 11.5889C10.2229 11.5889 10.8083 11.036 10.8083 10.3533C10.8083 9.67064 10.2229 9.11773 9.50001 9.11773ZM8.51879 6.33752V5.56528C8.51879 5.13902 8.15242 4.79303 7.70113 4.79303C7.24983 4.79303 6.88346 5.13905 6.88346 5.56528V6.33752L2.47101 10.7889C2.16695 11.07 1.9772 11.4622 1.9772 11.8948V13.1335C1.9772 13.8162 2.5627 14.3691 3.28551 14.3691H3.6126V15.1414C3.6126 15.5677 3.97901 15.9136 4.43031 15.9136C4.8816 15.9136 5.24798 15.5677 5.24798 15.1414V14.3691H13.752V15.1414C13.752 15.5677 14.1183 15.9136 14.5698 15.9136C15.0211 15.9136 15.3874 15.5677 15.3874 15.1414V14.3691H15.7145C16.4373 14.3691 17.0228 13.8162 17.0228 13.1335V11.8948C17.0228 11.4622 16.833 11.07 16.5289 10.7889L12.1167 6.33752V5.56528C12.1167 5.13902 11.7502 4.79303 11.2989 4.79303C10.8476 4.79303 10.4813 5.13905 10.4813 5.56528V6.33752H8.51879ZM9.50001 7.8821C10.9457 7.8821 12.1167 8.98799 12.1167 10.3533C12.1167 11.7187 10.9457 12.8246 9.50001 12.8246C8.05432 12.8246 6.88342 11.7187 6.88342 10.3533C6.88342 8.98795 8.05432 7.8821 9.50001 7.8821Z" fill="#FFD74B"/>
+                  <svg width="19" height="17">
+                    <use xlink:href="./img/sprite.svg#telephone"></use>
                   </svg>
                 </div>
                 88005558628
@@ -265,7 +265,12 @@
               </picture>
               <ul class="card-companion__list-countries list-countries">
                 <li class="list-countries__item tooltip">
-                  <img class="list-countries__flag" src="img/countries/sri-lanka.png" width="35" height="24" alt="флаг Шри-Ланка.">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/countries/sri-lanka-full.webp 1x, img/countries/sri-lanka-full@2x.webp 2x">
+                    <source type="image/webp" srcset="img/countries/sri-lanka.webp 1x, img/countries/sri-lanka@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/countries/sri-lanka-full.png 1x, img/countries/sri-lanka-full@2x.png 2x">
+                    <img class="list-countries__flag" src="img/countries/sri-lanka.png" srcset="img/countries/sri-lanka@2x.png 2x" width="35" height="24" alt="флаг Шри-Ланка.">
+                  </picture>
                   <span class="list-countries__text tooltip__text">Шри-Ланка</span>
                 </li>
                 <li class="list-countries__item tooltip">

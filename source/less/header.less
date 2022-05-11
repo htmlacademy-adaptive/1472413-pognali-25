@@ -10,24 +10,38 @@
   background-color: transparent;
   z-index: 10;
 
-  &__logo {
-    max-height: 15px;
-
-    @media (min-width: @tablet-width) {
-      margin-right: 145px;
-      max-height: none;
-    }
+  &--theme-light {
+    background-color: @white;
   }
 
-  &__button {
-    .size(25px, 11px);
+  &--no-js {
+    position: static;
+    margin-bottom: 515px;
 
-    @media (min-width: @tablet-width) {
+    & .header__button,
+    & .logo__img {
       display: none;
+    }
+
+    & .logo__img-dark {
+      display: block;
     }
   }
 }
 
-.header--theme-light {
-  background-color: @white;
+.header__logo {
+  max-height: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 145px;
+    max-height: none;
+  }
+}
+
+.header__button {
+  .size(25px, 11px);
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
