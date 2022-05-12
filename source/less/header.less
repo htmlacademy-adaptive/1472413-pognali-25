@@ -10,8 +10,21 @@
   background-color: transparent;
   z-index: 10;
 
+  @media (min-width: @desktop-width) {
+    padding-top: 46px;
+    padding-bottom: 11px;
+  }
+
   &--theme-light {
     background-color: @white;
+
+    & .logo__img {
+      display: none;
+    }
+
+    & .logo__img-dark {
+      display: block;
+    }
   }
 
   &--no-js {
@@ -33,15 +46,19 @@
   max-height: 15px;
 
   @media (min-width: @tablet-width) {
-    margin-right: 145px;
     max-height: none;
+    margin-right: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 145px;
   }
 }
 
 .header__button {
   .size(25px, 11px);
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     display: none;
   }
 }

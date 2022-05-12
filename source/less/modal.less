@@ -17,35 +17,35 @@
   &--open {
     display: flex;
   }
+}
 
-  &__list {
-    flex-grow: 1;
-    width: calc(100% - 50px);
-    color: @gray;
+.modal__list {
+  flex-grow: 1;
+  width: calc(100% - 50px);
+  color: @gray;
+}
+
+.modal__item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid @gray-light;
+
+  &:first-child {
+    border-top: 1px solid @gray-light;
   }
+}
 
-  &__item {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid @gray-light;
+.modal__price {
+  margin: 0;
+}
 
-    &:first-child {
-      border-top: 1px solid @gray-light;
-    }
-  }
-
-  &__price {
-    margin: 0;
-  }
-
-  &__button {
-    width: 100%;
-    padding: 18px;
-    background-color: @encycolorpedia;
-    .font(16px, 700, 24px, normal);
-    color: @basic-blue-light;
-    text-transform: uppercase;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-  }
+.modal__button {
+  width: 100%;
+  padding: 18px;
+  background-color: @encycolorpedia;
+  .font(16px, 700, 24px);
+  color: @basic-blue-light;
+  text-transform: uppercase;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }

@@ -22,21 +22,22 @@
   &--authorization {
     display: block;
     padding: 12px 40px;
-    .font(17px, 700, 20px, normal);
+    .font(17px, 700, 20px);
     color: @basic-blue;
     text-transform: uppercase;
+    text-align: center;
     background-color: @basic-yellow;
     border-radius: 25px;
 
     @media (min-width: @tablet-width) {
       padding: 15px 29px;
-      .font(20px, 700, 20px, normal);
+      .fontChanged(20px, 20px);
     }
   }
 
   &--primary {
     padding: 25px 50px 25px 33px;
-    .font(24px, 700, 24px, normal);
+    .font(24px, 700, 24px);
     color: @basic-blue-light;
     background-color: @basic-yellow;
     border-radius: 20px;

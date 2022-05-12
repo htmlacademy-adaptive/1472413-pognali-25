@@ -7,20 +7,6 @@
   .base;
   .reset;
 
-  &__item {
-    &--header {
-      width: 100%;
-    }
-  }
-
-  &__link--first {
-    background-color: @orange;
-  }
-
-  &__link--second {
-    background-color: @yellow-dark;
-  }
-
   &--header {
     display: none;
 
@@ -43,11 +29,8 @@
   }
 
   &--open {
-    display: flex;
-    position: absolute;
+    .abs(flex, 274px, initial, initial, 50%);
     width: 270px;
-    top: 274px;
-    left: 50%;
     transform: translateX(-50%);
 
     @media (min-width: @tablet-width) {
@@ -55,5 +38,21 @@
       width: auto;
       transform: none;
     }
+  }
+}
+
+.user-list__item {
+  &--header {
+    width: 100%;
+  }
+}
+
+.user-list__link {
+  &--first {
+    background-color: @orange;
+  }
+
+  &--second {
+    background-color: @yellow-dark;
   }
 }

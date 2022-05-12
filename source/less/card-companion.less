@@ -13,77 +13,77 @@
     margin-bottom: 0;
     padding-bottom: 27px;
   }
+}
 
-  &__link {
+.card-companion__link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  .resetLink;
+}
+
+.card-companion__info {
+  .size(60px, 60px);
+  .abs(flex, 17px, 0, 0, 17px);
+  flex-direction: column;
+  justify-content: center;
+  color: @white;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+}
+
+.card-companion__toolbar {
+  .abs(block, 0, 0, 0, 0);
+}
+
+.card-companion__img {
+  width: 100%;
+  object-fit: cover;
+  .borderRadiusSmallTop;
+
+  @media (min-width: @tablet-width) {
+    .size(100%, 285px);
+  }
+}
+
+.card-companion__list-countries {
+  .size(100%, 25px);
+  margin-top: -11px;
+}
+
+.card-companion__title {
+  margin-top: 13px;
+  margin-bottom: 15px;
+  color: @basic-blue-light;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 19px;
+    margin-bottom: 23px;
+  }
+
+  & span {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    .resetLink;
   }
 
-  &__info {
-    .size(60px, 60px);
-    .abs(d, 17px, 0, 0, 17px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: @white;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 50%;
-  }
-
-  &__toolbar {
-    .abs(d, 0, 0, 0, 0);
-  }
-
-  &__img {
-    width: 100%;
-    object-fit: cover;
-    .borderRadiusSmallTop;
-
-    @media (min-width: @tablet-width) {
-      .size(100%, 285px);
-    }
-  }
-
-  &__list-countries {
-    .size(100%, 25px);
-    margin-top: -11px;
-  }
   /* в обычном состоянии пользователь оффлайн, в aria-label прописано, что пользователь оффлайн, когда пользователь онлайн, добавляется класс-модификатор "--online", при добавлении класса онлайн необходимо поменять текст aria-label */
-  &__title span::before {
+  & span::before {
     content: "";
-    .abs(d, 12px, initial, initial, -15px);
+    .abs(block, 12px, initial, initial, -15px);
     .size(6px, 6px);
     background-color: #f97676;
     border-radius: 50%;
   }
 
-  &__title {
-    margin-top: 13px;
-    margin-bottom: 15px;
-    color: @basic-blue-light;
-
-    @media (min-width: @tablet-width) {
-      margin-top: 19px;
-      margin-bottom: 23px;
-    }
-
-    & span {
-      position: relative;
-    }
-
-    &--online span::before {
-      background-color: #81e31e;
-    }
+  &--online span::before {
+    background-color: #81e31e;
   }
+}
 
-  &__list-tags {
-    margin: 0 auto;
-    margin-bottom: 17px;
+.card-companion__list-tags {
+  margin: 0 auto;
+  margin-bottom: 17px;
 
-    @media (min-width: @tablet-width) {
-      margin-bottom: 24px;
-    }
+  @media (min-width: @tablet-width) {
+    margin-bottom: 24px;
   }
 }

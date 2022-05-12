@@ -5,7 +5,7 @@
   position: relative;
   .reset;
   .base;
-  .font(30px, 500, 35px, normal);
+  .font(30px, 500, 35px);
   color: @midnight-blue;
   text-transform: uppercase;
 
@@ -20,14 +20,14 @@
       display: block;
     }
   }
+}
 
-  &__link {
-    .resetLink;
-  }
+.site-list__link {
+  .resetLink;
+}
 
-  &__item:not(:last-child) {
-    @media (min-width: @desktop-width) {
-      margin-right: 34px;
-    }
+.site-list__item:not(:last-child) {
+  @media (min-width: @desktop-width) {
+    margin-right: 34px;
   }
 }

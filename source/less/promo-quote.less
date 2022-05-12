@@ -6,30 +6,30 @@
   margin-bottom: @standart;
   text-align: left;
   color: @white;
+}
 
-  &__text {
-    .base;
-    margin-bottom: 20px;
+.promo-quote__text {
+  .base;
+  margin-bottom: 20px;
 
-    @media (min-width: @tablet-width) {
-      margin-bottom: 45px;
-      .font(28px, 300, 33px, normal);
-    }
+  @media (min-width: @tablet-width) {
+    margin-bottom: 45px;
+    .fontChanged(28px, 33px);
+  }
+}
+
+.promo-quote__author {
+  font-weight: 700;
+
+  @media (min-width: @tablet-width) {
+    .fontChanged(21px, 25px);
   }
 
-  &__author {
-    font-weight: 700;
-
-    & br {
-      display: none;
-
-      @media (min-width: @tablet-width) {
-        display: block;
-      }
-    }
+  & br {
+    display: none;
 
     @media (min-width: @tablet-width) {
-      .font(21px, 700, 25px, normal);
+      display: block;
     }
   }
 }

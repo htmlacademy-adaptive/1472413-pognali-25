@@ -52,12 +52,17 @@
 
 /* functions */
 /* font */
-.font(@fz, @fw, @lh, @fs) {
+.font(@fz, @fw, @lh) {
   font-family: "BloggerSans", sans-serif;
   font-size: @fz;
   font-weight: @fw;
   line-height: @lh;
-  font-style: @fs;
+  font-style: normal;
+}
+
+.fontChanged(@fz, @lh) {
+  font-size: @fz;
+  line-height: @lh;
 }
 
 /* positioning */
