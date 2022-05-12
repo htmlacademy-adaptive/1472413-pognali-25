@@ -20,7 +20,7 @@
 <body class="page__body">
   <!-- header -->
   <!-- добавляется класс header--theme-light через js при скролле страницы -->
-  <header class="header header--no-js">
+  <header class="header">
     <div class="container container--header">
       <a class="header__logo logo">
 <!-- через js добавляется display:none, при классе header--theme-light у header и при открытии меню -->
@@ -42,7 +42,7 @@
         <span class="visually-hidden">Меню.</span>
       </button>
       <!-- при нажатии на кнопку открытия меню, добавляется класс nav--open -->
-      <div class="header__nav nav nav--open">
+      <div class="header__nav nav">
         <div class="container container--nav">
           <ul class="nav__list site-list">
             <li class="site-list__item">
@@ -145,7 +145,14 @@
           <b class="account__level">80</b>
           <span class="account__text">level</span>
         </div>
-        <img src="img/avatars/avatar-100x100.png" alt="аватарка пользователя.">
+        <picture>
+          <source type="image/webp" media="(min-width: 1200px)" srcset="img/avatars/avatar-2-190x190.webp 1x, img/avatars/avatar-2-190x190@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/avatars/avatar-94x94.webp 1x, img/avatars/avatar-94x94@2x.webp 2x">
+          <source type="image/webp" srcset="img/avatars/avatar-100x100.webp 1x, img/avatars/avatar-100x100@2x.webp 2x">
+          <source media="(min-width: 1200px)" srcset="img/avatars/avatar-2-190x190.png 1x, img/avatars/avatar-2-190x190@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/avatars/avatar-94x94.png 1x, img/avatars/avatar-94x94@2x.png 2x">
+          <img src="img/avatars/avatar-100x100.png" srcset="img/avatars/avatar-100x100@2x.png 2x" alt="аватарка пользователя.">
+        </picture>
         <button class="account__button btn" type="button">
           <span class="account__button-dekstop">Сменить</span>фото
         </button>
@@ -615,7 +622,12 @@
                   <option value="Босния и Герцеговина">Босния и&nbsp;Герцеговина</option>
                 </select>
                 <div class="countries-list__flag">
-                  <img src="img/countries/bosnia-and-herzegovina.png" width="35" height="24" alt="флаг Боснии и Герцеговины.">
+                  <picture class="direction__flag">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/countries/bosnia-and-herzegovina-full.webp 1x, img/countries/bosnia-and-herzegovina-full@2x.webp 2x">
+                    <source type="image/webp" srcset="img/countries/bosnia-and-herzegovina.webp 1x, img/countries/bosnia-and-herzegovina@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/countries/bosnia-and-herzegovina-full.png 1x, img/countries/bosnia-and-herzegovina-full@2x.png 2x">
+                    <img class="action-plan__flag" src="img/countries/bosnia-and-herzegovina.png" srcset="img/countries/bosnia-and-herzegovina@2x.png 2x" width="35" height="24" alt="флаг Боснии и Герцеговины.">
+                  </picture>
                 </div>
                 <button class="countries-list__close" type="button"><span class="visually-hidden">Удалить выбранную страну.</span></button>
               </li>
@@ -624,7 +636,12 @@
                   <option value="Чехия">Чехия</option>
                 </select>
                 <div class="countries-list__flag">
-                  <img src="img/countries/czechia.png" width="35" height="24" alt="флаг Чехии.">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/countries/czechia-full.webp 1x, img/countries/czechia-full@2x.webp 2x">
+                    <source type="image/webp" srcset="img/countries/czechia.webp 1x, img/countries/czechia@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/countries/czechia-full.png 1x, img/countries/czechia-full@2x.png 2x">
+                    <img class="action-plan__flag" src="img/countries/czechia.png" srcset="img/countries/czechia@2x.png 2x" width="35" height="24" alt="флаг Франции.">
+                  </picture>
                 </div>
                 <button class="countries-list__close" type="button"><span class="visually-hidden">Удалить выбранную страну.</span></button>
               </li>
@@ -1002,12 +1019,22 @@
             <ul class="actions-list__plans action-plan">
               <li class="action-plan__item">
                 <p class="action-plan__country">Босния и&nbsp;Герцеговина</p>
-                <img class="action-plan__flag" width="35" height="24" src="img/countries/bosnia-and-herzegovina.png" alt="флаг Боснии и Герцеговины.">
+                <picture class="direction__flag">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/countries/bosnia-and-herzegovina-full.webp 1x, img/countries/bosnia-and-herzegovina-full@2x.webp 2x">
+                  <source type="image/webp" srcset="img/countries/bosnia-and-herzegovina.webp 1x, img/countries/bosnia-and-herzegovina@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/countries/bosnia-and-herzegovina-full.png 1x, img/countries/bosnia-and-herzegovina-full@2x.png 2x">
+                  <img class="action-plan__flag" src="img/countries/bosnia-and-herzegovina.png" srcset="img/countries/bosnia-and-herzegovina@2x.png 2x" width="35" height="24" alt="флаг Боснии и Герцеговины.">
+                </picture>
                 <textarea class="action-plan__description" placeholder="План действий"></textarea>
               </li>
               <li class="action-plan__item">
                 <p class="action-plan__country">Чехия</p>
-                <img class="action-plan__flag" width="35" height="24" src="img/countries/czechia.png" alt="флаг Чехии.">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/countries/czechia-full.webp 1x, img/countries/czechia-full@2x.webp 2x">
+                  <source type="image/webp" srcset="img/countries/czechia.webp 1x, img/countries/czechia@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/countries/czechia-full.png 1x, img/countries/czechia-full@2x.png 2x">
+                  <img class="action-plan__flag" src="img/countries/czechia.png" srcset="img/countries/czechia@2x.png 2x" width="35" height="24" alt="флаг Франции.">
+                </picture>
                 <textarea class="action-plan__description" placeholder="План действий">Пить пиво и&nbsp;лазить по&nbsp;старым замкам, наслаждаться архитектурой и&nbsp;вот это все.</textarea>
               </li>
             </ul>

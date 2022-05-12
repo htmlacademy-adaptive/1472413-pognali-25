@@ -36,7 +36,6 @@
           <img class="logo__img-dark" src="img/logo/logo-mobile-dark.svg" alt="логотип сайта Погнали">
         </picture>
       </a>
-<!-- через js добавляется класс burger--dark, если у header есть класс header--theme-light -->
 <!-- при нажатии на кнопку открытия меню, добавляется класс burger--open -->
       <button class="header__button btn burger" type="button">
         <span class="visually-hidden">Меню.</span>
@@ -46,13 +45,13 @@
         <div class="container container--nav">
           <ul class="nav__list site-list">
             <li class="site-list__item">
-              <a class="site-list__link">О&nbsp;сервисе</a>
+              <a class="site-list__link" data-hover="О сервисе">О&nbsp;сервисе</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="form.html">Направления</a>
+              <a class="site-list__link" href="form.html" data-hover="Направления">Направления</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html">Попутчики</a>
+              <a class="site-list__link" href="catalog.html" data-hover="Попутчики">Попутчики</a>
             </li>
           </ul>
           <ul class="nav__list-contact contacts-list">
@@ -201,10 +200,15 @@
             <picture>
               <source type="image/webp" media="(min-width: 768px)" srcset="img/direction/thailand.webp 1x, img/direction/thailand@2x.webp 2x">
               <source type="image/webp" srcset="img/direction/thailand-mobile.webp 1x, img/direction/thailand-mobile@2x.webp 2x">
-              <source media="(min-width: 768px)" srcset="img/direction/thailand.png 1x, img/direction/thailand@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/direction/thailand.jpg 1x, img/direction/thailand@2x.jpg 2x">
               <img class="card-direction__img lazyload" src="img/direction/thailand-mobile.png" srcset="img/direction/thailand-mobile@2x.png 2x" alt="голубое море с двумя небольшими зелёными скалами.">
             </picture>
-            <img class="card-direction__flag" src="img/countries/thailand.png" width="35" height="24" alt="флаг Таиланда.">
+            <picture class="direction__flag">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/countries/thailand-full.webp 1x, img/countries/thailand-full@2x.webp 2x">
+              <source type="image/webp" srcset="img/countries/thailand.webp 1x, img/countries/thailand@2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="img/countries/thailand-full.png 1x, img/countries/thailand-full@2x.png 2x">
+              <img class="card-direction__flag" src="img/countries/thailand.png" srcset="img/countries/thailand@2x.png 2x" width="35" height="24" alt="флаг Таиланда.">
+            </picture>
             <div class="card-direction__wrapper" href="#">
               <h3 class="card-direction__title title-small">Таиланд</h3>
               <span class="card-direction__count">18321</span>
@@ -215,10 +219,15 @@
             <picture>
               <source type="image/webp" media="(min-width: 768px)" srcset="img/direction/france.webp 1x, img/direction/france@2x.webp 2x">
               <source type="image/webp" srcset="img/direction/france-mobile.webp 1x, img/direction/france-mobile@2x.webp 2x">
-              <source media="(min-width: 768px)" srcset="img/direction/france.png 1x, img/direction/france@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/direction/france.jpg 1x, img/direction/france@2x.jpg 2x">
               <img class="card-direction__img" src="img/direction/france-mobile.png 1x, img/direction/france-mobile@2x.png 2x" alt="фактурный невысокий многоквартирный дом с аллеей напротив.">
             </picture>
-            <img class="card-direction__flag" src="img/countries/france.png" width="35" height="24" alt="флаг Франции.">
+            <picture class="direction__flag">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/countries/france-full.webp 1x, img/countries/france-full@2x.webp 2x">
+              <source type="image/webp" srcset="img/countries/france.webp 1x, img/countries/france@2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="img/countries/france-full.png 1x, img/countries/france-full@2x.png 2x">
+              <img class="card-direction__flag" src="img/countries/france.png" srcset="img/countries/france@2x.png 2x" width="35" height="24" alt="флаг Чехии.">
+            </picture>
             <div class="card-direction__wrapper" href="#">
               <h3 class="card-direction__title title-small">Франция</h3>
               <span class="card-direction__count">12518</span>
@@ -229,10 +238,15 @@
             <picture>
               <source type="image/webp" media="(min-width: 768px)" srcset="img/direction/czech.webp 1x, img/direction/czech@2x.webp 2x">
               <source type="image/webp" srcset="img/direction/czech-mobile.webp 1x, img/direction/czech-mobile@2x.webp 2x">
-              <source media="(min-width: 768px)" srcset="img/direction/czech.png 1x, img/direction/czech@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/direction/czech.jpg 1x, img/direction/czech@2x.jpg 2x">
               <img class="card-direction__img" src="img/direction/czech-mobile.png 1x, img/direction/czech-mobile@2x.png 2x" alt="река с теплоходоим на фоне старого моста и старых разноцветных домов.">
             </picture>
-            <img class="card-direction__flag" src="img/countries/czechia.png" width="35" height="24" alt="флаг Чехия.">
+            <picture class="direction__flag">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/countries/czechia-full.webp 1x, img/countries/czechia-full@2x.webp 2x">
+              <source type="image/webp" srcset="img/countries/czechia.webp 1x, img/countries/czechia@2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="img/countries/czechia-full.png 1x, img/countries/czechia-full@2x.png 2x">
+              <img class="card-direction__flag" src="img/countries/czechia.png" srcset="img/countries/czechia@2x.png 2x" width="35" height="24" alt="флаг Франции.">
+            </picture>
             <div class="card-direction__wrapper" href="#">
               <h3 class="card-direction__title title-small">Чехия</h3>
               <span class="card-direction__count">5326</span>
@@ -269,19 +283,23 @@
               <ul class="card-companion__list-countries list-countries">
                 <li class="list-countries__item tooltip">
                   <picture>
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/countries/sri-lanka-full.webp 1x, img/countries/sri-lanka-full@2x.webp 2x">
                     <source type="image/webp" srcset="img/countries/sri-lanka.webp 1x, img/countries/sri-lanka@2x.webp 2x">
-                    <source media="(min-width: 768px)" srcset="img/countries/sri-lanka-full.png 1x, img/countries/sri-lanka-full@2x.png 2x">
                     <img class="list-countries__flag" src="img/countries/sri-lanka.png" srcset="img/countries/sri-lanka@2x.png 2x" width="35" height="24" alt="флаг Шри-Ланка.">
                   </picture>
                   <span class="list-countries__text tooltip__text">Шри-Ланка</span>
                 </li>
                 <li class="list-countries__item tooltip">
-                  <img class="list-countries__flag" src="img/countries/thailand.png" width="35" height="24" alt="флаг Таиланда.">
+                  <picture>
+                    <source type="image/webp" srcset="img/countries/thailand.webp 1x, img/countries/thailand@2x.webp 2x">
+                    <img class="list-countries__flag" src="img/countries/thailand.png" srcset="img/countries/thailand@2x.png 2x" width="35" height="24" alt="флаг Таиланда.">
+                  </picture>
                   <span class="list-countries__text tooltip__text">Таиланд</span>
                 </li>
                 <li class="list-countries__item tooltip">
-                  <img class="list-countries__flag" src="img/countries/seychelles.png" width="35" height="24" alt="флаг Сейшелы.">
+                  <picture>
+                    <source type="image/webp" srcset="img/countries/seychelles.webp 1x, img/countries/seychelles@2x.webp 2x">
+                    <img class="list-countries__flag" src="img/countries/seychelles.png" srcset="img/countries/seychelles@2x.png 2x" width="35" height="24" alt="флаг Сейшелы.">
+                  </picture>
                   <span class="list-countries__text tooltip__text">Сейшелы</span>
                 </li>
               </ul>
@@ -341,11 +359,17 @@
               </picture>
               <ul class="card-companion__list-countries list-countries">
                 <li class="list-countries__item tooltip">
-                  <img class="list-countries__flag" src="img/countries/belgium.png" width="35" height="24" alt="флаг Бельгии.">
+                  <picture>
+                    <source type="image/webp" srcset="img/countries/belgium.webp 1x, img/countries/belgium@2x.webp 2x">
+                    <img class="list-countries__flag" src="img/countries/belgium.png" srcset="img/countries/belgium@2x.png 2x" width="35" height="24" alt="флаг Бельгии.">
+                  </picture>
                   <span class="list-countries__text tooltip__text">Бельгия</span>
                 </li>
                 <li class="list-countries__item tooltip">
-                  <img class="list-countries__flag" src="img/countries/czechia.png" width="35" height="24" alt="флаг Чехии.">
+                  <picture>
+                    <source type="image/webp" srcset="img/countries/czechia.webp 1x, img/countries/czechia@2x.webp 2x">
+                    <img class="list-countries__flag" src="img/countries/czechia.png" srcset="img/countries/czechia@2x.png 2x" width="35" height="24" alt="флаг Чехии.">
+                  </picture>
                   <span class="list-countries__text tooltip__text">Чехия</span>
                 </li>
               </ul>
@@ -455,7 +479,7 @@
             <span class="contact__button-text">Регистрация</span>
           </button>
         </form>
-        <p class="contact__text">Остались вопросы?<br> Мы&nbsp;с&nbsp;радостью на&nbsp;них ответим!</p>
+        <p class="contact__text">Остались вопросы?&nbsp;<br> Мы&nbsp;с&nbsp;радостью на&nbsp;них ответим!</p>
         <ul class="contact__list contacts-list">
           <li class="contacts-list__item contacts-list__item--desktop">
             <a class="contacts-list__link btn" href="tel:+78005558628">
@@ -485,7 +509,7 @@
     <section class="location">
       <div class="container container--location">
         <h2 class="visually-hidden">Местонахождение</h2>
-        <p class="location__address">ул. Большая<br> Конюшенная, 19/8</p>
+        <p class="location__address">ул. Большая&nbsp;<br> Конюшенная, 19/8</p>
         <a class="location__button btn btn--secondary" href="https://goo.gl/maps/z61GzcFfaVSCYbSt8" target="_blank">Проложить маршрут</a>
       </div>
     </section>

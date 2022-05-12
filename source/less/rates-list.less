@@ -35,8 +35,9 @@
 .rates-list__item {
   position: relative;
   margin-left: 25px;
-  margin-right: 70px;
+  margin-right: 44px;
   padding-top: 13px;
+  padding-right: 18px;
   padding-bottom: 18px;
   border-bottom: 1px solid @gray-light;
 
@@ -71,7 +72,7 @@
     border-radius: 50%;
     background-color: @yellow-dark;
     content: counter(list2);
-    .abs(flex, 3px, -70px, initial, initial);
+    .abs(flex, 3px, -44px, initial, initial);
     .font(16px, 400, 16px);
     color: @white;
 
@@ -95,4 +96,8 @@
   @media (min-width: @tablet-width) {
     .fontChanged(28px, 28px);
   }
+}
+
+.rates-list__price {
+  z-index: 3;
 }

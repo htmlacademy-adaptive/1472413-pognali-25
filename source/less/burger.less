@@ -3,37 +3,44 @@
 
 .burger {
   position: relative;
-  .size(100%, 100%);
+  .size(25px, 11px);
   background-color: transparent;
-  border-bottom: 3px solid @white;
-  border-radius: 1.5px;
   transition: @transition;
 
-  &::after {
-    position: absolute;
+  &::after,
+  &::before {
     content: "";
     background-color: @white;
     border-radius: 1.5px;
     .size(100%, 3px);
-    .abs(block, 0, 0, 0, 0);
+    transition: @transition;
   }
 
-  &--dark {
-    border-color: @gray-light;
+  &::after {
+    .abs(block, 0, initial, initial, 0);
+  }
 
-    &::after {
-      background-color: @gray-light;
-    }
+  &::before {
+    .abs(block, 8px, initial, initial, 0);
   }
 
   &--open {
-    border-color: @gray-light;
-    transform: rotate(45deg);
+    height: 25px;
+
+    &::after,
+    &::before {
+      top: 50%;
+      transform: translate(-50%);
+    }
+
+    &::before {
+      background-color: @gray-light;
+      transform: rotate(45deg);
+    }
 
     &::after {
-      transform: rotate(-90deg);
-      top: 9px;
       background-color: @gray-light;
+      transform: rotate(-45deg);
     }
   }
 }
