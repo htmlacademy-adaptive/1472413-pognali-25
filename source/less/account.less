@@ -1,2 +1,62 @@
 @import "_vars";
 @import "_mixins";
+
+.account {
+  margin-top: -30px;
+  padding-top: 50px;
+  background-color: @blue-light;
+  z-index: 3;
+}
+
+.account__info {
+  position: relative;
+  .size(100px, 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.account__level {
+  position: relative;
+  margin-bottom: 5px;
+  .font(38px, 700, 38px);
+  color: @basic-blue;
+
+  &::after {
+    content: "";
+    .abs(block, initial, initial, -3px, 0);
+    .size(100%, 1px);
+    background-color: @gray;
+    opacity: 0.3;
+  }
+}
+
+.account__text {
+  .font(18px, 400, 18px);
+  color: @gray;
+}
+
+.account__toolbar {
+  .abs(block, 0, 0, 0, 0);
+}
+
+.account__button {
+  padding: 12.5px 15px;
+  .font(20px, 500, 18px);
+  color: @basic-blue;
+  text-transform: uppercase;
+  background-color: @special-blue-light;
+  border-radius: 20px;
+  transition: @transitionBgColor, @transitionColor;
+
+  &:hover {
+    background-color: @periwinkle;
+  }
+
+  &:active {
+    background-color: @special-blue-light;
+    color: rgba(22, 28, 53, 0.3);
+  }
+}

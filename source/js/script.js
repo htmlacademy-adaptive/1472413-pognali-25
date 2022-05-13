@@ -4,15 +4,12 @@ let burger = header.querySelector('.burger');
 let userList = header.querySelector('.user-list--header');
 let logoDark = header.querySelector('.logo__img-dark');
 let logoLight = header.querySelector('.logo__img');
-let modal = document.querySelector('.modal');
-let modalButton = modal.querySelector('.modal__button');
-let profileButton = document.querySelector('.profile__button');
 
 const headerSize = header.offsetHeight;
 
 header.classList.remove('header--no-js');
 headerNav.classList.remove('nav--open');
-modal.classList.remove('modal--open');
+
 
 /* scroll */
 window.addEventListener('scroll', function () {
@@ -48,8 +45,14 @@ burger.addEventListener('click', function () {
   }
 });
 
+let modal = (document.querySelector('.modal') != null)? document.querySelector('.modal') : null;
+let modalButton = (document.querySelector('.modal__button') != null)? document.querySelector('.modal__button') : null;
+let profileButton = (document.querySelector('.profile__button') != null)? document.querySelector('.profile__button') : null;
+
+if (modal != null) modal.classList.remove('modal--open');
+
 /* modal window*/
-profileButton.addEventListener('click', function () {
+if (profileButton != null) profileButton.addEventListener('click', function () {
   if (!modal.classList.contains('modal--open')) {
     modal.classList.add('modal--open');
   } else {
@@ -57,7 +60,7 @@ profileButton.addEventListener('click', function () {
   }
 });
 
-modalButton.addEventListener('click', function () {
+if (modalButton != null) modalButton.addEventListener('click', function () {
   if (modal.classList.contains('modal--open')) {
     modal.classList.remove('modal--open');
   }

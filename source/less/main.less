@@ -1,3 +1,20 @@
+@import "_vars";
+@import "_mixins";
+
 .main {
   flex-grow: 1;
+}
+
+.main__header {
+  position: relative;
+  padding-top: 95px;
+  padding-bottom: 18px;
+  background-color: @rurikon-blue;
+  z-index: 4;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.main__title {
+  color: @white;
 }

@@ -20,9 +20,9 @@
 <body class="page__body">
   <!-- header -->
   <!-- добавляется класс header--theme-light через js при скролле страницы -->
-  <header class="header">
+  <header class="header header--no-js">
     <div class="container container--header">
-      <a class="header__logo logo">
+      <a class="header__logo logo" href="index.html">
 <!-- через js добавляется display:none, при классе header--theme-light у header и при открытии меню -->
         <picture>
           <source media="(min-width: 1200px)" srcset="img/logo/logo-full.svg">
@@ -42,7 +42,7 @@
         <span class="visually-hidden">Меню.</span>
       </button>
       <!-- при нажатии на кнопку открытия меню, добавляется класс nav--open -->
-      <div class="header__nav nav">
+      <div class="header__nav nav nav--open">
         <div class="container container--nav">
           <ul class="nav__list site-list">
             <li class="site-list__item">
@@ -139,9 +139,12 @@
     </header>
     <!-- account -->
     <section class="account">
-      <div class="container">
+      <div class="container container--account">
         <h2 class="visually-hidden">Профиль</h2>
         <div class="account__info">
+          <svg class="account__toolbar" width="100" height="100" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.74236 17.9148C2.16557 23.3002 1.37757 29.3683 2.4934 35.2332C3.60922 41.0982 6.57045 46.4529 10.9448 50.5159C15.3192 54.5788 20.8777 57.1372 26.8089 57.8176C32.7402 58.498 38.7336 57.2647 43.9144 54.2979C49.0952 51.3311 53.1921 46.786 55.607 41.3261C58.022 35.8662 58.6285 29.7773 57.3382 23.9483C56.0478 18.1193 52.9282 12.8553 48.4345 8.92466C43.9408 4.99408 38.3084 2.6027 32.3595 2.0996" stroke="#FF8D30" stroke-width="4" stroke-linecap="round"/>
+          </svg>
           <b class="account__level">80</b>
           <span class="account__text">level</span>
         </div>
@@ -154,7 +157,7 @@
           <img src="img/avatars/avatar-100x100.png" srcset="img/avatars/avatar-100x100@2x.png 2x" alt="аватарка пользователя.">
         </picture>
         <button class="account__button btn" type="button">
-          <span class="account__button-dekstop">Сменить</span>фото
+          <span class="account__button-mobile">Сменить </span>фото
         </button>
         <form class="account__tags" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="account__input-tags">

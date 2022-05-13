@@ -15,10 +15,26 @@
 
 .title-small {
   .base;
-  .font(21px, 700, 21px);
+  .fontChanged(21px, 21px);
 
   @media (min-width: @tablet-width) {
     margin-bottom: 5px;
     .fontChanged(24px, 24px);
   }
 }
+
+.title-big {
+  position: relative;
+  display: inline-block;
+  .base;
+  .fontChanged(36px, 36px);
+
+  &::after {
+    content: "";
+    .abs(block, initial, initial, -20px, 0);
+    .size(100%, 5px);
+    background-color: @orange;
+    border-radius: 4px;
+  }
+}
+

@@ -58,13 +58,32 @@
     position: static;
     margin-bottom: 515px;
 
+    @media (min-width: @tablet-width) {
+      margin-bottom: 775px;
+    }
+
+    @media (min-width: @desktop-width) {
+      position: fixed;
+      margin-bottom: inherit;
+    }
+
     & .header__button,
     & .logo__img {
       display: none;
     }
 
+    & .logo__img {
+      @media (min-width: @desktop-width) {
+        display: block;
+      }
+    }
+
     & .logo__img-dark {
       display: block;
+
+      @media (min-width: @desktop-width) {
+        display: none;
+      }
     }
   }
 }
