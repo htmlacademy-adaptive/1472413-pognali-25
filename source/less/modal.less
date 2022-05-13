@@ -17,7 +17,6 @@
   box-shadow: 0 2px 8px rgba(29, 46, 91, 0.14);
   box-sizing: border-box;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
 
   @media (min-width: @tablet-width) {
     .size(688px, 526px);
@@ -85,6 +84,16 @@
   text-transform: uppercase;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  transition: @transitionColor, @transitionBgColor;
+
+  &:hover {
+    background-color: @blue-light;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+    background-color: @blue-light;
+  }
 
   @media (min-width: @tablet-width) {
     padding-top: 41px;

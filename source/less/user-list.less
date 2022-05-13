@@ -48,11 +48,37 @@
 }
 
 .user-list__link {
+  transition: @transitionBgColor;
+
   &--first {
     background-color: @orange;
+
+    &:hover {
+      background-color: @bright-orange;
+    }
+
+    &:active {
+      background-color: @bright-orange;
+    }
+
+    &:active svg {
+      opacity: 0.3;
+    }
   }
 
   &--second {
     background-color: @yellow-dark;
+
+    &:hover {
+      background-color: @orange;
+    }
+
+    &:active {
+      background-color: @orange;
+    }
+
+    &:active svg {
+      opacity: 0.3;
+    }
   }
 }

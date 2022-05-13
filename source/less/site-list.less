@@ -26,27 +26,29 @@
   display: block;
   .resetLink;
   position: relative;
-  transition: @transition;
+  transition: @transitionTransform, @transitionColor;
 
   &::after {
     @media (min-width: @desktop-width) {
       content: attr(data-hover);
       .abs(block, 100%, initial, initial, initial);
       color: @yellow-dark;
-      transition: @transition;
+      transition: @transitionTransform;
     }
   }
 
-  &:hover {
+  &[href]:hover {
+    @media (max-width: 1199px) {
+      color: @yellow-dark;
+    }
+
     @media (min-width: @desktop-width) {
       transform: translateY(-100%);
     }
   }
 
   &:active {
-    @media (min-width: @desktop-width) {
-      opacity: 0.3;
-    }
+    opacity: 0.3;
   }
 }
 

@@ -28,6 +28,15 @@
     text-align: center;
     background-color: @basic-yellow;
     border-radius: 25px;
+    transition: @transitionBgColor, @transitionColor;
+
+    &:hover {
+      background-color: @yellow-dark;
+    }
+
+    &:active {
+      color: rgba(22, 28, 53, 0.3);
+    }
 
     @media (min-width: @tablet-width) {
       padding: 15px 29px;
@@ -41,14 +50,23 @@
     color: @basic-blue-light;
     background-color: @basic-yellow;
     border-radius: 20px;
+    transition: @transitionBgColor, @transitionColor;
+
+    &:hover {
+      background-color: @yellow-dark;
+    }
+
+    &:active {
+      color: rgba(22, 28, 53, 0.3);
+    }
+
+    &:active::after {
+      opacity: 0.3;
+    }
 
     @media (min-width: @desktop-width) {
       padding-top: 29px;
       padding-bottom: 27px;
-    }
-
-    &:hover {
-      background-color: @yellow-dark;
     }
   }
 }

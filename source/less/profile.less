@@ -77,6 +77,15 @@
   background-color: transparent;
   .font(16px, 700, 16px);
   color: @blue-bright;
+  transition: @transitionOpacity;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   & svg {
     display: none;

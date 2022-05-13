@@ -7,11 +7,16 @@
   .borderRadiusSmallTop;
   .borderRadiusSmallBottom;
   margin-bottom: 10px;
-  padding-bottom: 23px;
+  height: 483px;
+  transition: @transitionTransform, box-shadow 0.2s linear;
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 9px 0 rgb(0 0 0 / 16%);
+  }
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
-    padding-bottom: 27px;
   }
 }
 
@@ -19,7 +24,20 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  height: 100%;
   .resetLink;
+  .borderRadiusSmallTop;
+  .borderRadiusSmallBottom;
+  overflow: hidden;
+
+  &:hover .card-companion__title {
+    opacity: 0.7;
+  }
+
+  &:active .card-companion__title {
+    color: rgba(29, 46, 91, 0.3);
+    opacity: 0.3;
+  }
 }
 
 .card-companion__info {
@@ -40,6 +58,8 @@
   width: 100%;
   object-fit: cover;
   .borderRadiusSmallTop;
+  overflow: hidden;
+  transition: @transitionTransform;
 
   @media (min-width: @tablet-width) {
     .size(100%, 285px);
@@ -48,13 +68,14 @@
 
 .card-companion__list-countries {
   .size(100%, 25px);
-  margin-top: -11px;
+  margin-top: -15px;
 }
 
 .card-companion__title {
   margin-top: 13px;
   margin-bottom: 15px;
   color: @basic-blue-light;
+  transition: @transitionOpacity;
 
   @media (min-width: @tablet-width) {
     margin-top: 19px;
@@ -70,12 +91,12 @@
     content: "";
     .abs(block, 12px, initial, initial, -15px);
     .size(6px, 6px);
-    background-color: #f97676;
+    background-color: @salmon-pink;
     border-radius: 50%;
   }
 
   &--online span::before {
-    background-color: #81e31e;
+    background-color: @green;
   }
 }
 
