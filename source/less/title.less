@@ -29,12 +29,21 @@
   .base;
   .fontChanged(36px, 36px);
 
+  @media (min-width: @tablet-width) {
+    .fontChanged(60px, 60px);
+  }
+
   &::after {
     content: "";
     .abs(block, initial, initial, -20px, 0);
     .size(100%, 5px);
     background-color: @orange;
     border-radius: 4px;
+
+    @media (min-width: @tablet-width) {
+      height: 8px;
+      bottom: -70px;
+    }
   }
 }
 

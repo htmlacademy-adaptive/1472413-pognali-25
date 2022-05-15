@@ -2,20 +2,89 @@
 @import "_mixins";
 
 .account {
-  margin-top: -30px;
-  padding-top: 50px;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 34px;
   background-color: @blue-light;
-  z-index: 3;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 66px;
+    padding-bottom: 48px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+    padding-bottom: 55px;
+  }
+
+  &::after {
+    content: "";
+    .abs(block, initial, initial, -30px, 0);
+    .size(100%, 30px);
+    background-color: @blue-light;
+    z-index: -1;
+  }
+}
+
+.account__form {
+  display: grid;
+  grid-template-areas:
+    "level img"
+    "button button"
+    "tags tags"
+    "transports transports";
+  column-gap: 35px;
+  grid-template-columns: repeat(2, 1fr);
+
+  & picture {
+    grid-area: img;
+  }
+
+  @media (min-width: @tablet-width) {
+    max-width: 89.5%;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-areas:
+      "level transports img"
+      "button button button"
+      "tags tags tags";
+    column-gap: 60px;
+    grid-template-columns: 94px auto 94px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    max-width: 100%;
+    margin-top: -190px;
+    margin-left: 64px;
+    grid-template-areas:
+      ". level img ."
+      ". . button ."
+      "tags transports transports transports";
+    column-gap: 44px;
+    grid-template-columns: auto 95px 190px 53px;
+    z-index: 5;
+  }
 }
 
 .account__info {
   position: relative;
   .size(100px, 100px);
   display: flex;
+  grid-area: level;
+  justify-self: flex-end;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    .size(94px, 94px);
+  }
+
+  @media (min-width: @desktop-width) {
+    align-self: center;
+  }
 }
 
 .account__level {
@@ -24,28 +93,52 @@
   .font(38px, 700, 38px);
   color: @basic-blue;
 
+  @media (min-width: @desktop-width) {
+    color: @white;
+  }
+
   &::after {
     content: "";
     .abs(block, initial, initial, -3px, 0);
     .size(100%, 1px);
     background-color: @gray;
     opacity: 0.3;
+
+    @media (min-width: @desktop-width) {
+      background-color: @white;
+    }
   }
 }
 
 .account__text {
   .font(18px, 400, 18px);
   color: @gray;
+
+  @media (min-width: @desktop-width) {
+    color: @white;
+  }
 }
 
 .account__toolbar {
   .abs(block, 0, 0, 0, 0);
+
+  @media (min-width: @tablet-width) {
+    .size(94px, 94px);
+  }
+}
+
+.account__img {
+  display: block;
+  border-radius: 15px 15px 0 0;
 }
 
 .account__button {
+  grid-area: button;
+  margin: 15px 0 24px;
   padding: 12.5px 15px;
   .font(20px, 500, 18px);
   color: @basic-blue;
+  text-align: center;
   text-transform: uppercase;
   background-color: @special-blue-light;
   border-radius: 20px;
@@ -58,5 +151,154 @@
   &:active {
     background-color: @special-blue-light;
     color: rgba(22, 28, 53, 0.3);
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 40px;
+    margin-bottom: 52px;
+    border-radius: 10px;
+    letter-spacing: 1.8px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    margin-bottom: 27px;
+    letter-spacing: normal;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
+.account__tags {
+  position: relative;
+  grid-area: tags;
+  margin: 0;
+  margin-bottom: 18px;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    transform: rotate(180deg);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    justify-self: flex-start;
+    min-width: 95.2%;
+  }
+}
+
+.account__transports {
+  grid-area: transports;
+  padding: 0;
+  border: 1px solid @skyline;
+  border-radius: 10px;
+  transition: border-color 0.2s ease-in-out;
+
+  @media (min-width: @tablet-width) {
+    transform: rotate(180deg);
+  }
+
+  @media (min-width: @desktop-width) {
+    height: max-content;
+    margin-left: 40px;
+  }
+
+  &:hover {
+    border-color: @sapphire;
+  }
+}
+
+.account__list-tags {
+  .base();
+  .size(100%, 100%);
+  padding: 26px;
+  .font(16px, 400, 18px);
+  color: @gray;
+  opacity: 0.6;
+  background-color: transparent;
+  border: 1px solid @skyline;
+  border-radius: 10px;
+  transition: border-color 0.2s ease-in-out;
+  cursor: pointer;
+  resize: none;
+  overflow: hidden;
+
+  @media (min-width: @tablet-width) {
+    padding: 35px 40px 19px;
+    .fontChanged(20px, 22px);
+    transform: rotate(180deg);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 9px;
+  }
+
+
+  &:hover {
+    border-color: @sapphire;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 1;
+    outline: 1px solid @basic-blue;
+  }
+}
+
+.account__title {
+  box-sizing: border-box;
+  min-width: 70px;
+  padding: 0 15px;
+  text-align: center;
+  .font(16px, 700, 18px);
+  color: @basic-blue-light;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    max-width: 154px;
+    .font(20px, 500, 20px);
+    letter-spacing: 1.8px;
+    transform: rotate(180deg);
+  }
+
+  &--tags {
+    .base();
+    .abs(inline-block, -9px, initial, initial, 50%);
+    z-index: 1;
+    transform: translateX(-50%);
+    background-color: @blue-light;
+
+    @media (min-width: @tablet-width) {
+      transform: translateX(-50%) rotate(180deg);
+    }
+
+    @media (min-width: @desktop-width) {
+      transform: rotate(180deg);
+      left: initial;
+      right: 30px;
+    }
+  }
+}
+
+.account__list-transports {
+  padding-top: 10px;
+  padding-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    transform: rotate(180deg);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 20.5px 0;
+  }
+}
+
+.account__list-transports > .list-transports__item {
+  margin-left: 0;
+}
+
+.account__button-mobile {
+  @media (min-width: @desktop-width) {
+    display: none;
   }
 }

@@ -8,13 +8,13 @@
   min-width: 320px;
 
   @media (min-width: @tablet-width) {
-    min-width: 708px;
-    max-width: 89.5%;
+    min-width: 748px;
+    max-width: 97%;
   }
 
   @media (min-width: @desktop-width) {
     min-width: auto;
-    max-width: 1340px;
+    max-width: 1380px;
   }
 
   &--header {
@@ -75,7 +75,7 @@
   &--direction {
     @media (min-width: @tablet-width) {
       background-image: url("../img/direction/direction-bg-flags.png");
-      .bg(top left calc(100% - 10px), auto);
+      .bg(top left calc(100% - 30px), auto);
     }
 
     @media (min-width: @desktop-width) {
@@ -100,11 +100,12 @@
   &--contact,
   &--location {
     @media (min-width: @tablet-width) {
-      max-width: 636px;
+      max-width: 90%;
+      min-width: inherit;
     }
 
     @media (min-width: @desktop-width) {
-      max-width: 1340px;
+      max-width: 1380px;
     }
   }
 
@@ -122,10 +123,5 @@
       justify-content: space-between;
       align-items: center;
     }
-  }
-
-  /* form.html */
-  &--account {
-    display: grid;
   }
 }

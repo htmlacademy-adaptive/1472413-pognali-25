@@ -1,2 +1,37 @@
 @import "_vars";
 @import "_mixins";
+
+.my-plans {
+  padding-top: 28px;
+  padding-bottom: 30px;
+  color: @basic-blue-light;
+  background-color: @special-blue-light;
+  border-radius: 30px 30px 0 0;
+
+  &::after {
+    content: "";
+    .abs(block, initial, initial, -30px, 0);
+    .size(100%, 30px);
+    background-color: @special-blue-light;
+    z-index: -1;
+  }
+}
+
+.my-plans__title {
+  margin-bottom: 29px;
+  color: @basic-blue-light;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 48px;
+    margin-left: 37px;
+  }
+}
+
+.my-plans__list {
+  @media (min-width: @tablet-width) {
+    max-width: 89.5%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+

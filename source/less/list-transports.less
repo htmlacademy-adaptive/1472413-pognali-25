@@ -14,3 +14,47 @@
     margin-left: 14px;
   }
 }
+
+.list-transports__icon {
+  transition: @transitionOpacity;
+}
+
+.list-transports__button {
+  .size(43px, 43px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: @white;
+  border-radius: 50%;
+  transition: @transitionBgColor, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 2px 6px rgba(22, 28, 53, 0.17);
+  }
+
+  &:hover .list-transports__checkbox:checked ~ .list-transports__icon {
+    opacity: 0.7;
+  }
+
+  &:hover .list-transports__checkbox:not(:checked) ~ .list-transports__icon {
+    fill: @silver-chalice;
+  }
+}
+
+.list-transports__checkbox:not(:checked) ~ .list-transports__icon {
+  opacity: 0.15;
+}
+
+.list-transports__checkbox:disabled:checked + .list-transports__button,
+.list-transports__checkbox:disabled:not(:checked) + .list-transports__button {
+  background-color: @lavender-light;
+}
+
+.list-transports__checkbox:disabled:checked + .list-transports__icon {
+  opacity: 0.3;
+}
+
+.list-transports__checkbox:disabled:not(:checked) + .list-transports__icon {
+  opacity: 0.1;
+}
