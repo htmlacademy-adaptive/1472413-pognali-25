@@ -1,2 +1,149 @@
 @import "_vars";
 @import "_mixins";
+
+.actions-list__item {
+  .base();
+  position: relative;
+  margin-bottom: 10px;
+  padding-top: 80px;
+  padding-right: 25px;
+  padding-left: 24px;
+  border: none;
+  border-radius: 10px;
+  background-color: @white;
+}
+
+.actions-list__title {
+  .abs(block, 24px, initial, initial, 24px);
+  .font(20px, 700, 20px);
+  color: @basic-blue-light;
+}
+
+.actions-list__info {
+  .base();
+  margin-right: 15px;
+  margin-bottom: 20px;
+  color: @gray;
+}
+
+.actions-list__label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  color: @basic-blue-light;
+  line-height: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.actions-list__label-text {
+  letter-spacing: 1.44px;
+}
+
+.actions-list__label-unit {
+  letter-spacing: 1.12px;
+  opacity: 0.3;
+}
+
+.actions-list__wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.actions-list__wrapper-button {
+  position: absolute;
+  .size(43px, 43px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  color: @gray80;
+  text-align: center;
+  .font(34px, 300, 17px);
+  background-color: transparent;
+  transition: @transitionColor;
+
+  &:hover {
+    color: @silver;
+  }
+
+  &:disabled {
+    color: @gray90;
+  }
+
+  &--minus {
+    top: 0;
+    left: 0;
+  }
+
+  &--plus {
+    top: 0;
+    right: 0;
+  }
+}
+
+.actions-list__count {
+  padding: 12px 0 10px;
+  width: 100%;
+  flex-grow: 1;
+  text-align: center;
+  color: @basic-blue-light;
+  .font(15px, 500, 14px);
+  border: 1px solid @skyline;
+  border-radius: 4px;
+  background-color: transparent;
+  transition: border 0.2s ease-in-out;
+
+  &:hover {
+    border-color: @navy;
+  }
+
+  &:hover ~ .actions-list__wrapper-button {
+    color: @navy;
+  }
+
+  &:active,
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    border: 1px solid @basic-blue-light;
+  }
+
+  &:active ~ .actions-list__wrapper-button,
+  &:focus ~ .actions-list__wrapper-button,
+  &:focus-visible ~ .actions-list__wrapper-button {
+    color: @basic-blue-light;
+  }
+
+  &::placeholder {
+    color: @basic-blue-light;
+  }
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+}
+
+.actions-list__check {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.actions-list__calendar {
+  margin-bottom: 22px;
+}
+
+.actions-list__button {
+  width: 100%;
+  margin-bottom: 17px;
+
+  &--prev-step {
+    .font(17px, 700, 17px);
+    color: @basic-blue-light;
+    text-transform: uppercase;
+    letter-spacing: 0.17px;
+    background-color: transparent;
+  }
+}

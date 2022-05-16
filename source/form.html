@@ -14,7 +14,6 @@
   <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon/apple.png"> <!-- 180×180 -->
   <link rel="manifest" href="manifest.json">
-  <script async src="js/lazysizes.min.js"></script>
   <script defer src="js/script.js"></script>
 </head>
 <body class="page__body">
@@ -46,13 +45,13 @@
         <div class="container container--nav">
           <ul class="nav__list site-list">
             <li class="site-list__item">
-              <a class="site-list__link" href="index.html">О&nbsp;сервисе</a>
+              <a class="site-list__link" href="index.html" data-hover="О сервисе">О&nbsp;сервисе</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link">Направления</a>
+              <a class="site-list__link" data-hover="Направления">Направления</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html">Попутчики</a>
+              <a class="site-list__link" href="catalog.html" data-hover="Попутчики">Попутчики</a>
             </li>
           </ul>
           <ul class="nav__list-contact contacts-list">
@@ -221,7 +220,7 @@
             <div class="plans-list__inner">
               <p class="plans-list__companion">3&nbsp;попутчика</p>
               <p class="plans-list__date">26&nbsp;мар&nbsp;&mdash; 29&nbsp;мар</p>
-              <button class="plans-list__button btn" type="button">Изменить</button>
+              <a class="plans-list__button btn" href="#">Изменить</a>
             </div>
           </li>
           <li class="plans-list__item">
@@ -229,7 +228,7 @@
             <div class="plans-list__inner">
               <p class="plans-list__companion">1&nbsp;попутчик</p>
               <p class="plans-list__date">1&nbsp;июл&nbsp;&mdash; 15&nbsp;июл</p>
-              <button class="plans-list__button btn" type="button">Изменить</button>
+              <a class="plans-list__button btn" href="#">Изменить</a>
             </div>
           </li>
         </ol>
@@ -268,8 +267,8 @@
               <span class="actions-list__label-unit">чел.</span>
             </label>
             <div class="actions-list__wrapper">
-              <button class="actions-list__wrapper-button actions-list__wrapper-button--minus btn">-</button>
               <input class="actions-list__count" type="number" name="companion-count" id="companion-count" placeholder="2" min="1">
+              <button class="actions-list__wrapper-button actions-list__wrapper-button--minus btn">-</button>
               <button class="actions-list__wrapper-button actions-list__wrapper-button--plus btn">+</button>
             </div>
             <label class="actions-list__label" for="companion-duration">
@@ -277,8 +276,8 @@
               <span class="actions-list__label-unit">дн.</span>
             </label>
             <div class="actions-list__wrapper">
+              <input class="actions-list__count" type="number" name="companion-duration" id="companion-duration" placeholder="3" min="1">
               <button class="actions-list__wrapper-button actions-list__wrapper-button--minus btn" type="button">-</button>
-              <input class="actions-list__count" type="number" name="companion-duration" id="companion-duration" placeholder="3">
               <button class="actions-list__wrapper-button actions-list__wrapper-button--plus btn" type="button">+</button>
             </div>
             <label class="actions-list__check">
@@ -619,7 +618,7 @@
           <!-- step 2 -->
           <fieldset class="actions-list__item">
             <legend class="actions-list__title">Шаг&nbsp;2. <br>Маршрут</legend>
-            <p class="actions-list__info">Укажите страны, которые вы&nbsp;хотели&nbsp;бы посетить. Это может быть одна или сразу несколько.</p>
+            <p class="actions-list__info">Укажите страны, которые вы&nbsp;хотели&nbsp;бы посетить. Это&nbsp;может быть одна или сразу несколько.</p>
             <ul class="actions-list__countries countries-list">
               <li class="countries-list__item">
                 <select class="countries-list__choice countries-list__choice--first" name="choice-first-country">
@@ -1019,7 +1018,7 @@
           <!-- step 3 -->
           <fieldset class="actions-list__item">
             <legend class="actions-list__title">Шаг&nbsp;3. <br>Развлечения</legend>
-            <p class="actions-list__info">Наконец, расскажите о&nbsp;своих планах времяпровождения. Можно писать в&nbsp;свободной форме и&nbsp;ставить тэги.</p>
+            <p class="actions-list__info">Наконец, расскажите о&nbsp;своих планах времяпровождения.<br> Можно писать в&nbsp;свободной форме и&nbsp;ставить тэги.</p>
             <ul class="actions-list__plans action-plan">
               <li class="action-plan__item">
                 <p class="action-plan__country">Босния и&nbsp;Герцеговина</p>
