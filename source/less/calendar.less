@@ -1,2 +1,40 @@
 @import "_vars";
 @import "_mixins";
+
+.calendar__control {
+  .base();
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  padding: 11px 0;
+  border-top: 1px solid @hawkes-blue;
+  border-bottom: 1px solid @hawkes-blue;
+}
+
+.calendar__control-button {
+  background-color: transparent;
+  opacity: 0.3;
+  transition: @transitionOpacity;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:disabled {
+    opacity: 0.15;
+  }
+}
+
+.calendar__control-month,
+.calendar__control-year {
+  .font(20px, 700, 20px);
+  color: @basic-blue-light;
+  background-color: transparent;
+  border: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.calendar__control-month {
+  width: 45px;
+}

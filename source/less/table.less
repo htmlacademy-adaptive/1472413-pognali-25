@@ -1,2 +1,49 @@
 @import "_vars";
 @import "_mixins";
+
+.table-calendar {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-calendar__text {
+  display: none;
+}
+
+.table-calendar__cell-day {
+  padding: 8px 0;
+  .font(14px, 400, 18px);
+  color: @gray;
+
+  &--weekend {
+    color: @bright-red;
+  }
+}
+
+.table-calendar__cell-number {
+  max-width: 14.4%;
+  padding: 8px 0;
+  text-align: center;
+  .font(14px, 500, 18px);
+  color: @basic-blue-light;
+  border: 1px solid @skyline;
+}
+
+.table-calendar__day {
+  display: block;
+}
+
+.table-calendar__choice {
+  position: absolute;
+  z-index: -1;
+  appearance: none;
+}
+
+.table-calendar__start,
+.table-calendar__finish {
+  display: none;
+}
+
+.table-calendar__cell-month {
+  display: none;
+}

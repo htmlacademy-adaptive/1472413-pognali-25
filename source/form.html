@@ -241,19 +241,13 @@
         <h2 class="steps__title title">Добавьте план:</h2>
         <ol class="steps__list pagination">
           <li class="pagination__item">
-            <a class="pagination__link" href="#">
-              <span class="pagination__text">Даты</span>
-            </a>
+            <span class="pagination__text">Даты</span>
           </li>
           <li class="pagination__item">
-            <a class="pagination__link" href="#">
-              <span class="pagination__text">Маршрут</span>
-            </a>
+            <span class="pagination__text">Маршрут</span>
           </li>
           <li class="pagination__item">
-            <a class="pagination__link" href="#">
-              <span class="pagination__text">Развлечения</span>
-            </a>
+            <span class="pagination__text">Развлечения</span>
           </li>
         </ol>
         <!-- actions-list -->
@@ -281,47 +275,56 @@
               <button class="actions-list__wrapper-button actions-list__wrapper-button--plus btn" type="button">+</button>
             </div>
             <label class="actions-list__check">
-              <input type="checkbox" name="with-children" checked>
+              <input class="actions-list__checkbox visually-hidden" type="checkbox" name="with-children" checked>
+              <span class="actions-list__text"></span>
               Можно с&nbsp;детьми
             </label>
             <div class="actions-list__calendar calendar">
               <div class="calendar__control">
                 <button class="calendar__control-button calendar__control-button--prev btn" type="button">
+                  <svg svg width="9" height="19" viewBox="0 0 9 19">
+                    <use xlink:href="./img/sprite.svg#left-array"></use>
+                  </svg>
                   <span class="visually-hidden">Предыдущий месяц.</span>
                 </button>
-                <label>
-                  <select class="calendar__control-month" name="month">
-                    <option value="january">Январь</option>
-                    <option value="february">Февраль</option>
-                    <option value="march" selected>Март</option>
-                    <option value="april">Апрель</option>
-                    <option value="may">Май</option>
-                    <option value="june">Июнь</option>
-                    <option value="july">Июль</option>
-                    <option value="august">Август</option>
-                    <option value="september">Сентябрь</option>
-                    <option value="october">Октябрь</option>
-                    <option value="november">Ноябрь</option>
-                    <option value="december">Декабрь</option>
-                  </select>
-                </label>
-                <label>
-                  <select class="calendar__control-year" name="year">
-                    <option value="2019" selected>2019</option>
-                    <option value="2020">2020</option>
-                    <option value="2021">2021</option>
-                    <option value="2022">2022</option>
-                    <option value="2023">2023</option>
-                    <option value="2024">2024</option>
-                    <option value="2025">2025</option>
-                  </select>
-                </label>
+                <div class="calendar__control-inner">
+                  <label>
+                    <select class="calendar__control-month" name="month">
+                      <option value="january">Январь</option>
+                      <option value="february">Февраль</option>
+                      <option value="march" selected>Март</option>
+                      <option value="april">Апрель</option>
+                      <option value="may">Май</option>
+                      <option value="june">Июнь</option>
+                      <option value="july">Июль</option>
+                      <option value="august">Август</option>
+                      <option value="september">Сентябрь</option>
+                      <option value="october">Октябрь</option>
+                      <option value="november">Ноябрь</option>
+                      <option value="december">Декабрь</option>
+                    </select>
+                  </label>
+                  <label>
+                    <select class="calendar__control-year" name="year">
+                      <option value="2019" selected>2019</option>
+                      <option value="2020">2020</option>
+                      <option value="2021">2021</option>
+                      <option value="2022">2022</option>
+                      <option value="2023">2023</option>
+                      <option value="2024">2024</option>
+                      <option value="2025">2025</option>
+                    </select>
+                  </label>
+                </div>
                 <button class="calendar__control-button calendar__control-button--next btn" type="button">
+                  <svg svg width="10" height="19" viewBox="0 0 10 19">
+                    <use xlink:href="./img/sprite.svg#right-array"></use>
+                  </svg>
                   <span class="visually-hidden">Следующий месяц.</span>
                 </button>
               </div>
               <table class="calendar__table table-calendar">
-                <tr class="table-calendar__row">
+                <thead class="table-calendar__row">
                   <th class="table-calendar__cell-day">
                     П<span class="table-calendar__text">н</span>
                   </th>
@@ -343,273 +346,275 @@
                   <th class="table-calendar__cell-day table-calendar__cell-day--weekend">
                     В<span class="table-calendar__text">с</span>
                   </th>
-                </tr>
-                <tr>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="23-past">
-                      23
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="24-past">
-                      24
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="25-past">
-                      25
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="26-past">
-                      26
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="27-past">
-                      27
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="28-past">
-                      28
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="1-past">
-                      1<span class="table-calendar__cell-mounth">&nbsp;мар</span>
-                    </label>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="2-past">
-                      2
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="3-past">
-                      3
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="4-past">
-                      4
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="5-past">
-                      5
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="6-past">
-                      6
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="7-past">
-                      7
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="8-past">
-                      8
-                    </label>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="9-past">
-                      9
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="10-past">
-                      10
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="11-past">
-                      11
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="12-past">
-                      12
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="13-past">
-                      13
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="14-past">
-                      14
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="15-past">
-                      15
-                    </label>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="16-past">
-                      16
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="17-past">
-                      17
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="18-past">
-                      18
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="19-past">
-                      19
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="20-past">
-                      20
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="21-past">
-                      21
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="22-past">
-                      22
-                    </label>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="23-past">
-                      23
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="24-past">
-                      24
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" disabled name="25-past">
-                      25
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number table-calendar__cell">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" name="26">
-                      26
-                      <span class="table-calendar__start">Заезд</span>
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number table-calendar__cell">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" name="27">
-                      27
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number table-calendar__cell">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" name="28">
-                      28
-                      <span class="table-calendar__finish">Выезд</span>
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number table-calendar__cell">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" name="29">
-                      29
-                    </label>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="table-calendar__cell-number table-calendar__cell">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" name="30">
-                      30
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number table-calendar__cell">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" name="31">
-                      3
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number table-calendar__cell">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" name="1">
-                      1<span class="table-calendar__cell-mounth">&nbsp;апр</span>
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number table-calendar__cell">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" name="2">
-                      2
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number table-calendar__cell">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" name="3">
-                      3
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number table-calendar__cell">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" name="4">
-                      4
-                    </label>
-                  </td>
-                  <td class="table-calendar__cell-number table-calendar__cell">
-                    <label class="table-calendar__day">
-                      <input class="table-calendar__choice" type="checkbox" name="5">
-                      5
-                    </label>
-                  </td>
-                </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="23-past">
+                        23
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="24-past">
+                        24
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="25-past">
+                        25
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="26-past">
+                        26
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="27-past">
+                        27
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="28-past">
+                        28
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="1-past">
+                        1<span class="table-calendar__cell-month">&nbsp;мар</span>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="2-past">
+                        2
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="3-past">
+                        3
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="4-past">
+                        4
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="5-past">
+                        5
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="6-past">
+                        6
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="7-past">
+                        7
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="8-past">
+                        8
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="9-past">
+                        9
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="10-past">
+                        10
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="11-past">
+                        11
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="12-past">
+                        12
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="13-past">
+                        13
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="14-past">
+                        14
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="15-past">
+                        15
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="16-past">
+                        16
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="17-past">
+                        17
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="18-past">
+                        18
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="19-past">
+                        19
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="20-past">
+                        20
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="21-past">
+                        21
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="22-past">
+                        22
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="23-past">
+                        23
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="24-past">
+                        24
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" disabled name="25-past">
+                        25
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number table-calendar__cell">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" name="26">
+                        26
+                        <span class="table-calendar__start">Заезд</span>
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number table-calendar__cell">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" name="27">
+                        27
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number table-calendar__cell">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" name="28">
+                        28
+                        <span class="table-calendar__finish">Выезд</span>
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number table-calendar__cell">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" name="29">
+                        29
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table-calendar__cell-number table-calendar__cell">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" name="30">
+                        30
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number table-calendar__cell">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" name="31">
+                        3
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number table-calendar__cell">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" name="1">
+                        1<span class="table-calendar__cell-month">&nbsp;апр</span>
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number table-calendar__cell">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" name="2">
+                        2
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number table-calendar__cell">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" name="3">
+                        3
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number table-calendar__cell">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" name="4">
+                        4
+                      </label>
+                    </td>
+                    <td class="table-calendar__cell-number table-calendar__cell">
+                      <label class="table-calendar__day">
+                        <input class="table-calendar__choice" type="checkbox" name="5">
+                        5
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
             </table>
             </div>
             <button class="actions-list__button btn btn--authorization">Следующий шаг</button>
