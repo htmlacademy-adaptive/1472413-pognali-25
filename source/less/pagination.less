@@ -1,2 +1,29 @@
 @import "_vars";
 @import "_mixins";
+
+.pagination__item {
+  position: relative;
+  .size(5px, 5px);
+
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  &::before {
+    content: "";
+    .size(5px, 5px);
+    .abs(block, 50%, initial, initial, 0);
+    transform: translateY(-50%);
+    background-color: @basic-blue-light;
+    opacity: 0.3;
+    border-radius: 50%;
+  }
+
+  &--active::before {
+    opacity: 1;
+  }
+}
+
+.pagination__text {
+  display: none;
+}

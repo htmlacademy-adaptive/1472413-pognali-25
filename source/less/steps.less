@@ -2,6 +2,7 @@
 @import "_mixins";
 
 .steps {
+  position: relative;
   padding-top: 28px;
   padding-bottom: 43px;
   background-color: @gainsboro;
@@ -11,4 +12,10 @@
 .steps__title {
   margin-bottom: 29px;
   color: @basic-blue-light;
+}
+
+.steps__list {
+  .base();
+  .reset();
+  .abs(flex, 40px, 44px, initial, initial);
 }

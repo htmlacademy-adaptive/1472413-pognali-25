@@ -21,22 +21,49 @@
 }
 
 .table-calendar__cell-number {
+  box-sizing: border-box;
+  min-height: 14.4%;
   max-width: 14.4%;
-  padding: 8px 0;
+  padding: 0;
+  vertical-align: middle;
   text-align: center;
   .font(14px, 500, 18px);
   color: @basic-blue-light;
   border: 1px solid @skyline;
-}
-
-.table-calendar__day {
-  display: block;
+  border-spacing: 0;
+  transition: box-shadow 0.2s ease-in-out;
 }
 
 .table-calendar__choice {
   position: absolute;
   z-index: -1;
   appearance: none;
+}
+
+.table-calendar__choice:disabled:not(:checked) + .table-calendar__day {
+  color: @gray;
+  opacity: 0.3;
+}
+
+.table-calendar__choice:not(:checked) + .table-calendar__day {
+  background-color: @blue-light;
+}
+
+.table-calendar__choice:checked + .table-calendar__day {
+  color: @white;
+  background-color: @basic-blue-light;
+}
+
+.table-calendar__day {
+  box-sizing: border-box;
+  display: block;
+  padding: 8px 0;
+  .size(100%, 100%);
+  cursor: pointer;
+}
+
+.table-calendar__choice + .table-calendar__day:hover {
+  box-shadow: 0 0 0 2px @bright-red inset;
 }
 
 .table-calendar__start,

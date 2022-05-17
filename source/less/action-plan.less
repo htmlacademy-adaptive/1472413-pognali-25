@@ -1,0 +1,25 @@
+@import "_vars";
+@import "_mixins";
+
+.action-plan__item {
+  position: relative;
+  margin-bottom: 27px;
+}
+
+.action-plan__country {
+  position: relative;
+  .base();
+  margin-bottom: 18px;
+  padding-left: 11px;
+  .font(18px, 500, 18px);
+  color: @basic-blue-light;
+}
+
+.action-plan__flag {
+  .abs(block, -4px, 0, initial, initial);
+}
+
+.action-plan__description {
+  .size(100%, 220px);
+  resize: none;
+}
