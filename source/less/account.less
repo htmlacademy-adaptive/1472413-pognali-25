@@ -20,7 +20,7 @@
   &::after {
     content: "";
     .abs(block, initial, initial, -30px, 0);
-    .size(100%, 30px);
+    .size(100%, 40px);
     background-color: @blue-light;
     z-index: -1;
   }
@@ -195,7 +195,7 @@
   transition: border-color 0.2s ease-in-out;
 
   @media (min-width: @tablet-width) {
-    transform: rotate(180deg);
+    position: relative;
   }
 
   @media (min-width: @desktop-width) {
@@ -261,6 +261,14 @@
     transform: rotate(180deg);
   }
 
+  &--transports {
+    @media (min-width: @tablet-width) {
+      .abs(block, initial, initial, -10px, 50%);
+      transform: translateX(-50%);
+      background-color: @blue-light;
+    }
+  }
+
   &--tags {
     .base();
     .abs(inline-block, -9px, initial, initial, 50%);
@@ -285,11 +293,11 @@
   padding-bottom: 15px;
 
   @media (min-width: @tablet-width) {
-    transform: rotate(180deg);
+    padding: 26px 0 16px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 20.5px 0;
+    padding: 25px 0;
   }
 }
 

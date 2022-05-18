@@ -58,3 +58,10 @@
 .list-transports__checkbox:disabled:not(:checked) + .list-transports__icon {
   opacity: 0.1;
 }
+
+.list-transports__checkbox:focus ~ .list-transports__icon,
+.list-transports__checkbox:focus-visible ~ .list-transports__icon {
+  outline: 1px solid @basic-blue;
+  border-radius: 50%;
+  outline-offset: 12px;
+}

@@ -4,11 +4,23 @@ let burger = header.querySelector('.burger');
 let userList = header.querySelector('.user-list--header');
 let logoDark = header.querySelector('.logo__img-dark');
 let logoLight = header.querySelector('.logo__img');
+let choiceCountry = document.querySelector('.countries-list__choice--third');
+
+let companionDuration = document.getElementById('duration');
+let companionDurationInput = document.getElementById('companion-duration');
+let durationAdd = companionDuration.querySelector('.actions-list__wrapper-button--plus');
+let durationSub = companionDuration.querySelector('.actions-list__wrapper-button--minus');
+
+let companionCount = document.getElementById('count');
+let companionCountInput = document.getElementById('companion-count');
+let companionSub = companionCount.querySelector('.actions-list__wrapper-button--minus');
+let companionAdd = companionCount.querySelector('.actions-list__wrapper-button--plus');
 
 const headerSize = header.offsetHeight;
 
 header.classList.remove('header--no-js');
 headerNav.classList.remove('nav--open');
+choiceCountry.classList.remove('countries-list__choice--open');
 
 
 /* scroll */
@@ -63,5 +75,57 @@ if (profileButton != null) profileButton.addEventListener('click', function () {
 if (modalButton != null) modalButton.addEventListener('click', function () {
   if (modal.classList.contains('modal--open')) {
     modal.classList.remove('modal--open');
+  }
+});
+
+/* counter */
+/* companion-count */
+let companionCountValue = 2;
+
+if (companionSub != null) companionSub.addEventListener('click', function () {
+  ChangeValue(-1);
+});
+if (companionAdd != null) companionAdd.addEventListener('click', function () {
+  ChangeValue(1);
+});
+
+function ChangeValue(value) {
+  companionCountValue += value;
+  if (companionCountValue < 0) {
+    companionCountInput.value = 0;
+    companionCountValue = 0;
+  } else {
+    companionCountInput.value = companionCountValue;
+  }
+}
+
+/* companion-duration */
+let companionDurationValue = 3;
+
+if (durationSub != null) durationSub.addEventListener('click', function () {
+  ChangeDurationValue(-1);
+});
+if (durationAdd != null) durationAdd.addEventListener('click', function () {
+  ChangeDurationValue(1);
+});
+
+function ChangeDurationValue(value) {
+  companionDurationValue += value;
+  if (companionDurationValue < 0) {
+    companionDurationInput.value = 0;
+    companionDurationValue = 0;
+  } else {
+    companionDurationInput.value = companionDurationValue;
+  }
+}
+
+
+
+/* choosing country */
+if (choiceCountry != null) choiceCountry.addEventListener('click', function () {
+  if (!choiceCountry.classList.contains('countries-list__choice--open')) {
+    choiceCountry.classList.add('countries-list__choice--open');
+  } else {
+    choiceCountry.classList.remove('countries-list__choice--open');
   }
 });

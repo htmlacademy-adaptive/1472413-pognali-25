@@ -1,2 +1,101 @@
 @import "_vars";
 @import "_mixins";
+
+.table-calendar {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-calendar__text {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+  }
+}
+
+.table-calendar__cell-day {
+  padding: 8px 0;
+  .font(14px, 400, 18px);
+  color: @gray;
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 0;
+    .fontChanged(18px, 18px);
+  }
+
+  &--weekend {
+    color: @bright-red;
+  }
+}
+
+.table-calendar__cell-number {
+  box-sizing: border-box;
+  min-height: 14.4%;
+  max-width: 14.4%;
+  padding: 0;
+  vertical-align: middle;
+  text-align: center;
+  .font(14px, 500, 18px);
+  color: @basic-blue-light;
+  border: 1px solid @skyline;
+  border-spacing: 0;
+  transition: box-shadow 0.2s ease-in-out, @transitionBgColor, @transitionColor;
+
+  @media (min-width: @tablet-width) {
+    .fontChanged(20px, 20px);
+  }
+}
+
+.table-calendar__choice {
+  position: absolute;
+  z-index: -1;
+  appearance: none;
+}
+
+.table-calendar__choice:disabled:not(:checked) + .table-calendar__day {
+  color: @gray;
+  opacity: 0.3;
+}
+
+.table-calendar__choice:not(:checked) + .table-calendar__day {
+  background-color: @blue-light;
+}
+
+.table-calendar__choice:checked + .table-calendar__day {
+  color: @white;
+  background-color: @basic-blue-light;
+}
+
+.table-calendar__choice:disabled ~ .table-calendar__day {
+  @media (min-width: @tablet-width) {
+    font-weight: 400;
+  }
+}
+
+.table-calendar__day {
+  box-sizing: border-box;
+  display: block;
+  padding: 8px 0;
+  .size(100%, 100%);
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    padding: 24px 0 25px;
+  }
+}
+
+.table-calendar__choice + .table-calendar__day:hover {
+  box-shadow: 0 0 0 2px @bright-red inset;
+  color: @white;
+  background-color: @basic-blue-light;
+}
+
+.table-calendar__start,
+.table-calendar__finish {
+  display: none;
+}
+
+.table-calendar__cell-month {
+  display: none;
+}

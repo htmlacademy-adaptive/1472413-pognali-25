@@ -1,2 +1,27 @@
 @import "_vars";
 @import "_mixins";
+
+.alphabet__list {
+  .base();
+  .reset();
+}
+
+.alphabet__item {
+  margin-bottom: 4px;
+}
+
+.alphabet__link {
+  .resetLink();
+  .resetButton();
+  transition: @transitionColor;
+
+  &:hover {
+    color: @basic-blue-light;
+  }
+
+  &:active {
+    color: @basic-blue-light;
+    font-weight: 400;
+    opacity: 0.3;
+  }
+}
