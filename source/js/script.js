@@ -8,19 +8,27 @@ let choiceCountry = document.querySelector('.countries-list__choice--third');
 
 let companionDuration = document.getElementById('duration');
 let companionDurationInput = document.getElementById('companion-duration');
-let durationAdd = companionDuration.querySelector('.actions-list__wrapper-button--plus');
-let durationSub = companionDuration.querySelector('.actions-list__wrapper-button--minus');
+let durationAdd;
+let durationSub;
+if (companionDuration != null) {
+  durationAdd = companionDuration.querySelector('.actions-list__wrapper-button--plus');
+  durationSub = companionDuration.querySelector('.actions-list__wrapper-button--minus');
+};
 
 let companionCount = document.getElementById('count');
 let companionCountInput = document.getElementById('companion-count');
-let companionSub = companionCount.querySelector('.actions-list__wrapper-button--minus');
-let companionAdd = companionCount.querySelector('.actions-list__wrapper-button--plus');
+let companionSub;
+let companionAdd;
+if (companionCount != null) {
+  companionSub = companionCount.querySelector('.actions-list__wrapper-button--minus');
+  companionAdd = companionCount.querySelector('.actions-list__wrapper-button--plus');
+}
 
 const headerSize = header.offsetHeight;
 
 header.classList.remove('header--no-js');
 headerNav.classList.remove('nav--open');
-choiceCountry.classList.remove('countries-list__choice--open');
+if (choiceCountry != null) choiceCountry.classList.remove('countries-list__choice--open');
 
 
 /* scroll */
@@ -118,8 +126,6 @@ function ChangeDurationValue(value) {
     companionDurationInput.value = companionDurationValue;
   }
 }
-
-
 
 /* choosing country */
 if (choiceCountry != null) choiceCountry.addEventListener('click', function () {

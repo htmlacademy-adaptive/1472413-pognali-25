@@ -238,7 +238,7 @@
     <!-- steps -->
     <section class="steps">
       <div class="container">
-        <h2 class="steps__title title">Добавьте план:</h2>
+        <h2 class="steps__title title">Добавить план:</h2>
         <ol class="steps__list pagination">
           <li class="pagination__item pagination__item--active">
             <span class="pagination__text">Даты</span>
@@ -254,7 +254,7 @@
         <form class="steps__actions actions-list" action="https://echo.htmlacademy.ru/" method="post">
           <!-- step 1 -->
           <fieldset class="actions-list__item actions-list__item--step1">
-            <legend class="actions-list__title">Шаг&nbsp;1. <br>Даты пребывания</legend>
+            <legend class="actions-list__title">Шаг&nbsp;1.&nbsp;<br>Даты пребывания</legend>
             <p class="actions-list__info">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели&nbsp;бы позвать в&nbsp;поездку, и&nbsp;ее&nbsp;предполагаемую длительность.</p>
             <label class="actions-list__label actions-list__label--count" for="companion-count">
               <span class="actions-list__label-text">Ищу попутчиков:</span>
@@ -545,7 +545,7 @@
           <!-- /step 1 -->
           <!-- step 2 -->
           <fieldset class="actions-list__item">
-            <legend class="actions-list__title">Шаг&nbsp;2. <br>Маршрут</legend>
+            <legend class="actions-list__title">Шаг&nbsp;2.&nbsp;<br>Маршрут</legend>
             <p class="actions-list__info">Укажите страны, которые вы&nbsp;хотели&nbsp;бы посетить. Это может быть одна или сразу несколько.</p>
             <ul class="actions-list__countries countries-list">
               <li class="countries-list__item countries-list__item--chosen">
@@ -953,14 +953,16 @@
                 </div>
               </li>
             </ul>
-            <button class="actions-list__add-country btn" type="button">Добавить страну</button>
+            <div class="actions-list__container">
+              <button class="actions-list__add-country btn" type="button">Добавить страну</button>
+            </div>
             <button class="actions-list__button actions-list__button--next btn btn--authorization" type="button">Следующий шаг</button>
             <button class="actions-list__button actions-list__button--prev-step btn" type="button">На&nbsp;шаг назад</button>
           </fieldset>
           <!-- /step 2 -->
           <!-- step 3 -->
           <fieldset class="actions-list__item">
-            <legend class="actions-list__title">Шаг&nbsp;3. <br>Развлечения</legend>
+            <legend class="actions-list__title">Шаг&nbsp;3.&nbsp;<br>Развлечения</legend>
             <p class="actions-list__info">Наконец, расскажите о&nbsp;своих планах времяпровождения.<br> Можно писать в&nbsp;свободной форме и&nbsp;ставить тэги.</p>
             <ul class="actions-list__plans action-plan">
               <li class="action-plan__item">
