@@ -1,2 +1,42 @@
 @import "_vars";
 @import "_mixins";
+
+.filter {
+  position: relative;
+  .base();
+  margin-bottom: 21px;
+  padding: 21px 0 15px;
+  background-color: @lavender-light;
+  border-radius: 0 0 @small @small;
+
+  &::before {
+    content: "";
+    .abs(block, -30px, 0, 0, initial);
+    .size(100%, 30px);
+    background-color: @lavender-light;
+  }
+}
+
+.filter__title {
+  .base();
+  padding-left: 27px;
+  .font(16px, 700, 18px);
+  color: @midnight-blue;
+  text-transform: uppercase;
+}
+
+.filter__text {
+  display: none;
+}
+
+.filter__continents {
+  display: none;
+}
+
+.filter__table {
+  display: none;
+}
+
+.filter__close {
+  display: none;
+}

@@ -16,12 +16,13 @@
   @media (min-width: @desktop-width) {
     padding-top: 55px;
     padding-bottom: 54px;
+    border-radius: 60px 60px 0 0;
   }
 }
 
 .steps__actions {
   @media (min-width: @tablet-width) {
-    max-width: 89.5%;
+    max-width: @max-width;
     margin: 0 auto;
   }
 
@@ -49,6 +50,7 @@
   .base();
   .reset();
   .abs(flex, 40px, 44px, initial, initial);
+  z-index: 5;
 
   @media (min-width: @tablet-width) {
     top: 71px;
@@ -57,6 +59,10 @@
   }
 
   @media (min-width: @desktop-width) {
-    left: 90.5%;
+    flex-direction: column;
+    height: 100px;
+    top: 240px;
+    right: 207px;
+    left: initial;
   }
 }

@@ -130,7 +130,7 @@
   </header>
   <!-- /header -->
   <!-- main -->
-  <main class="main main--inner">
+  <main class="main main--catalog">
     <header class="main__header">
       <div class="container">
         <h1 class="main__title title-big">Попутчики</h1>
@@ -139,11 +139,13 @@
     </header>
     <!-- filter -->
     <section class="filter">
-      <div class="container">
+      <div class="container container--filter">
         <h2 class="filter__title">Фильтрация по&nbsp;странам:</h2>
+<!-- при нажатии добавляется класс filter__button--open -->
         <button class="filter__button btn" type="button">
           <span class="filter__text">Показать всё</span>
         </button>
+<!-- при нажатии на filter__button открывается меню и добавляется filter__continents--open -->
         <ul class="filter__continents continents-list">
           <li class="continents-list__item">
             <a class="continents-list__link" href="#">Европа</a>
@@ -163,7 +165,7 @@
             <tr class="table__row">
               <td class="table__cell">
                 <button class="table__button table__button--current btn" type="submit" disabled>А</button>
-                <div class="alphabet">
+                <div class="alphabet alphabet--active">
                   <ol class="alphabet__list">
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Австралия</a></li>
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Австрия</a></li>
@@ -515,9 +517,9 @@
     </section>
     <!-- /filter -->
     <!-- filter-companion -->
-    <section class="filter-companion">
-      <div class="container">
-        <h2 class="filter-companion">Подберите идеального попутчика</h2>
+    <div class="container">
+      <section class="filter-companion">
+        <h2 class="filter-companion__title">Подберите идеального попутчика</h2>
         <form class="filter-companion__list preferences" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="preferences__item">
             <legend class="preferences__title">Хобби</legend>
@@ -644,8 +646,8 @@
           </fieldset>
           <button class="preferences__button btn" type="submit">Показать</button>
         </form>
-      </div>
-    </section>
+      </section>
+    </div>
     <!-- /filter-companion -->
     <!-- catalog -->
     <section class="catalog">

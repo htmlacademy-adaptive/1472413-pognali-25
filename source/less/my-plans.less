@@ -9,12 +9,21 @@
   background-color: @special-blue-light;
   border-radius: 30px 30px 0 0;
 
+  @media (min-width: @desktop-width) {
+    border-radius: 60px 60px 0 0;
+  }
+
   &::after {
     content: "";
     .abs(block, initial, initial, -30px, 0);
     .size(100%, 40px);
     background-color: @special-blue-light;
     z-index: -1;
+
+    @media (min-width: @desktop-width) {
+      height: 60px;
+      bottom: -50px;
+    }
   }
 }
 
@@ -35,7 +44,7 @@
 
 .my-plans__list {
   @media (min-width: @tablet-width) {
-    max-width: 89.5%;
+    max-width: @max-width;
     margin-left: auto;
     margin-right: auto;
   }

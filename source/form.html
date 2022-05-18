@@ -265,11 +265,11 @@
               <button class="actions-list__wrapper-button actions-list__wrapper-button--minus btn" type="button">-</button>
               <button class="actions-list__wrapper-button actions-list__wrapper-button--plus btn" type="button">+</button>
             </div>
-            <label class="actions-list__label" for="companion-duration">
+            <label class="actions-list__label actions-list__label--duration" for="companion-duration">
               <span class="actions-list__label-text">Длительность:</span>
               <span class="actions-list__label-unit">дн.</span>
             </label>
-            <div class="actions-list__wrapper" id="duration">
+            <div class="actions-list__wrapper actions-list__wrapper--duration" id="duration">
               <input class="actions-list__count" type="number" name="companion-duration" id="companion-duration" placeholder="3" min="1">
               <button class="actions-list__wrapper-button actions-list__wrapper-button--minus btn" type="button">-</button>
               <button class="actions-list__wrapper-button actions-list__wrapper-button--plus btn" type="button">+</button>
@@ -486,7 +486,7 @@
                     </td>
                     <td class="table-calendar__cell-number table-calendar__cell">
                       <input class="table-calendar__choice" type="checkbox" checked name="26" id="26">
-                      <label class="table-calendar__day" for="26">26
+                      <label class="table-calendar__day table-calendar__day--extreme" for="26">26
                         <span class="table-calendar__start">Заезд</span>
                       </label>
                     </td>
@@ -496,7 +496,7 @@
                     </td>
                     <td class="table-calendar__cell-number table-calendar__cell">
                       <input class="table-calendar__choice" type="checkbox" checked name="28" id="28">
-                      <label class="table-calendar__day" for="28">28
+                      <label class="table-calendar__day table-calendar__day--extreme" for="28">28
                         <span class="table-calendar__finish">Выезд</span>
                       </label>
                     </td>
@@ -546,7 +546,7 @@
           <!-- step 2 -->
           <fieldset class="actions-list__item">
             <legend class="actions-list__title">Шаг&nbsp;2.&nbsp;<br>Маршрут</legend>
-            <p class="actions-list__info">Укажите страны, которые вы&nbsp;хотели&nbsp;бы посетить. Это может быть одна или сразу несколько.</p>
+            <p class="actions-list__info">Укажите страны, которые вы&nbsp;хотели&nbsp;бы посетить.&nbsp;<br> Это может быть одна или сразу несколько.</p>
             <ul class="actions-list__countries countries-list">
               <li class="countries-list__item countries-list__item--chosen">
                 <button class="countries-list__choice countries-list__choice--first btn" type="button">
@@ -974,6 +974,7 @@
                   <img class="action-plan__flag" src="img/countries/bosnia-and-herzegovina.png" srcset="img/countries/bosnia-and-herzegovina@2x.png 2x" width="35" height="24" alt="флаг Боснии и Герцеговины.">
                 </picture>
                 <textarea class="action-plan__description" placeholder="План действий"></textarea>
+                <p class="action-plan__message-error">Это поле должно быть заполнено</p>
               </li>
               <li class="action-plan__item">
                 <p class="action-plan__country">Чехия</p>
@@ -984,6 +985,7 @@
                   <img class="action-plan__flag" src="img/countries/czechia.png" srcset="img/countries/czechia@2x.png 2x" width="35" height="24" alt="флаг Франции.">
                 </picture>
                 <textarea class="action-plan__description" placeholder="План действий">Пить пиво и&nbsp;лазить по&nbsp;старым замкам, наслаждаться архитектурой и&nbsp;вот это все.</textarea>
+                <p class="action-plan__message-error">Это поле должно быть заполнено</p>
               </li>
             </ul>
             <button class="actions-list__button actions-list__button--next btn btn--authorization" type="submit">Отправить</button>

@@ -120,8 +120,10 @@
     color: @white;
   }
 
-  &:invalid {
+  &:invalid::placeholder,
+  &--invalid::placeholder {
     color: @red;
+    opacity: 1;
   }
 
   @media (min-width: @tablet-width) {

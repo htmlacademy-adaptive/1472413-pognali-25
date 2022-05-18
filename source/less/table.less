@@ -8,6 +8,15 @@
   box-sizing: border-box;
   border-collapse: collapse;
   border-spacing: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-collapse: separate;
+    border-spacing: 14px;
+  }
 }
 
 .table .alphabet {
@@ -15,6 +24,18 @@
 
   &--active {
     .abs(block, initial, initial, -300px, 19px);
+
+    @media (min-width: @tablet-width) {
+      height: 100%;
+      left: initial;
+      bottom: initial;
+      top: 0;
+      right: -250px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 10px;
+    }
   }
 }
 
@@ -24,6 +45,10 @@
   border: 1px solid @skyline;
   outline: 1px solid transparent;
   transition: outline 0.2s ease-in-out;
+
+  @media (min-width: @desktop-width) {
+    border-radius: 4px;
+  }
 
   &:hover {
     outline-color: @navy;
@@ -39,20 +64,47 @@
   text-transform: uppercase;
   background-color: @white;
 
+  @media (min-width: @tablet-width) {
+    .fontChanged(20px, 20px);
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-radius: 4px;
+  }
+
   &--current,
   &:active {
     background-color: @blue-light;
+
+    @media (min-width: @tablet-width) {
+      color: @white;
+      background-color: @basic-blue-light;
+    }
   }
 }
 
 .table__row:first-child .table__cell {
   border-top: none;
+
+  @media (min-width: @tablet-width) {
+    border-top: 1px solid @skyline;
+  }
 }
 
 .table__row .table__cell:first-child {
   border-left: none;
+
+  @media (min-width: @tablet-width) {
+    border-left: 1px solid @skyline;
+  }
 }
 
 .table__row .table__cell:last-child {
   border-right: none;
+
+  @media (min-width: @tablet-width) {
+    border-right: 1px solid @skyline;
+  }
 }

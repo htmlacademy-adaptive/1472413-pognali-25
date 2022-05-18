@@ -8,12 +8,20 @@
 
 .alphabet__item {
   margin-bottom: 4px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 10px;
+  }
 }
 
 .alphabet__link {
   .resetLink();
   .resetButton();
   transition: @transitionColor;
+
+  @media (min-width: @tablet-width) {
+    .font(20px, 400, 20px);
+  }
 
   &:hover {
     color: @basic-blue-light;
