@@ -24,6 +24,11 @@ if (companionCount != null) {
   companionAdd = companionCount.querySelector('.actions-list__wrapper-button--plus');
 }
 
+let stepsNodeList = document.querySelectorAll('.actions-list__item');
+let nextStepButton = document.querySelectorAll('.actions-list__button--next');
+let prevStepButton = document.querySelectorAll('.actions-list__button--prev-step');
+let paginatorNodeList = document.querySelectorAll('.pagination__item');
+
 const headerSize = header.offsetHeight;
 
 header.classList.remove('header--no-js');
@@ -99,9 +104,9 @@ if (companionAdd != null) companionAdd.addEventListener('click', function () {
 
 function ChangeValue(value) {
   companionCountValue += value;
-  if (companionCountValue < 0) {
-    companionCountInput.value = 0;
-    companionCountValue = 0;
+  if (companionCountValue < 1) {
+    companionCountInput.value = 1;
+    companionCountValue = 1;
   } else {
     companionCountInput.value = companionCountValue;
   }
@@ -119,9 +124,9 @@ if (durationAdd != null) durationAdd.addEventListener('click', function () {
 
 function ChangeDurationValue(value) {
   companionDurationValue += value;
-  if (companionDurationValue < 0) {
-    companionDurationInput.value = 0;
-    companionDurationValue = 0;
+  if (companionDurationValue < 1) {
+    companionDurationInput.value = 1;
+    companionDurationValue = 1;
   } else {
     companionDurationInput.value = companionDurationValue;
   }
@@ -134,4 +139,63 @@ if (choiceCountry != null) choiceCountry.addEventListener('click', function () {
   } else {
     choiceCountry.classList.remove('countries-list__choice--open');
   }
+});
+
+/* steps */
+let activeStepIndex = 2;
+if (stepsNodeList != null) {
+  ChangeStep(0);
+}
+
+if (nextStepButton != null) nextStepButton.forEach(nextButton => nextButton.addEventListener('click', function () {
+  ChangeStep(1);
+}));
+
+if (prevStepButton != null) prevStepButton.forEach(prevButton => prevButton.addEventListener('click', function () {
+  ChangeStep(-1);
+}));
+
+function ChangeStep(value) {
+  activeStepIndex += value;
+  if (activeStepIndex < 0)
+    activeStepIndex = 0;
+  else if (activeStepIndex >= stepsNodeList.length)
+    activeStepIndex = stepsNodeList.length - 1;
+
+  for (let i = 0; i < stepsNodeList.length; i++) {
+    if (i == activeStepIndex) {
+      if (stepsNodeList[i].classList.contains('actions-list__item--hide'))
+        stepsNodeList[i].classList.remove('actions-list__item--hide');
+      if (!paginatorNodeList[i].classList.contains('pagination__item--active'))
+        paginatorNodeList[i].classList.add('pagination__item--active');
+    } else {
+      if (!stepsNodeList[i].classList.contains('actions-list__item--hide'))
+        stepsNodeList[i].classList.add('actions-list__item--hide');
+      if (paginatorNodeList[i].classList.contains('pagination__item--active'))
+        paginatorNodeList[i].classList.remove('pagination__item--active');
+    }
+  }
+}
+
+/* invalid textarea */
+let submitBtn = document.querySelector('.actions-list__button--submit');
+let textFields = document.querySelectorAll('.action-plan__description');
+
+if (submitBtn != null) submitBtn.addEventListener('click', function () {
+  textFields.forEach(textField => {
+    if (textField.value.length === 0) {
+      textField.classList.add('action-plan__description--invalid');
+    }
+  })
+});
+
+/* invalid email */
+let submitEmail = document.querySelector('.contact__button');
+let inputEmail = document.querySelector('.contact__input');
+
+if (submitEmail != null) submitEmail.addEventListener('click', function () {
+    if (inputEmail.value.length === 0) {
+      inputEmail.classList.add('contact__input--invalid');
+      inputEmail.placeholder = "Введите e-mail";
+    }
 });

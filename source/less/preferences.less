@@ -1,2 +1,37 @@
 @import "_vars";
 @import "_mixins";
+
+.preferences__item {
+  position: relative;
+  .base();
+  padding-top: 46px;
+  padding-bottom: 21px;
+  border: none;
+  border-top: 1px solid @yellow;
+
+  &:last-of-type {
+    margin-bottom: 20px;
+  }
+}
+
+.preferences__title {
+  .abs(block, 0, initial, initial, 0);
+  padding: 12px 0;
+  .font(16px, 700, 18px);
+  color: @basic-blue-light;
+  text-transform: uppercase;
+}
+
+.preferences__list {
+  .base();
+  .reset();
+}
+
+.preferences__button {
+  width: 100%;
+  padding: 14px;
+  .font(17px, 700, 17px);
+  color: @basic-blue;
+  text-transform: uppercase;
+  border-radius: 25px;
+}

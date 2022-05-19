@@ -7,7 +7,7 @@
   <link rel="preload" href="fonts/bloggersans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/bloggersans-light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/bloggersans-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-  <title>Погнили! | Каталог</title>
+  <title>Погнали! | Каталог</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon32.ico"> <!-- 32×32 -->
   <link rel="icon" href="favicon16.ico"> <!-- 16×16 -->
@@ -518,7 +518,7 @@
     <!-- /filter -->
     <!-- filter-companion -->
     <div class="container">
-      <section class="filter-companion">
+      <aside class="filter-companion">
         <h2 class="filter-companion__title">Подберите идеального попутчика</h2>
         <form class="filter-companion__list preferences" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="preferences__item">
@@ -646,7 +646,7 @@
           </fieldset>
           <button class="preferences__button btn" type="submit">Показать</button>
         </form>
-      </section>
+      </aside>
     </div>
     <!-- /filter-companion -->
     <!-- catalog -->
@@ -663,9 +663,11 @@
               <source media="(min-width: 768px)" srcset="img/avatars/avatar-1-190x190.png 1x, img/avatars/avatar-1-190x190@2x.png 2x">
               <img class="card-catalog__img" src="img/avatars/avatar-1-70x70.png" srcset="img/avatars/avatar-1-70x70@2x.png 2x" alt="аватарка пользователя.">
             </picture>
-            <h3 class="card-catalog__title title-small">Таня Фирсова</h3>
+            <a class="card-catalog__link" href="#">
+              <h3 class="card-catalog__title title-small">Таня Фирсова</h3>
+            </a>
             <div class="card-catalog__like">
-              <button class="card-catalog__like-button btn" type="button" name="like">
+              <button class="card-catalog__like-button card-catalog__like-button--like btn" type="button" name="like">
                 <span class="visually-hidden">Добавить в&nbsp;избранное</span>
                 <svg class="card-catalog__like-icon" width="13" height="11" viewBox="0 0 13 11">
                   <use xlink:href="./img/sprite.svg#heart-full"></use>
@@ -681,14 +683,14 @@
               <li class="list-tags__item">#авокадо</li>
               <li class="list-tags__item">#смузи</li>
             </ul>
-            <h4 class="card-catalog__subtitle title-xs-xize">хочет посетить:</h4>
+            <h4 class="card-catalog__subtitle card-catalog__subtitle--wanted title-xs-size">хочет посетить:</h4>
             <ul class="card-catalog__list-countries countries">
               <li class="countries__item">
                 <picture>
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/countries/sri-lanka.webp 1x, img/countries/sri-lanka@2x.webp 2x">
                   <source type="image/webp" srcset="img/countries/sri-lanka-small.webp 1x, img/countries/sri-lanka-small@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/countries/sri-lanka.png 1x, img/countries/sri-lanka@2x.png 2x">
-                  <img class="list-countries__flag" src="img/countries/sri-lanka-small.png" srcset="img/countries/sri-lanka-small@2x.png 2x" width="26" height="18" alt="флаг Шри-Ланка.">
+                  <img class="countries__flag" src="img/countries/sri-lanka-small.png" srcset="img/countries/sri-lanka-small@2x.png 2x" width="26" height="18" alt="флаг Шри-Ланка.">
                 </picture>
                 <span class="countries__text">Шри-Ланка</span>
               </li>
@@ -697,7 +699,7 @@
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/countries/thailand.webp 1x, img/countries/thailand@2x.webp 2x">
                   <source type="image/webp" srcset="img/countries/thailand-small.webp 1x, img/countries/thailand-small@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/countries/thailand.png 1x, img/countries/thailand@2x.png 2x">
-                  <img class="list-countries__flag" src="img/countries/thailand-small.png" srcset="img/countries/thailand-small@2x.png 2x" width="26" height="18" alt="флаг Таиланда.">
+                  <img class="countries__flag" src="img/countries/thailand-small.png" srcset="img/countries/thailand-small@2x.png 2x" width="26" height="18" alt="флаг Таиланда.">
                 </picture>
                 <span class="countries__text">Таиланд</span>
               </li>
@@ -706,48 +708,43 @@
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/countries/seychelles.webp 1x, img/countries/seychelles@2x.webp 2x">
                   <source type="image/webp" srcset="img/countries/seychelles-small.webp 1x, img/countries/seychelles-small@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/countries/seychelles.png 1x, img/countries/seychelles@2x.png 2x">
-                  <img class="list-countries__flag" src="img/countries/seychelles-small.png" srcset="img/countries/seychelles-small@2x.png 2x" width="26" height="18" alt="флаг Сейшел.">
+                  <img class="countries__flag" src="img/countries/seychelles-small.png" srcset="img/countries/seychelles-small@2x.png 2x" width="26" height="18" alt="флаг Сейшел.">
                 </picture>
                 <span class="countries__text">Сейшелы</span>
               </li>
             </ul>
-            <h4 class="card-catalog__subtitle title-xs-xize">транспорт:</h4>
-            <ul class="card-catalog__transports list-transports">
-              <li class="list-transports__item tooltip transport-icon transport-icon--first">
-                <button class="list-transports__button btn" type="button">
-                  <svg class="list-transports__icon" width="18" height="20" viewBox="0 0 18 20">
-                    <use xlink:href="./img/sprite.svg#plane"></use>
-                  </svg>
-                </button>
+            <h4 class="card-catalog__subtitle card-catalog__subtitle--transports title-xs-size">транспорт:</h4>
+            <ul class="card-catalog__list-transports list-transports">
+              <li class="list-transports__point list-transports__point--active tooltip transport-icon transport-icon--big transport-icon--first">
+                <svg class="list-transports__icon" width="14" height="16" viewBox="0 0 18 20">
+                  <use xlink:href="./img/sprite.svg#plane"></use>
+                </svg>
                 <span class="list-transports__text tooltip__text">Авиаперелет</span>
               </li>
-              <li class="list-transports__item tooltip transport-icon transport-icon--second">
-                <button class="list-transports__button btn" type="button">
-                  <svg width="18" height="21" viewBox="0 0 18 21">
-                    <use xlink:href="./img/sprite.svg#bus"></use>
-                  </svg>
-                </button>
+              <li class="list-transports__point tooltip transport-icon transport-icon--big transport-icon--second">
+                <svg width="13" height="16" viewBox="0 0 18 21">
+                  <use xlink:href="./img/sprite.svg#bus"></use>
+                </svg>
                 <span class="list-transports__text tooltip__text">Автотранспорт</span>
               </li>
-              <li class="list-transports__item tooltip transport-icon transport-icon--third">
-                <button class="list-transports__button btn" type="button">
-                  <svg width="25" height="24" viewBox="0 0 25 24">
-                    <use xlink:href="./img/sprite.svg#bicycle"></use>
-                  </svg>
-                </button>
+              <li class="list-transports__point tooltip transport-icon transport-icon--big transport-icon--third">
+                <svg width="15" height="17" viewBox="0 0 25 24">
+                  <use xlink:href="./img/sprite.svg#bicycle"></use>
+                </svg>
                 <span class="list-transports__text tooltip__text">Велосипед</span>
               </li>
-              <li class="list-transports__item tooltip transport-icon transport-icon--fouth">
-                <button class="list-transports__button btn" type="button">
-                  <svg width="22" height="24" viewBox="0 0 22 24">
-                    <use xlink:href="./img/sprite.svg#runner"></use>
-                  </svg>
-                </button>
+              <li class="list-transports__point tooltip transport-icon transport-icon--big transport-icon--fouth">
+                <svg width="13" height="17" viewBox="0 0 22 24">
+                  <use xlink:href="./img/sprite.svg#runner"></use>
+                </svg>
                 <span class="list-transports__text tooltip__text">Пешком</span>
               </li>
             </ul>
-            <h4 class="card-catalog__subtitle title-xs-xize">левел:</h4>
+            <h4 class="card-catalog__subtitle card-catalog__subtitle--level title-xs-size">левел:</h4>
             <div class="card-catalog__info">
+              <svg class="card-catalog__toolbar card-catalog__toolbar--level-99" viewBox="0 0 60 60" width="45" height="45">
+                <use xlink:href="img/sprite.svg#level"></use>
+              </svg>
               <b class="card-catalog__level">99</b>
               <span class="card-catalog__text card-catalog__text--mobile">level</span>
             </div>
@@ -755,14 +752,16 @@
           </li>
           <li class="catalog__item card-catalog">
             <picture>
-              <source media="(min-width: 1200px)" srcset="img/avatars/avatar-3-285x285.png 1x, img/avatars/avatar-3-285x285@2x.png 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/avatars/avatar-3-190x190.webp 1x, img/avatars/avatar-3-190x190@2x.webp 2x">
-              <source type="image/webp" srcset="img/avatars/avatar-3-70x70.webp 1x, img/avatars/avatar-3-70x70@2x.webp 2x">
-              <source media="(min-width: 1200px)" srcset="img/avatars/avatar-3-285x285.png 1x, img/avatars/avatar-3-285x285@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/avatars/avatar-3-190x190.png 1x, img/avatars/avatar-3-190x190@2x.png 2x">
-              <img class="card-catalog__img" src="img/avatars/avatar-3-70x70.png" srcset="img/avatars/avatar-3-70x70@2x.png 2x" alt="аватарка пользователя.">
+              <source media="(min-width: 1200px)" srcset="img/avatars/avatar-2-285x285.png 1x, img/avatars/avatar-2-285x285@2x.png 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/avatars/avatar-2-190x190.webp 1x, img/avatars/avatar-2-190x190@2x.webp 2x">
+              <source type="image/webp" srcset="img/avatars/avatar-2-70x70.webp 1x, img/avatars/avatar-2-70x70@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/avatars/avatar-2-285x285.png 1x, img/avatars/avatar-2-285x285@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/avatars/avatar-2-190x190.png 1x, img/avatars/avatar-2-190x190@2x.png 2x">
+              <img class="card-catalog__img" src="img/avatars/avatar-2-70x70.png" srcset="img/avatars/avatar-2-70x70@2x.png 2x" alt="аватарка пользователя.">
             </picture>
-            <h3 class="card-catalog__title title-small">Петя Демин</h3>
+            <a class="card-catalog__link" href="#">
+              <h3 class="card-catalog__title title-small">Петя Демин</h3>
+            </a>
             <div class="card-catalog__like">
               <button class="card-catalog__like-button btn" type="button" name="like">
                 <span class="visually-hidden">Добавить в&nbsp;избранное</span>
@@ -779,14 +778,14 @@
               <li class="list-tags__item">#концерт</li>
               <li class="list-tags__item">#крафт</li>
             </ul>
-            <h4 class="card-catalog__subtitle title-xs-xize">хочет посетить:</h4>
+            <h4 class="card-catalog__subtitle card-catalog__subtitle--wanted title-xs-size">хочет посетить:</h4>
             <ul class="card-catalog__list-countries countries">
               <li class="countries__item">
                 <picture>
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/countries/belgium.webp 1x, img/countries/belgium@2x.webp 2x">
                   <source type="image/webp" srcset="img/countries/belgium-small.webp 1x, img/countries/belgium-small@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/countries/belgium.png 1x, img/countries/belgium@2x.png 2x">
-                  <img class="list-countries__flag" src="img/countries/belgium-small.png" srcset="img/countries/belgium-small@2x.png 2x" width="26" height="18" alt="флаг Бельгии.">
+                  <img class="countries__flag" src="img/countries/belgium-small.png" srcset="img/countries/belgium-small@2x.png 2x" width="26" height="18" alt="флаг Бельгии.">
                 </picture>
                 <span class="countries__text">Бельгия</span>
               </li>
@@ -795,28 +794,43 @@
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/countries/czechia.webp 1x, img/countries/czechia@2x.webp 2x">
                   <source type="image/webp" srcset="img/countries/czechia-small.webp 1x, img/countries/czechia-small@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/countries/czechia.png 1x, img/countries/czechia@2x.png 2x">
-                  <img class="list-countries__flag" src="img/countries/czechia-small.png" srcset="img/countries/czechia-small@2x.png 2x" width="26" height="18" alt="флаг Чехии.">
+                  <img class="countries__flag" src="img/countries/czechia-small.png" srcset="img/countries/czechia-small@2x.png 2x" width="26" height="18" alt="флаг Чехии.">
                 </picture>
                 <span class="countries__text">Чехия</span>
               </li>
             </ul>
-            <h4 class="card-catalog__subtitle title-xs-xize">транспорт:</h4>
+            <h4 class="card-catalog__subtitle card-catalog__subtitle--transports title-xs-size">транспорт:</h4>
             <ul class="card-catalog__list-transports list-transports">
-              <li class="list-transports__item tooltip transport-icon transport-icon--first">
+              <li class="list-transports__point list-transports__point--active tooltip transport-icon transport-icon--big transport-icon--first">
+                <svg class="list-transports__icon" width="14" height="16" viewBox="0 0 18 20">
+                  <use xlink:href="./img/sprite.svg#plane"></use>
+                </svg>
                 <span class="list-transports__text tooltip__text">Авиаперелет</span>
               </li>
-              <li class="list-transports__item tooltip transport-icon transport-icon--second">
+              <li class="list-transports__point list-transports__point--active tooltip transport-icon transport-icon--big transport-icon--second">
+                <svg width="13" height="16" viewBox="0 0 18 21">
+                  <use xlink:href="./img/sprite.svg#bus"></use>
+                </svg>
                 <span class="list-transports__text tooltip__text">Автотранспорт</span>
               </li>
-              <li class="list-transports__item tooltip transport-icon transport-icon--third">
+              <li class="list-transports__point tooltip transport-icon transport-icon--big transport-icon--third">
+                <svg width="15" height="17" viewBox="0 0 25 24">
+                  <use xlink:href="./img/sprite.svg#bicycle"></use>
+                </svg>
                 <span class="list-transports__text tooltip__text">Велосипед</span>
               </li>
-              <li class="list-transports__item tooltip transport-icon transport-icon--fouth">
+              <li class="list-transports__point list-transports__point--active tooltip transport-icon transport-icon--big transport-icon--fouth">
+                <svg width="13" height="17" viewBox="0 0 22 24">
+                  <use xlink:href="./img/sprite.svg#runner"></use>
+                </svg>
                 <span class="list-transports__text tooltip__text">Пешком</span>
               </li>
             </ul>
-            <h4 class="card-catalog__subtitle title-xs-xize">левел:</h4>
+            <h4 class="card-catalog__subtitle card-catalog__subtitle--level title-xs-size">левел:</h4>
             <div class="card-catalog__info">
+              <svg class="card-catalog__toolbar card-catalog__toolbar--level-80" viewBox="0 0 60 60" width="45" height="45">
+                <use xlink:href="img/sprite.svg#level"></use>
+              </svg>
               <b class="card-catalog__level">80</b>
               <span class="card-catalog__text card-catalog__text--mobile">level</span>
             </div>
@@ -824,14 +838,16 @@
           </li>
           <li class="catalog__item card-catalog">
             <picture>
-              <source media="(min-width: 1200px)" srcset="img/avatars/avatar-2-285x285.png 1x, img/avatars/avatar-2-285x285@2x.png 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/avatars/avatar-2-190x190.webp 1x, img/avatars/avatar-2-190x190@2x.webp 2x">
-              <source type="image/webp" srcset="img/avatars/avatar-2-70x70.webp 1x, img/avatars/avatar-2-70x70@2x.webp 2x">
-              <source media="(min-width: 1200px)" srcset="img/avatars/avatar-2-285x285.png 1x, img/avatars/avatar-2-285x285@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/avatars/avatar-2-190x190.png 1x, img/avatars/avatar-2-190x190@2x.png 2x">
-              <img class="card-catalog__img" src="img/avatars/avatar-2-70x70.png" srcset="img/avatars/avatar-2-70x70@2x.png 2x" alt="аватарка пользователя.">
+              <source media="(min-width: 1200px)" srcset="img/avatars/avatar-3-285x285.png 1x, img/avatars/avatar-3-285x285@2x.png 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/avatars/avatar-3-190x190.webp 1x, img/avatars/avatar-3-190x190@2x.webp 2x">
+              <source type="image/webp" srcset="img/avatars/avatar-3-70x70.webp 1x, img/avatars/avatar-3-70x70@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/avatars/avatar-3-285x285.png 1x, img/avatars/avatar-3-285x285@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/avatars/avatar-3-190x190.png 1x, img/avatars/avatar-3-190x190@2x.png 2x">
+              <img class="card-catalog__img" src="img/avatars/avatar-3-70x70.png" srcset="img/avatars/avatar-3-70x70@2x.png 2x" alt="аватарка пользователя.">
             </picture>
-            <h3 class="card-catalog__title title-small">Марк Смолов</h3>
+            <a class="card-catalog__link" href="#">
+              <h3 class="card-catalog__title title-small">Марк Смолов</h3>
+            </a>
             <div class="card-catalog__like">
               <button class="card-catalog__like-button btn" type="button" name="like">
                 <span class="visually-hidden">Добавить в&nbsp;избранное</span>
@@ -848,14 +864,14 @@
               <li class="list-tags__item">#кроссовки</li>
               <li class="list-tags__item">#суприм</li>
             </ul>
-            <h4 class="card-catalog__subtitle title-xs-xize">хочет посетить:</h4>
+            <h4 class="card-catalog__subtitle card-catalog__subtitle--wanted title-xs-size">хочет посетить:</h4>
             <ul class="card-catalog__list-countries countries">
               <li class="countries__item">
                 <picture>
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/countries/usa.webp 1x, img/countries/usa@2x.webp 2x">
                   <source type="image/webp" srcset="img/countries/usa-small.webp 1x, img/countries/usa-small@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/countries/usa.png 1x, img/countries/usa@2x.png 2x">
-                  <img class="list-countries__flag" src="img/countries/usa-small.png" srcset="img/countries/usa-small@2x.png 2x" width="26" height="18" alt="флаг США.">
+                  <img class="countries__flag" src="img/countries/usa-small.png" srcset="img/countries/usa-small@2x.png 2x" width="26" height="18" alt="флаг США.">
                 </picture>
                 <span class="countries__text">США</span>
               </li>
@@ -864,7 +880,7 @@
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/countries/australia.webp 1x, img/countries/australia@2x.webp 2x">
                   <source type="image/webp" srcset="img/countries/australia-small.webp 1x, img/countries/australia-small@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/countries/australia.png 1x, img/countries/australia@2x.png 2x">
-                  <img class="list-countries__flag" src="img/countries/australia-small.png" srcset="img/countries/australia-small@2x.png 2x" width="26" height="18" alt="флаг Австралии.">
+                  <img class="countries__flag" src="img/countries/australia-small.png" srcset="img/countries/australia-small@2x.png 2x" width="26" height="18" alt="флаг Австралии.">
                 </picture>
                 <span class="countries__text">Австралия</span>
               </li>
@@ -873,28 +889,43 @@
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/countries/dominica.webp 1x, img/countries/dominica@2x.webp 2x">
                   <source type="image/webp" srcset="img/countries/dominica-small.webp 1x, img/countries/dominica-small@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/countries/dominica.png 1x, img/countries/dominica@2x.png 2x">
-                  <img class="list-countries__flag" src="img/countries/dominica-small.png" srcset="img/countries/dominica-small@2x.png 2x" width="26" height="18" alt="флаг Доминики.">
+                  <img class="countries__flag" src="img/countries/dominica-small.png" srcset="img/countries/dominica-small@2x.png 2x" width="26" height="18" alt="флаг Доминики.">
                 </picture>
                 <span class="countries__text">Доминика</span>
               </li>
             </ul>
-            <h4 class="card-catalog__subtitle title-xs-xize">транспорт:</h4>
+            <h4 class="card-catalog__subtitle card-catalog__subtitle--transports title-xs-size">транспорт:</h4>
             <ul class="card-catalog__list-transports list-transports">
-              <li class="list-transports__item tooltip transport-icon transport-icon--first">
+              <li class="list-transports__point list-transports__point--active tooltip transport-icon transport-icon--big transport-icon--first">
+                <svg class="list-transports__icon" width="14" height="16" viewBox="0 0 18 20">
+                  <use xlink:href="./img/sprite.svg#plane"></use>
+                </svg>
                 <span class="list-transports__text tooltip__text">Авиаперелет</span>
               </li>
-              <li class="list-transports__item tooltip transport-icon transport-icon--second">
+              <li class="list-transports__point tooltip transport-icon transport-icon--big transport-icon--second">
+                <svg width="13" height="16" viewBox="0 0 18 21">
+                  <use xlink:href="./img/sprite.svg#bus"></use>
+                </svg>
                 <span class="list-transports__text tooltip__text">Автотранспорт</span>
               </li>
-              <li class="list-transports__item tooltip transport-icon transport-icon--third">
+              <li class="list-transports__point list-transports__point--active tooltip transport-icon transport-icon--big transport-icon--third">
+                <svg width="15" height="17" viewBox="0 0 25 24">
+                  <use xlink:href="./img/sprite.svg#bicycle"></use>
+                </svg>
                 <span class="list-transports__text tooltip__text">Велосипед</span>
               </li>
-              <li class="list-transports__item tooltip transport-icon transport-icon--fouth">
+              <li class="list-transports__point tooltip transport-icon transport-icon--big transport-icon--fouth">
+                <svg width="13" height="17" viewBox="0 0 22 24">
+                  <use xlink:href="./img/sprite.svg#runner"></use>
+                </svg>
                 <span class="list-transports__text tooltip__text">Пешком</span>
               </li>
             </ul>
-            <h4 class="card-catalog__subtitle title-xs-xize">левел:</h4>
+            <h4 class="card-catalog__subtitle card-catalog__subtitle--level title-xs-size">левел:</h4>
             <div class="card-catalog__info">
+                <svg class="card-catalog__toolbar card-catalog__toolbar--level-25" viewBox="0 0 60 60" width="45" height="45">
+                  <use xlink:href="img/sprite.svg#level"></use>
+                </svg>
               <b class="card-catalog__level">25</b>
               <span class="card-catalog__text card-catalog__text--mobile">level</span>
             </div>
@@ -909,7 +940,9 @@
               <source media="(min-width: 768px)" srcset="img/avatars/avatar-4-190x190.png 1x, img/avatars/avatar-4-190x190@2x.png 2x">
               <img class="card-catalog__img" src="img/avatars/avatar-4-70x70.png" srcset="img/avatars/avatar-4-70x70@2x.png 2x" alt="аватарка пользователя.">
             </picture>
-            <h3 class="card-catalog__title title-small">Лариса Роговая</h3>
+            <a class="card-catalog__link" href="#">
+              <h3 class="card-catalog__title--online title-small">Лариса Роговая</h3>
+            </a>
             <div class="card-catalog__like">
               <button class="card-catalog__like-button btn" type="button" name="like">
                 <span class="visually-hidden">Добавить в избранное</span>
@@ -925,14 +958,14 @@
               <li class="list-tags__item">#учеба</li>
               <li class="list-tags__item">#линкедин</li>
             </ul>
-            <h4 class="card-catalog__subtitle title-xs-xize">хочет посетить:</h4>
+            <h4 class="card-catalog__subtitle card-catalog__subtitle--wanted title-xs-size">хочет посетить:</h4>
             <ul class="card-catalog__list-countries countries">
               <li class="countries__item">
                 <picture>
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/countries/uk.webp 1x, img/countries/uk@2x.webp 2x">
                   <source type="image/webp" srcset="img/countries/uk-small.webp 1x, img/countries/uk-small@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/countries/uk.png 1x, img/countries/uk@2x.png 2x">
-                  <img class="list-countries__flag" src="img/countries/uk-small.png" srcset="img/countries/uk-small@2x.png 2x" width="26" height="18" alt="флаг Великобритании.">
+                  <img class="countries__flag" src="img/countries/uk-small.png" srcset="img/countries/uk-small@2x.png 2x" width="26" height="18" alt="флаг Великобритании.">
                 </picture>
                 <span class="countries__text">Великобритания</span>
               </li>
@@ -941,35 +974,55 @@
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/countries/germany.webp 1x, img/countries/germany@2x.webp 2x">
                   <source type="image/webp" srcset="img/countries/germany-small.webp 1x, img/countries/germany-small@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/countries/germany.png 1x, img/countries/germany@2x.png 2x">
-                  <img class="list-countries__flag" src="img/countries/germany-small.png" srcset="img/countries/germany-small@2x.png 2x" width="26" height="18" alt="флаг Германии.">
+                  <img class="countries__flag" src="img/countries/germany-small.png" srcset="img/countries/germany-small@2x.png 2x" width="26" height="18" alt="флаг Германии.">
                 </picture>
                 <span class="countries__text">Германия</span>
               </li>
             </ul>
-            <h4 class="card-catalog__subtitle title-xs-xize">транспорт:</h4>
+            <h4 class="card-catalog__subtitle card-catalog__subtitle--transports title-xs-size">транспорт:</h4>
             <ul class="card-catalog__list-transports list-transports">
-              <li class="list-transports__item tooltip transport-icon transport-icon--first">
+              <li class="list-transports__point list-transports__point--active tooltip transport-icon transport-icon--big transport-icon--first">
+                <svg class="list-transports__icon" width="14" height="16" viewBox="0 0 18 20">
+                  <use xlink:href="./img/sprite.svg#plane"></use>
+                </svg>
                 <span class="list-transports__text tooltip__text">Авиаперелет</span>
               </li>
-              <li class="list-transports__item tooltip transport-icon transport-icon--second">
+              <li class="list-transports__point list-transports__point--active tooltip transport-icon transport-icon--big transport-icon--second">
+                <svg width="13" height="16" viewBox="0 0 18 21">
+                  <use xlink:href="./img/sprite.svg#bus"></use>
+                </svg>
                 <span class="list-transports__text tooltip__text">Автотранспорт</span>
               </li>
-              <li class="list-transports__item tooltip transport-icon transport-icon--third">
+              <li class="list-transports__point tooltip transport-icon transport-icon--big transport-icon--third">
+                <svg width="15" height="17" viewBox="0 0 25 24">
+                  <use xlink:href="./img/sprite.svg#bicycle"></use>
+                </svg>
                 <span class="list-transports__text tooltip__text">Велосипед</span>
               </li>
-              <li class="list-transports__item tooltip transport-icon transport-icon--fouth">
+              <li class="list-transports__point tooltip transport-icon transport-icon--big transport-icon--fouth">
+                <svg width="13" height="17" viewBox="0 0 22 24">
+                  <use xlink:href="./img/sprite.svg#runner"></use>
+                </svg>
                 <span class="list-transports__text tooltip__text">Пешком</span>
               </li>
             </ul>
-            <h4 class="card-catalog__subtitle title-xs-xize">левел:</h4>
+            <h4 class="card-catalog__subtitle card-catalog__subtitle--level title-xs-size">левел:</h4>
             <div class="card-catalog__info">
+              <svg class="card-catalog__toolbar card-catalog__toolbar--level-50" viewBox="0 0 60 60" width="45" height="45">
+                <use xlink:href="img/sprite.svg#level"></use>
+              </svg>
               <b class="card-catalog__level">50</b>
               <span class="card-catalog__text card-catalog__text--mobile">level</span>
             </div>
             <button class="card-catalog__button btn btn--authorization" type="button">Позвать!</button>
           </li>
         </ul>
-        <button class="catalog__button btn" type="button">Показать еще</button>
+        <button class="catalog__button btn" type="button">
+          <svg width="18" height="18" viewBox="0 0 18 18">
+            <use xlink:href="img/sprite.svg#more"></use>
+          </svg>
+          Показать еще
+        </button>
         <footer class="catalog__footer">
           <ol class="catalog__footer-list">
             <li class="catalog__footer-item catalog__footer-item--current"><a class="catalog__footer-link" href="#">1</a></li>
@@ -977,10 +1030,16 @@
             <li class="catalog__footer-item"><a class="catalog__footer-link" href="#">3</a></li>
             <li class="catalog__footer-item"><a class="catalog__footer-link" href="#">4</a></li>
           </ol>
-          <button class="catalog__footer catalog__footer--prev btn" type="button">
+          <button class="catalog__footer-btn catalog__footer-btn--prev btn" type="button">
+            <svg width="20" height="14" viewBox="0 0 12 14">
+              <use xlink:href="img/sprite.svg#array-right"></use>
+            </svg>
             <span class="visually-hidden">предыдущая страница</span>
           </button>
-          <button class="catalog__footer catalog__footer--next btn" type="button">
+          <button class="catalog__footer-btn catalog__footer-btn--next btn" type="button">
+            <svg width="20" height="14" viewBox="0 0 12 14">
+              <use xlink:href="img/sprite.svg#array-right"></use>
+            </svg>
             <span class="visually-hidden">следующая страница</span>
           </button>
         </footer>

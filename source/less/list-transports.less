@@ -65,3 +65,20 @@
   border-radius: 50%;
   outline-offset: 12px;
 }
+
+.list-transports__point {
+  .size(32px, 32px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: @blue-light;
+  border-radius: 50%;
+
+  & svg {
+    opacity: 0.15;
+  }
+
+  &--active svg {
+    opacity: 1;
+  }
+}

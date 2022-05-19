@@ -97,6 +97,10 @@
       }
     }
 
+    & .actions-list__label--duration .actions-list__label-unit {
+      padding-right: 10px;
+    }
+
     & .actions-list__wrapper--duration {
       @media (min-width: @desktop-width) {
         grid-area: input-duration;
@@ -181,6 +185,8 @@
   }
 
   @media (min-width: @desktop-width) {
+    position: relative;
+    margin-bottom: 0;
     border: none;
   }
 }
@@ -206,7 +212,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    display: none;
+    .abs(block, 25px, -290px, initial, initial);
+    text-align: left;
+    opacity: 1;
   }
 }
 
@@ -408,6 +416,7 @@
   width: 100%;
   margin-bottom: 17px;
 
+  &--submit,
   &--next {
     @media (min-width: @tablet-width) {
       margin-bottom: 54px;
@@ -607,4 +616,8 @@
     padding-top: 80px;
     padding-right: 271px;
   }
+}
+
+.actions-list__item--hide {
+  display: none;
 }

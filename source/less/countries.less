@@ -1,2 +1,22 @@
 @import "_vars";
 @import "_mixins";
+
+.countries__item {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.countries__flag {
+  display: block;
+  margin-right: 14px;
+}
+
+.countries__text {
+  .font(15px, 500, 16px);
+  color: @basic-blue-light;
+  text-transform: uppercase;
+}

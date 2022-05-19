@@ -23,10 +23,38 @@
   .font(16px, 700, 18px);
   color: @midnight-blue;
   text-transform: uppercase;
+  background-image: url("../img/filter.svg");
+  .bg(center left, 16px 10px);
+}
+
+.filter__button {
+  padding: 8px 8px;
+  background-color: transparent;
 }
 
 .filter__text {
-  display: none;
+  position: relative;
+  display: block;
+  .size(3px, 3px);
+  font-size: 0;
+  border-radius: 50%;
+  background-color: @midnight-blue;
+
+  &::before,
+  &::after {
+    content: "";
+    .size(3px, 3px);
+    border-radius: 50%;
+    background-color: @midnight-blue;
+  }
+
+  &::before {
+    .abs(block, initial, 7px, initial, initial);
+  }
+
+  &::after {
+    .abs(block, initial, initial, initial, 7px);
+  }
 }
 
 .filter__continents {

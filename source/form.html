@@ -7,7 +7,7 @@
   <link rel="preload" href="fonts/bloggersans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/bloggersans-light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/bloggersans-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-  <title>Погнили! | Направления</title>
+  <title>Погнали! | Направления</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon32.ico"> <!-- 32×32 -->
   <link rel="icon" href="favicon16.ico"> <!-- 16×16 -->
@@ -237,7 +237,7 @@
     <!-- /my-plans -->
     <!-- steps -->
     <section class="steps">
-      <div class="container">
+      <div class="container container--steps">
         <h2 class="steps__title title">Добавить план:</h2>
         <ol class="steps__list pagination">
           <li class="pagination__item pagination__item--active">
@@ -540,7 +540,7 @@
                 </tbody>
             </table>
             </div>
-            <button class="actions-list__button actions-list__button--next btn btn--authorization">Следующий шаг</button>
+            <button class="actions-list__button actions-list__button--next btn btn--authorization" type="button">Следующий шаг</button>
           </fieldset>
           <!-- /step 1 -->
           <!-- step 2 -->
@@ -973,7 +973,7 @@
                   <source media="(min-width: 768px)" srcset="img/countries/bosnia-and-herzegovina-full.png 1x, img/countries/bosnia-and-herzegovina-full@2x.png 2x">
                   <img class="action-plan__flag" src="img/countries/bosnia-and-herzegovina.png" srcset="img/countries/bosnia-and-herzegovina@2x.png 2x" width="35" height="24" alt="флаг Боснии и Герцеговины.">
                 </picture>
-                <textarea class="action-plan__description" placeholder="План действий"></textarea>
+                <textarea class="action-plan__description" placeholder="План действий" required></textarea>
                 <p class="action-plan__message-error">Это поле должно быть заполнено</p>
               </li>
               <li class="action-plan__item">
@@ -984,11 +984,11 @@
                   <source media="(min-width: 768px)" srcset="img/countries/czechia-full.png 1x, img/countries/czechia-full@2x.png 2x">
                   <img class="action-plan__flag" src="img/countries/czechia.png" srcset="img/countries/czechia@2x.png 2x" width="35" height="24" alt="флаг Франции.">
                 </picture>
-                <textarea class="action-plan__description" placeholder="План действий">Пить пиво и&nbsp;лазить по&nbsp;старым замкам, наслаждаться архитектурой и&nbsp;вот это все.</textarea>
+                <textarea class="action-plan__description" placeholder="План действий" required>Пить пиво и&nbsp;лазить по&nbsp;старым замкам, наслаждаться архитектурой и&nbsp;вот это все.</textarea>
                 <p class="action-plan__message-error">Это поле должно быть заполнено</p>
               </li>
             </ul>
-            <button class="actions-list__button actions-list__button--next btn btn--authorization" type="submit">Отправить</button>
+            <button class="actions-list__button actions-list__button--submit btn btn--authorization" type="submit">Отправить</button>
             <button class="actions-list__button actions-list__button--prev-step btn" type="button">На&nbsp;шаг назад</button>
           </fieldset>
           <!-- /step 3 -->
