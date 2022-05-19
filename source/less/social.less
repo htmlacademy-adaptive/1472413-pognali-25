@@ -6,11 +6,24 @@
   justify-content: center;
   .reset;
   .base;
+}
 
-  &__link {
-    .size(45px, 45px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.social__link {
+  .size(45px, 45px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: @transitionOpacity, @transitionBgColor;
+
+  &:hover {
+    background-color: @yellow-dark;
+  }
+
+  &:active {
+    background-color: @yellow-dark;
+
+    & svg {
+      opacity: 0.3;
+    }
   }
 }

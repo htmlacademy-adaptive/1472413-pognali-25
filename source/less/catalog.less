@@ -1,2 +1,71 @@
 @import "_vars";
 @import "_mixins";
+
+.catalog {
+  margin-bottom: 76px;
+}
+
+.catalog__list {
+  .base();
+  .reset();
+  margin-bottom: 20px;
+}
+
+.catalog__item {
+  .base();
+  padding: 14px 20px 23px;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.catalog__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 170px;
+  margin: 0 auto;
+  margin-bottom: 18px;
+  .font(17px, 700, 30px);
+  color: @basic-blue-light;
+  text-transform: uppercase;
+  background-color: transparent;
+
+  & svg {
+    fill: @basic-blue-light;
+  }
+}
+
+.catalog__footer {
+  display: flex;
+}
+
+.catalog__footer-list {
+  display: none;
+}
+
+.catalog__footer-btn {
+  .size(50%, 51%);
+  padding: 16px 0 14px;
+  background-color: @white;
+
+  &--prev {
+    border-right: 1px solid @blue-light;
+    border-top-left-radius: @small;
+    border-bottom-left-radius: @small;
+
+    & svg {
+      transform: scaleX(-1);
+    }
+  }
+
+  &--next {
+    border-top-right-radius: @small;
+    border-bottom-right-radius: @small;
+  }
+
+  & svg {
+    fill: @basic-blue-light;
+  }
+}

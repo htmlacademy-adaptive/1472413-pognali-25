@@ -1,2 +1,18 @@
 @import "_vars";
 @import "_mixins";
+
+.filter-companion {
+  position: relative;
+  margin-bottom: 28px;
+  padding: 26px 25px 22px;
+  background-color: @basic-yellow;
+  border-radius: @small;
+}
+
+.filter-companion__title {
+  .base();
+  max-width: 80%;
+  margin-bottom: 23px;
+  .font(22px, 700, 22px);
+  color: @basic-blue-light;
+}

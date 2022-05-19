@@ -1,2 +1,151 @@
 @import "_vars";
 @import "_mixins";
+
+
+.plans-list {
+  .base();
+  margin-left: auto;
+  margin-right: auto;
+  counter-reset: list3;
+
+  @media (min-width: @desktop-width) {
+    margin-left: 64px;
+  }
+}
+
+.plans-list__item {
+  position: relative;
+  padding: 23px 24px;
+  background-color: @white;
+  border-radius: 10px;
+  list-style-position: inside;
+
+  @media (min-width: @tablet-width) {
+    padding: 40px 0 0;
+    list-style-type: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 50.2%;
+    align-items: baseline;
+    margin-bottom: 15px;
+    padding: 36px 42px 36px 95px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &::marker {
+    .font(16px, 500, 16px);
+    color: @basic-blue-light;
+  }
+
+  &::after {
+    @media (min-width: @tablet-width) {
+      .abs(block, 40px, 32px, initial, initial);
+      .font(20px, 500, 20px);
+      counter-increment: list3;
+      content: counter(list3) ".";
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 39px;
+      left: 43px;
+      right: initial;
+    }
+  }
+}
+
+.plans-list__title {
+  display: inline-block;
+  .base();
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 34px;
+    margin-left: 40px;
+    .font(24px, 700, 24px);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
+}
+
+.plans-list__companion,
+.plans-list__date {
+  .base();
+  .font(14px, 500, 14px);
+  color: @basic-blue-light;
+  text-transform: uppercase;
+  letter-spacing: 0.84px;
+
+  @media (min-width: @tablet-width) {
+    .fontChanged(20px, 20px);
+    letter-spacing: 2px;
+  }
+}
+
+.plans-list__companion {
+  margin-bottom: 5px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 56px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 157px;
+    margin-right: 0;
+  }
+}
+
+.plans-list__date {
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.plans-list__button {
+  display: inline-block;
+  padding: 0;
+  .font(14px, 500, 14px);
+  color: rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  background-color: transparent;
+  transition: @transitionColor;
+
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+    .fontChanged(20px, 20px);
+    letter-spacing: 2px;
+  }
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+.plans-list__inner {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    padding: 20px 40px 15px;
+    border-top: 1px solid rgba(203, 206, 217, 0.3);
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 631px;
+    align-items: start;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+}

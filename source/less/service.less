@@ -2,13 +2,13 @@
 @import "_mixins";
 
 .service {
-  margin-top: -280px;
-  padding-top: 315px;
+  margin-top: -275px;
+  padding-top: 300px;
   padding-bottom: 82px;
   position: relative;
   z-index: 7;
   background-color: @midnight-blue;
-  background-image: url("../img/service-bg-mobile.png"), url("../img/service-back-mobile.png");
+  background-image: url("../img/service/service-bg-mobile.png"), url("../img/service/service-back-mobile.png");
   background-position: calc(100% - 10px) bottom, left calc(100% - 222px);
   background-repeat: no-repeat;
   .borderRadius;
@@ -17,8 +17,9 @@
     margin-top: -140px;
     padding-top: 285px;
     padding-bottom: 89px;
-    background-image: url("../img/service-bg-tablet.png"), url("../img/service-back-tablet.png");
-    background-position: bottom 89px left calc(100% - 10px), center top 235px;
+    background-image: url("../img/service/service-bg-tablet.png"), url("../img/service/service-back-tablet.png");
+    background-position: bottom 89px left 100%, center top 235px;
+    background-size: auto, calc(100% - 60px);
   }
 
   @media (min-width: @desktop-width) {
@@ -26,75 +27,76 @@
     margin-top: -60px;
     background-image: none;
   }
+}
 
-  &__text {
-    max-width: 211px;
-    margin-bottom: 20px;
-    margin-left: @margin-left;
-    color: @white;
+.service__text {
+  margin-right: 55px;
+  margin-bottom: 20px;
+  margin-left: @margin-left;
+  color: @white;
 
-    @media (min-width: @tablet-width) {
-      max-width: 45%;
-      margin-bottom: 31px;
-      margin-left: @margin-left-m;
-      .font(28px, 300, 33px, normal);
-    }
-
-    @media (min-width: @desktop-width) {
-      max-width: 50%;
-      margin-bottom: 38px;
-      margin-left: @margin-left-xl;
-    }
-
-    &--bold {
-      display: block;
-      margin-bottom: 0;
-      font-weight: 700;
-
-      @media (min-width: @tablet-width) {
-        margin-bottom: 52px;
-        .font(21px, 700, 25px, normal);
-      }
-
-      @media (min-width: @desktop-width) {
-        max-width: 425px;
-        margin-bottom: 85px;
-      }
-    }
+  @media (min-width: @tablet-width) {
+    max-width: 41%;
+    margin-bottom: 31px;
+    margin-left: @margin-left-m;
+    .fontChanged(28px, 33px);
   }
 
-  &__button {
-    display: none;
-    position: relative;
-
-    &::after {
-      .abs(d, 44%, 0, 50%, calc(100% - 50px));
-      content: "";
-      .size(14px, 13.5px);
-      background-image: url("data:image/svg+xml,%3Csvg width='12' height='14' viewBox='0 0 12 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 7L0 13.0622L0 0.937822L12 7Z' fill='%231D2E5B'/%3E%3C/svg%3E%0A");
-      .bg(right center, cover);
-    }
-
-    @media (min-width: @tablet-width) {
-      display: block;
-      max-width: 276px;
-      margin-left: @margin-left-m;
-    }
-
-    @media (min-width: @desktop-width) {
-      margin-left: @margin-left-xl;
-    }
+  @media (min-width: @desktop-width) {
+    max-width: 50%;
+    margin-bottom: 38px;
+    margin-left: @margin-left-xl;
   }
 
-  &__title {
-    margin-left: @margin-left;
+  &--bold {
+    display: block;
+    margin-bottom: 0;
+    font-weight: 700;
 
     @media (min-width: @tablet-width) {
-      margin-left: @margin-left-m;
+      margin-bottom: 52px;
+      .fontChanged(21px, 25px);
     }
 
     @media (min-width: @desktop-width) {
-      margin-left: @margin-left-xl;
+      max-width: 425px;
+      margin-bottom: 85px;
     }
+  }
+}
+
+.service__button {
+  display: none;
+  position: relative;
+
+  &::after {
+    .abs(block, 44%, 0, 50%, calc(100% - 50px));
+    content: "";
+    .size(14px, 13.5px);
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='14' viewBox='0 0 12 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 7L0 13.0622L0 0.937822L12 7Z' fill='%231D2E5B'/%3E%3C/svg%3E%0A");
+    .bg(right center, cover);
+    transition: @transitionOpacity;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    max-width: 276px;
+    margin-left: @margin-left-m;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: @margin-left-xl;
+  }
+}
+
+.service__title {
+  margin-left: @margin-left;
+
+  @media (min-width: @tablet-width) {
+    margin-left: @margin-left-m;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: @margin-left-xl;
   }
 }

@@ -17,7 +17,7 @@
     border-radius: 20px;
     background-color: @lavender-light;
     .abs(none, -41px, 0, initial, initial);
-    .font(16px, 400, 16px, normal);
+    .font(16px, 400, 16px);
     color: @white;
 
     @media (min-width: @tablet-width) {
@@ -30,68 +30,71 @@
       top: -51px;
     }
   }
+}
 
-  &__item {
-    position: relative;
-    margin-left: 25px;
-    margin-right: 70px;
-    padding-top: 13px;
-    padding-bottom: 18px;
-    border-bottom: 1px solid @gray-light;
+.rates-list__item {
+  position: relative;
+  margin-left: 25px;
+  margin-right: 44px;
+  padding-top: 13px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid @gray-light;
 
-    @media (min-width: @tablet-width) {
-      display: flex;
-      justify-content: space-between;
-      margin-right: 35px;
-      padding-top: 20px;
-    }
-
-    @media (min-width: @desktop-width) {
-      margin-right: 0;
-    }
-
-    &:first-child {
-      border-top: 1px solid @gray-light;
-    }
-
-    &:first-child::after {
-      background-color: @orange;
-    }
-
-    &:last-child::after {
-      background-color: @basic-yellow;
-    }
-
-    &::after {
-      counter-increment: list2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .size(34px, 34px);
-      border-radius: 50%;
-      background-color: @yellow-dark;
-      content: counter(list2);
-      .abs(d, 3px, -70px, initial, initial);
-      .font(16px, 400, 16px, normal);
-      color: @white;
-
-      @media (min-width: @tablet-width) {
-        .abs(d, 0, 0, 0, -90px);
-        .size(68px, 68px);
-        .font(28px, 400, 28px, normal);
-      }
-    }
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 35px;
+    padding-top: 20px;
   }
 
-  &__service {
-    @media (min-width: @tablet-width) {
-      .font(28px, 300, 28px, normal);
-    }
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
   }
 
-  &__price {
+  &:first-child {
+    border-top: 1px solid @gray-light;
+  }
+
+  &:first-child::after {
+    background-color: @orange;
+  }
+
+  &:last-child::after {
+    background-color: @basic-yellow;
+  }
+
+  &::after {
+    counter-increment: list2;
+    justify-content: center;
+    align-items: center;
+    .size(34px, 34px);
+    border-radius: 50%;
+    background-color: @yellow-dark;
+    content: counter(list2);
+    .abs(flex, 3px, -44px, initial, initial);
+    .font(16px, 400, 16px);
+    color: @white;
+
     @media (min-width: @tablet-width) {
-      .font(28px, 300, 28px, normal);
+      .abs(flex, 0, 0, 0, -90px);
+      .size(68px, 68px);
+      .fontChanged(28px, 28px);
     }
+  }
+}
+
+.rates-list__service {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    .fontChanged(28px, 28px);
+  }
+}
+
+.rates-list__price {
+  z-index: 3;
+
+  @media (min-width: @tablet-width) {
+    .fontChanged(28px, 28px);
   }
 }

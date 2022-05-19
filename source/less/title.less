@@ -4,21 +4,50 @@
 .title {
   .base;
   margin-bottom: 19px;
-  .font(24px, 700, 24px, normal);
+  .font(24px, 700, 24px);
   color: @orange;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 55px;
-    .font(45px, 700, 45px, normal);
+    .fontChanged(45px, 45px);
   }
+}
+
+.title-xs-size {
+  .base;
+  .font(15px, 400, 16px);
 }
 
 .title-small {
   .base;
-  .font(21px, 700, 21px, normal);
+  .fontChanged(21px, 21px);
 
   @media (min-width: @tablet-width) {
     margin-bottom: 5px;
-    .font(24px, 700, 24px, normal);
+    .fontChanged(24px, 24px);
+  }
+}
+
+.title-big {
+  position: relative;
+  display: inline-block;
+  .base;
+  .fontChanged(36px, 36px);
+
+  @media (min-width: @tablet-width) {
+    .fontChanged(60px, 60px);
+  }
+
+  &::after {
+    content: "";
+    .abs(block, initial, initial, -20px, 0);
+    .size(100%, 5px);
+    background-color: @orange;
+    border-radius: 4px;
+
+    @media (min-width: @tablet-width) {
+      height: 8px;
+      bottom: -70px;
+    }
   }
 }

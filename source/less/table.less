@@ -1,2 +1,110 @@
 @import "_vars";
 @import "_mixins";
+
+.table {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-collapse: separate;
+    border-spacing: 14px;
+  }
+}
+
+.table .alphabet {
+  display: none;
+
+  &--active {
+    .abs(block, initial, initial, -300px, 19px);
+
+    @media (min-width: @tablet-width) {
+      height: 100%;
+      left: initial;
+      bottom: initial;
+      top: 0;
+      right: -250px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 10px;
+    }
+  }
+}
+
+.table__cell {
+  width: 20%;
+  padding: 0;
+  border: 1px solid @skyline;
+  outline: 1px solid transparent;
+  transition: outline 0.2s ease-in-out;
+
+  @media (min-width: @desktop-width) {
+    border-radius: 4px;
+  }
+
+  &:hover {
+    outline-color: @navy;
+  }
+}
+
+.table__button {
+  width: 100%;
+  padding-top: 11px;
+  padding-bottom: 12px;
+  .font(14px, 500, 18px);
+  color: @basic-blue-light;
+  text-transform: uppercase;
+  background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    .fontChanged(20px, 20px);
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-radius: 4px;
+  }
+
+  &--current,
+  &:active {
+    background-color: @blue-light;
+
+    @media (min-width: @tablet-width) {
+      color: @white;
+      background-color: @basic-blue-light;
+    }
+  }
+}
+
+.table__row:first-child .table__cell {
+  border-top: none;
+
+  @media (min-width: @tablet-width) {
+    border-top: 1px solid @skyline;
+  }
+}
+
+.table__row .table__cell:first-child {
+  border-left: none;
+
+  @media (min-width: @tablet-width) {
+    border-left: 1px solid @skyline;
+  }
+}
+
+.table__row .table__cell:last-child {
+  border-right: none;
+
+  @media (min-width: @tablet-width) {
+    border-right: 1px solid @skyline;
+  }
+}

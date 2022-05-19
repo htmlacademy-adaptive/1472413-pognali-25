@@ -1,2 +1,67 @@
 @import "_vars";
 @import "_mixins";
+
+.steps {
+  position: relative;
+  padding-top: 28px;
+  padding-bottom: 43px;
+  background-color: @gainsboro;
+  border-radius: 30px 30px 0 0;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 53px;
+    padding-bottom: 63px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 55px;
+    padding-bottom: 54px;
+    border-radius: 60px 60px 0 0;
+  }
+}
+
+.steps__actions {
+  @media (min-width: @tablet-width) {
+    max-width: @max-width;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: initial;
+  }
+}
+
+.steps__title {
+  margin-bottom: 29px;
+  color: @basic-blue-light;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 56px;
+    margin-left: 37px;
+    .fontChanged(36px, 36px);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 64px;
+  }
+}
+
+.steps__list {
+  .base();
+  .reset();
+  .abs(flex, 12px, 44px, initial, initial);
+  z-index: 5;
+
+  @media (min-width: @tablet-width) {
+    top: 18px;
+    right: 0;
+    left: calc(89.5% - 37px);
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    top: 185px;
+    right: 245px;
+    left: initial;
+  }
+}

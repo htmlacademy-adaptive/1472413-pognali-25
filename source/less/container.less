@@ -4,15 +4,18 @@
 .container {
   .base;
   margin: 0 auto;
-  padding: 0 10px;
-  min-width: 290px;
+  padding: 0 25px;
+  min-width: 320px;
 
   @media (min-width: @tablet-width) {
-    max-width: 708px;
+    padding: 0 30px;
+    min-width: 748px;
+    max-width: 97%;
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 1340px;
+    min-width: auto;
+    max-width: 1380px;
   }
 
   &--header {
@@ -41,11 +44,11 @@
   }
 
   &--promo {
-    background-image: url("../img/promo-traveller-mobile.png");
+    background-image: url("../img/promo/promo-traveller-mobile.png");
     .bg(center 130px, auto);
 
     @media (min-width: @tablet-width) {
-      background-image: url("../img/promo-traveller-tablet.png");
+      background-image: url("../img/promo/promo-traveller-tablet.png");
       .bg(bottom 280px right 71px, auto);
     }
 
@@ -55,7 +58,7 @@
       gap: 100px 250px;
       padding-top: 209px;
       padding-bottom: 123px;
-      background-image: url("../img/promo-traveller-desktop.png");
+      background-image: url("../img/promo/promo-traveller-desktop.png");
       .bg(right 355px bottom, 431px 640px);
     }
   }
@@ -64,7 +67,7 @@
     @media (min-width: @desktop-width) {
       padding-top: 190px;
       padding-bottom: 163px;
-      background-image: url("../img/service-bg-desktop.png"), url("../img/companion-back.png");
+      background-image: url("../img/service/service-bg-desktop.png"), url("../img/companion/companion-back.png");
       background-position: bottom left calc(100% - 10px), left 10px top 128px;
       background-repeat: no-repeat;
     }
@@ -72,8 +75,8 @@
 
   &--direction {
     @media (min-width: @tablet-width) {
-      background-image: url("../img/direction-bg-flags.png");
-      .bg(top left calc(100% - 10px), auto);
+      background-image: url("../img/direction/direction-bg-flags.png");
+      .bg(top left calc(100% - 30px), auto);
     }
 
     @media (min-width: @desktop-width) {
@@ -82,7 +85,7 @@
       column-gap: 144px;
       padding-top: 75px;
       padding-bottom: 138px;
-      background-image: url("../img/direction-bg-flags.png");
+      background-image: url("../img/direction/direction-bg-flags.png");
       .bg(top right 10px, auto);
     }
   }
@@ -98,11 +101,12 @@
   &--contact,
   &--location {
     @media (min-width: @tablet-width) {
-      max-width: 636px;
+      max-width: 90%;
+      min-width: inherit;
     }
 
     @media (min-width: @desktop-width) {
-      max-width: 1340px;
+      max-width: 1380px;
     }
   }
 
@@ -111,6 +115,15 @@
       display: flex;
       align-items: center;
     }
+  }
+
+  &--steps {
+    position: relative;
+  }
+
+  &--filter {
+    display: flex;
+    justify-content: space-between;
   }
 
   &--footer {

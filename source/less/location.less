@@ -21,89 +21,107 @@
     padding-top: 116px;
     padding-bottom: 56px;
   }
+}
 
-  &__address {
-    position: relative;
-    .base;
-    margin-bottom: 32px;
-    padding-right: 5px;
-    padding-left: 61px;
-    font-weight: 700;
-    text-transform: uppercase;
+.location__address {
+  position: relative;
+  .base;
+  margin-bottom: 32px;
+  padding-right: 5px;
+  padding-left: 61px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 62px;
+    padding-top: 22px;
+    padding-left: 94px;
+    .fontChanged(28px, 28px);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+    margin-left: 245px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 121px;
+  }
+
+  &::before {
+    content: "";
+    .abs(block, 0, 0, 0, 0);
+    .size(45px, 45px);
+    border-radius: 50%;
+    background-color: #121936;
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.5 0C6.15169 0 2.625 3.52669 2.625 7.875C2.625 12.9334 6.42846 15.1449 7.26923 16.1538C9.28846 18.5769 9.40257 21 10.5 21C11.5974 21 11.7115 18.5769 13.7308 16.1538C14.5715 15.1449 18.375 12.9334 18.375 7.875C18.375 3.52669 14.8483 0 10.5 0ZM10.5 13.125C7.60069 13.125 5.25 10.7743 5.25 7.875C5.25 4.97569 7.60069 2.625 10.5 2.625C13.3993 2.625 15.75 4.97569 15.75 7.875C15.75 10.7743 13.3993 13.125 10.5 13.125ZM10.5 5.25C9.051 5.25 7.875 6.426 7.875 7.875C7.875 9.324 9.051 10.5 10.5 10.5C11.949 10.5 13.125 9.324 13.125 7.875C13.125 6.426 11.949 5.25 10.5 5.25Z' fill='%23FFD74B'/%3E%3Cellipse cx='10.5' cy='7.875' rx='0.875001' ry='0.874999' fill='%23161C35'/%3E%3C/svg%3E");
+    .bg(center, 16px 21px);
 
     @media (min-width: @tablet-width) {
-      margin-bottom: 62px;
-      padding-top: 22px;
-      padding-left: 94px;
-      .font(28px, 700, 28px, normal);
+      .size(68px, 68px);
+      .bg(center, 32px 32px);
     }
 
     @media (min-width: @desktop-width) {
-      margin-right: 147px;
-      margin-bottom: 0;
-      margin-left: 225px;
-      padding-top: 30px;
-      padding-bottom: 30px;
-      padding-left: 121px;
-    }
-
-    &::before {
-      display: block;
-      content: "";
-      .abs(d, 0, 0, 0, 0);
-      .size(45px, 45px);
-      border-radius: 50%;
-      background-color: #121936;
-      background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.5 0C6.15169 0 2.625 3.52669 2.625 7.875C2.625 12.9334 6.42846 15.1449 7.26923 16.1538C9.28846 18.5769 9.40257 21 10.5 21C11.5974 21 11.7115 18.5769 13.7308 16.1538C14.5715 15.1449 18.375 12.9334 18.375 7.875C18.375 3.52669 14.8483 0 10.5 0ZM10.5 13.125C7.60069 13.125 5.25 10.7743 5.25 7.875C5.25 4.97569 7.60069 2.625 10.5 2.625C13.3993 2.625 15.75 4.97569 15.75 7.875C15.75 10.7743 13.3993 13.125 10.5 13.125ZM10.5 5.25C9.051 5.25 7.875 6.426 7.875 7.875C7.875 9.324 9.051 10.5 10.5 10.5C11.949 10.5 13.125 9.324 13.125 7.875C13.125 6.426 11.949 5.25 10.5 5.25Z' fill='%23FFD74B'/%3E%3Cellipse cx='10.5' cy='7.875' rx='0.875001' ry='0.874999' fill='%23161C35'/%3E%3C/svg%3E");
-      .bg(center, 16px 21px);
-
-      @media (min-width: @tablet-width) {
-        .size(68px, 68px);
-        .bg(center, 32px 32px);
-      }
-
-      @media (min-width: @desktop-width) {
-        .size(90px, 90px);
-        .bg(center, 42px 42px);
-      }
-    }
-
-    & br {
-      @media (min-width: @tablet-width) {
-        display: none;
-      }
+      .size(90px, 90px);
+      .bg(center, 42px 42px);
     }
   }
 
-  &__button {
-    position: relative;
-    width: 100%;
-    padding: 19px;
-    .font(18px, 700, 18px, normal);
-    border: 3px solid #192144;
-    .borderRadiusSmallTop;
-    .borderRadiusSmallBottom;
-
+  & br {
     @media (min-width: @tablet-width) {
-      padding: 25px;
-      .font(24px, 700, 24px, normal);
+      display: none;
     }
+  }
+}
 
-    @media (min-width: @desktop-width) {
-      width: auto;
-      min-width: 324px;
-    }
+.location__button {
+  position: relative;
+  width: 100%;
+  padding: 19px;
+  .font(18px, 700, 18px);
+  border: 3px solid @midnight-blue;
+  .borderRadiusSmallTop;
+  .borderRadiusSmallBottom;
+  transition: @transitionBgColor, @transitionColor;
+
+  &:hover {
+    color: @white;
+    background-color: @midnight-blue;
 
     &::after {
-      .abs(d, 39%, 0, 0, calc(100% - 37px));
-      content: "";
-      .size(13px, 13.5px);
-      background-image: url("data:image/svg+xml,%3Csvg width='12' height='14' viewBox='0 0 12 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 7L0 13.0622L0 0.937822L12 7Z' fill='%231D2E5B'/%3E%3C/svg%3E%0A");
-      .bg(right center, cover);
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='14' viewBox='0 0 12 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 7L0 13.0622L0 0.937822L12 7Z' fill='%23FFFFFF'/%3E%3C/svg%3E%0A");
+    }
+  }
 
-      @media (min-width: @tablet-width) {
-        .size(15px, 15px);
-      }
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+
+    &::after {
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='14' viewBox='0 0 12 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 7L0 13.0622L0 0.937822L12 7Z' fill='%23FFFFFF' opacity='0.3'/%3E%3C/svg%3E%0A");
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 25px;
+    .fontChanged(24px, 24px);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    min-width: 324px;
+    margin-left: auto;
+  }
+
+  &::after {
+    .abs(block, 39%, 0, 0, calc(100% - 37px));
+    content: "";
+    .size(13px, 13.5px);
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='14' viewBox='0 0 12 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 7L0 13.0622L0 0.937822L12 7Z' fill='%231D2E5B'/%3E%3C/svg%3E%0A");
+    .bg(right center, cover);
+    transition: background-image 0.2s ease-in-out;
+
+    @media (min-width: @tablet-width) {
+      .size(15px, 15px);
     }
   }
 }

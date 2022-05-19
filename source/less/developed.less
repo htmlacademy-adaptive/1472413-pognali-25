@@ -13,25 +13,35 @@
     padding-bottom: 0;
     border: none;
   }
+}
 
-  &__link {
-    width: 270px;
-    display: flex;
-    justify-content: space-between;
-    .resetLink;
+.developed__link {
+  width: 270px;
+  display: flex;
+  justify-content: space-between;
+  .resetLink;
+  transition: @transitionOpacity, filter 0.2s ease-in-out;
 
-    @media (min-width: @tablet-width) {
-      width: auto;
-      justify-content: flex-end;
-    }
+  &:hover {
+    filter: grayscale(1);
+    opacity: 0.6;
   }
 
-  &__text {
-    color: @gray;
+  &:active {
+    opacity: 0.3;
+  }
 
-    @media (min-width: @tablet-width) {
-      padding-top: 2px;
-      margin-right: 23px;
-    }
+  @media (min-width: @tablet-width) {
+    width: auto;
+    justify-content: flex-end;
+  }
+}
+
+.developed__text {
+  color: @gray;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 2px;
+    margin-right: 23px;
   }
 }
