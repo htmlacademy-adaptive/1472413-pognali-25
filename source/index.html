@@ -208,7 +208,7 @@
               <source media="(min-width: 768px)" srcset="img/countries/thailand-full.png 1x, img/countries/thailand-full@2x.png 2x">
               <img class="card-direction__flag" src="img/countries/thailand.png" srcset="img/countries/thailand@2x.png 2x" width="35" height="24" alt="флаг Таиланда.">
             </picture>
-            <div class="card-direction__wrapper" href="#">
+            <div class="card-direction__wrapper">
               <h3 class="card-direction__title title-small">Таиланд</h3>
               <span class="card-direction__count">18321</span>
               <p class="card-direction__text">Джунгли зовут!</p>
@@ -219,7 +219,7 @@
               <source type="image/webp" media="(min-width: 768px)" srcset="img/direction/france.webp 1x, img/direction/france@2x.webp 2x">
               <source type="image/webp" srcset="img/direction/france-mobile.webp 1x, img/direction/france-mobile@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/direction/france.jpg 1x, img/direction/france@2x.jpg 2x">
-              <img class="card-direction__img" src="img/direction/france-mobile.png 1x, img/direction/france-mobile@2x.png 2x" alt="фактурный невысокий многоквартирный дом с аллеей напротив.">
+              <img class="card-direction__img" src="img/direction/france-mobile.png 1x" srcset="img/direction/france-mobile@2x.png 2x" alt="фактурный невысокий многоквартирный дом с аллеей напротив.">
             </picture>
             <picture class="direction__flag">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/countries/france-full.webp 1x, img/countries/france-full@2x.webp 2x">
@@ -227,7 +227,7 @@
               <source media="(min-width: 768px)" srcset="img/countries/france-full.png 1x, img/countries/france-full@2x.png 2x">
               <img class="card-direction__flag" src="img/countries/france.png" srcset="img/countries/france@2x.png 2x" width="35" height="24" alt="флаг Чехии.">
             </picture>
-            <div class="card-direction__wrapper" href="#">
+            <div class="card-direction__wrapper">
               <h3 class="card-direction__title title-small">Франция</h3>
               <span class="card-direction__count">12518</span>
               <p class="card-direction__text">Трэ бьен, манифик!</p>
@@ -238,7 +238,7 @@
               <source type="image/webp" media="(min-width: 768px)" srcset="img/direction/czech.webp 1x, img/direction/czech@2x.webp 2x">
               <source type="image/webp" srcset="img/direction/czech-mobile.webp 1x, img/direction/czech-mobile@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/direction/czech.jpg 1x, img/direction/czech@2x.jpg 2x">
-              <img class="card-direction__img" src="img/direction/czech-mobile.png 1x, img/direction/czech-mobile@2x.png 2x" alt="река с теплоходоим на фоне старого моста и старых разноцветных домов.">
+              <img class="card-direction__img" src="img/direction/czech-mobile.png 1x" srcset="img/direction/czech-mobile@2x.png 2x" alt="река с теплоходоим на фоне старого моста и старых разноцветных домов.">
             </picture>
             <picture class="direction__flag">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/countries/czechia-full.webp 1x, img/countries/czechia-full@2x.webp 2x">
@@ -246,7 +246,7 @@
               <source media="(min-width: 768px)" srcset="img/countries/czechia-full.png 1x, img/countries/czechia-full@2x.png 2x">
               <img class="card-direction__flag" src="img/countries/czechia.png" srcset="img/countries/czechia@2x.png 2x" width="35" height="24" alt="флаг Франции.">
             </picture>
-            <div class="card-direction__wrapper" href="#">
+            <div class="card-direction__wrapper">
               <h3 class="card-direction__title title-small">Чехия</h3>
               <span class="card-direction__count">5326</span>
               <p class="card-direction__text">Закоулки старой Европы</p>
@@ -354,7 +354,7 @@
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/avatars/avatar-2-285x285.webp 1x, img/avatars/avatar-2-285x285@2x.webp 2x">
                 <source type="image/webp" srcset="img/avatars/avatar-2.webp 1x, img/avatars/avatar-2@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/avatars/avatar-2-285x285.png 1x, img/avatars/avatar-2-285x285@2x.png 2x">
-                <img class="card-companion__img" src="img/avatars/avatar-2.png 1x, img/avatars/avatar-2@2x.png 2x" alt="аватарка пользователя.">
+                <img class="card-companion__img" src="img/avatars/avatar-2.png 1x" srcset="img/avatars/avatar-2@2x.png 2x" alt="аватарка пользователя.">
               </picture>
               <ul class="card-companion__list-countries list-countries">
                 <li class="list-countries__item tooltip">
@@ -515,6 +515,7 @@
     <!-- /location -->
     <!-- map -->
     <section class="map">
+      <h2 class="visually-hidden">Карта</h2>
       <iframe class="map__img" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1188.4507549368425!2d30.32052682793922!3d59.936656160651445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1649687251886!5m2!1sru!2sru" width="320" height="424" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
     <!-- /map -->

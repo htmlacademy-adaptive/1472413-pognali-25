@@ -7,6 +7,10 @@
   text-align: center;
   background-color: @basic-blue;
   background-image: url("../img/promo/promo-bg-mobile.jpg");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/promo/promo-bg-mobile@2x.jpg");
+  }
   .bg(center top, 100% 477px);
 
   @media (min-width: @tablet-width) {
@@ -14,6 +18,10 @@
     padding-bottom: 0;
     background-color: @rurikon-blue;
     background-image: url("../img/promo/promo-bg-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo/promo-bg-tablet@2x.jpg");
+    }
     .bg(center bottom 140px, 100% 612px);
   }
 
@@ -23,6 +31,10 @@
     padding-top: 0;
     background-color: @basic-blue;
     background-image: url("../img/promo/promo-bg-desktop.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo/promo-bg-desktop@2x.png");
+    }
     .bg(center bottom -5px, 100% 750px);
     .borderRadius;
   }

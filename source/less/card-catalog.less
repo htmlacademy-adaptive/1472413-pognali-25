@@ -17,12 +17,24 @@
     "btn btn btn";
   background-color: @white;
   border-radius: @small;
+  transition: box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.16);
+  }
+
+  &:hover .card-catalog__img {
+    transform: scale(1.2);
+  }
 }
 
-.card-catalog__img {
+.card-catalog__link-img {
   grid-area: img;
   display: block;
+  width: fit-content;
   margin-left: -3px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .card-catalog__link {
@@ -90,8 +102,22 @@
   padding: 10px 40px;
 }
 
+.card-catalog__img {
+  display: block;
+  .size(70px, 70px);
+  transition: @transitionTransform;
+}
+
 .card-catalog__title {
   color: @basic-blue-light;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &::after {
     content: "";
@@ -110,13 +136,50 @@
   }
 }
 
+.card-catalog__like-icon {
+  transition: @transitionOpacity, @transitionBgColor;
+}
+
 .card-catalog__like-button {
   .size(31px, 31px);
   .abs(block, -10px, initial, initial, -37px);
   border-radius: 50%;
 
+  & .card-catalog__like-icon {
+    opacity: 0.3;
+  }
+
+  &:hover .card-catalog__like-icon {
+    opacity: 0.5;
+  }
+
+  &:active .card-catalog__like-icon {
+    opacity: 0.1;
+  }
+
+
   &--like {
     background-color: @ballerina-gown;
+
+    &:hover {
+      background-color: @azalea;
+    }
+
+    &:active {
+      background-color: @azalea;
+    }
+
+    & .card-catalog__like-icon {
+      opacity: 1;
+    }
+
+    &:hover .card-catalog__like-icon {
+      opacity: 1;
+    }
+
+    &:active .card-catalog__like-icon {
+      opacity: 0.3;
+    }
   }
 }
 

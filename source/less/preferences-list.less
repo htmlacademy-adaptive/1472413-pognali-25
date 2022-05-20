@@ -1,2 +1,62 @@
 @import "_vars";
 @import "_mixins";
+
+.preferences-list__item {
+  &:not(:last-child) {
+    margin-bottom: 6px;
+  }
+}
+
+.preferences-list__point {
+  transition: @transitionOpacity;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.preferences-list__checkbox {
+  appearance: none;
+  z-index: -1;
+  opacity: 0;
+}
+
+.preferences-list__text {
+  position: relative;
+  padding-left: 15px;
+  .font(15px, 400, 20px);
+  color: @black;
+
+  &::after {
+    content: "";
+    .abs(block, 50%, initial, initial, -12px);
+    .size(18px, 18px);
+    background-color: @white;
+    transform: translateY(-50%);
+    border-radius: 4px;
+    transition: @transitionOpacity;
+  }
+}
+
+.preferences-list__checkbox:checked + .preferences-list__text::after {
+  background-image: url("data:image/svg+xml,%0A%3Csvg width='8' height='9' viewBox='0 0 11 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.38679 11.1809L0 7.5V7V6C0 6.04093 0 5.95907 0 6C0 5.78516 6.95735e-05 5.5 6.95735e-05 5.5V4.5L3.37736 7.75615C3.49314 7.87756 3.68161 7.87614 3.79738 7.75474L11.0001 0V2.07271V3C11.0001 3.5 11.0001 3.5 11.0001 3.5L4.80839 10.1208L4.80974 10.1222L3.80681 11.1795C3.69103 11.3009 3.50256 11.3009 3.38679 11.1809Z' fill='%23161C35'/%3E%3C/svg%3E");
+  .bg(center, auto);
+}
+
+.preferences-list__checkbox:disabled:checked + .preferences-list__text::after {
+  background-image: url("data:image/svg+xml,%0A%3Csvg width='11' height='12' viewBox='0 0 11 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.38679 11.1809L0 7.5V7V6C0 6.04093 0 5.95907 0 6C0 5.78516 6.95735e-05 5.5 6.95735e-05 5.5V4.5L3.37736 7.75615C3.49314 7.87756 3.68161 7.87614 3.79738 7.75474L11.0001 0V2.07271V3C11.0001 3.5 11.0001 3.5 11.0001 3.5L4.80839 10.1208L4.80974 10.1222L3.80681 11.1795C3.69103 11.3009 3.50256 11.3009 3.38679 11.1809Z' fill='%23161C35' opacity='0.3'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.preferences-list__checkbox:active:checked + .preferences-list__text::after,
+.preferences-list__checkbox:active:checked + .preferences-list__text,
+.preferences-list__checkbox:active:not(:checked) + .preferences-list__text::after,
+.preferences-list__checkbox:active:not(:checked) + .preferences-list__text,
+.preferences-list__checkbox:focus + .preferences-list__text::after,
+.preferences-list__checkbox:focus-visible + .preferences-list__text::after,
+.preferences-list__checkbox:focus + .preferences-list__text,
+.preferences-list__checkbox:focus-visible + .preferences-list__text {
+  opacity: 0.3;
+}

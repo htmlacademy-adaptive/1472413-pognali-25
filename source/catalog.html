@@ -522,7 +522,9 @@
         <h2 class="filter-companion__title">Подберите идеального попутчика</h2>
         <form class="filter-companion__list preferences" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="preferences__item">
-            <legend class="preferences__title">Хобби</legend>
+            <legend class="preferences__title">
+              <a class="preferences__title-link" href="#">Хобби</a>
+            </legend>
             <ul class="preferences__list preferences-list">
               <li class="preferences-list__item">
                 <label class="preferences-list__point">
@@ -545,7 +547,9 @@
             </ul>
           </fieldset>
           <fieldset class="preferences__item">
-            <legend class="preferences__title">Музыка</legend>
+            <legend class="preferences__title">
+              <a class="preferences__title-link" href="#">Музыка</a>
+            </legend>
             <ul class="preferences__list preferences-list">
               <li class="preferences-list__item">
                 <label class="preferences-list__point">
@@ -568,7 +572,9 @@
             </ul>
           </fieldset>
           <fieldset class="preferences__item">
-            <legend class="preferences__title">Еда</legend>
+            <legend class="preferences__title">
+              <a class="preferences__title-link" href="#">Еда</a>
+            </legend>
             <ul class="preferences__list preferences-list">
               <li class="preferences-list__item">
                 <label class="preferences-list__point">
@@ -591,55 +597,69 @@
             </ul>
           </fieldset>
           <fieldset class="preferences__item">
-            <legend class="preferences__title">Транспорт</legend>
+            <legend class="preferences__title">
+              <a class="preferences__title-link" href="#">Транспорт</a>
+            </legend>
             <ul class="preferences__list preferences-list list-transports">
-              <li class="preferences-list__item tooltip list-transports__item">
-                <label class="preferences-list__point">
+              <li class="preferences-list__transport tooltip list-transports__item">
+                <label class="preferences-list__element">
                   <input class="preferences-list__checkbox" type="checkbox" name="plane" checked>
+                  <svg class="list-transports__icon" width="18" height="20" viewBox="0 0 18 20">
+                    <use xlink:href="./img/sprite.svg#plane"></use>
+                  </svg>
                   <span class="list-transports__text tooltip__text">Авиаперелет</span>
                 </label>
               </li>
-              <li class="preferences-list__item tooltip list-transports__item">
-                <label class="preferences-list__point">
+              <li class="preferences-list__transport tooltip list-transports__item">
+                <label class="preferences-list__element">
                   <input class="preferences-list__checkbox" type="checkbox" name="auto" checked>
+                  <svg class="list-transports__icon" width="18" height="21" viewBox="0 0 18 21">
+                    <use xlink:href="./img/sprite.svg#bus"></use>
+                  </svg>
                   <span class="list-transports__text tooltip__text">Автотранспорт</span>
                 </label>
               </li>
-              <li class="preferences-list__item tooltip list-transports__item">
-                <label class="preferences-list__point">
+              <li class="preferences-list__transport tooltip list-transports__item">
+                <label class="preferences-list__element">
                   <input class="preferences-list__checkbox" type="checkbox" name="cicle">
+                  <svg class="list-transports__icon" width="25" height="24" viewBox="0 0 25 24">
+                    <use xlink:href="./img/sprite.svg#bicycle"></use>
+                  </svg>
                   <span class="list-transports__text tooltip__text">Велосипед</span>
                 </label>
               </li>
-              <li class="preferences-list__item tooltip list-transports__item">
-                <label class="preferences-list__point">
+              <li class="preferences-list__transport tooltip list-transports__item">
+                <label class="preferences-list__element">
                   <input class="preferences-list__checkbox" type="checkbox" name="on-foot" checked>
+                  <svg class="list-transports__icon" width="22" height="24" viewBox="0 0 22 24">
+                    <use xlink:href="./img/sprite.svg#runner"></use>
+                  </svg>
                   <span class="list-transports__text tooltip__text">Пешком</span>
                 </label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="preferences__item">
-            <legend class="preferences__title">Левел</legend>
-            <div class="range-wrapper-inputs">
-              <label class="range-label range-label--min">
-                <input class="range-input" type="number" value="30" name="min-price">
+            <legend class="preferences__title">
+              <a class="preferences__title-link" href="#">Левел</a>
+            </legend>
+            <div class="preferences__wrapper-inputs">
+              <label class="preferences__range-label">
+                <input class="preferences__range-input preferences__range-input--min" type="text" value="30" name="min-price">
               </label>
-              <label class="range-label">
-                <input class="range-input" type="number" value="100" name="max-price">
+              <label class="preferences__range-label">
+                <input class="preferences__range-input preferences__range-input--max" type="text" value="100" name="max-price">
               </label>
             </div>
-            <div class="range-wrapper-toddler">
-              <div class="range">
-                <div class="range-scale">
-                  <div class="range-bar">
-                    <button class="range-toggle toggle-min btn" type="button">
-                      <span class="visually-hidden">Изменить минимальную цену</span>
-                    </button>
-                    <button class="range-toggle toggle-max btn" type="button">
-                      <span class="visually-hidden">Изменить максимальную цену</span>
-                    </button>
-                  </div>
+            <div class="preferences__wrapper-toddler range">
+              <div class="range__scale">
+                <div class="range__bar">
+                  <button class="range__toggle range__toggle--min btn" type="button">
+                    <span class="visually-hidden">Изменить минимальную цену</span>
+                  </button>
+                  <button class="range__toggle range__toggle--max btn" type="button">
+                    <span class="visually-hidden">Изменить максимальную цену</span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -655,14 +675,16 @@
         <h2 class="visually-hidden">Список попутчиков</h2>
         <ul class="catalog__list">
           <li class="catalog__item card-catalog">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/avatars/avatar-1-285x285.png 1x, img/avatars/avatar-1-285x285@2x.png 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/avatars/avatar-1-190x190.webp 1x, img/avatars/avatar-1-190x190@2x.webp 2x">
-              <source type="image/webp" srcset="img/avatars/avatar-1-70x70.webp 1x, img/avatars/avatar-1-70x70@2x.webp 2x">
-              <source media="(min-width: 1200px)" srcset="img/avatars/avatar-1-285x285.png 1x, img/avatars/avatar-1-285x285@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/avatars/avatar-1-190x190.png 1x, img/avatars/avatar-1-190x190@2x.png 2x">
-              <img class="card-catalog__img" src="img/avatars/avatar-1-70x70.png" srcset="img/avatars/avatar-1-70x70@2x.png 2x" alt="аватарка пользователя.">
-            </picture>
+            <a class="card-catalog__link-img"  href="#">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/avatars/avatar-1-285x285.png 1x, img/avatars/avatar-1-285x285@2x.png 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/avatars/avatar-1-190x190.webp 1x, img/avatars/avatar-1-190x190@2x.webp 2x">
+                <source type="image/webp" srcset="img/avatars/avatar-1-70x70.webp 1x, img/avatars/avatar-1-70x70@2x.webp 2x">
+                <source media="(min-width: 1200px)" srcset="img/avatars/avatar-1-285x285.png 1x, img/avatars/avatar-1-285x285@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/avatars/avatar-1-190x190.png 1x, img/avatars/avatar-1-190x190@2x.png 2x">
+                <img class="card-catalog__img" src="img/avatars/avatar-1-70x70.png" srcset="img/avatars/avatar-1-70x70@2x.png 2x" alt="аватарка пользователя.">
+              </picture>
+            </a>
             <a class="card-catalog__link" href="#">
               <h3 class="card-catalog__title title-small">Таня Фирсова</h3>
             </a>
@@ -748,17 +770,19 @@
               <b class="card-catalog__level">99</b>
               <span class="card-catalog__text card-catalog__text--mobile">level</span>
             </div>
-            <button class="card-catalog__button btn btn--authorization" type="button">Позвать!</button>
+            <a class="card-catalog__button btn btn--authorization" href="#">Позвать!</a>
           </li>
           <li class="catalog__item card-catalog">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/avatars/avatar-2-285x285.png 1x, img/avatars/avatar-2-285x285@2x.png 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/avatars/avatar-2-190x190.webp 1x, img/avatars/avatar-2-190x190@2x.webp 2x">
-              <source type="image/webp" srcset="img/avatars/avatar-2-70x70.webp 1x, img/avatars/avatar-2-70x70@2x.webp 2x">
-              <source media="(min-width: 1200px)" srcset="img/avatars/avatar-2-285x285.png 1x, img/avatars/avatar-2-285x285@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/avatars/avatar-2-190x190.png 1x, img/avatars/avatar-2-190x190@2x.png 2x">
-              <img class="card-catalog__img" src="img/avatars/avatar-2-70x70.png" srcset="img/avatars/avatar-2-70x70@2x.png 2x" alt="аватарка пользователя.">
-            </picture>
+            <a class="card-catalog__link-img" href="#">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/avatars/avatar-2-285x285.png 1x, img/avatars/avatar-2-285x285@2x.png 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/avatars/avatar-2-190x190.webp 1x, img/avatars/avatar-2-190x190@2x.webp 2x">
+                <source type="image/webp" srcset="img/avatars/avatar-2-70x70.webp 1x, img/avatars/avatar-2-70x70@2x.webp 2x">
+                <source media="(min-width: 1200px)" srcset="img/avatars/avatar-2-285x285.png 1x, img/avatars/avatar-2-285x285@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/avatars/avatar-2-190x190.png 1x, img/avatars/avatar-2-190x190@2x.png 2x">
+                <img class="card-catalog__img" src="img/avatars/avatar-2-70x70.png" srcset="img/avatars/avatar-2-70x70@2x.png 2x" alt="аватарка пользователя.">
+              </picture>
+            </a>
             <a class="card-catalog__link" href="#">
               <h3 class="card-catalog__title title-small">Петя Демин</h3>
             </a>
@@ -834,17 +858,19 @@
               <b class="card-catalog__level">80</b>
               <span class="card-catalog__text card-catalog__text--mobile">level</span>
             </div>
-            <button class="card-catalog__button btn btn--authorization" type="button">Позвать!</button>
+            <a class="card-catalog__button btn btn--authorization" href="#">Позвать!</a>
           </li>
           <li class="catalog__item card-catalog">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/avatars/avatar-3-285x285.png 1x, img/avatars/avatar-3-285x285@2x.png 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/avatars/avatar-3-190x190.webp 1x, img/avatars/avatar-3-190x190@2x.webp 2x">
-              <source type="image/webp" srcset="img/avatars/avatar-3-70x70.webp 1x, img/avatars/avatar-3-70x70@2x.webp 2x">
-              <source media="(min-width: 1200px)" srcset="img/avatars/avatar-3-285x285.png 1x, img/avatars/avatar-3-285x285@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/avatars/avatar-3-190x190.png 1x, img/avatars/avatar-3-190x190@2x.png 2x">
-              <img class="card-catalog__img" src="img/avatars/avatar-3-70x70.png" srcset="img/avatars/avatar-3-70x70@2x.png 2x" alt="аватарка пользователя.">
-            </picture>
+            <a class="card-catalog__link-img" href="#">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/avatars/avatar-3-285x285.png 1x, img/avatars/avatar-3-285x285@2x.png 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/avatars/avatar-3-190x190.webp 1x, img/avatars/avatar-3-190x190@2x.webp 2x">
+                <source type="image/webp" srcset="img/avatars/avatar-3-70x70.webp 1x, img/avatars/avatar-3-70x70@2x.webp 2x">
+                <source media="(min-width: 1200px)" srcset="img/avatars/avatar-3-285x285.png 1x, img/avatars/avatar-3-285x285@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/avatars/avatar-3-190x190.png 1x, img/avatars/avatar-3-190x190@2x.png 2x">
+                <img class="card-catalog__img" src="img/avatars/avatar-3-70x70.png" srcset="img/avatars/avatar-3-70x70@2x.png 2x" alt="аватарка пользователя.">
+              </picture>
+            </a>
             <a class="card-catalog__link" href="#">
               <h3 class="card-catalog__title title-small">Марк Смолов</h3>
             </a>
@@ -929,19 +955,21 @@
               <b class="card-catalog__level">25</b>
               <span class="card-catalog__text card-catalog__text--mobile">level</span>
             </div>
-            <button class="card-catalog__button btn btn--authorization" type="button">Позвать!</button>
+            <a class="card-catalog__button btn btn--authorization" href="#">Позвать!</a>
           </li>
           <li class="catalog__item card-catalog">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/avatars/avatar-4-285x285.png 1x, img/avatars/avatar-4-285x285@2x.png 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/avatars/avatar-4-190x190.webp 1x, img/avatars/avatar-4-190x190@2x.webp 2x">
-              <source type="image/webp" srcset="img/avatars/avatar-4-70x70.webp 1x, img/avatars/avatar-4-70x70@2x.webp 2x">
-              <source media="(min-width: 1200px)" srcset="img/avatars/avatar-4-285x285.png 1x, img/avatars/avatar-4-285x285@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/avatars/avatar-4-190x190.png 1x, img/avatars/avatar-4-190x190@2x.png 2x">
-              <img class="card-catalog__img" src="img/avatars/avatar-4-70x70.png" srcset="img/avatars/avatar-4-70x70@2x.png 2x" alt="аватарка пользователя.">
-            </picture>
+            <a class="card-catalog__link-img" href="#" >
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/avatars/avatar-4-285x285.png 1x, img/avatars/avatar-4-285x285@2x.png 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/avatars/avatar-4-190x190.webp 1x, img/avatars/avatar-4-190x190@2x.webp 2x">
+                <source type="image/webp" srcset="img/avatars/avatar-4-70x70.webp 1x, img/avatars/avatar-4-70x70@2x.webp 2x">
+                <source media="(min-width: 1200px)" srcset="img/avatars/avatar-4-285x285.png 1x, img/avatars/avatar-4-285x285@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/avatars/avatar-4-190x190.png 1x, img/avatars/avatar-4-190x190@2x.png 2x">
+                <img class="card-catalog__img" src="img/avatars/avatar-4-70x70.png" srcset="img/avatars/avatar-4-70x70@2x.png 2x" alt="аватарка пользователя.">
+              </picture>
+            </a>
             <a class="card-catalog__link" href="#">
-              <h3 class="card-catalog__title--online title-small">Лариса Роговая</h3>
+              <h3 class="card-catalog__title card-catalog__title--online title-small">Лариса Роговая</h3>
             </a>
             <div class="card-catalog__like">
               <button class="card-catalog__like-button btn" type="button" name="like">
@@ -1014,15 +1042,15 @@
               <b class="card-catalog__level">50</b>
               <span class="card-catalog__text card-catalog__text--mobile">level</span>
             </div>
-            <button class="card-catalog__button btn btn--authorization" type="button">Позвать!</button>
+            <a class="card-catalog__button btn btn--authorization" href="#">Позвать!</a>
           </li>
         </ul>
-        <button class="catalog__button btn" type="button">
+        <a class="catalog__button btn" href="#">
           <svg width="18" height="18" viewBox="0 0 18 18">
             <use xlink:href="img/sprite.svg#more"></use>
           </svg>
           Показать еще
-        </button>
+        </a>
         <footer class="catalog__footer">
           <ol class="catalog__footer-list">
             <li class="catalog__footer-item catalog__footer-item--current"><a class="catalog__footer-link" href="#">1</a></li>

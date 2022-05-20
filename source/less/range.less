@@ -1,2 +1,46 @@
 @import "_vars";
 @import "_mixins";
+
+.range {
+  display: block;
+}
+
+.range__scale {
+  position: relative;
+  .size(100%, 2px);
+  background-color: rgba(29, 46, 93, 0.2);
+}
+
+.range__bar {
+  .abs(block, initial, 0, initial, initial);
+  .size(70%, 2px);
+  background-color: @basic-blue-light;
+}
+
+.range__toggle {
+  .base();
+  .size(10px, 10px);
+  background-color: @basic-blue-light;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    .size(13px, 13px);
+  }
+
+  &:active {
+    .size(13px, 13px);
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.24);
+  }
+
+  &--min {
+    .abs(block, 50%, 100%, initial, initial);
+    transform: translateX(50%) translateY(-50%);
+  }
+
+  &--max {
+    .abs(block, 50%, 0, initial, initial);
+    transform: translateX(50%) translateY(-50%);
+  }
+}

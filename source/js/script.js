@@ -142,7 +142,7 @@ if (choiceCountry != null) choiceCountry.addEventListener('click', function () {
 });
 
 /* steps */
-let activeStepIndex = 2;
+let activeStepIndex = 0;
 if (stepsNodeList != null) {
   ChangeStep(0);
 }

@@ -4,27 +4,53 @@
 .preferences__item {
   position: relative;
   .base();
-  padding-top: 46px;
+  padding-top: 19px;
   padding-bottom: 21px;
   border: none;
   border-top: 1px solid @yellow;
-
-  &:last-of-type {
-    margin-bottom: 20px;
-  }
 }
 
 .preferences__title {
   .abs(block, 0, initial, initial, 0);
+  width: 100%;
   padding: 12px 0;
   .font(16px, 700, 18px);
   color: @basic-blue-light;
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+.preferences__title-link {
+  .resetLink();
+  display: block;
+  width: 100%;
+  transition: @transitionOpacity;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active,
+  &:focus,
+  &:focus-visible {
+    opacity: 0.3;
+  }
+
+  &::after {
+    content: "";
+    .abs(block, calc(50% - 3px), 0, initial, initial);
+    .bg(center, auto);
+    border-bottom: 6px solid @midnight-blue;
+    border-left: 6px solid transparent;
+    transform: rotate(225deg);
+    transition: @transitionTransform;
+  }
 }
 
 .preferences__list {
   .base();
   .reset();
+  padding-top: 27px;
 }
 
 .preferences__button {
@@ -34,4 +60,80 @@
   color: @basic-blue;
   text-transform: uppercase;
   border-radius: 25px;
+  transition: box-shadow 0.2s ease-in-out, @transitionBgColor, @transitionColor;
+
+  &:hover {
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.14);
+  }
+
+  &:active {
+    color: rgba(22, 28, 53, 0.3);
+    background-color: @yellow;
+  }
+}
+
+.preferences__wrapper-inputs {
+  position: relative;
+  display: flex;
+  margin-bottom: 21px;
+  padding-top: 22px;
+
+  &::after,
+  &::before {
+    content: "";
+    .abs(block, 50%, initial, initial, calc(50% - 8px));
+    z-index: 2;
+  }
+
+  &::after {
+    .size(16px, 1px);
+    background-color: @skyline;
+  }
+
+  &::before {
+    .size(16px, 12px);
+    background-color: @white;
+    transform: translateY(-50%);
+  }
+}
+
+.preferences__range-label {
+  flex-grow: 1;
+}
+
+.preferences__range-input {
+  position: relative;
+  .base();
+  display: inline-block;
+  .size(100%, 35px);
+  padding-top: 3px;
+  text-align: center;
+  .font(14px, 500, 13px);
+  background-color: @white;
+  color: @basic-blue-light;
+  border: 1px solid @skyline;
+  outline: 0;
+  appearance: textfield;
+  transition: border-color 0.2s ease-in-out;
+
+  &:hover {
+    z-index: 1;
+    border-color: @navy;
+  }
+
+  &:active,
+  &:focus,
+  &:focus-visible {
+    z-index: 1;
+    border-color: @basic-blue;
+  }
+
+  &--min {
+    border-radius: 4px 0 0 4px;
+  }
+
+  &--max {
+    margin-left: -1px;
+    border-radius: 0 4px 4px 0;
+  }
 }

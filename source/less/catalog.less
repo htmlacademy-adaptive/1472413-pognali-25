@@ -24,7 +24,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 170px;
+  width: 150px;
   margin: 0 auto;
   margin-bottom: 18px;
   .font(17px, 700, 30px);
@@ -33,7 +33,16 @@
   background-color: transparent;
 
   & svg {
+    transition: @transitionOpacity;
     fill: @basic-blue-light;
+  }
+
+  &:hover svg {
+    opacity: 0.6;
+  }
+
+  &:active svg {
+    opacity: 0.3;
   }
 }
 

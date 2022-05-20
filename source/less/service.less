@@ -9,6 +9,11 @@
   z-index: 7;
   background-color: @midnight-blue;
   background-image: url("../img/service/service-bg-mobile.png"), url("../img/service/service-back-mobile.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/service/service-bg-mobile@2x.png"), url("../img/service/service-back-mobile@2x.png");
+  }
+
   background-position: calc(100% - 10px) bottom, left calc(100% - 222px);
   background-repeat: no-repeat;
   .borderRadius;
@@ -18,6 +23,11 @@
     padding-top: 285px;
     padding-bottom: 89px;
     background-image: url("../img/service/service-bg-tablet.png"), url("../img/service/service-back-tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/service/service-bg-tablet@2x.png"), url("../img/service/service-back-tablet@2x.png");
+    }
+
     background-position: bottom 89px left 100%, center top 235px;
     background-size: auto, calc(100% - 60px);
   }
