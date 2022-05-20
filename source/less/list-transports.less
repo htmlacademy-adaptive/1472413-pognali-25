@@ -29,6 +29,10 @@
   transition: @transitionBgColor, box-shadow 0.2s ease-in-out;
   cursor: pointer;
 
+  &--filter {
+    .size(32px, 32px);
+  }
+
   &:hover {
     box-shadow: 0 2px 6px rgba(22, 28, 53, 0.17);
   }
@@ -76,9 +80,5 @@
 
   & svg {
     opacity: 0.15;
-  }
-
-  &--active svg {
-    opacity: 1;
   }
 }

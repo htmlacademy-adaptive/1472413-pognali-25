@@ -8,6 +8,23 @@
   padding-bottom: 21px;
   border: none;
   border-top: 1px solid @yellow;
+
+  &--hide {
+    & .preferences__title-link::after {
+      top: calc(50% - 5px);
+      transform: rotate(45deg);
+    }
+
+    & .preferences-list,
+    & .preferences__wrapper-inputs,
+    & .preferences__wrapper-toddler {
+      display: none;
+    }
+
+    & ~ .preferences__button {
+      margin-top: 16px;
+    }
+  }
 }
 
 .preferences__title {
@@ -51,6 +68,15 @@
   .base();
   .reset();
   padding-top: 27px;
+  transition: @transitionOpacity;
+
+  &--transports {
+    justify-content: flex-start;
+
+    & .list-transports__item {
+      margin: 0;
+    }
+  }
 }
 
 .preferences__button {

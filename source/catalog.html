@@ -600,44 +600,82 @@
             <legend class="preferences__title">
               <a class="preferences__title-link" href="#">Транспорт</a>
             </legend>
-            <ul class="preferences__list preferences-list list-transports">
-              <li class="preferences-list__transport tooltip list-transports__item">
+            <ul class="preferences__list preferences__list--transports list-transports">
+              <li class="list-transports__item tooltip transport-icon transport-icon--filter transport-icon--first">
+                <label class="list-transports__button list-transports__button--filter">
+                  <input class="list-transports__checkbox visually-hidden" type="checkbox" name="plane" checked>
+                  <svg class="list-transports__icon" width="16" height="16" viewBox="0 0 18 20">
+                    <use xlink:href="./img/sprite.svg#plane"></use>
+                  </svg>
+                </label>
+                <span class="list-transports__text tooltip__text">Авиаперелет</span>
+              </li>
+              <li class="list-transports__item tooltip transport-icon transport-icon--filter transport-icon--second">
+                <label class="list-transports__button list-transports__button--filter">
+                  <input class="list-transports__checkbox visually-hidden" type="checkbox" name="plane" checked>
+                  <svg class="list-transports__icon" width="16" height="16" viewBox="0 0 18 21">
+                    <use xlink:href="./img/sprite.svg#bus"></use>
+                  </svg>
+                </label>
+                <span class="list-transports__text tooltip__text">Автотранспорт</span>
+              </li>
+              <li class="list-transports__item tooltip transport-icon transport-icon--filter transport-icon--third">
+                <label class="list-transports__button list-transports__button--filter">
+                  <input class="list-transports__checkbox visually-hidden" type="checkbox" name="plane">
+                  <svg class="list-transports__icon" width="16" height="16" viewBox="0 0 25 24">
+                    <use xlink:href="./img/sprite.svg#bicycle"></use>
+                  </svg>
+                </label>
+                <span class="list-transports__text tooltip__text">Велосипед</span>
+              </li>
+              <li class="list-transports__item tooltip transport-icon transport-icon--filter transport-icon--fouth">
+                <label class="list-transports__button list-transports__button--filter">
+                  <input class="list-transports__checkbox visually-hidden" type="checkbox" name="plane" checked>
+                  <svg class="list-transports__icon" width="16" height="16" viewBox="0 0 22 24">
+                    <use xlink:href="./img/sprite.svg#runner"></use>
+                  </svg>
+                </label>
+                <span class="list-transports__text tooltip__text">Пешком</span>
+              </li>
+            </ul>
+            <!-- <ul class="preferences__list preferences-list preferences-list--transports list-transports">
+              <li class="preferences-list__item tooltip list-transports__point list-transports__point--filter">
                 <label class="preferences-list__element">
-                  <input class="preferences-list__checkbox" type="checkbox" name="plane" checked>
-                  <svg class="list-transports__icon" width="18" height="20" viewBox="0 0 18 20">
+                  <input class="preferences-list__checkbox visually-hidden" type="checkbox" name="plane" checked>
+                  <svg class="list-transports__icon" width="16" height="16" viewBox="0 0 18 20">
                     <use xlink:href="./img/sprite.svg#plane"></use>
                   </svg>
                   <span class="list-transports__text tooltip__text">Авиаперелет</span>
                 </label>
               </li>
-              <li class="preferences-list__transport tooltip list-transports__item">
+              <li class="preferences-list__item tooltip list-transports__point list-transports__point--filter">
                 <label class="preferences-list__element">
-                  <input class="preferences-list__checkbox" type="checkbox" name="auto" checked>
-                  <svg class="list-transports__icon" width="18" height="21" viewBox="0 0 18 21">
+                  <input class="preferences-list__checkbox visually-hidden" type="checkbox" name="auto" checked>
+                  <svg class="list-transports__icon" width="16" height="16" viewBox="0 0 18 21">
                     <use xlink:href="./img/sprite.svg#bus"></use>
                   </svg>
                   <span class="list-transports__text tooltip__text">Автотранспорт</span>
                 </label>
               </li>
-              <li class="preferences-list__transport tooltip list-transports__item">
+              <li class="preferences-list__item tooltip list-transports__point list-transports__point--filter">
                 <label class="preferences-list__element">
-                  <input class="preferences-list__checkbox" type="checkbox" name="cicle">
-                  <svg class="list-transports__icon" width="25" height="24" viewBox="0 0 25 24">
+                  <input class="preferences-list__checkbox visually-hidden" type="checkbox" name="cicle">
+                  <svg class="list-transports__icon" width="17" height="16" viewBox="0 0 25 24">
                     <use xlink:href="./img/sprite.svg#bicycle"></use>
                   </svg>
                   <span class="list-transports__text tooltip__text">Велосипед</span>
                 </label>
               </li>
-              <li class="preferences-list__transport tooltip list-transports__item">
+              <li class="preferences-list__item tooltip list-transports__point list-transports__point--filter">
                 <label class="preferences-list__element">
-                  <input class="preferences-list__checkbox" type="checkbox" name="on-foot" checked>
-                  <svg class="list-transports__icon" width="22" height="24" viewBox="0 0 22 24">
+                  <input class="preferences-list__checkbox visually-hidden" type="checkbox" name="on-foot" checked>
+                  <svg class="list-transports__icon" width="16" height="16" viewBox="0 0 22 24">
                     <use xlink:href="./img/sprite.svg#runner"></use>
                   </svg>
                   <span class="list-transports__text tooltip__text">Пешком</span>
                 </label>
               </li>
-            </ul>
+            </ul> -->
           </fieldset>
           <fieldset class="preferences__item">
             <legend class="preferences__title">
