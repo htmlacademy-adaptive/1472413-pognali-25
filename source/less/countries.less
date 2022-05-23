@@ -5,6 +5,12 @@
   @media (min-width: @tablet-width) {
     display: flex;
   }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    justify-self: flex-end;
+    margin-right: 60px;
+  }
 }
 
 .countries__item {
@@ -17,6 +23,11 @@
     @media (min-width: @tablet-width) {
       margin-bottom: 0;
       margin-right: 25px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 0;
+      margin-bottom: 14px;
     }
   }
 }

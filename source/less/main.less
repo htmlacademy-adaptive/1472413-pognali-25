@@ -24,6 +24,19 @@
     @media (min-width: @tablet-width) {
       padding-bottom: 51px;
     }
+
+    @media (min-width: @desktop-width) {
+      max-width: 1380px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 315px;
+      grid-template-areas:
+        "header header"
+        "filter filter"
+        "catalog filter-companion"
+        "footer footer";
+      column-gap: 86px;
+    }
   }
 }
 
@@ -40,6 +53,10 @@
     padding-top: 224px;
     padding-bottom: 66px;
     .borderRadius();
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: header;
   }
 }
 
@@ -77,6 +94,10 @@
   @media (min-width: @tablet-width) {
     display: block;
     margin-left: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 63px;
   }
 
   & svg {

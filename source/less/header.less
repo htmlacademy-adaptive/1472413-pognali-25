@@ -21,7 +21,7 @@
   }
 
   &--theme-light {
-    padding-top: 27px;
+    padding-top: 23px;
     padding-bottom: 31px;
     background-color: @white;
 
@@ -29,7 +29,6 @@
       padding-top: 40px;
       padding-bottom: 42px;
     }
-
 
     @media (min-width: @desktop-width) {
       padding-top: 19px;
@@ -103,8 +102,17 @@
 
 .header__button {
   .size(25px, 11px);
+  align-self: flex-end;
+
+  @media (max-width: @tablet-width) {
+    align-self: center;
+  }
 
   @media (min-width: @desktop-width) {
     display: none;
   }
+}
+
+.header--theme-light .header__button {
+  align-self: start;
 }

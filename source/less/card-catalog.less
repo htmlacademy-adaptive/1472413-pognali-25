@@ -30,6 +30,16 @@
       "countries countries countries countries";
   }
 
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 285px 23.4% 1fr 186px 60px;
+    // grid-template-rows: 49px max-content 60px auto min-content;
+    grid-template-rows: 96px max-content 108px;
+    grid-template-areas:
+      "img name name countries countries"
+      "img tagsList tagsList countries countries"
+      "img btn like transportsList levelImg";
+  }
+
   &:hover {
     box-shadow: 0 4px 9px rgba(0, 0, 0, 0.16);
   }
@@ -53,6 +63,11 @@
     margin-left: 0;
     border-radius: 20px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+    border-radius: 20px 0 0 20px;
+  }
 }
 
 .card-catalog__link {
@@ -63,6 +78,11 @@
 
   @media (min-width: @tablet-width) {
     margin-left: 29px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 46px;
+    margin-left: 36px;
   }
 }
 
@@ -75,6 +95,11 @@
   @media (min-width: @tablet-width) {
     align-items: center;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 10px;
+    margin-bottom: 48px;
+  }
 }
 
 .card-catalog__list-tags {
@@ -84,13 +109,20 @@
   .font(15px, 400, 18px);
 
   @media (min-width: @tablet-width) {
-    margin-left: 29px;
     padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    .fontChanged(20px, 23px);
   }
 }
 
 .card-catalog__subtitle--wanted {
   grid-area: wanted;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .card-catalog__subtitle--transports {
@@ -115,6 +147,10 @@
   .base();
   .reset();
   padding-left: 5px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+  }
 }
 
 .card-catalog__list-transports {
@@ -124,6 +160,11 @@
 
   @media (min-width: @tablet-width) {
     justify-content: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 10px;
+    margin-bottom: 48px;
   }
 }
 
@@ -142,6 +183,10 @@
     flex-direction: column;
     .size(60px, 60px);
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 42px;
+  }
 }
 
 .card-catalog__button {
@@ -155,6 +200,12 @@
     margin-left: 29px;
     padding: 15px 32px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 10px;
+    margin-bottom: 48px;
+    margin-left: 62px;
+  }
 }
 
 .card-catalog__img {
@@ -165,6 +216,10 @@
   @media (min-width: @tablet-width) {
     .size(190px, 190px);
   }
+
+  @media (min-width: @desktop-width) {
+    .size(285px, 285px);
+  }
 }
 
 .card-catalog__title {
@@ -174,6 +229,11 @@
     position: relative;
     width: fit-content;
     padding-right: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 0;
+    padding-left: 26px;
   }
 
   &:hover {
@@ -195,6 +255,11 @@
       top: 10px;
       .size(8px, 8px);
     }
+
+    @media (min-width: @desktop-width) {
+      right: initial;
+      left: 0;
+    }
   }
 
   &--online::after {
@@ -207,6 +272,11 @@
     @media (min-width: @tablet-width) {
       top: 10px;
       .size(8px, 8px);
+    }
+
+    @media (min-width: @desktop-width) {
+      right: initial;
+      left: 0;
     }
   }
 }

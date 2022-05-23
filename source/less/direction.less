@@ -12,7 +12,7 @@
 
   @media (min-width: @tablet-width) {
     margin-top: -50px;
-    padding-top: 123px;
+    padding-top: 119px;
   }
 
   @media (min-width: @desktop-width) {
@@ -23,13 +23,13 @@
 }
 
 .direction__text {
-  margin-right: 74px;
-  margin-bottom: 60px;
+  margin-right: 46px;
+  margin-bottom: 61px;
   margin-left: @margin-left;
 
   @media (min-width: @tablet-width) {
     max-width: 50%;
-    margin-bottom: 104px;
+    margin-bottom: 105px;
     margin-left: @margin-left-m;
     .fontChanged(28px, 33px);
   }
@@ -46,6 +46,7 @@
   position: relative;
   .reset;
   .base;
+  margin-bottom: 25px;
 
   @media (min-width: @tablet-width) {
     max-width: @max-width;
@@ -99,9 +100,9 @@
   }
 
   &::after {
-    .abs(block, 39%, 0, 0, calc(100% - 37px));
+    .abs(block, 41%, 0, 0, calc(100% - 34px));
     content: "";
-    .size(13px, 13.5px);
+    .size(11px, 13px);
     background-image: url("data:image/svg+xml,%3Csvg width='12' height='14' viewBox='0 0 12 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 7L0 13.0622L0 0.937822L12 7Z' fill='%231D2E5B'/%3E%3C/svg%3E%0A");
     .bg(right center, cover);
     transition: @transitionOpacity;
@@ -116,6 +117,7 @@
   margin-left: @margin-left;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 60px;
     margin-left: @margin-left-m;
   }
 

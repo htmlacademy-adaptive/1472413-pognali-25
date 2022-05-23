@@ -3,6 +3,17 @@
 
 .catalog {
   margin-bottom: 76px;
+
+  @media (min-width: @desktop-width) {
+    grid-area: catalog;
+  }
+
+  & .container {
+    @media (min-width: @desktop-width) {
+      padding: 0;
+      padding-left: 30px;
+    }
+  }
 }
 
 .catalog__list {
@@ -12,6 +23,10 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 51px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 62px;
   }
 }
 
@@ -23,11 +38,20 @@
     padding: 35px 25px 25px 35px;
   }
 
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    padding-right: 43px;
+  }
+
   &:not(:last-child) {
     margin-bottom: 10px;
 
     @media (min-width: @tablet-width) {
       margin-bottom: 39px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 31px;
     }
   }
 }
@@ -70,10 +94,62 @@
 
 .catalog__footer {
   display: flex;
+  background-color: @white;
+  border-radius: 20px;
+
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+    padding: 25px 35px 25px 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 41px;
+    padding-left: 29px;
+  }
 }
 
 .catalog__footer-list {
   display: none;
+  .base();
+  .reset();
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
+.catalog__footer-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .size(50px, 50px);
+  color: @basic-blue-light;
+
+  &:hover {
+    color: rgba(29, 46, 91, 0.6);
+  }
+
+  &--current {
+    @media (min-width: @tablet-width) {
+      background-color: @basic-yellow;
+      border-radius: 50%;
+    }
+  }
+}
+
+.catalog__footer-link {
+  .resetLink();
+  display: block;
+  .font(20px, 700, 20px);
+}
+
+.catalog__footer-wrapper {
+  width: 100%;
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+  }
 }
 
 .catalog__footer-btn {
@@ -81,10 +157,19 @@
   padding: 16px 0 14px;
   background-color: @white;
 
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    height: auto;
+  }
+
   &--prev {
     border-right: 1px solid @blue-light;
     border-top-left-radius: @small;
     border-bottom-left-radius: @small;
+
+    @media (min-width: @tablet-width) {
+      border: none;
+    }
 
     & svg {
       transform: scaleX(-1);
@@ -94,6 +179,14 @@
   &--next {
     border-top-right-radius: @small;
     border-bottom-right-radius: @small;
+
+    @media (min-width: @tablet-width) {
+      margin-left: 27px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 29px;
+    }
   }
 
   & svg {

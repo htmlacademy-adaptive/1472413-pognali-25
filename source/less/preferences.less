@@ -9,6 +9,10 @@
   border: none;
   border-top: 1px solid @yellow;
 
+  @media (min-width: @desktop-width) {
+    border: none;
+  }
+
   &--hide {
     & .preferences__title-link::after {
       top: calc(50% - 5px);
@@ -25,6 +29,10 @@
 
     & ~ .preferences__button {
       margin-top: 16px;
+
+      @media (min-width: @desktop-width) {
+        margin-top: 17px;
+      }
     }
   }
 
@@ -155,6 +163,10 @@
     margin-bottom: 26px;
     padding: 0;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 38px;
+  }
 }
 
 .preferences__button {
@@ -186,6 +198,11 @@
   display: flex;
   margin-bottom: 21px;
   padding-top: 22px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 36px;
+    padding-top: 30px;
+  }
 
   &::after,
   &::before {

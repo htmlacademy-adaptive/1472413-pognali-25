@@ -2,9 +2,9 @@
 @import "_mixins";
 
 .service {
-  margin-top: -275px;
+  margin-top: -269px;
   padding-top: 300px;
-  padding-bottom: 82px;
+  padding-bottom: 83px;
   position: relative;
   z-index: 7;
   background-color: @midnight-blue;
@@ -21,9 +21,11 @@
 
   @media (min-width: @tablet-width) {
     margin-top: -140px;
-    padding-top: 285px;
+    padding-top: 273px;
     padding-bottom: 89px;
     background-image: url("../img/service/service-bg-tablet.png"), url("../img/service/service-back-tablet.png");
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/service/service-bg-tablet@2x.png"), url("../img/service/service-back-tablet@2x.png");
@@ -42,13 +44,13 @@
 }
 
 .service__text {
-  margin-right: 55px;
+  margin-right: 25px;
   margin-bottom: 20px;
   margin-left: @margin-left;
   color: @white;
 
   @media (min-width: @tablet-width) {
-    max-width: 41%;
+    max-width: 46%;
     margin-bottom: 31px;
     margin-left: @margin-left-m;
     .fontChanged(28px, 33px);
@@ -66,7 +68,7 @@
     font-weight: 700;
 
     @media (min-width: @tablet-width) {
-      margin-bottom: 52px;
+      margin-bottom: 53px;
       .fontChanged(21px, 25px);
     }
 
@@ -82,9 +84,9 @@
   position: relative;
 
   &::after {
-    .abs(block, 44%, 0, 50%, calc(100% - 50px));
+    .abs(block, 44%, 0, 50%, calc(100% - 45px));
     content: "";
-    .size(14px, 13.5px);
+    .size(11px, 13px);
     background-image: url("data:image/svg+xml,%3Csvg width='12' height='14' viewBox='0 0 12 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 7L0 13.0622L0 0.937822L12 7Z' fill='%231D2E5B'/%3E%3C/svg%3E%0A");
     .bg(right center, cover);
     transition: @transitionOpacity;
@@ -92,8 +94,8 @@
 
   @media (min-width: @tablet-width) {
     display: block;
-    max-width: 276px;
-    margin-left: @margin-left-m;
+    max-width: 275px;
+    margin-left: 34px;
   }
 
   @media (min-width: @desktop-width) {
@@ -105,7 +107,8 @@
   margin-left: @margin-left;
 
   @media (min-width: @tablet-width) {
-    margin-left: @margin-left-m;
+    margin-bottom: 43px;
+    margin-left: 33px;
   }
 
   @media (min-width: @desktop-width) {

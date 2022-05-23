@@ -4,7 +4,7 @@
 .contact {
   position: relative;
   margin-top: -30px;
-  padding-top: 100px;
+  padding-top: 98px;
   padding-bottom: 31px;
   z-index: 3;
   text-align: center;
@@ -23,9 +23,14 @@
   }
 }
 
+.contact__title {
+  margin-bottom: 20px;
+}
+
 .contact__text {
   .base;
-  margin-bottom: 29px;
+  margin-bottom: 31px;
+  margin-left: -3px;
   color: @white;
 
   @media (min-width: @tablet-width) {
@@ -70,7 +75,7 @@
 .contact__form {
   display: grid;
   grid-template-columns: 1fr 60px;
-  margin-bottom: 29px;
+  margin-bottom: 27px;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 80px;
@@ -87,6 +92,7 @@
 .contact__input {
   grid-column: 1 / -1;
   grid-row: 1 / 1;
+  padding-top: 0;
   padding-left: 25px;
   padding-right: 70px;
   .font(18px, 700, 18px);

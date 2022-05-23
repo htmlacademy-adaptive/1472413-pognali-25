@@ -29,7 +29,7 @@
   }
 
   &--open {
-    .abs(flex, 274px, initial, initial, 50%);
+    .abs(flex, 275px, initial, initial, 50%);
     width: 270px;
     transform: translateX(-50%);
 
@@ -37,6 +37,11 @@
       position: initial;
       width: auto;
       transform: none;
+    }
+
+    & .user-list__item--header .user-list__link {
+      padding-top: 14px;
+      padding-bottom: 14px;
     }
   }
 }

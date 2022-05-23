@@ -45,7 +45,7 @@
 
   &--promo {
     background-image: url("../img/promo/promo-traveller-mobile.png");
-    .bg(center 130px, auto);
+    .bg(80px 130px, auto);
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/promo/promo-traveller-mobile@2x.png");
@@ -54,7 +54,7 @@
 
     @media (min-width: @tablet-width) {
       background-image: url("../img/promo/promo-traveller-tablet.png");
-      .bg(bottom 280px right 71px, auto);
+      .bg(bottom 280px right 102px, auto);
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/promo/promo-traveller-tablet@2x.png");
@@ -97,7 +97,7 @@
   &--direction {
     @media (min-width: @tablet-width) {
       background-image: url("../img/direction/direction-bg-flags.png");
-      .bg(top left calc(100% - 30px), auto);
+      .bg(top 10px left calc(100% - 30px), auto);
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/direction/direction-bg-flags@2x.png");
@@ -130,7 +130,6 @@
   &--contact,
   &--location {
     @media (min-width: @tablet-width) {
-      max-width: 90%;
       min-width: inherit;
     }
   }
@@ -212,6 +211,14 @@
       @media (min-width: @tablet-width) {
         margin-bottom: 0;
       }
+    }
+  }
+
+  &--filter-companion {
+    @media (min-width: @desktop-width) {
+      grid-area: filter-companion;
+      padding: 0;
+      padding-right: 30px;
     }
   }
 

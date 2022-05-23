@@ -538,7 +538,7 @@
     </section>
     <!-- /filter -->
     <!-- filter-companion -->
-    <div class="container">
+    <div class="container container--filter-companion">
       <aside class="filter-companion">
         <h2 class="filter-companion__title">Подберите идеального попутчика</h2>
         <form class="filter-companion__list preferences" action="https://echo.htmlacademy.ru" method="post">
@@ -1079,18 +1079,20 @@
             <li class="catalog__footer-item"><a class="catalog__footer-link" href="#">3</a></li>
             <li class="catalog__footer-item"><a class="catalog__footer-link" href="#">4</a></li>
           </ol>
-          <button class="catalog__footer-btn catalog__footer-btn--prev btn" type="button">
-            <svg width="20" height="14" viewBox="0 0 12 14">
-              <use xlink:href="img/sprite.svg#array-right"></use>
-            </svg>
-            <span class="visually-hidden">предыдущая страница</span>
-          </button>
-          <button class="catalog__footer-btn catalog__footer-btn--next btn" type="button">
-            <svg width="20" height="14" viewBox="0 0 12 14">
-              <use xlink:href="img/sprite.svg#array-right"></use>
-            </svg>
-            <span class="visually-hidden">следующая страница</span>
-          </button>
+          <div class="catalog__footer-wrapper">
+            <button class="catalog__footer-btn catalog__footer-btn--prev btn" type="button">
+              <svg width="20" height="14" viewBox="0 0 12 14">
+                <use xlink:href="img/sprite.svg#array-right"></use>
+              </svg>
+              <span class="visually-hidden">предыдущая страница</span>
+            </button>
+            <button class="catalog__footer-btn catalog__footer-btn--next btn" type="button">
+              <svg width="20" height="14" viewBox="0 0 12 14">
+                <use xlink:href="img/sprite.svg#array-right"></use>
+              </svg>
+              <span class="visually-hidden">следующая страница</span>
+            </button>
+          </div>
         </footer>
       </div>
     </section>
