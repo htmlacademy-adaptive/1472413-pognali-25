@@ -20,6 +20,10 @@
 
   &--catalog {
     background-color: @blue-light;
+
+    @media (min-width: @tablet-width) {
+      padding-bottom: 51px;
+    }
   }
 }
 
@@ -52,5 +56,30 @@
 }
 
 .main__link {
+  .base();
+  .resetLink();
+  margin-top: 5px;
+  margin-right: 33px;
   display: none;
+  .font(20px, 700, 20px);
+  color: @white;
+  text-transform: uppercase;
+  transition: @transitionOpacity;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin-left: auto;
+  }
+
+  & svg {
+    margin-left: 28px;
+  }
 }

@@ -49,6 +49,7 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/promo/promo-traveller-mobile@2x.png");
+      background-size: 192px;
     }
 
     @media (min-width: @tablet-width) {
@@ -57,6 +58,7 @@
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/promo/promo-traveller-tablet@2x.png");
+        background-size: 372px;
       }
     }
 
@@ -67,10 +69,11 @@
       padding-top: 209px;
       padding-bottom: 123px;
       background-image: url("../img/promo/promo-traveller-desktop.png");
-      .bg(right 355px bottom, 431px 640px);
+      .bg(right 355px bottom, auto);
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/promo/promo-traveller-desktop@2x.png");
+        background-size: 431px 640px;
       }
     }
   }
@@ -83,7 +86,7 @@
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/service/service-bg-desktop@2x.png"), url("../img/companion/companion-back@2x.png");
-        background-size: 678px auto, 376px auto;
+        background-size: 630px auto, 212px auto;
       }
 
       background-position: bottom left calc(100% - 10px), left 10px top 128px;
@@ -130,16 +133,13 @@
       max-width: 90%;
       min-width: inherit;
     }
-
-    @media (min-width: @desktop-width) {
-      max-width: 1380px;
-    }
   }
 
   &--location {
     @media (min-width: @desktop-width) {
       display: flex;
       align-items: center;
+      justify-content: flex-end;
     }
   }
 
@@ -147,9 +147,72 @@
     position: relative;
   }
 
+  &--main-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   &--filter {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    &.container--open {
+      height: 80vh;
+
+      @media (min-width: @tablet-width) {
+        height: auto;
+        padding-bottom: 20px;
+      }
+
+      @media (min-width: @desktop-width) {
+        padding-bottom: 45px;
+      }
+    }
+
+    &.container--open .filter__continents {
+      display: block;
+
+      @media (min-width: @tablet-width) {
+        display: flex;
+        margin-top: -23px;
+        margin-bottom: 65px;
+      }
+
+      @media (min-width: @desktop-width) {
+        margin-top: -20px;
+        margin-bottom: 23px;
+      }
+    }
+
+    &.container--open .filter__button {
+      display: none;
+    }
+
+    &.container--open .filter__button--closed {
+      display: flex;
+
+      @media (min-width: @desktop-width) {
+        display: none;
+      }
+    }
+
+    &.container--open .filter__close {
+      display: flex;
+    }
+
+    &.container--open .filter__table {
+      display: table;
+    }
+
+    &.container--open .filter__wrapper {
+      margin-bottom: 35px;
+
+      @media (min-width: @tablet-width) {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &--footer {

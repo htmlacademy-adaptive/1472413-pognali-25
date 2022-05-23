@@ -31,6 +31,14 @@
 
   &--filter {
     .size(32px, 32px);
+
+    @media (min-width: @tablet-width) {
+      .size(43px, 43px);
+    }
+
+    & .list-transports__icon {
+      .size(23px, 22px);
+    }
   }
 
   &:hover {
@@ -78,7 +86,20 @@
   background-color: @blue-light;
   border-radius: 50%;
 
+  @media (min-width: @tablet-width) {
+    align-items: start;
+    background-color: transparent;
+  }
+
   & svg {
     opacity: 0.15;
+
+    @media (min-width: @tablet-width) {
+      .size(23px, 23px);
+    }
+  }
+
+  &--active svg {
+    opacity: 1;
   }
 }

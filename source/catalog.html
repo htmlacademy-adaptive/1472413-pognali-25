@@ -22,21 +22,21 @@
   <header class="header header--no-js">
     <div class="container container--header">
       <a class="header__logo logo">
-<!-- через js добавляется display:none, при классе header--theme-light у header и при открытии меню -->
+      <!-- через js добавляется display:none, при классе header--theme-light у header и при открытии меню -->
         <picture>
           <source media="(min-width: 1200px)" srcset="img/logo/logo-full.svg">
           <source media="(min-width: 768px)" srcset="img/logo/logo-full.svg">
           <img class="logo__img" src="img/logo/logo-mobile.svg" alt="логотип сайта Погнали">
         </picture>
-<!-- через js добавляется display:block, при классе header--theme-light у header и при открытии меню -->
+        <!-- через js добавляется display:block, при классе header--theme-light у header и при открытии меню -->
         <picture>
           <source media="(min-width: 1200px)" srcset="img/logo/logo-full-dark.svg">
           <source media="(min-width: 768px)" srcset="img/logo/logo-full-dark.svg">
           <img class="logo__img-dark" src="img/logo/logo-mobile-dark.svg" alt="логотип сайта Погнали">
         </picture>
       </a>
-<!-- через js добавляется класс burger--dark, если у header есть класс header--theme-light -->
-<!-- при нажатии на кнопку открытия меню, добавляется класс burger--open -->
+      <!-- через js добавляется класс burger--dark, если у header есть класс header--theme-light -->
+      <!-- при нажатии на кнопку открытия меню, добавляется класс burger--open -->
       <button class="header__button btn burger" type="button">
         <span class="visually-hidden">Меню.</span>
       </button>
@@ -104,7 +104,7 @@
           </ul>
         </div>
       </div>
-<!-- при открытии меню на мобильных и планшетных версиях добавляется класс user-list--open -->
+      <!-- при открытии меню на мобильных и планшетных версиях добавляется класс user-list--open -->
       <ul class="user-list user-list--header">
         <li class="user-list__item">
           <a class="user-list__link user-list__link--first btn btn--icon" href="tel:+78005558628">
@@ -132,23 +132,39 @@
   <!-- main -->
   <main class="main main--catalog">
     <header class="main__header">
-      <div class="container">
+      <div class="container container--main-inner">
         <h1 class="main__title title-big">Попутчики</h1>
-        <a class="main__link" href="index.html">На&nbsp;главную</a>
+        <a class="main__link" href="index.html">
+          На&nbsp;главную
+          <svg width="32" height="16" viewBox="0 0 32 16">
+            <use xlink:href="./img/sprite.svg#arrow-main"></use>
+          </svg>
+        </a>
       </div>
     </header>
     <!-- filter -->
     <section class="filter">
+      <!-- при нажатии на filter__button или filter__title-link открывается меню и добавляется container--open -->
       <div class="container container--filter">
-        <h2 class="filter__title">Фильтрация по&nbsp;странам:</h2>
-<!-- при нажатии добавляется класс filter__button--open -->
-        <button class="filter__button btn" type="button">
-          <span class="filter__text">Показать всё</span>
-        </button>
-<!-- при нажатии на filter__button открывается меню и добавляется filter__continents--open -->
+        <div class="filter__wrapper">
+          <a class="filter__title-link" href="#">
+            <h2 class="filter__title">Фильтрация по&nbsp;странам:</h2>
+          </a>
+          <!-- при нажатии добавляется скрывается .filter__button--open  и открывается filter__button--closed -->
+          <button class="filter__button filter__button--open btn" type="button">
+            <span class="filter__text">Показать все</span>
+            <span class="filter__pagination"></span>
+          </button>
+          <button class="filter__button filter__button--closed btn" type="button">
+            <span class="filter__text">Свернуть</span>
+            <svg width="22" height="24" viewBox="0 0 24 22">
+              <use xlink:href="./img/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
         <ul class="filter__continents continents-list">
           <li class="continents-list__item">
-            <a class="continents-list__link" href="#">Европа</a>
+            <a class="continents-list__link continents-list__link--active" href="#">Европа</a>
           </li>
           <li class="continents-list__item">
             <a class="continents-list__link" href="#">Азия</a>
@@ -163,9 +179,9 @@
         <table class="filter__table table">
           <tbody class="table__wrapper">
             <tr class="table__row">
-              <td class="table__cell">
-                <button class="table__button table__button--current btn" type="submit" disabled>А</button>
-                <div class="alphabet alphabet--active">
+              <td class="table__cell table__cell--filter">
+                <button class="table__button table__button--filter table__button--current btn" type="submit" disabled>А</button>
+                <div class="alphabet alphabet--filter alphabet--active">
                   <ol class="alphabet__list">
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Австралия</a></li>
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Австрия</a></li>
@@ -181,9 +197,9 @@
                   </ol>
                 </div>
               </td>
-              <td class="table__cell">
-                <button class="table__button btn" type="submit">Б</button>
-                <div class="alphabet">
+              <td class="table__cell table__cell--filter">
+                <button class="table__button table__button--filter btn" type="submit">Б</button>
+                <div class="alphabet alphabet--filter">
                   <ol class="alphabet__list">
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Багамские Острова</a></li>
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Бангладеш</a></li>
@@ -205,9 +221,9 @@
                   </ol>
                 </div>
               </td>
-              <td class="table__cell">
-                <button class="table__button btn" type="submit">В</button>
-                <div class="alphabet">
+              <td class="table__cell table__cell--filter">
+                <button class="table__button table__button--filter btn" type="submit">В</button>
+                <div class="alphabet alphabet--filter">
                   <ol class="alphabet__list">
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Вануату</a></li>
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Великобритания</a></li>
@@ -218,9 +234,9 @@
                   </ol>
                 </div>
               </td>
-              <td class="table__cell">
-                <button class="table__button btn" type="submit">Г</button>
-                <div class="alphabet">
+              <td class="table__cell table__cell--filter">
+                <button class="table__button table__button--filter btn" type="submit">Г</button>
+                <div class="alphabet alphabet--filter">
                   <ol class="alphabet__list">
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Габон</a></li>
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Гаити</a></li>
@@ -238,9 +254,9 @@
                   </ol>
                 </div>
               </td>
-              <td class="table__cell">
-                <button class="table__button btn" type="submit">Д</button>
-                <div class="alphabet">
+              <td class="table__cell table__cell--filter">
+                <button class="table__button table__button--filter btn" type="submit">Д</button>
+                <div class="alphabet alphabet--filter">
                   <ol class="alphabet__list">
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Дания</a></li>
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Джибути</a></li>
@@ -251,26 +267,26 @@
               </td>
             </tr>
             <tr class="table__row">
-              <td class="table__cell">
-                <button class="table__button btn" type="submit">Е</button>
-                <div class="alphabet">
+              <td class="table__cell table__cell--filter">
+                <button class="table__button table__button--filter btn" type="submit">Е</button>
+                <div class="alphabet alphabet--filter">
                   <ol class="alphabet__list">
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Египет</a></li>
                   </ol>
                 </div>
               </td>
-              <td class="table__cell">
-                <button class="table__button btn" type="submit">З</button>
-                <div class="alphabet">
+              <td class="table__cell table__cell--filter">
+                <button class="table__button table__button--filter btn" type="submit">З</button>
+                <div class="alphabet alphabet--filter">
                   <ol class="alphabet__list">
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Замбия</a></li>
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Зимбабве</a></li>
                   </ol>
                 </div>
               </td>
-              <td class="table__cell">
-                <button class="table__button btn" type="submit">И</button>
-                <div class="alphabet">
+              <td class="table__cell table__cell--filter">
+                <button class="table__button table__button--filter btn" type="submit">И</button>
+                <div class="alphabet alphabet--filter">
                   <ol class="alphabet__list">
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Израиль</a></li>
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Индия</a></li>
@@ -285,9 +301,9 @@
                   </ol>
                 </div>
               </td>
-              <td class="table__cell">
-                <button class="table__button btn" type="submit">К</button>
-                <div class="alphabet">
+              <td class="table__cell table__cell--filter">
+                <button class="table__button table__button--filter btn" type="submit">К</button>
+                <div class="alphabet alphabet--filter">
                   <ol class="alphabet__list">
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Кабо-Верде</a></li>
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Казахстан</a></li>
@@ -304,9 +320,9 @@
                   </ol>
                 </div>
               </td>
-              <td class="table__cell">
-                <button class="table__button btn" type="submit">Л</button>
-                <div class="alphabet">
+              <td class="table__cell table__cell--filter">
+                <button class="table__button table__button--filter btn" type="submit">Л</button>
+                <div class="alphabet alphabet--filter">
                   <ol class="alphabet__list">
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Лаос</a></li>
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Латвия</a></li>
@@ -322,9 +338,9 @@
               </td>
             </tr>
             <tr class="table__row">
-              <td class="table__cell">
-                <button class="table__button btn" type="submit">М</button>
-                <div class="alphabet">
+              <td class="table__cell table__cell--filter">
+                <button class="table__button table__button--filter btn" type="submit">М</button>
+                <div class="alphabet alphabet--filter">
                   <ol class="alphabet__list">
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Маврикий</a></li>
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Мавритания</a></li>
@@ -338,9 +354,9 @@
                   </ol>
                 </div>
               </td>
-              <td class="table__cell">
-                <button class="table__button btn" type="submit">Н</button>
-                <div class="alphabet">
+              <td class="table__cell table__cell--filter">
+                <button class="table__button table__button--filter btn" type="submit">Н</button>
+                <div class="alphabet alphabet--filter">
                   <ol class="alphabet__list">
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Намибия</a></li>
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Науру</a></li>
@@ -354,18 +370,18 @@
                   </ol>
                 </div>
               </td>
-              <td class="table__cell">
-                <button class="table__button btn" type="submit">О</button>
-                <div class="alphabet">
+              <td class="table__cell table__cell--filter">
+                <button class="table__button table__button--filter btn" type="submit">О</button>
+                <div class="alphabet alphabet--filter">
                   <ol class="alphabet__list">
                     <li class="alphabet__item"><a class="alphabet__link" href="#">ОАЭ</a></li>
                     <li class="alphabet__item"><a class="alphabet__link" href="#"> Оман</a></li>
                   </ol>
                 </div>
               </td>
-              <td class="table__cell">
-                <button class="table__button btn" type="submit">П</button>
-                <div class="alphabet">
+              <td class="table__cell table__cell--filter">
+                <button class="table__button table__button--filter btn" type="submit">П</button>
+                <div class="alphabet alphabet--filter">
                   <ol class="alphabet__list">
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Пакистан</a></li>
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Палау</a></li>
@@ -378,9 +394,9 @@
                   </ol>
                 </div>
               </td>
-              <td class="table__cell">
-                <button class="table__button btn" type="submit">Р</button>
-                <div class="alphabet">
+              <td class="table__cell table__cell--filter">
+                <button class="table__button table__button--filter btn" type="submit">Р</button>
+                <div class="alphabet alphabet--filter">
                   <ol class="alphabet__list">
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Руанда</a></li>
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Румыния</a></li>
@@ -390,9 +406,9 @@
               </td>
             </tr>
             <tr class="table__row">
-              <td class="table__cell">
-                <button class="table__button btn" type="submit">С</button>
-                <div class="alphabet">
+              <td class="table__cell table__cell--filter">
+                <button class="table__button table__button--filter btn" type="submit">С</button>
+                <div class="alphabet alphabet--filter">
                   <ol class="alphabet__list">
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Сальвадор</a></li>
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Самоа</a></li>
@@ -409,9 +425,9 @@
                   </ol>
                 </div>
               </td>
-              <td class="table__cell">
-                <button class="table__button btn" type="submit">Т</button>
-                <div class="alphabet">
+              <td class="table__cell table__cell--filter">
+                <button class="table__button table__button--filter btn" type="submit">Т</button>
+                <div class="alphabet alphabet--filter">
                   <ol class="alphabet__list">
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Таджикистан</a></li>
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Таиланд</a></li>
@@ -426,9 +442,9 @@
                   </ol>
                 </div>
               </td>
-              <td class="table__cell">
-                <button class="table__button btn" type="submit">У</button>
-                <div class="alphabet">
+              <td class="table__cell table__cell--filter">
+                <button class="table__button table__button--filter btn" type="submit">У</button>
+                <div class="alphabet alphabet--filter">
                   <ol class="alphabet__list">
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Уганда</a></li>
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Узбекистан</a></li>
@@ -437,9 +453,9 @@
                   </ol>
                 </div>
               </td>
-              <td class="table__cell">
-                <button class="table__button btn" type="submit">Ф</button>
-                <div class="alphabet">
+              <td class="table__cell table__cell--filter">
+                <button class="table__button table__button--filter btn" type="submit">Ф</button>
+                <div class="alphabet alphabet--filter">
                   <ol class="alphabet__list">
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Фиджи</a></li>
                     <li class="alphabet__item"><a class="alphabet__link" href="#"> Филиппины</a></li>
@@ -448,9 +464,9 @@
                   </ol>
                 </div>
               </td>
-              <td class="table__cell">
-                <button class="table__button btn" type="submit">Х</button>
-                <div class="alphabet">
+              <td class="table__cell table__cell--filter">
+                <button class="table__button table__button--filter btn" type="submit">Х</button>
+                <div class="alphabet alphabet--filter">
                   <ol class="alphabet__list">
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Хорватия</a></li>
                   </ol>
@@ -458,9 +474,9 @@
               </td>
             </tr>
             <tr class="table__row">
-              <td class="table__cell">
-                <button class="table__button btn" type="submit">Ч</button>
-                <div class="alphabet">
+              <td class="table__cell table__cell--filter">
+                <button class="table__button table__button--filter btn" type="submit">Ч</button>
+                <div class="alphabet alphabet--filter">
                   <ol class="alphabet__list">
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Чад</a></li>
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Черногория</a></li>
@@ -469,9 +485,9 @@
                   </ol>
                 </div>
               </td>
-              <td class="table__cell">
-                <button class="table__button btn" type="submit">Ш</button>
-                <div class="alphabet">
+              <td class="table__cell table__cell--filter">
+                <button class="table__button table__button--filter btn" type="submit">Ш</button>
+                <div class="alphabet alphabet--filter">
                   <ol class="alphabet__list">
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Швейцария</a></li>
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Швеция</a></li>
@@ -479,9 +495,9 @@
                   </ol>
                 </div>
               </td>
-              <td class="table__cell">
-                <button class="table__button btn" type="submit">Э</button>
-                <div class="alphabet">
+              <td class="table__cell table__cell--filter">
+                <button class="table__button table__button--filter btn" type="submit">Э</button>
+                <div class="alphabet alphabet--filter">
                   <ol class="alphabet__list">
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Эквадор</a></li>
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Эритрея</a></li>
@@ -491,18 +507,18 @@
                   </ol>
                 </div>
               </td>
-              <td class="table__cell">
-                <button class="table__button btn" type="submit">Ю</button>
-                <div class="alphabet">
+              <td class="table__cell table__cell--filter">
+                <button class="table__button table__button--filter btn" type="submit">Ю</button>
+                <div class="alphabet alphabet--filter">
                   <ol class="alphabet__list">
                     <li class="alphabet__item"><a class="alphabet__link" href="#">ЮАР</a></li>
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Южный Судан</a></li>
                   </ol>
                 </div>
               </td>
-              <td class="table__cell">
-                <button class="table__button btn" type="submit">Я</button>
-                <div class="alphabet">
+              <td class="table__cell table__cell--filter">
+                <button class="table__button table__button--filter btn" type="submit">Я</button>
+                <div class="alphabet alphabet--filter">
                   <ol class="alphabet__list">
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Ямайка</a></li>
                     <li class="alphabet__item"><a class="alphabet__link" href="#">Япония</a></li>
@@ -512,7 +528,12 @@
             </tr>
           </tbody>
         </table>
-        <button class="filter__close btn">Свернуть</button>
+        <button class="filter__close btn">
+          <svg width="14" height="14" viewBox="0 0 24 22">
+            <use xlink:href="./img/sprite.svg#close"></use>
+          </svg>
+          Свернуть
+        </button>
       </div>
     </section>
     <!-- /filter -->
@@ -597,7 +618,7 @@
             </ul>
           </fieldset>
           <fieldset class="preferences__item">
-            <legend class="preferences__title">
+            <legend class="preferences__title preferences__title--transports">
               <a class="preferences__title-link" href="#">Транспорт</a>
             </legend>
             <ul class="preferences__list preferences__list--transports list-transports">
@@ -638,46 +659,8 @@
                 <span class="list-transports__text tooltip__text">Пешком</span>
               </li>
             </ul>
-            <!-- <ul class="preferences__list preferences-list preferences-list--transports list-transports">
-              <li class="preferences-list__item tooltip list-transports__point list-transports__point--filter">
-                <label class="preferences-list__element">
-                  <input class="preferences-list__checkbox visually-hidden" type="checkbox" name="plane" checked>
-                  <svg class="list-transports__icon" width="16" height="16" viewBox="0 0 18 20">
-                    <use xlink:href="./img/sprite.svg#plane"></use>
-                  </svg>
-                  <span class="list-transports__text tooltip__text">Авиаперелет</span>
-                </label>
-              </li>
-              <li class="preferences-list__item tooltip list-transports__point list-transports__point--filter">
-                <label class="preferences-list__element">
-                  <input class="preferences-list__checkbox visually-hidden" type="checkbox" name="auto" checked>
-                  <svg class="list-transports__icon" width="16" height="16" viewBox="0 0 18 21">
-                    <use xlink:href="./img/sprite.svg#bus"></use>
-                  </svg>
-                  <span class="list-transports__text tooltip__text">Автотранспорт</span>
-                </label>
-              </li>
-              <li class="preferences-list__item tooltip list-transports__point list-transports__point--filter">
-                <label class="preferences-list__element">
-                  <input class="preferences-list__checkbox visually-hidden" type="checkbox" name="cicle">
-                  <svg class="list-transports__icon" width="17" height="16" viewBox="0 0 25 24">
-                    <use xlink:href="./img/sprite.svg#bicycle"></use>
-                  </svg>
-                  <span class="list-transports__text tooltip__text">Велосипед</span>
-                </label>
-              </li>
-              <li class="preferences-list__item tooltip list-transports__point list-transports__point--filter">
-                <label class="preferences-list__element">
-                  <input class="preferences-list__checkbox visually-hidden" type="checkbox" name="on-foot" checked>
-                  <svg class="list-transports__icon" width="16" height="16" viewBox="0 0 22 24">
-                    <use xlink:href="./img/sprite.svg#runner"></use>
-                  </svg>
-                  <span class="list-transports__text tooltip__text">Пешком</span>
-                </label>
-              </li>
-            </ul> -->
           </fieldset>
-          <fieldset class="preferences__item">
+          <fieldset class="preferences__item preferences__item--level">
             <legend class="preferences__title">
               <a class="preferences__title-link" href="#">Левел</a>
             </legend>

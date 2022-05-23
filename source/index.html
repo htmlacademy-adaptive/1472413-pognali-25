@@ -22,20 +22,20 @@
   <header class="header header--no-js">
     <div class="container container--header">
       <a class="header__logo logo">
-<!-- через js добавляется display:none, при классе header--theme-light у header и при открытии меню -->
+        <!-- через js добавляется display:none, при классе header--theme-light у header и при открытии меню -->
         <picture>
           <source media="(min-width: 1200px)" srcset="img/logo/logo-full.svg">
           <source media="(min-width: 768px)" srcset="img/logo/logo-full.svg">
           <img class="logo__img" src="img/logo/logo-mobile.svg" alt="логотип сайта Погнали">
         </picture>
-<!-- через js добавляется display:block, при классе header--theme-light у header и при открытии меню -->
+        <!-- через js добавляется display:block, при классе header--theme-light у header и при открытии меню -->
         <picture>
           <source media="(min-width: 1200px)" srcset="img/logo/logo-full-dark.svg">
           <source media="(min-width: 768px)" srcset="img/logo/logo-full-dark.svg">
           <img class="logo__img-dark" src="img/logo/logo-mobile-dark.svg" alt="логотип сайта Погнали">
         </picture>
       </a>
-<!-- при нажатии на кнопку открытия меню, добавляется класс burger--open -->
+      <!-- при нажатии на кнопку открытия меню, добавляется класс burger--open -->
       <button class="header__button btn burger" type="button">
         <span class="visually-hidden">Меню.</span>
       </button>
@@ -103,7 +103,7 @@
           </ul>
         </div>
       </div>
-<!-- при открытии меню на мобильных и планшетных версиях добавляется класс user-list--open -->
+      <!-- при открытии меню на мобильных и планшетных версиях добавляется класс user-list--open -->
       <ul class="user-list user-list--header">
         <li class="user-list__item">
           <a class="user-list__link user-list__link--first btn btn--icon" href="tel:+78005558628">
@@ -266,6 +266,14 @@
         <ul class="companion__list">
           <li class="companion__item card-companion">
             <a class="card-companion__link" href="#">
+              <div class="card-companion__wrapper">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/avatars/avatar-1-285x285.webp 1x, img/avatars/avatar-1-285x285@2x.webp 2x">
+                  <source type="image/webp" srcset="img/avatars/avatar-1.webp 1x, img/avatars/avatar-1@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/avatars/avatar-1-285x285.png 1x, img/avatars/avatar-1-285x285@2x.png 2x">
+                  <img class="card-companion__img" src="img/avatars/avatar-1.png" srcset="img/avatars/avatar-1@2x.png 2x" alt="аватарка пользователя.">
+                </picture>
+              </div>
               <div class="card-companion__info">
                 <svg class="card-companion__toolbar" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M22.5503 3.00922C15.7757 4.87906 9.95203 9.22814 6.23551 15.1929C2.51899 21.1577 1.18146 28.302 2.48848 35.2073C3.7955 42.1126 7.65149 48.2739 13.2908 52.4678C18.9302 56.6618 25.9405 58.5817 32.9298 57.8463C39.9191 57.1109 46.3763 53.7741 51.0193 48.4983C55.6623 43.2226 58.1516 36.3937 57.9929 29.3676C57.8341 22.3415 55.039 15.632 50.1625 10.5713C45.2859 5.51057 38.6846 2.46876 31.6692 2.0498" stroke="#FF8D30" stroke-width="4" stroke-linecap="round"/>
@@ -273,12 +281,6 @@
                 <b class="card-companion__level">99</b>
                 <span class="card-companion__text">level</span>
               </div>
-              <picture>
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/avatars/avatar-1-285x285.webp 1x, img/avatars/avatar-1-285x285@2x.webp 2x">
-                <source type="image/webp" srcset="img/avatars/avatar-1.webp 1x, img/avatars/avatar-1@2x.webp 2x">
-                <source media="(min-width: 768px)" srcset="img/avatars/avatar-1-285x285.png 1x, img/avatars/avatar-1-285x285@2x.png 2x">
-                <img class="card-companion__img" src="img/avatars/avatar-1.png" srcset="img/avatars/avatar-1@2x.png 2x" alt="аватарка пользователя.">
-              </picture>
               <ul class="card-companion__list-countries list-countries">
                 <li class="list-countries__item tooltip">
                   <picture>
@@ -343,6 +345,14 @@
           </li>
           <li class="companion__item card-companion">
             <a class="card-companion__link" href="#">
+              <div class="card-companion__wrapper">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/avatars/avatar-2-285x285.webp 1x, img/avatars/avatar-2-285x285@2x.webp 2x">
+                  <source type="image/webp" srcset="img/avatars/avatar-2.webp 1x, img/avatars/avatar-2@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/avatars/avatar-2-285x285.png 1x, img/avatars/avatar-2-285x285@2x.png 2x">
+                  <img class="card-companion__img" src="img/avatars/avatar-2.png 1x" srcset="img/avatars/avatar-2@2x.png 2x" alt="аватарка пользователя.">
+                </picture>
+              </div>
               <div class="card-companion__info">
                 <svg class="card-companion__toolbar" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M4.74236 17.9148C2.16557 23.3002 1.37757 29.3683 2.4934 35.2332C3.60922 41.0982 6.57045 46.4529 10.9448 50.5159C15.3192 54.5788 20.8777 57.1372 26.8089 57.8176C32.7402 58.498 38.7336 57.2647 43.9144 54.2979C49.0952 51.3311 53.1921 46.786 55.607 41.3261C58.022 35.8662 58.6285 29.7773 57.3382 23.9483C56.0478 18.1193 52.9282 12.8553 48.4345 8.92466C43.9408 4.99408 38.3084 2.6027 32.3595 2.0996" stroke="#FF8D30" stroke-width="4" stroke-linecap="round"/>
@@ -350,12 +360,6 @@
                 <b class="card-companion__level">80</b>
                 <span class="card-companion__text">level</span>
               </div>
-              <picture>
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/avatars/avatar-2-285x285.webp 1x, img/avatars/avatar-2-285x285@2x.webp 2x">
-                <source type="image/webp" srcset="img/avatars/avatar-2.webp 1x, img/avatars/avatar-2@2x.webp 2x">
-                <source media="(min-width: 768px)" srcset="img/avatars/avatar-2-285x285.png 1x, img/avatars/avatar-2-285x285@2x.png 2x">
-                <img class="card-companion__img" src="img/avatars/avatar-2.png 1x" srcset="img/avatars/avatar-2@2x.png 2x" alt="аватарка пользователя.">
-              </picture>
               <ul class="card-companion__list-countries list-countries">
                 <li class="list-countries__item tooltip">
                   <picture>

@@ -29,6 +29,8 @@ let nextStepButton = document.querySelectorAll('.actions-list__button--next');
 let prevStepButton = document.querySelectorAll('.actions-list__button--prev-step');
 let paginatorNodeList = document.querySelectorAll('.pagination__item');
 
+let filters = document.querySelectorAll(".preferences__item");
+
 const headerSize = header.offsetHeight;
 
 header.classList.remove('header--no-js');
@@ -199,3 +201,77 @@ if (submitEmail != null) submitEmail.addEventListener('click', function () {
       inputEmail.placeholder = "Введите e-mail";
     }
 });
+
+
+ /* accordion */
+window.addEventListener ("resize", function() {
+  if (filters != null) filters.forEach(filter => {
+    if (this.window.matchMedia("(min-width: 768px)").matches && this.window.matchMedia("(max-width: 1199px)").matches) {
+      filter.classList.remove("preferences__item--hide");
+    } else {
+      filter.classList.add("preferences__item--hide");
+    }
+  });
+})
+
+window.addEventListener("load", function() {
+  CheckAccordionAvalable()
+})
+
+function CheckAccordionAvalable() {
+  if (this.window.matchMedia("(min-width: 768px)").matches && this.window.matchMedia("(max-width: 1199px)").matches) {
+    if (filters != null) filters.forEach(filter => {
+      filter.classList.remove("preferences__item--hide");
+
+      let filterBtn = filter.querySelector(".preferences__title-link");
+
+      filterBtn.addEventListener("click", function () {
+        if (filter.classList.contains("preferences__item--hide")) {
+          filter.classList.remove("preferences__item--hide");
+        } else {
+          filter.classList.add("preferences__item--hide");
+        }
+      });
+
+    });
+  } else {
+    if (filters != null) filters.forEach(filter => {
+      filter.classList.add("preferences__item--hide");
+
+      let filterBtn = filter.querySelector(".preferences__title-link");
+
+      filterBtn.addEventListener("click", function () {
+        if (filter.classList.contains("preferences__item--hide")) {
+          filter.classList.remove("preferences__item--hide");
+        } else {
+          filter.classList.add("preferences__item--hide");
+        }
+      });
+    });
+  }
+}
+
+/* filter button open/close */
+let filterButtonParent = document.querySelector('.container--filter');
+let filterOpenButton = document.querySelector('.filter__button--open');
+let filterOpenTitle = document.querySelector('.filter__title-link');
+let filterCloseButtonTop = document.querySelector('.filter__button--closed');
+let filterCloseButtonBottom = document.querySelector('.filter__close');
+
+if (filterButtonParent != null) {
+  filterOpenButton.addEventListener('click', function () {
+    filterButtonParent.classList.add('container--open');
+  });
+
+  filterOpenTitle.addEventListener('click', function () {
+    filterButtonParent.classList.add('container--open');
+  });
+
+  filterCloseButtonTop.addEventListener('click', function () {
+    filterButtonParent.classList.remove('container--open');
+  });
+
+  filterCloseButtonBottom.addEventListener('click', function () {
+    filterButtonParent.classList.remove('container--open');
+  });
+}

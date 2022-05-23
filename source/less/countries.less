@@ -1,22 +1,41 @@
 @import "_vars";
 @import "_mixins";
 
+.countries {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
 .countries__item {
   display: flex;
   align-items: center;
 
   &:not(:last-child) {
     margin-bottom: 10px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 0;
+      margin-right: 25px;
+    }
   }
 }
 
 .countries__flag {
   display: block;
   margin-right: 14px;
+
+  @media (min-width: @tablet-width) {
+    .size(35px, 24px);
+  }
 }
 
 .countries__text {
   .font(15px, 500, 16px);
   color: @basic-blue-light;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .fontChanged(20px, 20px);
+  }
 }

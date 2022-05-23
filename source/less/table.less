@@ -37,6 +37,27 @@
       top: 10px;
     }
   }
+
+  &--active.alphabet--filter {
+    bottom: -255px;
+    left: 0;
+
+    @media (min-width: @tablet-width) {
+      top: 10px;
+      right: -64%;
+      left: initial;
+    }
+
+    @media (min-width: @desktop-width) {
+      position: initial;
+    }
+  }
+
+  &--filter {
+    @media (min-width: @desktop-width) {
+      display: flex;
+    }
+  }
 }
 
 .table__cell {
@@ -53,6 +74,22 @@
   &:hover {
     outline-color: @navy;
   }
+
+  &--filter {
+    @media (min-width: @desktop-width) {
+      padding-left: 35px;
+      vertical-align: top;
+      pointer-events: none;
+    }
+
+    &:hover {
+      @media (min-width: @desktop-width) {
+        outline-color: transparent;
+        outline-style: none;
+        border: none;
+      }
+    }
+  }
 }
 
 .table__button {
@@ -63,6 +100,7 @@
   color: @basic-blue-light;
   text-transform: uppercase;
   background-color: @white;
+  transition: @transitionOpacity;
 
   @media (min-width: @tablet-width) {
     .fontChanged(20px, 20px);
@@ -74,6 +112,28 @@
     border-radius: 4px;
   }
 
+  &--filter {
+    font-weight: 400;
+    line-height: 14px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      .font(60px, 700, 60px);
+      background-color: transparent;
+      opacity: 0.3;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 0;
+      margin-bottom: 30px;
+      text-align: left;
+      opacity: 1;
+      cursor: none;
+      pointer-events: none;
+    }
+  }
+
   &--current,
   &:active {
     background-color: @blue-light;
@@ -81,6 +141,18 @@
     @media (min-width: @tablet-width) {
       color: @white;
       background-color: @basic-blue-light;
+    }
+  }
+
+  &:active.table__button--filter,
+  &--current.table__button--filter {
+    color: @white;
+    background-color: @basic-blue-light;
+
+    @media (min-width: @tablet-width) {
+      color: @basic-blue-light;
+      background-color: transparent;
+      opacity: 1;
     }
   }
 }
@@ -106,5 +178,14 @@
 
   @media (min-width: @tablet-width) {
     border-right: 1px solid @skyline;
+  }
+}
+
+.table__row .table__cell.table__cell--filter {
+  border-top: 1px solid @skyline;
+  border-right: 1px solid @skyline;
+
+  @media (min-width: @tablet-width) {
+    border: none;
   }
 }

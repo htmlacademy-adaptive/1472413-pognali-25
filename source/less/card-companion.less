@@ -4,17 +4,20 @@
 .card-companion {
   text-align: center;
   background-color: @white;
-  .borderRadiusSmallTop;
-  .borderRadiusSmallBottom;
+  border-radius: 30px;
   margin-bottom: 10px;
   transition: @transitionTransform, box-shadow 0.2s linear;
 
   &:hover {
-    transform: scale(1.01);
     box-shadow: 0 4px 9px 0 rgb(0 0 0 / 16%);
+
+    & .card-companion__img {
+      transform: scale(1.2);
+    }
   }
 
   @media (min-width: @tablet-width) {
+    height: 483px;
     margin-bottom: 0;
   }
 }
@@ -25,8 +28,7 @@
   flex-direction: column;
   height: 100%;
   .resetLink;
-  .borderRadiusSmallTop;
-  .borderRadiusSmallBottom;
+  border-radius: 25px;
   padding-bottom: 25px;
 
   &:hover .card-companion__title {
@@ -37,6 +39,11 @@
     color: rgba(29, 46, 91, 0.3);
     opacity: 0.3;
   }
+}
+
+.card-companion__wrapper {
+  border-radius: 25px 25px 0 0;
+  overflow: hidden;
 }
 
 .card-companion__info {
@@ -58,7 +65,7 @@
   object-fit: cover;
   .borderRadiusSmallTop;
   overflow: hidden;
-  transition: @transitionTransform;
+  transition: transform 0.5s ease-in-out;
 
   @media (min-width: @tablet-width) {
     .size(100%, 285px);

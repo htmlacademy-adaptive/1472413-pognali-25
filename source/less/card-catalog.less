@@ -19,6 +19,17 @@
   border-radius: @small;
   transition: box-shadow 0.2s ease-in-out;
 
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 190px 28.5% 1fr 60px;
+    grid-template-rows: 49px max-content 60px auto min-content;
+    grid-template-areas:
+      "img name name transportsList"
+      "img tagsList tagsList transportsList"
+      "img btn like levelImg"
+      "wanted wanted wanted wanted"
+      "countries countries countries countries";
+  }
+
   &:hover {
     box-shadow: 0 4px 9px rgba(0, 0, 0, 0.16);
   }
@@ -35,6 +46,13 @@
   margin-left: -3px;
   border-radius: 50%;
   overflow: hidden;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    margin-bottom: 5px;
+    margin-left: 0;
+    border-radius: 20px;
+  }
 }
 
 .card-catalog__link {
@@ -42,6 +60,10 @@
   position: relative;
   .resetLink();
   padding-right: 100px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 29px;
+  }
 }
 
 .card-catalog__like {
@@ -49,6 +71,10 @@
   position: relative;
   display: flex;
   align-self: center;
+
+  @media (min-width: @tablet-width) {
+    align-items: center;
+  }
 }
 
 .card-catalog__list-tags {
@@ -56,6 +82,11 @@
   padding: 13px 5px 5px;
   justify-content: flex-start;
   .font(15px, 400, 18px);
+
+  @media (min-width: @tablet-width) {
+    margin-left: 29px;
+    padding: 0;
+  }
 }
 
 .card-catalog__subtitle--wanted {
@@ -64,10 +95,18 @@
 
 .card-catalog__subtitle--transports {
   grid-area: transports;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .card-catalog__subtitle--level {
   grid-area: level;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .card-catalog__list-countries {
@@ -82,6 +121,10 @@
   grid-area: transportsList;
   align-self: center;
   justify-content: start;
+
+  @media (min-width: @tablet-width) {
+    justify-content: center;
+  }
 }
 
 .card-catalog__info {
@@ -94,22 +137,44 @@
   justify-content: center;
   .font(24px, 700, 24px);
   color: @basic-blue-light;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+    .size(60px, 60px);
+  }
 }
 
 .card-catalog__button {
   grid-area: btn;
   margin-top: 14px;
   padding: 10px 40px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 4px;
+    margin-bottom: 6px;
+    margin-left: 29px;
+    padding: 15px 32px;
+  }
 }
 
 .card-catalog__img {
   display: block;
   .size(70px, 70px);
   transition: @transitionTransform;
+
+  @media (min-width: @tablet-width) {
+    .size(190px, 190px);
+  }
 }
 
 .card-catalog__title {
   color: @basic-blue-light;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    width: fit-content;
+    padding-right: 30px;
+  }
 
   &:hover {
     opacity: 0.6;
@@ -125,6 +190,11 @@
     .size(6px, 6px);
     background-color: @salmon-pink;
     border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      top: 10px;
+      .size(8px, 8px);
+    }
   }
 
   &--online::after {
@@ -133,6 +203,11 @@
     .size(6px, 6px);
     background-color: @green;
     border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      top: 10px;
+      .size(8px, 8px);
+    }
   }
 }
 
@@ -145,8 +220,17 @@
   .abs(block, -10px, initial, initial, -37px);
   border-radius: 50%;
 
+  @media (min-width: @tablet-width) {
+    position: initial;
+    .size(50px, 50px);
+  }
+
   & .card-catalog__like-icon {
     opacity: 0.3;
+
+    @media (min-width: @tablet-width) {
+      .size(20px, 20px);
+    }
   }
 
   &:hover .card-catalog__like-icon {
@@ -187,15 +271,35 @@
   .base();
   .font(14px, 700, 16px);
   color: @basic-blue;
+
+  @media (min-width: @tablet-width) {
+    .fontChanged(20px, 20px);
+  }
 }
 
 .card-catalog__subtitle {
   align-self: center;
   padding-left: 5px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 22px;
+    margin-bottom: 19px;
+    padding-left: 49px;
+  }
 }
 
 .card-catalog__text {
   display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin-top: 1px;
+    padding-top: 2px;
+    .font(14px, 400, 14px);
+    color: @black;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    opacity: 0.4;
+  }
 }
 
 .card-catalog__toolbar {
