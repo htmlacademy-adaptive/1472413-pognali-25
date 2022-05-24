@@ -4,8 +4,8 @@
 .card-catalog {
   .base();
   display: grid;
-  grid-template-columns: 86px 1fr 66px;
-  grid-template-rows: 45px 26px 57px minmax(30px, max-content) minmax(90px, max-content) minmax(30px, max-content);
+  grid-template-columns: 83px 1fr 66px;
+  grid-template-rows: 42px 28px 55px min-content min-content min-content;
   grid-template-areas:
     "img name name"
     "img like ."
@@ -74,6 +74,7 @@
   grid-area: name;
   position: relative;
   .resetLink();
+  margin-top: -3px;
   padding-right: 100px;
 
   @media (min-width: @tablet-width) {
@@ -104,7 +105,7 @@
 
 .card-catalog__list-tags {
   grid-area: tagsList;
-  padding: 13px 5px 5px;
+  padding: 13px 5px 8px;
   justify-content: flex-start;
   .font(15px, 400, 18px);
 
@@ -135,6 +136,7 @@
 
 .card-catalog__subtitle--level {
   grid-area: level;
+  justify-self: flex-end;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -143,13 +145,19 @@
 
 .card-catalog__list-countries {
   grid-area: countries;
-  align-self: center;
+  align-self: start;
   .base();
   .reset();
+  margin-bottom: 3px;
+  padding-top: 12px;
   padding-left: 5px;
 
   @media (min-width: @tablet-width) {
     padding-left: 0;
+  }
+
+  &--second {
+    margin-bottom: 9px;
   }
 }
 
@@ -172,6 +180,8 @@
   grid-area: levelImg;
   position: relative;
   align-self: flex-end;
+  justify-self: flex-end;
+  margin-top: 4px;
   .size(45px, 45px);
   display: flex;
   align-items: center;
@@ -191,7 +201,7 @@
 
 .card-catalog__button {
   grid-area: btn;
-  margin-top: 14px;
+  margin-top: 13px;
   padding: 10px 40px;
 
   @media (min-width: @tablet-width) {
@@ -246,7 +256,7 @@
 
   &::after {
     content: "";
-    .abs(block, 8px, 0, initial, initial);
+    .abs(block, 12px, 2px, initial, initial);
     .size(6px, 6px);
     background-color: @salmon-pink;
     border-radius: 50%;
@@ -287,7 +297,7 @@
 
 .card-catalog__like-button {
   .size(31px, 31px);
-  .abs(block, -10px, initial, initial, -37px);
+  .abs(block, -7px, initial, initial, -35px);
   border-radius: 50%;
 
   @media (min-width: @tablet-width) {
@@ -349,6 +359,8 @@
 
 .card-catalog__subtitle {
   align-self: center;
+  margin-top: 8px;
+  margin-bottom: 7px;
   padding-left: 5px;
 
   @media (min-width: @tablet-width) {

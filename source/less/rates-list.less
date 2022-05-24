@@ -9,6 +9,10 @@
   .reset;
   counter-reset: list2;
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 33px;
+  }
+
   &::before {
     content: "";
     .size(198px, 100%);
@@ -44,11 +48,13 @@
     display: flex;
     justify-content: space-between;
     margin-right: 35px;
-    padding-top: 20px;
+    padding-top: 18px;
+    padding-bottom: 19px;
   }
 
   @media (min-width: @desktop-width) {
     margin-right: 0;
+    padding-bottom: 18px;
   }
 
   &:first-child {

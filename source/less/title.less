@@ -40,14 +40,18 @@
 
   &::after {
     content: "";
-    .abs(block, initial, initial, -20px, 0);
+    .abs(block, initial, initial, -18px, 0);
     .size(100%, 5px);
     background-color: @orange;
     border-radius: 4px;
 
     @media (min-width: @tablet-width) {
       height: 8px;
-      bottom: -70px;
+      bottom: -75px;
+    }
+
+    @media (min-width: @desktop-width) {
+      bottom: -77px;
     }
   }
 }

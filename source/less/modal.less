@@ -20,14 +20,17 @@
 
   @media (min-width: @tablet-width) {
     .size(688px, 526px);
-    padding-top: 54px;
+    bottom: initial;
+    padding-top: 51px;
     transform: translateY(-555px) translateX(-50%);
     box-shadow: 0 4px 22px rgba(29, 46, 91, 0.18);
   }
 
   @media (min-width: @desktop-width) {
     width: 750px;
-    transform: translateY(-651px) translateX(-50%);
+    padding-top: 48px;
+    transform: translateY(-651px) translateX(-48%);
+    border-radius: 25px;
   }
 
   &--open {
@@ -38,6 +41,10 @@
 
 .modal__title {
   margin-bottom: 31px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
+  }
 }
 
 .modal__list {
@@ -48,7 +55,7 @@
   color: @gray;
 
   @media (min-width: @tablet-width) {
-    width: calc(100% - 183px);
+    width: calc(100% - 180px);
   }
 
   @media (min-width: @desktop-width) {
@@ -65,8 +72,13 @@
     display: flex;
     justify-content: space-between;
     padding-top: 12px;
-    padding-bottom: 15px;
+    padding-bottom: 14px;
     .fontChanged(22px, 28px);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 10px;
+    padding-bottom: 16px;
   }
 
 
@@ -75,8 +87,22 @@
   }
 }
 
+.modal__service {
+  @media (min-width: @desktop-width) {
+    padding-left: 10px;
+  }
+}
+
 .modal__price {
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 10px;
+  }
 }
 
 .modal__button {
@@ -100,8 +126,8 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-top: 41px;
-    padding-bottom: 41px;
+    padding-top: 39px;
+    padding-bottom: 45px;
     .fontChanged(24px, 24px);
     text-transform: inherit;
   }

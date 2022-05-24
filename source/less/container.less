@@ -33,7 +33,7 @@
 
     @media (min-width: @tablet-width) {
       width: 708px;
-      padding-left: 57px;
+      padding-left: 86px;
     }
 
     @media (min-width: @desktop-width) {
@@ -65,11 +65,11 @@
     @media (min-width: @desktop-width) {
       display: grid;
       grid-template-columns: 1fr auto;
-      gap: 100px 250px;
-      padding-top: 209px;
+      gap: 106px 250px;
+      padding-top: 203px;
       padding-bottom: 123px;
       background-image: url("../img/promo/promo-traveller-desktop.png");
-      .bg(right 355px bottom, auto);
+      .bg(right 377px bottom, auto);
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/promo/promo-traveller-desktop@2x.png");
@@ -80,7 +80,7 @@
 
   &--service {
     @media (min-width: @desktop-width) {
-      padding-top: 190px;
+      padding-top: 186px;
       padding-bottom: 163px;
       background-image: url("../img/service/service-bg-desktop.png"), url("../img/companion/companion-back.png");
 
@@ -89,7 +89,7 @@
         background-size: 630px auto, 212px auto;
       }
 
-      background-position: bottom left calc(100% - 10px), left 10px top 128px;
+      background-position: bottom left calc(100% - 30px), left 30px top 128px;
       background-repeat: no-repeat;
     }
   }
@@ -107,11 +107,11 @@
     @media (min-width: @desktop-width) {
       display: grid;
       grid-template-columns: minmax(50%, 632px) 1fr;
-      column-gap: 144px;
+      column-gap: 140px;
       padding-top: 75px;
-      padding-bottom: 138px;
+      padding-bottom: 135px;
       background-image: url("../img/direction/direction-bg-flags.png");
-      .bg(top right 10px, auto);
+      .bg(top right 30px, auto);
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/direction/direction-bg-flags@2x.png");
@@ -158,11 +158,12 @@
     justify-content: flex-start;
 
     &.container--open {
-      height: 80vh;
+      padding-bottom: 10px;
 
       @media (min-width: @tablet-width) {
         height: auto;
-        padding-bottom: 20px;
+        padding-top: 7px;
+        padding-bottom: 23px;
       }
 
       @media (min-width: @desktop-width) {
@@ -176,7 +177,7 @@
       @media (min-width: @tablet-width) {
         display: flex;
         margin-top: -23px;
-        margin-bottom: 65px;
+        margin-bottom: 48px;
       }
 
       @media (min-width: @desktop-width) {
@@ -206,7 +207,7 @@
     }
 
     &.container--open .filter__wrapper {
-      margin-bottom: 35px;
+      margin-bottom: 30px;
 
       @media (min-width: @tablet-width) {
         margin-bottom: 0;
@@ -224,10 +225,15 @@
 
   &--footer {
     @media (min-width: @tablet-width) {
+      max-width: 100%;
       width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+
+    @media (min-width: @desktop-width) {
+      max-width: 1380px;
     }
   }
 }

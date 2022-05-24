@@ -8,6 +8,14 @@
   .base;
 }
 
+.nav__social.social .social__item {
+  &:not(:last-child) {
+    @media (min-width: @tablet-width) {
+      margin-right: 16px;
+    }
+  }
+}
+
 .social__link {
   .size(45px, 45px);
   display: flex;

@@ -15,6 +15,7 @@
     }
 
     @media (min-width: @desktop-width) {
+      margin-top: 3px;
       margin-left: auto;
     }
   }
@@ -42,6 +43,11 @@
     & .user-list__item--header .user-list__link {
       padding-top: 14px;
       padding-bottom: 14px;
+
+      @media (min-width: @tablet-width) {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
     }
   }
 }

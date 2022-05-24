@@ -3,18 +3,18 @@
 
 .account {
   position: relative;
-  padding-top: 20px;
+  padding-top: 23px;
   padding-bottom: 34px;
   background-color: @blue-light;
 
   @media (min-width: @tablet-width) {
     padding-top: 66px;
-    padding-bottom: 48px;
+    padding-bottom: 41px;
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 0;
-    padding-bottom: 55px;
+    padding-bottom: 48px;
   }
 
   &::after {
@@ -94,9 +94,15 @@
 
 .account__level {
   position: relative;
-  margin-bottom: 5px;
+  margin-top: -10px;
+  margin-bottom: 10px;
   .font(38px, 700, 38px);
   color: @basic-blue;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 2px;
+    margin-bottom: 10px;
+  }
 
   @media (min-width: @desktop-width) {
     color: @white;
@@ -104,13 +110,14 @@
 
   &::after {
     content: "";
-    .abs(block, initial, initial, -3px, 0);
-    .size(100%, 1px);
+    .abs(block, initial, initial, -5px, 0);
+    .size(calc(100% + 5px), 1px);
     background-color: @gray;
     opacity: 0.3;
 
     @media (min-width: @desktop-width) {
       background-color: @white;
+      bottom: -2px;
     }
   }
 }
@@ -139,8 +146,8 @@
 
 .account__button {
   grid-area: button;
-  margin: 15px 0 24px;
-  padding: 12.5px 15px;
+  margin: 18px 0 33px;
+  padding: 11px 15px;
   .font(20px, 500, 18px);
   color: @basic-blue;
   text-align: center;
@@ -159,8 +166,10 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-top: 40px;
+    margin-top: 51px;
     margin-bottom: 52px;
+    padding-top: 21px;
+    padding-bottom: 21px;
     border-radius: 10px;
     letter-spacing: 1.8px;
   }
@@ -168,6 +177,8 @@
   @media (min-width: @desktop-width) {
     margin-top: 0;
     margin-bottom: 27px;
+    padding-top: 16px;
+    padding-bottom: 13px;
     letter-spacing: normal;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -178,7 +189,7 @@
   position: relative;
   grid-area: tags;
   margin: 0;
-  margin-bottom: 18px;
+  margin-bottom: 17px;
   padding: 0;
 
   @media (min-width: @tablet-width) {
@@ -194,6 +205,8 @@
 
 .account__transports {
   grid-area: transports;
+  margin-left: 0;
+  margin-right: 0;
   padding: 0;
   border: 1px solid @skyline;
   border-radius: 10px;
@@ -216,7 +229,7 @@
 .account__list-tags {
   .base();
   .size(100%, 100%);
-  padding: 23px 26px;
+  padding: 25px 26px 21px 24px;
   .font(16px, 400, 18px);
   color: @gray;
   opacity: 0.6;
@@ -229,13 +242,13 @@
   overflow: hidden;
 
   @media (min-width: @tablet-width) {
-    padding: 35px 40px 19px;
+    padding: 34px 39px 10px;
     .fontChanged(20px, 22px);
     transform: rotate(180deg);
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 9px;
+    padding: 34px 36px 10px;
   }
 
 
@@ -268,9 +281,13 @@
 
   &--transports {
     @media (min-width: @tablet-width) {
-      .abs(block, initial, initial, -10px, 50%);
+      .abs(block, initial, initial, -11px, 50%);
       transform: translateX(-50%);
       background-color: @blue-light;
+    }
+
+    @media (min-width: @desktop-width) {
+      bottom: -8px;
     }
   }
 
@@ -288,14 +305,13 @@
     @media (min-width: @desktop-width) {
       transform: rotate(180deg);
       left: initial;
-      right: 30px;
+      right: 26px;
     }
   }
 }
 
 .account__list-transports {
-  padding-top: 10px;
-  padding-bottom: 15px;
+  padding: 7px 10px 14px;
 
   @media (min-width: @tablet-width) {
     padding: 26px 0 16px;
@@ -306,8 +322,20 @@
   }
 }
 
-.account__list-transports > .list-transports__item {
+.account__list-transports > .list-transports__item,
+.account__list-transports .list-transports__item .list-transports__button {
+  .size(32px, 32px);
   margin-left: 0;
+
+  @media (min-width: @tablet-width) {
+    .size(44px, 44px);
+  }
+}
+
+.account__list-transports .list-transports__item .list-transports__button .list-transports__icon {
+  @media (min-width: @tablet-width) {
+    .size(23px, 22px);
+  }
 }
 
 .account__button-mobile {

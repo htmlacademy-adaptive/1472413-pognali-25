@@ -5,7 +5,7 @@
   position: relative;
   .base();
   padding-top: 19px;
-  padding-bottom: 21px;
+  padding-bottom: 19px;
   border: none;
   border-top: 1px solid @yellow;
 
@@ -27,7 +27,7 @@
       display: none;
     }
 
-    & ~ .preferences__button {
+    & .preferences__button {
       margin-top: 16px;
 
       @media (min-width: @desktop-width) {
@@ -36,11 +36,19 @@
     }
   }
 
+  &--transports {
+    @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+      margin-top: -5px;
+      margin-left: -2px;
+    }
+  }
+
   &--level {
     @media (min-width: @tablet-width) and (max-width: @desktop-width) {
       display: grid;
-      grid-template-columns: 66px 43% 1fr;
+      grid-template-columns: 66px 45% 1fr;
       column-gap: 61px;
+      margin-top: -13px;
     }
 
     & .preferences__title {
@@ -56,6 +64,7 @@
       @media (min-width: @tablet-width) and (max-width: @desktop-width) {
         grid-column: 3 / 4;
         margin: 0;
+        margin-left: 3px;
         padding: 0;
       }
     }
@@ -64,7 +73,7 @@
       @media (min-width: @tablet-width) and (max-width: @desktop-width) {
         grid-column: 2 / 3;
         margin: 0;
-        margin-top: -23px;
+        margin-top: -25px;
         padding: 0;
       }
     }
@@ -73,7 +82,7 @@
   &:last-of-type {
     @media (min-width: @tablet-width) and (max-width: @desktop-width) {
       margin-bottom: 36px;
-      padding-bottom: 37px;
+      padding-bottom: 36px;
       border-bottom: 1px solid @yellow;
     }
   }
@@ -87,7 +96,7 @@
 .preferences__title {
   .abs(block, 0, initial, initial, 0);
   width: 100%;
-  padding: 12px 0;
+  padding: 10px 0 12px;
   .font(16px, 700, 18px);
   color: @basic-blue-light;
   text-transform: uppercase;
@@ -131,7 +140,7 @@
 
   &::after {
     content: "";
-    .abs(block, calc(50% - 3px), 0, initial, initial);
+    .abs(block, 50%, 0, initial, initial);
     .bg(center, auto);
     border-bottom: 6px solid @midnight-blue;
     border-left: 6px solid transparent;
@@ -147,11 +156,13 @@
 .preferences__list {
   .base();
   .reset();
-  padding-top: 27px;
+  padding-top: 22px;
   transition: @transitionOpacity;
 
   &--transports {
     justify-content: flex-start;
+    padding-top: 25px;
+    padding-bottom: 2px;
 
     & .list-transports__item {
       margin: 0;
@@ -160,7 +171,7 @@
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width) {
     margin-left: 126px;
-    margin-bottom: 26px;
+    margin-bottom: 28px;
     padding: 0;
   }
 
@@ -170,8 +181,10 @@
 }
 
 .preferences__button {
-  width: 100%;
-  padding: 14px;
+  width: 104%;
+  margin-top: 5px;
+  margin-left: -5px;
+  padding: 12px;
   .font(17px, 700, 17px);
   color: @basic-blue;
   text-transform: uppercase;
@@ -179,6 +192,8 @@
   transition: box-shadow 0.2s ease-in-out, @transitionBgColor, @transitionColor;
 
   @media (min-width: @tablet-width) {
+    width: 100%;
+    margin-left: 0;
     padding: 15px;
     .fontChanged(20px, 20px);
   }
@@ -196,7 +211,7 @@
 .preferences__wrapper-inputs {
   position: relative;
   display: flex;
-  margin-bottom: 21px;
+  margin-bottom: 24px;
   padding-top: 22px;
 
   @media (min-width: @desktop-width) {

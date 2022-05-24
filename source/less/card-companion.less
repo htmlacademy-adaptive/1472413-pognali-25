@@ -59,6 +59,11 @@
   color: @white;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    top: 20px;
+    left: 21px;
+  }
 }
 
 .card-companion__toolbar {
@@ -85,6 +90,10 @@
 .card-companion__list-countries {
   .size(100%, 25px);
   margin-top: -15px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -17px;
+  }
 }
 
 .card-companion__title {
@@ -94,7 +103,7 @@
   transition: @transitionOpacity;
 
   @media (min-width: @tablet-width) {
-    margin-top: 19px;
+    margin-top: 14px;
     margin-bottom: 23px;
   }
 
@@ -109,11 +118,21 @@
     .size(6px, 6px);
     background-color: @salmon-pink;
     border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      top: 14px;
+      left: -20px;
+      .size(8px, 8px);
+    }
   }
 
   &--online span::before {
     background-color: @green;
   }
+}
+
+.companion__item:last-of-type .card-companion__title {
+  margin-left: -24px;
 }
 
 .card-companion__list-tags {
@@ -122,11 +141,16 @@
   line-height: 20px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 24px;
+    margin-bottom: 28px;
+    .font(20px, 400, 23px);
   }
 }
 
 .companion__item:last-of-type .card-companion__list-tags {
   margin: 0 30px;
   margin-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 28px;
+  }
 }

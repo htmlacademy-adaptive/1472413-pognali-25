@@ -19,7 +19,7 @@
 .catalog__list {
   .base();
   .reset();
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 51px;
@@ -32,7 +32,7 @@
 
 .catalog__item {
   .base();
-  padding: 14px 20px 23px;
+  padding: 15px 20px 23px;
 
   @media (min-width: @tablet-width) {
     padding: 35px 25px 25px 35px;
@@ -60,9 +60,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 150px;
+  width: 146px;
   margin: 0 auto;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   .font(17px, 700, 30px);
   color: @basic-blue-light;
   text-transform: uppercase;
@@ -153,9 +153,13 @@
 }
 
 .catalog__footer-btn {
-  .size(50%, 51%);
-  padding: 16px 0 14px;
+  .size(50%, 100%);
+  padding: 16px 0 12px;
   background-color: @white;
+
+  & svg {
+    .size(12px, 20px);
+  }
 
   @media (min-width: @tablet-width) {
     padding: 0;

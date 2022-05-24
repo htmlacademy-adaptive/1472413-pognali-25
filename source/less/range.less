@@ -15,6 +15,10 @@
   .abs(block, initial, 0, initial, initial);
   .size(70%, 2px);
   background-color: @basic-blue-light;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    width: 63%;
+  }
 }
 
 .range__toggle {
@@ -24,6 +28,10 @@
   border-radius: 50%;
   cursor: pointer;
   transition: width 0.2s ease-in-out, height 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  @media (min-width: @tablet-width) {
+    .size(12px, 12px);
+  }
 
   &:hover {
     .size(13px, 13px);
@@ -35,12 +43,12 @@
   }
 
   &--min {
-    .abs(block, 50%, 100%, initial, initial);
+    .abs(block, 50%, calc(100% - 5px), initial, initial);
     transform: translateX(50%) translateY(-50%);
   }
 
   &--max {
-    .abs(block, 50%, 0, initial, initial);
+    .abs(block, 50%, 5px, initial, initial);
     transform: translateX(50%) translateY(-50%);
   }
 }
