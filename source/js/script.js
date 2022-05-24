@@ -84,7 +84,7 @@ if (profileButton != null) profileButton.addEventListener('click', function () {
     modal.classList.add('modal--open');
   } else {
     modal.classList.remove('modal--open');
-  }
+    }
 });
 
 if (modalButton != null) modalButton.addEventListener('click', function () {
@@ -171,10 +171,10 @@ function ChangeStep(value) {
       if (!paginatorNodeList[i].classList.contains('pagination__item--active'))
         paginatorNodeList[i].classList.add('pagination__item--active');
     } else {
-      if (!stepsNodeList[i].classList.contains('actions-list__item--hide'))
-        stepsNodeList[i].classList.add('actions-list__item--hide');
-      if (paginatorNodeList[i].classList.contains('pagination__item--active'))
-        paginatorNodeList[i].classList.remove('pagination__item--active');
+        if (!stepsNodeList[i].classList.contains('actions-list__item--hide'))
+          stepsNodeList[i].classList.add('actions-list__item--hide');
+        if (paginatorNodeList[i].classList.contains('pagination__item--active'))
+          paginatorNodeList[i].classList.remove('pagination__item--active');
     }
   }
 }
