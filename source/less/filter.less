@@ -32,7 +32,7 @@
 
   @media (min-width: @desktop-width) {
     grid-area: filter;
-    margin-bottom: 56px;
+    margin-bottom: 52px;
     background-color: @blue-light;
   }
 }
@@ -212,10 +212,16 @@
 
   @media (min-width: @desktop-width) {
     max-width: none;
-    margin-left: 0;
+    margin-left: 5px;
     margin-right: 55px;
-    margin-bottom: 51px;
-    border-spacing: 0 51px;
+    margin-bottom: 17px;
+    border-spacing: 0 48px;
+  }
+
+  & .table__wrapper .table__row:nth-child(3) .table__cell--filter {
+    @media (min-width: @desktop-width) {
+      padding-bottom: 36px;
+    }
   }
 }
 

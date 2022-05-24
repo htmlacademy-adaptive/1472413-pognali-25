@@ -45,7 +45,7 @@
       display: grid;
       grid-template-columns: 66px 45% 1fr;
       column-gap: 61px;
-      margin-top: -13px;
+      margin-top: -4px;
     }
 
     & .preferences__title {
@@ -103,6 +103,10 @@
     .fontChanged(20px, 22px);
   }
 
+  @media (min-width: @desktop-width) {
+    padding: 16px 0 12px;
+  }
+
   @media (min-width: @tablet-width) and (max-width: @desktop-width) {
     padding: 0;
     cursor: default;
@@ -156,24 +160,32 @@
   padding-top: 22px;
   transition: @transitionOpacity;
 
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    margin-left: 125px;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 46px;
+  }
+
   &--transports {
     justify-content: flex-start;
     padding-top: 27px;
+
+    @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+      padding: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 38px;
+    }
 
     & .list-transports__item {
       margin: 0;
       margin-right: 2px;
     }
-  }
-
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
-    margin-left: 125px;
-    margin-bottom: 28px;
-    padding: 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 38px;
   }
 }
 
@@ -195,6 +207,11 @@
     .fontChanged(20px, 20px);
   }
 
+  @media (min-width: @desktop-width) {
+    margin-left: 2px;
+    margin-top: 25px;
+  }
+
   &:hover {
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.14);
   }
@@ -213,7 +230,7 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 36px;
-    padding-top: 30px;
+    padding-top: 38px;
   }
 
   &::after,
@@ -234,6 +251,10 @@
       width: 21px;
       transform: translateY(0);
     }
+
+    @media (min-width: @desktop-width) {
+      top: 65%;
+    }
   }
 
   &::before {
@@ -243,6 +264,10 @@
     @media (min-width: @tablet-width) and (max-width: @desktop-width) {
       top: 50%;
       transform: translateY(-50%);
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 65%;
     }
   }
 
