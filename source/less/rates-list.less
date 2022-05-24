@@ -4,10 +4,14 @@
 .rates-list {
   position: relative;
   .base;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
   color: @gray;
   .reset;
   counter-reset: list2;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 33px;
+  }
 
   &::before {
     content: "";
@@ -36,19 +40,21 @@
   position: relative;
   margin-left: 25px;
   margin-right: 44px;
-  padding-top: 13px;
-  padding-bottom: 18px;
+  padding-top: 7px;
+  padding-bottom: 14px;
   border-bottom: 1px solid @gray-light;
 
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
     margin-right: 35px;
-    padding-top: 20px;
+    padding-top: 18px;
+    padding-bottom: 19px;
   }
 
   @media (min-width: @desktop-width) {
     margin-right: 0;
+    padding-bottom: 18px;
   }
 
   &:first-child {

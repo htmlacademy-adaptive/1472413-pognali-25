@@ -22,21 +22,21 @@
   <header class="header header--no-js">
     <div class="container container--header">
       <a class="header__logo logo" href="index.html">
-<!-- через js добавляется display:none, при классе header--theme-light у header и при открытии меню -->
+        <!-- через js добавляется display:none, при классе header--theme-light у header и при открытии меню -->
         <picture>
           <source media="(min-width: 1200px)" srcset="img/logo/logo-full.svg">
           <source media="(min-width: 768px)" srcset="img/logo/logo-full.svg">
           <img class="logo__img" src="img/logo/logo-mobile.svg" alt="логотип сайта Погнали">
         </picture>
-<!-- через js добавляется display:block, при классе header--theme-light у header и при открытии меню -->
+        <!-- через js добавляется display:block, при классе header--theme-light у header и при открытии меню -->
         <picture>
           <source media="(min-width: 1200px)" srcset="img/logo/logo-full-dark.svg">
           <source media="(min-width: 768px)" srcset="img/logo/logo-full-dark.svg">
           <img class="logo__img-dark" src="img/logo/logo-mobile-dark.svg" alt="логотип сайта Погнали">
         </picture>
       </a>
-<!-- через js добавляется класс burger--dark, если у header есть класс header--theme-light -->
-<!-- при нажатии на кнопку открытия меню, добавляется класс burger--open -->
+      <!-- через js добавляется класс burger--dark, если у header есть класс header--theme-light -->
+      <!-- при нажатии на кнопку открытия меню, добавляется класс burger--open -->
       <button class="header__button btn burger" type="button">
         <span class="visually-hidden">Меню.</span>
       </button>
@@ -62,7 +62,7 @@
                     <use xlink:href="./img/sprite.svg#telephone"></use>
                   </svg>
                 </div>
-                88005558628
+                8&nbsp;800&nbsp;555-86-28
               </a>
             </li>
             <li class="contacts-list__item">
@@ -104,7 +104,7 @@
           </ul>
         </div>
       </div>
-<!-- при открытии меню на мобильных и планшетных версиях добавляется класс user-list--open -->
+      <!-- при открытии меню на мобильных и планшетных версиях добавляется класс user-list--open -->
       <ul class="user-list user-list--header">
         <li class="user-list__item">
           <a class="user-list__link user-list__link--first btn btn--icon" href="tel:+78005558628">
@@ -282,7 +282,7 @@
             <div class="actions-list__calendar calendar">
               <div class="calendar__control">
                 <button class="calendar__control-button calendar__control-button--prev btn" type="button">
-                  <svg svg width="9" height="19" viewBox="0 0 9 19">
+                  <svg width="9" height="19" viewBox="0 0 9 19">
                     <use xlink:href="./img/sprite.svg#left-array"></use>
                   </svg>
                   <span class="visually-hidden">Предыдущий месяц.</span>
@@ -317,7 +317,7 @@
                   </label>
                 </div>
                 <button class="calendar__control-button calendar__control-button--next btn" type="button">
-                  <svg svg width="10" height="19" viewBox="0 0 10 19">
+                  <svg width="10" height="19" viewBox="0 0 10 19">
                     <use xlink:href="./img/sprite.svg#right-array"></use>
                   </svg>
                   <span class="visually-hidden">Следующий месяц.</span>
@@ -325,27 +325,29 @@
               </div>
               <table class="calendar__table table-calendar">
                 <thead class="table-calendar__row">
-                  <th class="table-calendar__cell-day">
-                    П<span class="table-calendar__text">н</span>
-                  </th>
-                  <th class="table-calendar__cell-day">
-                    В<span class="table-calendar__text">т</span>
-                  </th>
-                  <th class="table-calendar__cell-day">
-                    С<span class="table-calendar__text">р</span>
-                  </th>
-                  <th class="table-calendar__cell-day">
-                    Ч<span class="table-calendar__text">т</span>
-                  </th>
-                  <th class="table-calendar__cell-day">
-                    П<span class="table-calendar__text">т</span>
-                  </th>
-                  <th class="table-calendar__cell-day table-calendar__cell-day--weekend">
-                    С<span class="table-calendar__text">б</span>
-                  </th>
-                  <th class="table-calendar__cell-day table-calendar__cell-day--weekend">
-                    В<span class="table-calendar__text">с</span>
-                  </th>
+                  <tr>
+                    <th class="table-calendar__cell-day">
+                      П<span class="table-calendar__text">н</span>
+                    </th>
+                    <th class="table-calendar__cell-day">
+                      В<span class="table-calendar__text">т</span>
+                    </th>
+                    <th class="table-calendar__cell-day">
+                      С<span class="table-calendar__text">р</span>
+                    </th>
+                    <th class="table-calendar__cell-day">
+                      Ч<span class="table-calendar__text">т</span>
+                    </th>
+                    <th class="table-calendar__cell-day">
+                      П<span class="table-calendar__text">т</span>
+                    </th>
+                    <th class="table-calendar__cell-day table-calendar__cell-day--weekend">
+                      С<span class="table-calendar__text">б</span>
+                    </th>
+                    <th class="table-calendar__cell-day table-calendar__cell-day--weekend">
+                      В<span class="table-calendar__text">с</span>
+                    </th>
+                  </tr>
                 </thead>
                 <tbody>
                   <tr>
@@ -587,7 +589,7 @@
                 </button>
               </li>
               <li class="countries-list__item">
-<!-- добавлется класс countries-list__choice--open через js при клике на кнопку -->
+                <!-- добавлется класс countries-list__choice--open через js при клике на кнопку -->
                 <button class="countries-list__choice countries-list__choice--third btn countries-list__choice--open " type="button">
                   <span class="countries-list__inner">Выберите страну</span>
                 </button>
@@ -1000,7 +1002,7 @@
   </main>
   <!-- /main -->
   <!-- footer -->
-  <footer class="footer">
+  <footer class="footer footer--inner">
     <div class="container container--footer">
       <a class="footer__logo logo">
         <picture>

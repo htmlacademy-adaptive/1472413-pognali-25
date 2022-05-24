@@ -29,6 +29,8 @@ let nextStepButton = document.querySelectorAll('.actions-list__button--next');
 let prevStepButton = document.querySelectorAll('.actions-list__button--prev-step');
 let paginatorNodeList = document.querySelectorAll('.pagination__item');
 
+let filters = document.querySelectorAll(".preferences__item");
+
 const headerSize = header.offsetHeight;
 
 header.classList.remove('header--no-js');
@@ -37,7 +39,7 @@ if (choiceCountry != null) choiceCountry.classList.remove('countries-list__choic
 
 
 /* scroll */
-window.addEventListener('scroll', function () {
+window.addEventListener('scroll', function() {
   if (window.pageYOffset >= headerSize) {
     header.classList.add('header--theme-light');
     logoDark.style.display = "block";
@@ -52,7 +54,7 @@ window.addEventListener('scroll', function () {
 });
 
 /* burger menu */
-burger.addEventListener('click', function () {
+burger.addEventListener('click', function() {
   if (!headerNav.classList.contains('nav--open')) {
     header.classList.add('header--theme-light');
     headerNav.classList.add('nav--open');
@@ -70,14 +72,14 @@ burger.addEventListener('click', function () {
   }
 });
 
-let modal = (document.querySelector('.modal') != null)? document.querySelector('.modal') : null;
-let modalButton = (document.querySelector('.modal__button') != null)? document.querySelector('.modal__button') : null;
-let profileButton = (document.querySelector('.profile__button') != null)? document.querySelector('.profile__button') : null;
+let modal = (document.querySelector('.modal') != null) ? document.querySelector('.modal') : null;
+let modalButton = (document.querySelector('.modal__button') != null) ? document.querySelector('.modal__button') : null;
+let profileButton = (document.querySelector('.profile__button') != null) ? document.querySelector('.profile__button') : null;
 
 if (modal != null) modal.classList.remove('modal--open');
 
 /* modal window*/
-if (profileButton != null) profileButton.addEventListener('click', function () {
+if (profileButton != null) profileButton.addEventListener('click', function() {
   if (!modal.classList.contains('modal--open')) {
     modal.classList.add('modal--open');
   } else {
@@ -85,7 +87,7 @@ if (profileButton != null) profileButton.addEventListener('click', function () {
   }
 });
 
-if (modalButton != null) modalButton.addEventListener('click', function () {
+if (modalButton != null) modalButton.addEventListener('click', function() {
   if (modal.classList.contains('modal--open')) {
     modal.classList.remove('modal--open');
   }
@@ -95,10 +97,10 @@ if (modalButton != null) modalButton.addEventListener('click', function () {
 /* companion-count */
 let companionCountValue = 2;
 
-if (companionSub != null) companionSub.addEventListener('click', function () {
+if (companionSub != null) companionSub.addEventListener('click', function() {
   ChangeValue(-1);
 });
-if (companionAdd != null) companionAdd.addEventListener('click', function () {
+if (companionAdd != null) companionAdd.addEventListener('click', function() {
   ChangeValue(1);
 });
 
@@ -115,10 +117,10 @@ function ChangeValue(value) {
 /* companion-duration */
 let companionDurationValue = 3;
 
-if (durationSub != null) durationSub.addEventListener('click', function () {
+if (durationSub != null) durationSub.addEventListener('click', function() {
   ChangeDurationValue(-1);
 });
-if (durationAdd != null) durationAdd.addEventListener('click', function () {
+if (durationAdd != null) durationAdd.addEventListener('click', function() {
   ChangeDurationValue(1);
 });
 
@@ -133,7 +135,7 @@ function ChangeDurationValue(value) {
 }
 
 /* choosing country */
-if (choiceCountry != null) choiceCountry.addEventListener('click', function () {
+if (choiceCountry != null) choiceCountry.addEventListener('click', function() {
   if (!choiceCountry.classList.contains('countries-list__choice--open')) {
     choiceCountry.classList.add('countries-list__choice--open');
   } else {
@@ -142,16 +144,16 @@ if (choiceCountry != null) choiceCountry.addEventListener('click', function () {
 });
 
 /* steps */
-let activeStepIndex = 2;
+let activeStepIndex = 0;
 if (stepsNodeList != null) {
   ChangeStep(0);
 }
 
-if (nextStepButton != null) nextStepButton.forEach(nextButton => nextButton.addEventListener('click', function () {
+if (nextStepButton != null) nextStepButton.forEach(nextButton => nextButton.addEventListener('click', function() {
   ChangeStep(1);
 }));
 
-if (prevStepButton != null) prevStepButton.forEach(prevButton => prevButton.addEventListener('click', function () {
+if (prevStepButton != null) prevStepButton.forEach(prevButton => prevButton.addEventListener('click', function() {
   ChangeStep(-1);
 }));
 
@@ -181,7 +183,7 @@ function ChangeStep(value) {
 let submitBtn = document.querySelector('.actions-list__button--submit');
 let textFields = document.querySelectorAll('.action-plan__description');
 
-if (submitBtn != null) submitBtn.addEventListener('click', function () {
+if (submitBtn != null) submitBtn.addEventListener('click', function() {
   textFields.forEach(textField => {
     if (textField.value.length === 0) {
       textField.classList.add('action-plan__description--invalid');
@@ -193,9 +195,82 @@ if (submitBtn != null) submitBtn.addEventListener('click', function () {
 let submitEmail = document.querySelector('.contact__button');
 let inputEmail = document.querySelector('.contact__input');
 
-if (submitEmail != null) submitEmail.addEventListener('click', function () {
-    if (inputEmail.value.length === 0) {
-      inputEmail.classList.add('contact__input--invalid');
-      inputEmail.placeholder = "Введите e-mail";
-    }
+if (submitEmail != null) submitEmail.addEventListener('click', function() {
+  if (inputEmail.value.length === 0) {
+    inputEmail.classList.add('contact__input--invalid');
+    inputEmail.placeholder = "Введите e-mail";
+  }
 });
+
+/* accordion */
+window.addEventListener("resize", function() {
+  if (filters != null) filters.forEach(filter => {
+    if (this.window.matchMedia("(min-width: 768px)").matches && this.window.matchMedia("(max-width: 1199px)").matches) {
+      filter.classList.remove("preferences__item--hide");
+    } else {
+      filter.classList.add("preferences__item--hide");
+    }
+  });
+})
+
+window.addEventListener("load", function() {
+  CheckAccordionAvalable()
+})
+
+function CheckAccordionAvalable() {
+  if (this.window.matchMedia("(min-width: 768px)").matches && this.window.matchMedia("(max-width: 1199px)").matches) {
+    if (filters != null) filters.forEach(filter => {
+      filter.classList.remove("preferences__item--hide");
+
+      let filterBtn = filter.querySelector(".preferences__title-link");
+
+      filterBtn.addEventListener("click", function() {
+        if (filter.classList.contains("preferences__item--hide")) {
+          filter.classList.remove("preferences__item--hide");
+        } else {
+          filter.classList.add("preferences__item--hide");
+        }
+      });
+
+    });
+  } else {
+    if (filters != null) filters.forEach(filter => {
+      filter.classList.add("preferences__item--hide");
+
+      let filterBtn = filter.querySelector(".preferences__title-link");
+
+      filterBtn.addEventListener("click", function() {
+        if (filter.classList.contains("preferences__item--hide")) {
+          filter.classList.remove("preferences__item--hide");
+        } else {
+          filter.classList.add("preferences__item--hide");
+        }
+      });
+    });
+  }
+}
+
+/* filter button open/close */
+let filterButtonParent = document.querySelector('.container--filter');
+let filterOpenButton = document.querySelector('.filter__button--open');
+let filterOpenTitle = document.querySelector('.filter__title-link');
+let filterCloseButtonTop = document.querySelector('.filter__button--closed');
+let filterCloseButtonBottom = document.querySelector('.filter__close');
+
+if (filterButtonParent != null) {
+  filterOpenButton.addEventListener('click', function() {
+    filterButtonParent.classList.add('container--open');
+  });
+
+  filterOpenTitle.addEventListener('click', function() {
+    filterButtonParent.classList.add('container--open');
+  });
+
+  filterCloseButtonTop.addEventListener('click', function() {
+    filterButtonParent.classList.remove('container--open');
+  });
+
+  filterCloseButtonBottom.addEventListener('click', function() {
+    filterButtonParent.classList.remove('container--open');
+  });
+}

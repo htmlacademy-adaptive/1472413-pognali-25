@@ -2,15 +2,15 @@
 @import "_mixins";
 
 .modal {
-  .abs(flex, initial, 0, initial, 50%);
+  .abs(flex, initial, 0, 627px, 50%);
   min-width: 270px;
-  max-width: calc(100vw - 40px);
-  .size(100%, 465px);
+  max-width: calc(100vw - 67px);
+  .size(100%, 443px);
   z-index: -1;
   margin: 0 auto;
   flex-direction: column;
   align-items: center;
-  padding-top: 34px;
+  padding-top: 29px;
   background-color: @white;
   border-radius: 20px;
   transform: translateY(-493px) translateX(-50%);
@@ -20,19 +20,30 @@
 
   @media (min-width: @tablet-width) {
     .size(688px, 526px);
-    padding-top: 54px;
+    bottom: initial;
+    padding-top: 51px;
     transform: translateY(-555px) translateX(-50%);
     box-shadow: 0 4px 22px rgba(29, 46, 91, 0.18);
   }
 
   @media (min-width: @desktop-width) {
     width: 750px;
-    transform: translateY(-651px) translateX(-50%);
+    padding-top: 48px;
+    transform: translateY(-651px) translateX(-48%);
+    border-radius: 25px;
   }
 
   &--open {
     z-index: 6;
     opacity: 1;
+  }
+}
+
+.modal__title {
+  margin-bottom: 31px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
   }
 }
 
@@ -44,7 +55,7 @@
   color: @gray;
 
   @media (min-width: @tablet-width) {
-    width: calc(100% - 183px);
+    width: calc(100% - 180px);
   }
 
   @media (min-width: @desktop-width) {
@@ -54,15 +65,20 @@
 
 .modal__item {
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 11px;
   border-bottom: 1px solid @gray-light;
 
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
     padding-top: 12px;
-    padding-bottom: 15px;
+    padding-bottom: 14px;
     .fontChanged(22px, 28px);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 10px;
+    padding-bottom: 16px;
   }
 
 
@@ -71,13 +87,27 @@
   }
 }
 
+.modal__service {
+  @media (min-width: @desktop-width) {
+    padding-left: 10px;
+  }
+}
+
 .modal__price {
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 10px;
+  }
 }
 
 .modal__button {
   width: 100%;
-  padding: 18px;
+  padding: 18px 18px 16px;
   background-color: @encycolorpedia;
   .font(16px, 700, 24px);
   color: @basic-blue-light;
@@ -96,8 +126,8 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-top: 41px;
-    padding-bottom: 41px;
+    padding-top: 39px;
+    padding-bottom: 45px;
     .fontChanged(24px, 24px);
     text-transform: inherit;
   }

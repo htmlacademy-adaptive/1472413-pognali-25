@@ -5,6 +5,10 @@
   position: relative;
   .size(5px, 5px);
 
+  @media (min-width: @tablet-width) {
+    .size(6px, 6px);
+  }
+
   @media (min-width: @desktop-width) {
     .size(fit-content, fit-content);
     opacity: 0.6;
@@ -18,6 +22,10 @@
 
   &:not(:last-child) {
     margin-right: 16px;
+
+    @media (min-width: @tablet-width) {
+      margin-right: 29px;
+    }
 
     @media (min-width: @desktop-width) {
       margin-right: 0;
@@ -33,6 +41,10 @@
     background-color: @basic-blue-light;
     opacity: 0.3;
     border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      .size(6px, 6px);
+    }
   }
 
   &--active::before {
@@ -45,7 +57,7 @@
 
   @media (min-width: @desktop-width) {
     display: block;
-    padding-left: 36px;
+    padding-left: 42px;
     .font(20px, 400, 24px);
     color: @black;
     text-transform: uppercase;

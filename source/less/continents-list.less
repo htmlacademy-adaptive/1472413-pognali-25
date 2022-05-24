@@ -1,2 +1,53 @@
 @import "_vars";
 @import "_mixins";
+
+.continents-list {
+  .base();
+  .reset();
+  margin-bottom: 15px;
+  margin-left: @margin-left;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    margin-left: 31px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 344px;
+  }
+}
+
+.continents-list__item {
+  margin-bottom: 5px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
+  &:not(:last-child) {
+    margin-right: 28px;
+  }
+}
+
+.continents-list__link {
+  .resetLink();
+  font-weight: 700;
+  line-height: 18px;
+  color: @midnight-blue;
+  text-transform: uppercase;
+  opacity: 0.3;
+  transition: @transitionOpacity;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active,
+  &--active {
+    opacity: 1;
+  }
+
+  @media (min-width: @tablet-width) {
+    .fontChanged(20px, 20px);
+  }
+}

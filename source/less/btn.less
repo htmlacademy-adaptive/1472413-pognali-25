@@ -21,7 +21,7 @@
 
   &--authorization {
     display: block;
-    padding: 12px 40px;
+    padding: 11px 40px;
     .font(17px, 700, 20px);
     color: @basic-blue;
     text-transform: uppercase;
@@ -45,11 +45,11 @@
   }
 
   &--primary {
-    padding: 25px 50px 25px 33px;
+    padding: 25px 50px 25px 23px;
     .font(24px, 700, 24px);
     color: @basic-blue-light;
     background-color: @basic-yellow;
-    border-radius: 20px;
+    border-radius: 10px;
     transition: @transitionBgColor, @transitionColor;
 
     &:hover {
@@ -64,9 +64,18 @@
       opacity: 0.3;
     }
 
+    @media (max-width: @tablet-width) {
+      padding-top: 27px;
+      padding-bottom: 29px;
+      padding-left: 33px;
+      border-radius: 20px;
+    }
+
     @media (min-width: @desktop-width) {
-      padding-top: 29px;
-      padding-bottom: 27px;
+      padding-top: 27px;
+      padding-bottom: 31px;
+      padding-left: 34px;
+      border-radius: 20px;
     }
   }
 }

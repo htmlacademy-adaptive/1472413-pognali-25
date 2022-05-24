@@ -4,15 +4,40 @@
 .filter-companion {
   position: relative;
   margin-bottom: 28px;
-  padding: 26px 25px 22px;
+  padding: 24px 25px 22px;
   background-color: @basic-yellow;
   border-radius: @small;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+    padding: 33px 36px 37px 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding: 46px 46px 48px 48px;
+  }
 }
 
 .filter-companion__title {
   .base();
   max-width: 80%;
-  margin-bottom: 23px;
+  margin-bottom: 24px;
   .font(22px, 700, 22px);
   color: @basic-blue-light;
+  letter-spacing: 0.4px;
+
+  @media (min-width: @tablet-width) {
+    max-width: initial;
+    margin-bottom: 40px;
+    .fontChanged(30px, 30px);
+    letter-spacing: normal;
+  }
+}
+
+.filter-companion__list {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    padding-top: 38px;
+    border-top: 1px solid @yellow;
+  }
 }

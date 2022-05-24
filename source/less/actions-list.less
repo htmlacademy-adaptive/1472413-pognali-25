@@ -5,7 +5,7 @@
   .base();
   position: relative;
   margin-bottom: 10px;
-  padding-top: 80px;
+  padding-top: 78px;
   padding-right: 25px;
   padding-left: 24px;
   border: none;
@@ -15,12 +15,12 @@
   @media (min-width: @tablet-width) {
     position: relative;
     margin-bottom: 39px;
-    padding: 155px 40px 0;
+    padding: 153px 40px 0;
     border-radius: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 160px 160px 105px;
+    padding: 167px 158px 105px;
     border-radius: 60px;
   }
 
@@ -45,8 +45,8 @@
     &::after {
       @media (min-width: @desktop-width) {
         content: "";
-        .abs(block, 263px, 160px, initial, initial);
-        .size(calc(100% - 320px), 1px);
+        .abs(block, 270px, 160px, initial, initial);
+        .size(calc(100% - 322px), 1px);
         background-color: @gray-light;
       }
     }
@@ -98,10 +98,14 @@
     }
 
     & .actions-list__label--duration .actions-list__label-unit {
-      padding-right: 10px;
+      @media (min-width: @desktop-width) {
+        padding-right: 10px;
+      }
     }
 
     & .actions-list__wrapper--duration {
+      margin-bottom: 25px;
+
       @media (min-width: @desktop-width) {
         grid-area: input-duration;
       }
@@ -122,19 +126,19 @@
 }
 
 .actions-list__title {
-  .abs(block, 24px, initial, initial, 24px);
+  .abs(block, 22px, initial, initial, 23px);
   .font(20px, 700, 20px);
   color: @basic-blue-light;
 
   @media (min-width: @tablet-width) {
-    top: 48px;
-    left: 40px;
+    top: 43px;
+    left: 37px;
     .fontChanged(36px, 36px);
   }
 
   @media (min-width: @desktop-width) {
-    top: 101px;
-    left: 159px;
+    top: 95px;
+    left: 156px;
   }
 
   & br {
@@ -150,7 +154,7 @@
   color: @gray;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 38px;
+    margin-bottom: 39px;
     .fontChanged(20px, 24px);
   }
 
@@ -171,7 +175,7 @@
 .actions-list__label {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 8px;
+  margin-bottom: 9px;
   color: @basic-blue-light;
   line-height: 16px;
   font-weight: 500;
@@ -212,7 +216,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    .abs(block, 25px, -290px, initial, initial);
+    .abs(block, 25px, -295px, initial, initial);
     text-align: left;
     opacity: 1;
   }
@@ -280,7 +284,8 @@
 }
 
 .actions-list__count {
-  padding: 12px 0 10px;
+  box-sizing: border-box;
+  padding: 12px 0 10px 15px;
   width: 100%;
   flex-grow: 1;
   text-align: center;
@@ -294,6 +299,10 @@
   @media (min-width: @tablet-width) {
     padding: 22px 0 20px;
     .fontChanged(20px, 20px);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 20px 0 24px 15px;
   }
 
   &:hover {
@@ -325,10 +334,15 @@
 .actions-list__check {
   position: relative;
   display: block;
-  margin-bottom: 25px;
+  margin-bottom: 29px;
   padding-left: 39px;
   .font(15px, 400, 15px);
   color: @basic-blue-light;
+  cursor: pointer;
+
+  &:hover .actions-list__text {
+    border-color: @navy;
+  }
 
   @media (min-width: @tablet-width) {
     margin-bottom: 34px;
@@ -398,11 +412,11 @@
   margin-bottom: 22px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 47px;
+    margin-bottom: 46px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 57px;
+    margin-bottom: 60px;
   }
 }
 
@@ -414,9 +428,9 @@
   &--submit,
   &--next {
     @media (min-width: @tablet-width) {
-      margin-bottom: 54px;
-      padding: 29px 77px 27px 34px;
-      min-width: 286px;
+      margin-bottom: 57px;
+      padding: 27px 77px 28px 34px;
+      min-width: 284px;
       text-align: left;
       width: fit-content;
       .fontChanged(24px, 24px);
@@ -431,9 +445,9 @@
 
   &::after {
     @media (min-width: @tablet-width) {
-      .abs(block, 45%, 0, 0, calc(100% - 37px));
+      .abs(block, 43%, 0, 0, calc(100% - 49px));
       content: "";
-      .size(13px, 13.5px);
+      .size(11px, 13px);
       background-image: url("data:image/svg+xml,%3Csvg width='12' height='14' viewBox='0 0 12 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 7L0 13.0622L0 0.937822L12 7Z' fill='%231D2E5B'/%3E%3C/svg%3E%0A");
       .bg(right center, cover);
       transition: @transitionOpacity;

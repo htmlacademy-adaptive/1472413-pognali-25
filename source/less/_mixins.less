@@ -1,4 +1,5 @@
 @import "_vars";
+@import "_fonts";
 
 .base() {
   margin: 0;
@@ -28,6 +29,11 @@
     border-bottom-left-radius: @big;
     border-bottom-right-radius: @big;
   }
+
+  @media (min-width: @desktop-width) {
+    border-bottom-left-radius: @extra-big;
+    border-bottom-right-radius: @extra-big;
+  }
 }
 
 .borderRadiusSmallBottom() {
@@ -53,7 +59,7 @@
 /* functions */
 /* font */
 .font(@fz, @fw, @lh) {
-  font-family: "BloggerSans", sans-serif;
+  font-family: "BloggerSans", "Tahoma", sans-serif;
   font-size: @fz;
   font-weight: @fw;
   line-height: @lh;

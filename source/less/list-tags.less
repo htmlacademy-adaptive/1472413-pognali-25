@@ -2,12 +2,23 @@
 @import "_mixins";
 
 .list-tags {
-  max-width: 188px;
   .reset;
   .base;
+  margin-right: 25px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 130px;
+    margin-left: 29px;
+    height: fit-content;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 79px;
+    margin-left: 62px;
+  }
 }
 
 .list-tags__item {

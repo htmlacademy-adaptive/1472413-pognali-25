@@ -4,17 +4,25 @@
 .card-companion {
   text-align: center;
   background-color: @white;
-  .borderRadiusSmallTop;
-  .borderRadiusSmallBottom;
+  border-radius: 10px;
   margin-bottom: 10px;
   transition: @transitionTransform, box-shadow 0.2s linear;
 
+  @media (min-width: @tablet-width) {
+    border-radius: 20px;
+  }
+
   &:hover {
-    transform: scale(1.01);
     box-shadow: 0 4px 9px 0 rgb(0 0 0 / 16%);
+
+    & .card-companion__img {
+      transform: scale(1.2);
+    }
   }
 
   @media (min-width: @tablet-width) {
+    max-width: 285px;
+    height: 483px;
     margin-bottom: 0;
   }
 }
@@ -25,9 +33,8 @@
   flex-direction: column;
   height: 100%;
   .resetLink;
-  .borderRadiusSmallTop;
-  .borderRadiusSmallBottom;
-  padding-bottom: 25px;
+  border-radius: 10px;
+  padding-bottom: 21px;
 
   &:hover .card-companion__title {
     opacity: 0.7;
@@ -39,6 +46,11 @@
   }
 }
 
+.card-companion__wrapper {
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+
 .card-companion__info {
   .size(60px, 60px);
   .abs(flex, 17px, 0, 0, 17px);
@@ -47,10 +59,20 @@
   color: @white;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    top: 20px;
+    left: 21px;
+  }
 }
 
 .card-companion__toolbar {
   .abs(block, 0, 0, 0, 0);
+}
+
+.card-companion__level {
+  margin-top: 7px;
+  .font(24px, 700, 24px);
 }
 
 .card-companion__img {
@@ -58,7 +80,7 @@
   object-fit: cover;
   .borderRadiusSmallTop;
   overflow: hidden;
-  transition: @transitionTransform;
+  transition: transform 0.5s ease-in-out;
 
   @media (min-width: @tablet-width) {
     .size(100%, 285px);
@@ -68,16 +90,20 @@
 .card-companion__list-countries {
   .size(100%, 25px);
   margin-top: -15px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -17px;
+  }
 }
 
 .card-companion__title {
-  margin-top: 13px;
-  margin-bottom: 15px;
+  margin-top: 12px;
+  margin-bottom: 12px;
   color: @basic-blue-light;
   transition: @transitionOpacity;
 
   @media (min-width: @tablet-width) {
-    margin-top: 19px;
+    margin-top: 14px;
     margin-bottom: 23px;
   }
 
@@ -88,10 +114,16 @@
   /* в обычном состоянии пользователь оффлайн, в aria-label прописано, что пользователь оффлайн, когда пользователь онлайн, добавляется класс-модификатор "--online", при добавлении класса онлайн необходимо поменять текст aria-label */
   & span::before {
     content: "";
-    .abs(block, 12px, initial, initial, -15px);
+    .abs(block, 12px, initial, initial, -16px);
     .size(6px, 6px);
     background-color: @salmon-pink;
     border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      top: 14px;
+      left: -20px;
+      .size(8px, 8px);
+    }
   }
 
   &--online span::before {
@@ -99,11 +131,26 @@
   }
 }
 
+.companion__item:last-of-type .card-companion__title {
+  margin-left: -24px;
+}
+
 .card-companion__list-tags {
-  margin: 0 auto;
+  margin: 0 10px;
+  margin-bottom: 17px;
+  line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 28px;
+    .font(20px, 400, 23px);
+  }
+}
+
+.companion__item:last-of-type .card-companion__list-tags {
+  margin: 0 30px;
   margin-bottom: 17px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 24px;
+    margin-bottom: 28px;
   }
 }
