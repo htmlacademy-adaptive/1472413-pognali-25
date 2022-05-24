@@ -235,20 +235,20 @@ function CheckAccordionAvalable() {
 
     });
   } else {
-    if (filters != null) filters.forEach(filter => {
-      filter.classList.add("preferences__item--hide");
+      if (filters != null) filters.forEach(filter => {
+        filter.classList.add("preferences__item--hide");
 
-      let filterBtn = filter.querySelector(".preferences__title-link");
+        let filterBtn = filter.querySelector(".preferences__title-link");
 
-      filterBtn.addEventListener("click", function () {
-        if (filter.classList.contains("preferences__item--hide")) {
-          filter.classList.remove("preferences__item--hide");
-        } else {
-          filter.classList.add("preferences__item--hide");
-        }
+        filterBtn.addEventListener("click", function () {
+          if (filter.classList.contains("preferences__item--hide")) {
+              filter.classList.remove("preferences__item--hide");
+          } else {
+              filter.classList.add("preferences__item--hide");
+          }
+        });
       });
-    });
-  }
+    }
 }
 
 /* filter button open/close */
