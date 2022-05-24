@@ -159,6 +159,8 @@
 
   & svg {
     .size(12px, 20px);
+    fill: @basic-blue-light;
+    transition: @transitionOpacity;
   }
 
   @media (min-width: @tablet-width) {
@@ -191,11 +193,6 @@
     @media (min-width: @desktop-width) {
       margin-left: 29px;
     }
-  }
-
-  & svg {
-    fill: @basic-blue-light;
-    transition: @transitionOpacity;
   }
 
   &:hover svg {
