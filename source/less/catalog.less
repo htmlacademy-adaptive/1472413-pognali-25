@@ -1,11 +1,9 @@
-@import "_vars";
-@import "_mixins";
-
 .catalog {
   margin-bottom: 76px;
 
   @media (min-width: @desktop-width) {
     grid-area: catalog;
+    margin-bottom: 80px;
   }
 
   & .container {
@@ -22,7 +20,7 @@
   margin-bottom: 18px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 51px;
+    margin-bottom: 48px;
   }
 
   @media (min-width: @desktop-width) {
@@ -47,7 +45,7 @@
     margin-bottom: 10px;
 
     @media (min-width: @tablet-width) {
-      margin-bottom: 39px;
+      margin-bottom: 41px;
     }
 
     @media (min-width: @desktop-width) {
@@ -69,9 +67,16 @@
   background-color: transparent;
 
   @media (min-width: @tablet-width) {
-    width: 186px;
+    width: 192px;
     margin-bottom: 51px;
+    padding-right: 7px;
     .fontChanged(20px, 20px);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 260px;
+    margin-bottom: 70px;
+    padding-right: 76px;
   }
 
   & svg {
@@ -187,11 +192,11 @@
     border-bottom-right-radius: @small;
 
     @media (min-width: @tablet-width) {
-      margin-left: 27px;
+      margin-left: 31px;
     }
 
     @media (min-width: @desktop-width) {
-      margin-left: 29px;
+      margin-left: 36px;
     }
   }
 

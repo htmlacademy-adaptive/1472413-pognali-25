@@ -1,6 +1,3 @@
-@import "_vars";
-@import "_mixins";
-
 .continents-list {
   .base();
   .reset();
@@ -26,6 +23,10 @@
 
   &:not(:last-child) {
     margin-right: 28px;
+
+    @media (min-width: @desktop-width) {
+      margin-right: 31px;
+    }
   }
 }
 
